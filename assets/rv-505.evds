@@ -1,0 +1,316 @@
+<EVDS>
+    <object name="Payload fairing" type="rigid_body" x="-13.5">
+        <parameter name="geometry.cross_sections">
+            <section type="ellipse" tangent.radial.pos="1" />
+            <section type="ellipse" offset="6" rx="2.65" tangent.offset.neg="2.65" continuous="1" />
+            <section type="ellipse" offset="8" rx="2.65" />
+        </parameter>
+        <parameter name="mass">3000</parameter>
+    </object>
+    <object name="ES-604" type="vessel" x="-8.1">
+        <parameter name="geometry.cross_sections">
+            <section type="ellipse" />
+            <section type="rectangle" rx="2" />
+            <section type="rectangle" offset="3" rx="2" />
+            <section type="ellipse" />
+        </parameter>
+        <parameter name="mass">500</parameter>
+        <object name="Channel A" type="antenna" x="-0.7" y="0.4">
+            <parameter name="design_frequency" />
+            <parameter name="frequency">250</parameter>
+            <parameter name="size">1.5</parameter>
+            <parameter name="data_rate">32000</parameter>
+            <parameter name="tx">1</parameter>
+            <parameter name="modulation_type">bpsk</parameter>
+            <parameter name="mass">1</parameter>
+        </object>
+        <object name="Channel B" type="antenna" x="-0.7" y="-0.4">
+            <parameter name="design_frequency" />
+            <parameter name="frequency">200</parameter>
+            <parameter name="size">1.5</parameter>
+            <parameter name="data_rate">32000</parameter>
+            <parameter name="modulation_type">bpsk</parameter>
+            <parameter name="tx" />
+            <parameter name="rx">1</parameter>
+            <parameter name="mass">1</parameter>
+        </object>
+    </object>
+    <object name="RV-505C (DIRECT)" type="vessel" x="-5">
+        <parameter name="geometry.cross_sections">
+            <section type="ellipse" />
+            <section type="ellipse" rx="1.5" />
+            <section type="ellipse" offset="1.3" rx="1.5" />
+            <section type="ellipse" offset="0.8" rx="2.4" />
+            <section type="ellipse" offset="1" rx="2.4" />
+            <section type="ellipse" rx="1" />
+            <section type="ellipse" offset="-1.5" rx="0.6" />
+        </parameter>
+        <parameter name="mass">1500</parameter>
+        <object name="H2 tank #3" type="fuel_tank" x="-1.38778e-016">
+            <parameter name="outer_radius">1.4</parameter>
+            <parameter name="upper_radius">0.2</parameter>
+            <parameter name="lower_radius">0.2</parameter>
+            <parameter name="fuel_type">H2</parameter>
+            <parameter name="middle_length">0.3</parameter>
+            <parameter name="mass">100</parameter>
+        </object>
+        <object name="H2 tank #2" type="fuel_tank" x="1.38778e-016">
+            <parameter name="geometry.cross_sections">
+                <section type="ellipse" rx="1.5" tangent.offset.pos="-0.5" tangent.offset.neg="-0.5" />
+                <section type="ellipse" offset="-0.5" rx="2" />
+                <section type="ellipse" offset="0.5" rx="2.5" tangent.offset.pos="0.5" tangent.offset.neg="0.5" />
+                <section type="ellipse" offset="0.5" rx="2" />
+                <section type="ellipse" offset="-0.5" rx="1.5" tangent.offset.pos="-0.5" tangent.offset.neg="-0.5" />
+            </parameter>
+            <parameter name="fuel_type">H2</parameter>
+            <parameter name="mass">100</parameter>
+        </object>
+        <object name="H2 tank #1" type="fuel_tank" x="1">
+            <parameter name="geometry.cross_sections">
+                <section type="ellipse" rx="1.5" tangent.offset.pos="-0.5" tangent.offset.neg="-0.5" />
+                <section type="ellipse" offset="-0.5" rx="2" continuous="1" />
+                <section type="ellipse" offset="0.5" rx="2.5" tangent.offset.pos="0.5" tangent.offset.neg="0.5" continuous="1" />
+                <section type="ellipse" offset="0.5" rx="2" continuous="1" />
+                <section type="ellipse" offset="-0.5" rx="1.5" tangent.offset.pos="-0.5" tangent.offset.neg="-0.5" continuous="1" />
+            </parameter>
+            <parameter name="fuel_type">H2</parameter>
+            <parameter name="mass">100</parameter>
+        </object>
+        <object name="O2 tank" type="fuel_tank" x="2.4">
+            <parameter name="geometry.cross_sections">
+                <section type="ellipse" rx="1" tangent.offset.pos="-0.6" tangent.offset.neg="-0.6" />
+                <section type="ellipse" offset="-0.6" rx="1.6" />
+                <section type="ellipse" offset="0.6" rx="2.2" tangent.offset.pos="0.6" tangent.offset.neg="0.6" />
+                <section type="ellipse" offset="0.6" rx="1.6" />
+                <section type="ellipse" offset="-0.6" rx="1" tangent.offset.pos="-0.6" tangent.offset.neg="-0.6" />
+            </parameter>
+            <parameter name="fuel_type">O2</parameter>
+            <parameter name="mass">100</parameter>
+        </object>
+        <object name="RE-505CE" type="gimbal" x="1.6">
+            <parameter name="geometry.cross_sections">
+                <section type="ellipse" rx="0.3" />
+                <section type="ellipse" rx="0.6" />
+            </parameter>
+            <parameter name="pitch_min">-8</parameter>
+            <parameter name="pitch_max">8</parameter>
+            <parameter name="pitch_rate">20</parameter>
+            <parameter name="pitch_bits">16</parameter>
+            <parameter name="yaw_min">-8</parameter>
+            <parameter name="yaw_max">8</parameter>
+            <parameter name="yaw_rate">20</parameter>
+            <parameter name="yaw_bits">16</parameter>
+            <parameter name="mass">277</parameter>
+            <object name="Nozzle" type="rocket_engine" x="-0.6">
+                <parameter name="mass" />
+                <parameter name="exit_radius">1.1</parameter>
+                <parameter name="chamber_radius">0.3</parameter>
+                <parameter name="nozzle_length" />
+                <parameter name="chamber_length">0.6</parameter>
+                <parameter name="divergence_angle">20</parameter>
+                <parameter name="area_ratio">84</parameter>
+            </object>
+        </object>
+    </object>
+    <object name="RV-505B (Upper stage)" type="vessel">
+        <parameter name="geometry.cross_sections">
+            <section type="ellipse" rx="2.5" offset="0.5" />
+            <section type="ellipse" rx="2.65" />
+            <section type="ellipse" offset="2.1" rx="2.65" />
+            <section type="ellipse" offset="13" rx="2.65" />
+            <section type="ellipse" offset="3.5" rx="2.65" />
+            <section type="ellipse" offset="3" rx="2.65" />
+            <section type="ellipse" offset="2.5" rx="1.95" />
+            <section type="ellipse" rx="0.6" />
+        </parameter>
+        <parameter name="mass">500</parameter>
+        <object name="VHF telemetry" type="antenna" x="21.6" y="-2.4">
+            <parameter name="design_frequency">420</parameter>
+            <parameter name="tx">1</parameter>
+            <parameter name="modulation_type">bpsk</parameter>
+            <parameter name="data_rate">24000</parameter>
+            <parameter name="frequency">420</parameter>
+            <parameter name="mass">0.5</parameter>
+        </object>
+        <object name="Interstage" type="static_body" x="24.6">
+            <parameter name="geometry.cross_sections">
+                <section type="ellipse" rx="1.95" />
+                <section type="ellipse" offset="1.7" rx="1.95" />
+            </parameter>
+            <parameter name="mass">400</parameter>
+        </object>
+        <object name="J2-X" type="gimbal" x="24.5">
+            <parameter name="geometry.cross_sections">
+                <section type="ellipse" rx="0.6" />
+                <section type="ellipse" rx="1" />
+            </parameter>
+            <parameter name="pitch_min">-15</parameter>
+            <parameter name="pitch_max">15</parameter>
+            <parameter name="pitch_rate">25</parameter>
+            <parameter name="pitch_bits">16</parameter>
+            <parameter name="yaw_min">-15</parameter>
+            <parameter name="yaw_max">15</parameter>
+            <parameter name="yaw_rate">25</parameter>
+            <parameter name="yaw_bits">16</parameter>
+            <parameter name="mass">2470</parameter>
+            <object name="Nozzle" type="rocket_engine" x="-1">
+                <parameter name="exit_radius">1.7</parameter>
+                <parameter name="chamber_radius">0.6</parameter>
+                <parameter name="nozzle_length" />
+                <parameter name="divergence_angle">21</parameter>
+                <parameter name="area_ratio">40</parameter>
+                <parameter name="chamber_length">1</parameter>
+                <parameter name="geometry.cross_sections">
+                    <geometry.cross_sections offset="-4.93056435433238" thickness="0.02" />
+                    <geometry.cross_sections rx="0.6" offset="-4.93056435433238" thickness="0.02" />
+                    <geometry.cross_sections rx="0.6" offset="-3.93056435433238" thickness="0.02" />
+                    <geometry.cross_sections rx="0.319504825211347" tangent.radial.pos="0.875" tangent.offset.pos="0.875" offset="-3.53750791889914" thickness="0.02" />
+                    <geometry.cross_sections rx="1.75" thickness="0.02" />
+                </parameter>
+            </object>
+        </object>
+        <object name="Sep motor #1" type="static_body" x="20" z="2.9">
+            <parameter name="geometry.cross_sections">
+                <section type="rectangle" />
+                <section type="rectangle" rx="0.5" />
+                <section type="rectangle" offset="1.2" rx="0.5" />
+                <section type="rectangle" />
+            </parameter>
+            <parameter name="mass">100</parameter>
+        </object>
+        <object name="Sep motor #2" type="static_body" x="20" y="2.9">
+            <parameter name="geometry.cross_sections">
+                <section type="rectangle" />
+                <section type="rectangle" rx="0.5" />
+                <section type="rectangle" offset="1.2" rx="0.5" />
+                <section type="rectangle" />
+            </parameter>
+            <parameter name="mass">100</parameter>
+        </object>
+        <object name="Sep motor #3" type="static_body" x="20" z="-2.9">
+            <parameter name="geometry.cross_sections">
+                <section type="rectangle" />
+                <section type="rectangle" rx="0.5" />
+                <section type="rectangle" offset="1.2" rx="0.5" />
+                <section type="rectangle" />
+            </parameter>
+            <parameter name="mass">100</parameter>
+        </object>
+        <object name="Sep motor #4" type="static_body" x="20" y="-2.9">
+            <parameter name="geometry.cross_sections">
+                <section type="rectangle" />
+                <section type="rectangle" rx="0.5" />
+                <section type="rectangle" offset="1.2" rx="0.5" />
+                <section type="rectangle" />
+            </parameter>
+            <parameter name="mass">100</parameter>
+        </object>
+        <object name="LO2 tank" type="fuel_tank" x="14.55">
+            <parameter name="geometry.cross_sections">
+                <section type="ellipse" />
+                <section type="ellipse" offset="1.7" rx="3.1" tangent.offset.neg="2" />
+                <section type="ellipse" offset="0.5" rx="3.1" tangent.offset.pos="2" />
+                <section type="ellipse" offset="2" />
+            </parameter>
+            <parameter name="middle_length">0.999999999999999</parameter>
+            <parameter name="outer_radius">2.55</parameter>
+            <parameter name="upper_radius">2.6</parameter>
+            <parameter name="lower_radius">2.1</parameter>
+            <parameter name="fuel_type">O2</parameter>
+            <parameter name="mass">2000</parameter>
+        </object>
+        <object name="LH2 tank" type="fuel_tank">
+            <parameter name="geometry.cross_sections">
+                <section type="ellipse" />
+                <section type="ellipse" offset="3.1" rx="3.1" tangent.offset.neg="3.1" />
+                <section type="ellipse" offset="9.9" rx="3.1" tangent.offset.pos="-2" />
+                <section type="ellipse" offset="-1.8" />
+            </parameter>
+            <parameter name="outer_radius">2.6</parameter>
+            <parameter name="middle_length">14.5</parameter>
+            <parameter name="lower_radius">-2.6</parameter>
+            <parameter name="upper_radius">2.6</parameter>
+            <parameter name="fuel_type">H2</parameter>
+            <parameter name="mass">2000</parameter>
+        </object>
+    </object>
+    <object name="RV-505A (First stage)" type="vessel" x="29.3">
+        <parameter name="geometry.cross_sections">
+            <section type="ellipse" rx="1.7" />
+            <section type="ellipse" rx="1.95" />
+            <section type="ellipse" offset="32.8" rx="1.95" />
+            <section type="ellipse" offset="0.8" rx="1.8" />
+        </parameter>
+        <parameter name="mass">2000</parameter>
+        <object name="Interstage" type="static_body" x="-3">
+            <parameter name="geometry.cross_sections">
+                <section type="ellipse" rx="1.95" />
+                <section type="ellipse" offset="3" rx="1.95" />
+            </parameter>
+            <parameter name="mass">1000</parameter>
+        </object>
+        <object name="RD-171" type="gimbal" x="33.2">
+            <parameter name="geometry.cross_sections">
+                <section type="ellipse" />
+                <section type="ellipse" rx="1.7" offset="-0.4" />
+            </parameter>
+            <parameter name="pitch_min">-7</parameter>
+            <parameter name="pitch_max">7</parameter>
+            <parameter name="pitch_rate">20</parameter>
+            <parameter name="pitch_bits">16</parameter>
+            <parameter name="yaw_bits">16</parameter>
+            <parameter name="yaw_rate">20</parameter>
+            <parameter name="yaw_min">-7</parameter>
+            <parameter name="yaw_max">7</parameter>
+            <parameter name="mass">9750</parameter>
+            <object name="Nozzle #1" type="rocket_engine" y="1.1" z="-2.77556e-017">
+                <parameter name="chamber_radius">0.25</parameter>
+                <parameter name="exit_radius">0.72</parameter>
+                <parameter name="area_ratio">36.8</parameter>
+                <parameter name="divergence_angle">21</parameter>
+                <parameter name="chamber_length">0.6</parameter>
+            </object>
+            <object name="Nozzle #2" type="rocket_engine" x="2.77556e-017" y="1.38778e-016" z="-1.1">
+                <parameter name="chamber_radius">0.25</parameter>
+                <parameter name="exit_radius">0.72</parameter>
+                <parameter name="area_ratio">36.8</parameter>
+                <parameter name="divergence_angle">21</parameter>
+                <parameter name="chamber_length">0.6</parameter>
+            </object>
+            <object name="Nozzle #3" type="rocket_engine" y="-1.1" z="-2.77556e-017">
+                <parameter name="chamber_radius">0.25</parameter>
+                <parameter name="exit_radius">0.72</parameter>
+                <parameter name="area_ratio">36.8</parameter>
+                <parameter name="divergence_angle">21</parameter>
+                <parameter name="chamber_length">0.6</parameter>
+            </object>
+            <object name="Nozzle #4" type="rocket_engine" z="1.1">
+                <parameter name="chamber_radius">0.25</parameter>
+                <parameter name="exit_radius">0.72</parameter>
+                <parameter name="area_ratio">36.8</parameter>
+                <parameter name="divergence_angle">21</parameter>
+                <parameter name="chamber_length">0.6</parameter>
+            </object>
+        </object>
+        <object name="RP-1 tank" type="fuel_tank" x="22.9">
+            <parameter name="geometry.cross_sections">
+                <section type="ellipse" />
+                <section type="ellipse" offset="1" rx="1.9" tangent.offset.neg="1" />
+                <section type="ellipse" offset="8" rx="1.9" tangent.offset.pos="0.5" />
+                <section type="ellipse" offset="0.5" />
+            </parameter>
+            <parameter name="fuel_type">RP-1</parameter>
+            <parameter name="mass">2000</parameter>
+        </object>
+        <object name="LOX tank" type="fuel_tank">
+            <parameter name="geometry.cross_sections">
+                <section type="ellipse" />
+                <section type="ellipse" offset="0.85" rx="1.9" tangent.offset.neg="0.85" />
+                <section type="ellipse" offset="21" rx="1.9" tangent.offset.pos="1" />
+                <section type="ellipse" offset="1" />
+            </parameter>
+            <parameter name="fuel_type">O2</parameter>
+            <parameter name="mass">2000</parameter>
+        </object>
+    </object>
+</EVDS>
