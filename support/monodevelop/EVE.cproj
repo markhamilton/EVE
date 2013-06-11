@@ -11,6 +11,14 @@
     <Compiler>
       <Compiler ctype="GppCompiler" />
     </Compiler>
+    <Packages>
+      <Packages>
+        <Package file="/usr/lib/x86_64-linux-gnu/pkgconfig/OGRE.pc" name="OGRE" IsProject="False" />
+        <Package file="/usr/lib/x86_64-linux-gnu/pkgconfig/OGRE-Terrain.pc" name="OGRE-Terrain" IsProject="False" />
+        <Package file="/usr/lib/x86_64-linux-gnu/pkgconfig/OGRE-RTShaderSystem.pc" name="OGRE-RTShaderSystem" IsProject="False" />
+        <Package file="/usr/lib/x86_64-linux-gnu/pkgconfig/OGRE-Paging.pc" name="OGRE-Paging" IsProject="False" />
+      </Packages>
+    </Packages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

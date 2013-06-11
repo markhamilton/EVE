@@ -1,6 +1,6 @@
-#include <Ogre.h>
-#include <OgreTextAreaOverlayElement.h>
-#include <OgreFontManager.h>
+#include <OGRE/Ogre.h>
+#include <OGRE/OgreTextAreaOverlayElement.h>
+#include <OGRE/OgreFontManager.h>
 
 #if OGRE_PLATFORM == OGRE_PLATFORM_WIN32
 #define WIN32_LEAN_AND_MEAN
@@ -10,6 +10,7 @@ INT WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR strCmdLine, INT)
 int main(int argc, char **argv)
 #endif
 {
+	using namespace Ogre;
 	Root *root = new Root();
 	if(!root->showConfigDialog())
 	{
@@ -19,7 +20,7 @@ int main(int argc, char **argv)
 	SceneManager *sceneMgr = root->createSceneManager(Ogre::ST_GENERIC);
 
 	Camera *mainCam = sceneMgr->createCamera("MainCam");
-	ViewPort *vp = renderWindow->addViewPort(mainCam);
+	//ViewPort *vp = renderWindow->addViewPort(mainCam);
 
 	return 0;
 }
