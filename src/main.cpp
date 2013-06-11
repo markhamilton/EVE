@@ -21,6 +21,5 @@ int main(int argc, char **argv)
 	Camera *mainCam = sceneMgr->createCamera("MainCam");
 	ViewPort *vp = renderWindow->addViewPort(mainCam);
 
-
 	return 0;
 }

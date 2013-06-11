@@ -17,7 +17,7 @@
     <OutputPath>..\..\bin\Debug</OutputPath>
     <DefineSymbols>DEBUG MONODEVELOP</DefineSymbols>
     <SourceDirectory>.</SourceDirectory>
-    <OutputName>FlightSim</OutputName>
+    <OutputName>EVE</OutputName>
     <CompileTarget>Bin</CompileTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -25,7 +25,7 @@
     <DefineSymbols>MONODEVELOP</DefineSymbols>
     <SourceDirectory>.</SourceDirectory>
     <OptimizationLevel>3</OptimizationLevel>
-    <OutputName>FlightSim</OutputName>
+    <OutputName>EVE</OutputName>
     <CompileTarget>Bin</CompileTarget>
   </PropertyGroup>
   <ItemGroup>
