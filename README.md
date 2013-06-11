@@ -8,6 +8,7 @@ EVE is meant to run on any desktop platform to provide visual or fully-automated
 # Roadmap
 
 The current plans with the software are to:
+
 1. Provide a simulated physics sandbox for you to test space flight in.
 2. Take part in first-person test flights or perform batch simulations.
 3. Both a graphical and command-line interface.
