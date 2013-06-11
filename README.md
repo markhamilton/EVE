@@ -1,4 +1,4 @@
-EvE Flight Simulator
+EVE Flight Simulator
 ====================
 
 Test planes and spacecraft in a fully simulated physical environment. This project is in its early stages and is not usable at present.
