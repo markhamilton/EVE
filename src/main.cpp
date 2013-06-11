@@ -11,7 +11,7 @@ int main(int argc, char **argv)
 #endif
 {
 	using namespace Ogre;
-	Root *root = new Root();
+	Root *root = new Root("", "");
 	if(!root->showConfigDialog())
 	{
 		return 0;
@@ -20,7 +20,7 @@ int main(int argc, char **argv)
 	SceneManager *sceneMgr = root->createSceneManager(Ogre::ST_GENERIC);
 
 	Camera *mainCam = sceneMgr->createCamera("MainCam");
-	//ViewPort *vp = renderWindow->addViewPort(mainCam);
+	Viewport *vp = renderWindow->addViewport(mainCam);
 
 	return 0;
 }
