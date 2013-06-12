@@ -1,26 +1,26 @@
-#include <OGRE/Ogre.h>
-#include <OGRE/OgreTextAreaOverlayElement.h>
-#include <OGRE/OgreFontManager.h>
-
-#if OGRE_PLATFORM == OGRE_PLATFORM_WIN32
+#include "../include/simapp.hpp"
+ 
+#if OGRE_PLATFORM == PLATFORM_WIN32 || OGRE_PLATFORM == OGRE_PLATFORM_WIN32
 #define WIN32_LEAN_AND_MEAN
-#include <Windows.h>
-INT WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR strCmdLine, INT)
+#include "windows.h"
+INT WINAPI WinMain(HINSTANCE hInst, HINSTANCE, LPSTR strCmdLine, INT)
 #else
 int main(int argc, char **argv)
 #endif
 {
-	using namespace Ogre;
-	Root *root = new Root("", "");
-	if(!root->showConfigDialog())
+	SimApp app;
+	try	
 	{
-		return 0;
+		app.start();
 	}
-	RenderWindow *renderWindow = root->createRenderWindow("FlightSim", 640, 480, false);
-	SceneManager *sceneMgr = root->createSceneManager(Ogre::ST_GENERIC);
-
-	Camera *mainCam = sceneMgr->createCamera("MainCam");
-	Viewport *vp = renderWindow->addViewport(mainCam);
-
-	return 0;
+	catch(std::exception& e)
+    {
+#if OGRE_PLATFORM == PLATFORM_WIN32 || OGRE_PLATFORM == OGRE_PLATFORM_WIN32
+        MessageBoxA(NULL, e.what(), "An exception has occurred!", MB_OK | MB_ICONERROR | MB_TASKMODAL);
+#else
+        fprintf(stderr, "An exception has occurred: %s\n", e.what());
+#endif
+    }
+ 
+    return 0;
 }
