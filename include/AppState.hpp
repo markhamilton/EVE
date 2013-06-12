@@ -25,7 +25,7 @@ public:
 	virtual void		popAppState() = 0;
 	virtual void		pauseAppState() = 0;
 	virtual void		shutdown() = 0;
-        virtual void            popAllAndPushAppState(AppState* state) = 0;
+    virtual void        popAllAndPushAppState(AppState* state) = 0;
 };
  
 //|||||||||||||||||||||||||||||||||||||||||||||||
@@ -51,13 +51,13 @@ protected:
 	bool		pushAppState(AppState* state){return m_pParent->pushAppState(state);}
 	void		popAppState(){m_pParent->popAppState();}
 	void		shutdown(){m_pParent->shutdown();}
-        void            popAllAndPushAppState(AppState* state){m_pParent->popAllAndPushAppState(state);}
+    void        popAllAndPushAppState(AppState* state){m_pParent->popAllAndPushAppState(state);}
  
 	AppStateListener*	m_pParent;
  
 	Ogre::Camera*		m_pCamera;
 	Ogre::SceneManager*	m_pSceneMgr;
-        Ogre::FrameEvent        m_FrameEvent;
+    Ogre::FrameEvent    m_FrameEvent;
 };
  
 //|||||||||||||||||||||||||||||||||||||||||||||||

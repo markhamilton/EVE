@@ -13,7 +13,7 @@ AppStateManager::~AppStateManager()
 {
 	state_info si;
  
-        while(!m_ActiveStateStack.empty())
+    while(!m_ActiveStateStack.empty())
 	{
 		m_ActiveStateStack.back()->exit();
 		m_ActiveStateStack.pop_back();
@@ -22,8 +22,8 @@ AppStateManager::~AppStateManager()
 	while(!m_States.empty())
 	{
 		si = m_States.back();
-                si.state->destroy();
-                m_States.pop_back();
+        si.state->destroy();
+        m_States.pop_back();
 	}
 }
 

@@ -22,7 +22,7 @@
 #include <OIS/OISKeyboard.h>
 #include <OIS/OISMouse.h>
  
-#include <OGRE/SdkTrays.h>
+// #include <OGRE/SdkTrays.h>
  
 //|||||||||||||||||||||||||||||||||||||||||||||||
  
@@ -52,7 +52,7 @@ public:
 	OIS::Keyboard*			m_pKeyboard;
 	OIS::Mouse*				m_pMouse;
  
-        OgreBites::SdkTrayManager*	        m_pTrayMgr;
+    OgreBites::SdkTrayManager* m_pTrayMgr;
  
 private:
 	OgreFramework(const OgreFramework&);
