@@ -25,14 +25,14 @@ public:
 	void popAppState();
 	void pauseAppState();
 	void shutdown();
-        void popAllAndPushAppState(AppState* state);
+	void popAllAndPushAppState(AppState* state);
  
 protected:
 	void init(AppState *state);
  
 	std::vector<AppState*>		m_ActiveStateStack;
 	std::vector<state_info>		m_States;
-	bool				m_bShutdown;
+	bool						m_bShutdown;
 };
  
 

@@ -1,6 +1,7 @@
 #include "DotSceneLoader.hpp"
 #include "tinyxml.h"
 #include <OGRE/Ogre.h>
+#include <string>
  
 using namespace std;
 using namespace Ogre;
