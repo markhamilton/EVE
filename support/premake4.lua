@@ -13,18 +13,16 @@ project "EVE"
 	includedirs { "../include" }
 	files { "../source/**" }
 	defines { "EVE_SIM" }
+	links { "OIS", "OGRE", "OGRE-Paging" }
+	kind "WindowedApp"
 	
 	configuration "Debug"
 		defines { "DEBUG" }
-		kind "WindowedApp"
 		flags { "Symbols" }
-		links { "OIS", "OGRE", "OGRE-Paging" }
 	
 	configuration "Release"
 		defines { "NDEBUG" }
-		kind "WindowedApp"
 		flags { "Optimize" }
-		links { "OIS", "OGRE", "OGRE-Paging" }
 
 
 -- TODO: Add paths for OGRE3D (cross-platform)
