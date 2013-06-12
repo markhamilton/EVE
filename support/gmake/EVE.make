@@ -119,6 +119,7 @@ OBJECTS := \
 	$(OBJDIR)/PauseState.o \
 	$(OBJDIR)/GameState.o \
 	$(OBJDIR)/main.o \
+	$(OBJDIR)/DotSceneLoader.o \
 	$(OBJDIR)/OgreFramework.o \
 	$(OBJDIR)/SimApp.o \
 	$(OBJDIR)/MenuState.o \
@@ -194,6 +195,9 @@ $(OBJDIR)/GameState.o: ../../source/GameState.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/main.o: ../../source/main.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/DotSceneLoader.o: ../../source/DotSceneLoader.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/OgreFramework.o: ../../source/OgreFramework.cpp
