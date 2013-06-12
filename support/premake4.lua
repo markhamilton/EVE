@@ -1,29 +1,49 @@
-solution "EVE"
-	configurations { "Debug", "Release" }
-	debugdir "../debug"
+-- TODO: Add paths for OGRE3D (cross-platform)
+-- TODO: Add console builds linked with ncurses
 
-if not os.isdir("../debug") then os.mkdir("../debug") end
+-- This makes the script a little bit cleaner
+
 
 --------------------------------------------------------------------------------
 -- EVE Flight Simulator 
 --------------------------------------------------------------------------------
+solution "EVE"
+	debugdir "../debug"
+	location (_WORKING_DIR.."/"..(_ACTION or ""))
+	targetdir (_WORKING_DIR.."/../bin") 
+
+if not os.isdir("../debug") then os.mkdir("../debug") end
+
 project "EVE"
 	uuid "D20CBF50-D363-11E2-8B8B-0800200C9A66"
 	language "C++"
 	includedirs { "../include" }
 	files { "../source/**" }
-	defines { "EVE_SIM" }
 	links { "OIS", "OGRE", "OGRE-Paging" }
+	defines { "EVE_SIM" }
 	kind "WindowedApp"
-	
+
+	configurations {
+		"Debug",
+		"Release"
+	}
+
+	platforms { "x32", "x64" }
+
+	configuration { "windows", "x64" }
+		defines { "WIN64" }
+
+	configuration { "linux" }
+		links { "m", "pthread" }
+		linkoptions { "-lstdc++" }
+
 	configuration "Debug"
 		defines { "DEBUG" }
 		flags { "Symbols" }
-	
+
 	configuration "Release"
 		defines { "NDEBUG" }
 		flags { "Optimize" }
 
 
--- TODO: Add paths for OGRE3D (cross-platform)
--- TODO: Add console builds linked with ncurses
+

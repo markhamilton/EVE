@@ -1,7 +1,7 @@
 #ifndef SIMAPP_HPP
 #define SIMAPP_HPP
 
-#include "AdvancedOgreFramework.hpp"
+#include "OgreFramework.hpp"
 #include "AppStateManager.hpp"
  
 class SimApp 
