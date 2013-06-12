@@ -27,4 +27,5 @@ project "EVE"
 		links { "OIS", "OGRE", "OGRE-Paging" }
 
 
--- TODO: Add paths for OGRE in the future
+-- TODO: Add paths for OGRE3D (cross-platform)
+-- TODO: Add console builds linked with ncurses
