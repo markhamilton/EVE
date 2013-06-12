@@ -1,6 +1,6 @@
 //|||||||||||||||||||||||||||||||||||||||||||||||
  
-#include "AdvancedOgreFramework.hpp"
+#include "OgreFramework.hpp"
  
 //|||||||||||||||||||||||||||||||||||||||||||||||
  

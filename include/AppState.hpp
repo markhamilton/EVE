@@ -5,7 +5,7 @@
  
 //|||||||||||||||||||||||||||||||||||||||||||||||
  
-#include "AdvancedOgreFramework.hpp"
+#include "OgreFramework.hpp"
  
 class AppState;
  

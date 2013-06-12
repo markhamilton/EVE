@@ -5,24 +5,24 @@
  
 //|||||||||||||||||||||||||||||||||||||||||||||||
  
-#include <OgreCamera.h>
-#include <OgreEntity.h>
-#include <OgreLogManager.h>
-#include <OgreOverlay.h>
-#include <OgreOverlayElement.h>
-#include <OgreOverlayManager.h>
-#include <OgreRoot.h>
-#include <OgreViewport.h>
-#include <OgreSceneManager.h>
-#include <OgreRenderWindow.h>
-#include <OgreConfigFile.h>
+#include <OGRE/OgreCamera.h>
+#include <OGRE/OgreEntity.h>
+#include <OGRE/OgreLogManager.h>
+#include <OGRE/OgreOverlay.h>
+#include <OGRE/OgreOverlayElement.h>
+#include <OGRE/OgreOverlayManager.h>
+#include <OGRE/OgreRoot.h>
+#include <OGRE/OgreViewport.h>
+#include <OGRE/OgreSceneManager.h>
+#include <OGRE/OgreRenderWindow.h>
+#include <OGRE/OgreConfigFile.h>
  
-#include <OISEvents.h>
-#include <OISInputManager.h>
-#include <OISKeyboard.h>
-#include <OISMouse.h>
+#include <OIS/OISEvents.h>
+#include <OIS/OISInputManager.h>
+#include <OIS/OISKeyboard.h>
+#include <OIS/OISMouse.h>
  
-#include <SdkTrays.h>
+#include <OGRE/SdkTrays.h>
  
 //|||||||||||||||||||||||||||||||||||||||||||||||
  
@@ -43,13 +43,13 @@ public:
 	bool mouseReleased(const OIS::MouseEvent &evt, OIS::MouseButtonID id);
  
 	Ogre::Root*				m_pRoot;
-	Ogre::RenderWindow*			m_pRenderWnd;
-	Ogre::Viewport*				m_pViewport;
+	Ogre::RenderWindow*		m_pRenderWnd;
+	Ogre::Viewport*			m_pViewport;
 	Ogre::Log*				m_pLog;
-	Ogre::Timer*				m_pTimer;
+	Ogre::Timer*			m_pTimer;
  
-	OIS::InputManager*			m_pInputMgr;
-	OIS::Keyboard*				m_pKeyboard;
+	OIS::InputManager*		m_pInputMgr;
+	OIS::Keyboard*			m_pKeyboard;
 	OIS::Mouse*				m_pMouse;
  
         OgreBites::SdkTrayManager*	        m_pTrayMgr;

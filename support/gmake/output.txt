@@ -1,0 +1,356 @@
+==== Building EVE (debug32) ====
+PauseState.cpp
+In file included from ../../include/OgreFramework.hpp:25:0,
+                 from ../../include/AppState.hpp:8,
+                 from ../../include/PauseState.hpp:8,
+                 from ../../source/PauseState.cpp:3:
+/usr/include/OGRE/SdkTrays.h:1700:72: error: ‘OIS’ has not been declared
+/usr/include/OGRE/SdkTrays.h:1700:82: error: expected ‘,’ or ‘...’ before ‘*’ token
+/usr/include/OGRE/SdkTrays.h:2907:30: error: ‘OIS’ does not name a type
+/usr/include/OGRE/SdkTrays.h:2907:45: error: expected unqualified-id before ‘&’ token
+/usr/include/OGRE/SdkTrays.h:2907:45: error: expected ‘)’ before ‘&’ token
+/usr/include/OGRE/SdkTrays.h:2907:35: error: expected ‘;’ at end of member declaration
+/usr/include/OGRE/SdkTrays.h:2907:52: error: ‘OIS’ has not been declared
+/usr/include/OGRE/SdkTrays.h:2907:57: error: expected ‘;’ at end of member declaration
+/usr/include/OGRE/SdkTrays.h:2907:71: error: ‘id’ does not name a type
+/usr/include/OGRE/SdkTrays.h:2990:28: error: ‘OIS’ does not name a type
+/usr/include/OGRE/SdkTrays.h:2990:43: error: expected unqualified-id before ‘&’ token
+/usr/include/OGRE/SdkTrays.h:2990:43: error: expected ‘)’ before ‘&’ token
+/usr/include/OGRE/SdkTrays.h:2990:33: error: expected ‘;’ at end of member declaration
+/usr/include/OGRE/SdkTrays.h:2990:48: error: declaration of ‘int& OgreBites::SdkTrayManager::evt’
+/usr/include/OGRE/SdkTrays.h:2907:47: error: conflicts with previous declaration ‘int& OgreBites::SdkTrayManager::evt’
+/usr/include/OGRE/SdkTrays.h:2990:50: error: ‘OIS’ has not been declared
+/usr/include/OGRE/SdkTrays.h:2990:55: error: expected ‘;’ at end of member declaration
+/usr/include/OGRE/SdkTrays.h:2990:55: error: declaration of ‘int OgreBites::SdkTrayManager::MouseButtonID’
+/usr/include/OGRE/SdkTrays.h:2907:57: error: conflicts with previous declaration ‘int OgreBites::SdkTrayManager::MouseButtonID’
+/usr/include/OGRE/SdkTrays.h:2990:69: error: ‘id’ does not name a type
+/usr/include/OGRE/SdkTrays.h:3048:30: error: ‘OIS’ does not name a type
+/usr/include/OGRE/SdkTrays.h:3048:45: error: expected unqualified-id before ‘&’ token
+/usr/include/OGRE/SdkTrays.h:3048:45: error: expected ‘)’ before ‘&’ token
+/usr/include/OGRE/SdkTrays.h:3048:35: error: expected ‘;’ at end of member declaration
+/usr/include/OGRE/SdkTrays.h:3048:47: error: expected ‘;’ at end of member declaration
+/usr/include/OGRE/SdkTrays.h:3048:47: error: declaration of ‘int& OgreBites::SdkTrayManager::evt’
+/usr/include/OGRE/SdkTrays.h:2907:47: error: conflicts with previous declaration ‘int& OgreBites::SdkTrayManager::evt’
+/usr/include/OGRE/SdkTrays.h:3048:50: error: expected unqualified-id before ‘)’ token
+../../source/PauseState.cpp:154:1: error: expected ‘}’ at end of input
+In file included from ../../include/OgreFramework.hpp:25:0,
+                 from ../../include/AppState.hpp:8,
+                 from ../../include/PauseState.hpp:8,
+                 from ../../source/PauseState.cpp:3:
+/usr/include/OGRE/SdkTrays.h: In constructor ‘OgreBites::SdkTrayManager::SdkTrayManager(const String&, Ogre::RenderWindow*, int)’:
+/usr/include/OGRE/SdkTrays.h:1702:5: error: class ‘OgreBites::SdkTrayManager’ does not have any field named ‘mName’
+/usr/include/OGRE/SdkTrays.h:1702:18: error: class ‘OgreBites::SdkTrayManager’ does not have any field named ‘mWindow’
+/usr/include/OGRE/SdkTrays.h:1702:35: error: class ‘OgreBites::SdkTrayManager’ does not have any field named ‘mMouse’
+/usr/include/OGRE/SdkTrays.h:1702:42: error: ‘mouse’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1702:50: error: class ‘OgreBites::SdkTrayManager’ does not have any field named ‘mWidgetDeathRow’
+/usr/include/OGRE/SdkTrays.h:1702:69: error: class ‘OgreBites::SdkTrayManager’ does not have any field named ‘mListener’
+/usr/include/OGRE/SdkTrays.h:1702:79: error: ‘listener’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1702:90: error: class ‘OgreBites::SdkTrayManager’ does not have any field named ‘mWidgetPadding’
+/usr/include/OGRE/SdkTrays.h:1703:17: error: class ‘OgreBites::SdkTrayManager’ does not have any field named ‘mWidgetSpacing’
+/usr/include/OGRE/SdkTrays.h:1703:36: error: class ‘OgreBites::SdkTrayManager’ does not have any field named ‘mTrayPadding’
+/usr/include/OGRE/SdkTrays.h:1703:53: error: class ‘OgreBites::SdkTrayManager’ does not have any field named ‘mTrayDrag’
+/usr/include/OGRE/SdkTrays.h:1703:71: error: class ‘OgreBites::SdkTrayManager’ does not have any field named ‘mExpandedMenu’
+/usr/include/OGRE/SdkTrays.h:1703:89: error: class ‘OgreBites::SdkTrayManager’ does not have any field named ‘mDialog’
+/usr/include/OGRE/SdkTrays.h:1703:101: error: class ‘OgreBites::SdkTrayManager’ does not have any field named ‘mOk’
+/usr/include/OGRE/SdkTrays.h:1703:109: error: class ‘OgreBites::SdkTrayManager’ does not have any field named ‘mYes’
+/usr/include/OGRE/SdkTrays.h:1704:17: error: class ‘OgreBites::SdkTrayManager’ does not have any field named ‘mNo’
+/usr/include/OGRE/SdkTrays.h:1704:25: error: class ‘OgreBites::SdkTrayManager’ does not have any field named ‘mCursorWasVisible’
+/usr/include/OGRE/SdkTrays.h:1704:51: error: class ‘OgreBites::SdkTrayManager’ does not have any field named ‘mFpsLabel’
+/usr/include/OGRE/SdkTrays.h:1704:65: error: class ‘OgreBites::SdkTrayManager’ does not have any field named ‘mStatsPanel’
+/usr/include/OGRE/SdkTrays.h:1704:81: error: class ‘OgreBites::SdkTrayManager’ does not have any field named ‘mLogo’
+/usr/include/OGRE/SdkTrays.h:1704:91: error: class ‘OgreBites::SdkTrayManager’ does not have any field named ‘mLoadBar’
+/usr/include/OGRE/SdkTrays.h:1705:5: error: class ‘OgreBites::SdkTrayManager’ does not have any field named ‘mGroupInitProportion’
+/usr/include/OGRE/SdkTrays.h:1705:33: error: class ‘OgreBites::SdkTrayManager’ does not have any field named ‘mGroupLoadProportion’
+/usr/include/OGRE/SdkTrays.h:1705:61: error: class ‘OgreBites::SdkTrayManager’ does not have any field named ‘mLoadInc’
+/usr/include/OGRE/SdkTrays.h:1700:3: error: uninitialized reference member ‘OgreBites::SdkTrayManager::evt’ [-fpermissive]
+/usr/include/OGRE/SdkTrays.h:1709:28: error: ‘mName’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1714:4: error: ‘mBackdropLayer’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1715:4: error: ‘mTraysLayer’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1716:4: error: ‘mPriorityLayer’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1717:4: error: ‘mCursorLayer’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1725:4: error: ‘mCursor’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1727:4: error: ‘mBackdrop’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1729:4: error: ‘mDialogShade’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1739:5: error: ‘mTrays’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1743:5: error: ‘mTrayWidgetAlign’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1753:4: error: ‘mTrays’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1754:4: error: ‘mTrayWidgetAlign’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In destructor ‘virtual OgreBites::SdkTrayManager::~SdkTrayManager()’:
+/usr/include/OGRE/SdkTrays.h:1772:33: error: ‘mWidgetDeathRow’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1776:4: error: ‘mWidgetDeathRow’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1778:15: error: ‘mBackdropLayer’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1779:15: error: ‘mTraysLayer’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1780:15: error: ‘mPriorityLayer’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1781:15: error: ‘mCursorLayer’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1786:31: error: ‘mBackdrop’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1787:31: error: ‘mCursor’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1788:31: error: ‘mDialogShade’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1792:32: error: ‘mTrays’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘Ogre::OverlayContainer* OgreBites::SdkTrayManager::getTrayContainer(OgreBites::TrayLocation)’:
+/usr/include/OGRE/SdkTrays.h:1815:75: error: ‘mTrays’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘Ogre::Overlay* OgreBites::SdkTrayManager::getBackdropLayer()’:
+/usr/include/OGRE/SdkTrays.h:1816:46: error: ‘mBackdropLayer’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘Ogre::Overlay* OgreBites::SdkTrayManager::getTraysLayer()’:
+/usr/include/OGRE/SdkTrays.h:1817:43: error: ‘mTraysLayer’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘Ogre::Overlay* OgreBites::SdkTrayManager::getCursorLayer()’:
+/usr/include/OGRE/SdkTrays.h:1818:44: error: ‘mCursorLayer’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘Ogre::OverlayContainer* OgreBites::SdkTrayManager::getBackdropContainer()’:
+/usr/include/OGRE/SdkTrays.h:1819:59: error: ‘mBackdrop’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘Ogre::OverlayContainer* OgreBites::SdkTrayManager::getCursorContainer()’:
+/usr/include/OGRE/SdkTrays.h:1820:57: error: ‘mCursor’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘Ogre::OverlayElement* OgreBites::SdkTrayManager::getCursorImage()’:
+/usr/include/OGRE/SdkTrays.h:1821:51: error: ‘mCursor’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘void OgreBites::SdkTrayManager::setListener(OgreBites::SdkTrayListener*)’:
+/usr/include/OGRE/SdkTrays.h:1825:4: error: ‘mListener’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘OgreBites::SdkTrayListener* OgreBites::SdkTrayManager::getListener()’:
+/usr/include/OGRE/SdkTrays.h:1830:11: error: ‘mListener’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘void OgreBites::SdkTrayManager::showBackdrop(const String&)’:
+/usr/include/OGRE/SdkTrays.h:1853:49: error: ‘mBackdrop’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1854:4: error: ‘mBackdropLayer’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘void OgreBites::SdkTrayManager::hideBackdrop()’:
+/usr/include/OGRE/SdkTrays.h:1859:4: error: ‘mBackdropLayer’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘void OgreBites::SdkTrayManager::showCursor(const String&)’:
+/usr/include/OGRE/SdkTrays.h:1870:9: error: ‘mCursorLayer’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘void OgreBites::SdkTrayManager::hideCursor()’:
+/usr/include/OGRE/SdkTrays.h:1879:4: error: ‘mCursorLayer’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1884:34: error: ‘mWidgets’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1890:21: error: ‘setExpandedMenu’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘void OgreBites::SdkTrayManager::refreshCursor()’:
+/usr/include/OGRE/SdkTrays.h:1910:4: error: ‘mCursor’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1910:25: error: ‘mMouse’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘void OgreBites::SdkTrayManager::showTrays()’:
+/usr/include/OGRE/SdkTrays.h:1916:4: error: ‘mTraysLayer’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1917:4: error: ‘mPriorityLayer’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘void OgreBites::SdkTrayManager::hideTrays()’:
+/usr/include/OGRE/SdkTrays.h:1922:4: error: ‘mTraysLayer’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1923:4: error: ‘mPriorityLayer’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1928:34: error: ‘mWidgets’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1934:21: error: ‘setExpandedMenu’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘bool OgreBites::SdkTrayManager::isCursorVisible()’:
+/usr/include/OGRE/SdkTrays.h:1937:35: error: ‘mCursorLayer’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘bool OgreBites::SdkTrayManager::isBackdropVisible()’:
+/usr/include/OGRE/SdkTrays.h:1938:37: error: ‘mBackdropLayer’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘bool OgreBites::SdkTrayManager::areTraysVisible()’:
+/usr/include/OGRE/SdkTrays.h:1939:35: error: ‘mTraysLayer’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘void OgreBites::SdkTrayManager::setTrayWidgetAlignment(OgreBites::TrayLocation, Ogre::GuiHorizontalAlignment)’:
+/usr/include/OGRE/SdkTrays.h:1946:4: error: ‘mTrayWidgetAlign’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1948:33: error: ‘mWidgets’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘void OgreBites::SdkTrayManager::setWidgetPadding(Ogre::Real)’:
+/usr/include/OGRE/SdkTrays.h:1958:4: error: ‘mWidgetPadding’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘void OgreBites::SdkTrayManager::setWidgetSpacing(Ogre::Real)’:
+/usr/include/OGRE/SdkTrays.h:1964:4: error: ‘mWidgetSpacing’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘void OgreBites::SdkTrayManager::setTrayPadding(Ogre::Real)’:
+/usr/include/OGRE/SdkTrays.h:1969:4: error: ‘mTrayPadding’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘virtual Ogre::Real OgreBites::SdkTrayManager::getWidgetPadding() const’:
+/usr/include/OGRE/SdkTrays.h:1973:56: error: ‘mWidgetPadding’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘virtual Ogre::Real OgreBites::SdkTrayManager::getWidgetSpacing() const’:
+/usr/include/OGRE/SdkTrays.h:1974:56: error: ‘mWidgetSpacing’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘virtual Ogre::Real OgreBites::SdkTrayManager::getTrayPadding() const’:
+/usr/include/OGRE/SdkTrays.h:1975:54: error: ‘mTrayPadding’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘virtual void OgreBites::SdkTrayManager::adjustTrays()’:
+/usr/include/OGRE/SdkTrays.h:1985:29: error: ‘mWidgetPadding’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1988:9: error: ‘mWidgets’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1990:6: error: ‘mTrays’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1993:10: error: ‘mTrays’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:1996:34: error: ‘mWidgets’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2000:32: error: ‘mWidgetSpacing’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2040:5: error: ‘mTrays’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2053:6: error: ‘mTrays’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2053:25: error: ‘mTrayPadding’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2055:6: error: ‘mTrays’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2057:6: error: ‘mTrays’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2057:51: error: ‘mTrayPadding’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2060:6: error: ‘mTrays’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2060:24: error: ‘mTrayPadding’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2062:6: error: ‘mTrays’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2064:6: error: ‘mTrays’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2064:50: error: ‘mTrayPadding’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2067:5: error: ‘mTrays’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘Ogre::Ray OgreBites::SdkTrayManager::getCursorRay(Ogre::Camera*)’:
+/usr/include/OGRE/SdkTrays.h:2077:44: error: ‘mCursor’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘OgreBites::Button* OgreBites::SdkTrayManager::createButton(OgreBites::TrayLocation, const String&, const String&, Ogre::Real)’:
+/usr/include/OGRE/SdkTrays.h:2084:23: error: ‘mListener’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘OgreBites::TextBox* OgreBites::SdkTrayManager::createTextBox(OgreBites::TrayLocation, const String&, const DisplayString&, Ogre::Real, Ogre::Real)’:
+/usr/include/OGRE/SdkTrays.h:2093:24: error: ‘mListener’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘OgreBites::SelectMenu* OgreBites::SdkTrayManager::createThickSelectMenu(OgreBites::TrayLocation, const String&, const DisplayString&, Ogre::Real, unsigned int, const StringVector&)’:
+/usr/include/OGRE/SdkTrays.h:2102:24: error: ‘mListener’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘OgreBites::SelectMenu* OgreBites::SdkTrayManager::createLongSelectMenu(OgreBites::TrayLocation, const String&, const DisplayString&, Ogre::Real, Ogre::Real, unsigned int, const StringVector&)’:
+/usr/include/OGRE/SdkTrays.h:2112:24: error: ‘mListener’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘OgreBites::Label* OgreBites::SdkTrayManager::createLabel(OgreBites::TrayLocation, const String&, const DisplayString&, Ogre::Real)’:
+/usr/include/OGRE/SdkTrays.h:2127:23: error: ‘mListener’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘OgreBites::Slider* OgreBites::SdkTrayManager::createThickSlider(OgreBites::TrayLocation, const String&, const DisplayString&, Ogre::Real, Ogre::Real, Ogre::Real, Ogre::Real, unsigned int)’:
+/usr/include/OGRE/SdkTrays.h:2143:23: error: ‘mListener’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘OgreBites::Slider* OgreBites::SdkTrayManager::createLongSlider(OgreBites::TrayLocation, const String&, const DisplayString&, Ogre::Real, Ogre::Real, Ogre::Real, Ogre::Real, Ogre::Real, unsigned int)’:
+/usr/include/OGRE/SdkTrays.h:2153:23: error: ‘mListener’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘OgreBites::CheckBox* OgreBites::SdkTrayManager::createCheckBox(OgreBites::TrayLocation, const String&, const DisplayString&, Ogre::Real)’:
+/usr/include/OGRE/SdkTrays.h:2184:24: error: ‘mListener’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘void OgreBites::SdkTrayManager::showFrameStats(OgreBites::TrayLocation, int)’:
+/usr/include/OGRE/SdkTrays.h:2217:5: error: ‘mFpsLabel’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2217:38: error: ‘mName’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2219:5: error: ‘mStatsPanel’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2222:21: error: ‘mFpsLabel’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2223:21: error: ‘mStatsPanel’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘void OgreBites::SdkTrayManager::hideFrameStats()’:
+/usr/include/OGRE/SdkTrays.h:2233:19: error: ‘mFpsLabel’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2234:19: error: ‘mStatsPanel’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘bool OgreBites::SdkTrayManager::areFrameStatsVisible()’:
+/usr/include/OGRE/SdkTrays.h:2242:11: error: ‘mFpsLabel’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘void OgreBites::SdkTrayManager::toggleAdvancedFrameStats()’:
+/usr/include/OGRE/SdkTrays.h:2250:8: error: ‘mFpsLabel’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘void OgreBites::SdkTrayManager::showLogo(OgreBites::TrayLocation, int)’:
+/usr/include/OGRE/SdkTrays.h:2258:26: error: ‘mLogo’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2258:61: error: ‘mName’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2259:21: error: ‘mLogo’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘void OgreBites::SdkTrayManager::hideLogo()’:
+/usr/include/OGRE/SdkTrays.h:2266:19: error: ‘mLogo’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘bool OgreBites::SdkTrayManager::isLogoVisible()’:
+/usr/include/OGRE/SdkTrays.h:2273:11: error: ‘mLogo’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘void OgreBites::SdkTrayManager::showLoadingBar(unsigned int, unsigned int, Ogre::Real)’:
+/usr/include/OGRE/SdkTrays.h:2285:8: error: ‘mDialog’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2286:8: error: ‘mLoadBar’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2288:4: error: ‘mLoadBar’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2288:31: error: ‘mName’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2290:4: error: ‘mDialogShade’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2296:4: error: ‘mCursorWasVisible’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2304:5: error: ‘mGroupInitProportion’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2305:5: error: ‘mGroupLoadProportion’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2309:5: error: ‘mGroupLoadProportion’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2310:29: error: ‘mGroupInitProportion’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2314:5: error: ‘mGroupInitProportion’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2315:5: error: ‘mGroupLoadProportion’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2319:5: error: ‘mGroupInitProportion’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2320:5: error: ‘mGroupLoadProportion’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘void OgreBites::SdkTrayManager::hideLoadingBar()’:
+/usr/include/OGRE/SdkTrays.h:2326:8: error: ‘mLoadBar’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2329:12: error: type ‘<type error>’ argument given to ‘delete’, expected pointer
+/usr/include/OGRE/SdkTrays.h:2333:9: error: ‘mCursorWasVisible’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2334:5: error: ‘mDialogShade’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘bool OgreBites::SdkTrayManager::isLoadingBarVisible()’:
+/usr/include/OGRE/SdkTrays.h:2340:11: error: ‘mLoadBar’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘void OgreBites::SdkTrayManager::showOkDialog(const DisplayString&, const DisplayString&)’:
+/usr/include/OGRE/SdkTrays.h:2348:8: error: ‘mLoadBar’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2352:8: error: ‘mDialog’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2357:9: error: ‘mOk’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2360:6: error: ‘mYes’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2361:6: error: ‘mNo’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2362:13: error: type ‘<type error>’ argument given to ‘delete’, expected pointer
+/usr/include/OGRE/SdkTrays.h:2363:13: error: type ‘<type error>’ argument given to ‘delete’, expected pointer
+/usr/include/OGRE/SdkTrays.h:2373:35: error: ‘mWidgets’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2379:5: error: ‘mDialogShade’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2381:27: error: ‘mName’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2389:5: error: ‘mCursorWasVisible’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2393:4: error: ‘mOk’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2393:21: error: ‘mName’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2396:4: error: ‘mDialogShade’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2399:14: error: ‘mDialog’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘void OgreBites::SdkTrayManager::showYesNoDialog(const DisplayString&, const DisplayString&)’:
+/usr/include/OGRE/SdkTrays.h:2407:8: error: ‘mLoadBar’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2411:8: error: ‘mDialog’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2416:9: error: ‘mOk’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2419:13: error: type ‘<type error>’ argument given to ‘delete’, expected pointer
+/usr/include/OGRE/SdkTrays.h:2429:35: error: ‘mWidgets’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2435:5: error: ‘mDialogShade’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2437:27: error: ‘mName’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2445:5: error: ‘mCursorWasVisible’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2449:4: error: ‘mYes’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2449:22: error: ‘mName’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2452:4: error: ‘mDialogShade’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2455:14: error: ‘mDialog’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2457:4: error: ‘mNo’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘void OgreBites::SdkTrayManager::closeDialog()’:
+/usr/include/OGRE/SdkTrays.h:2471:8: error: ‘mDialog’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2473:9: error: ‘mOk’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2476:13: error: type ‘<type error>’ argument given to ‘delete’, expected pointer
+/usr/include/OGRE/SdkTrays.h:2481:6: error: ‘mYes’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2482:6: error: ‘mNo’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2483:13: error: type ‘<type error>’ argument given to ‘delete’, expected pointer
+/usr/include/OGRE/SdkTrays.h:2484:13: error: type ‘<type error>’ argument given to ‘delete’, expected pointer
+/usr/include/OGRE/SdkTrays.h:2489:5: error: ‘mDialogShade’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2491:12: error: type ‘<type error>’ argument given to ‘delete’, expected pointer
+/usr/include/OGRE/SdkTrays.h:2494:10: error: ‘mCursorWasVisible’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘bool OgreBites::SdkTrayManager::isDialogVisible()’:
+/usr/include/OGRE/SdkTrays.h:2503:11: error: ‘mDialog’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘OgreBites::Widget* OgreBites::SdkTrayManager::getWidget(OgreBites::TrayLocation, unsigned int)’:
+/usr/include/OGRE/SdkTrays.h:2511:16: error: ‘mWidgets’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘OgreBites::Widget* OgreBites::SdkTrayManager::getWidget(OgreBites::TrayLocation, const String&)’:
+/usr/include/OGRE/SdkTrays.h:2520:33: error: ‘mWidgets’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘OgreBites::Widget* OgreBites::SdkTrayManager::getWidget(const String&)’:
+/usr/include/OGRE/SdkTrays.h:2534:34: error: ‘mWidgets’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘unsigned int OgreBites::SdkTrayManager::getNumWidgets()’:
+/usr/include/OGRE/SdkTrays.h:2551:14: error: ‘mWidgets’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘unsigned int OgreBites::SdkTrayManager::getNumWidgets(OgreBites::TrayLocation)’:
+/usr/include/OGRE/SdkTrays.h:2562:11: error: ‘mWidgets’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘OgreBites::WidgetIterator OgreBites::SdkTrayManager::getWidgetIterator(OgreBites::TrayLocation)’:
+/usr/include/OGRE/SdkTrays.h:2570:26: error: ‘mWidgets’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘int OgreBites::SdkTrayManager::locateWidgetInTray(OgreBites::Widget*)’:
+/usr/include/OGRE/SdkTrays.h:2578:33: error: ‘mWidgets’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘void OgreBites::SdkTrayManager::destroyWidget(OgreBites::Widget*)’:
+/usr/include/OGRE/SdkTrays.h:2593:18: error: ‘mLogo’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2594:23: error: ‘mStatsPanel’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2595:23: error: ‘mFpsLabel’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2597:4: error: ‘mTrays’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2599:24: error: ‘mWidgets’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2601:18: error: ‘mExpandedMenu’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2601:50: error: ‘setExpandedMenu’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2605:4: error: ‘mWidgetDeathRow’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘void OgreBites::SdkTrayManager::destroyAllWidgetsInTray(OgreBites::TrayLocation)’:
+/usr/include/OGRE/SdkTrays.h:2630:12: error: ‘mWidgets’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘void OgreBites::SdkTrayManager::moveWidgetToTray(OgreBites::Widget*, OgreBites::TrayLocation, int)’:
+/usr/include/OGRE/SdkTrays.h:2652:24: error: ‘mWidgets’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2657:5: error: ‘mTrays’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2663:4: error: ‘mTrays’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2665:56: error: ‘mTrayWidgetAlign’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘void OgreBites::SdkTrayManager::clearTray(OgreBites::TrayLocation)’:
+/usr/include/OGRE/SdkTrays.h:2720:12: error: ‘mWidgets’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘bool OgreBites::SdkTrayManager::frameRenderingQueued(const Ogre::FrameEvent&)’:
+/usr/include/OGRE/SdkTrays.h:2743:33: error: ‘mWidgetDeathRow’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2747:4: error: ‘mWidgetDeathRow’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2749:43: error: ‘mWindow’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2759:5: error: ‘mFpsLabel’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2761:9: error: ‘mStatsPanel’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘virtual void OgreBites::SdkTrayManager::resourceGroupScriptingStarted(const String&, size_t)’:
+/usr/include/OGRE/SdkTrays.h:2800:4: error: ‘mLoadInc’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2800:15: error: ‘mGroupInitProportion’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2801:4: error: ‘mLoadBar’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2803:4: error: ‘mWindow’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘virtual void OgreBites::SdkTrayManager::scriptParseStarted(const String&, bool&)’:
+/usr/include/OGRE/SdkTrays.h:2809:4: error: ‘mLoadBar’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2811:4: error: ‘mWindow’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘virtual void OgreBites::SdkTrayManager::scriptParseEnded(const String&, bool)’:
+/usr/include/OGRE/SdkTrays.h:2817:4: error: ‘mLoadBar’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2817:52: error: ‘mLoadInc’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2819:4: error: ‘mWindow’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘virtual void OgreBites::SdkTrayManager::resourceGroupLoadStarted(const String&, size_t)’:
+/usr/include/OGRE/SdkTrays.h:2827:4: error: ‘mLoadInc’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2827:15: error: ‘mGroupLoadProportion’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2828:4: error: ‘mLoadBar’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2830:4: error: ‘mWindow’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘virtual void OgreBites::SdkTrayManager::resourceLoadStarted(const ResourcePtr&)’:
+/usr/include/OGRE/SdkTrays.h:2836:4: error: ‘mLoadBar’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2838:4: error: ‘mWindow’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘virtual void OgreBites::SdkTrayManager::resourceLoadEnded()’:
+/usr/include/OGRE/SdkTrays.h:2844:4: error: ‘mLoadBar’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2844:52: error: ‘mLoadInc’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2846:4: error: ‘mWindow’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘virtual void OgreBites::SdkTrayManager::worldGeometryStageStarted(const String&)’:
+/usr/include/OGRE/SdkTrays.h:2852:4: error: ‘mLoadBar’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2854:4: error: ‘mWindow’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘virtual void OgreBites::SdkTrayManager::worldGeometryStageEnded()’:
+/usr/include/OGRE/SdkTrays.h:2860:4: error: ‘mLoadBar’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2860:52: error: ‘mLoadInc’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2862:4: error: ‘mWindow’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘virtual void OgreBites::SdkTrayManager::labelHit(OgreBites::Label*)’:
+/usr/include/OGRE/SdkTrays.h:2873:8: error: ‘mStatsPanel’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2876:5: error: ‘mFpsLabel’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2882:5: error: ‘mFpsLabel’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: In member function ‘virtual void OgreBites::SdkTrayManager::buttonHit(OgreBites::Button*)’:
+/usr/include/OGRE/SdkTrays.h:2892:8: error: ‘mListener’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2894:19: error: ‘mOk’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2894:50: error: ‘mDialog’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2895:39: error: ‘mDialog’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h:2895:69: error: ‘mYes’ was not declared in this scope
+/usr/include/OGRE/SdkTrays.h: At global scope:
+/usr/include/OGRE/SdkTrays.h:2898:3: error: expected unqualified-id at end of input
+/usr/include/OGRE/SdkTrays.h:2898:3: error: expected ‘}’ at end of input
+make[1]: *** [obj/x32/Debug/PauseState.o] Error 1
+make: *** [EVE] Error 2
