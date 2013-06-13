@@ -21,8 +21,6 @@ The current plans with the software are to:
 
 ## Dependencies
 
-* Ogre3D -- http://www.ogre3d.org/tikiwiki/Installing+the+Ogre+SDK
-* OIS Object Oriented Input System -- http://sourceforge.net/projects/wgois/
-
-All other dependencies should be included in the repository. They should compile with virtually any platform as well. Make sure to check out recursively.
+* Irrlicht3D (Included, premake should include it in the build process for you.)
+* Premake4
 
