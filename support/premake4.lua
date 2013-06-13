@@ -1,4 +1,3 @@
--- TODO: Add paths for OGRE3D (cross-platform)
 -- TODO: Add console builds linked with ncurses
 
 -- This makes the script a little bit cleaner
@@ -19,7 +18,7 @@ project "EVE"
 	language "C++"
 	includedirs { "../include" }
 	files { "../source/**" }
-	links { "libOIS", "libOgreMain" }
+	-- links { "libOIS", "libOgreMain" }
 	defines { "EVE_SIM" }
 	kind "WindowedApp"
 
@@ -29,6 +28,9 @@ project "EVE"
 	}
 
 	platforms { "x32", "x64" }
+
+	configuration { "windows" }
+		defines { "WINDOWS" }
 
 	configuration { "windows", "x64" }
 		defines { "WIN64" }

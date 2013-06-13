@@ -1,18 +1,16 @@
 #ifndef SIMAPP_HPP
 #define SIMAPP_HPP
 
-#include <OGRE/Ogre.h>
+#include <stdio.h>
+#include <string>
 
-#include <OIS/OIS.h>
-#include <OIS/OISInputManager.h>
-
-class SimApp : public OIS::KeyListener, public OIS::MouseListener
+class SimApp
 {
 public:
 	SimApp();
 	~SimApp();
  
-	bool initOgre(Ogre::String wndTitle, OIS::KeyListener *pKeyListener, OIS::MouseListener *pMouseListener);
+	bool init(std::wstring wndTitle);
 	void createScene();
 	void exit();
 
@@ -21,42 +19,42 @@ public:
 	void resume();
 	void update(double timeSinceLastFrame);
  
-	// void moveCamera();
+	// void updateCamera();
 	// void buildGUI();
 
-	bool keyPressed(const OIS::KeyEvent &keyEventRef);
-	bool keyReleased(const OIS::KeyEvent &keyEventRef);
+	bool keyPressed();
+	bool keyReleased();
  
-	bool mouseMoved(const OIS::MouseEvent &evt);
-	bool mousePressed(const OIS::MouseEvent &evt, OIS::MouseButtonID id);
-	bool mouseReleased(const OIS::MouseEvent &evt, OIS::MouseButtonID id);
+	bool mouseMoved();
+	bool mousePressed();
+	bool mouseReleased();
 
- 	void onLeftPressed(const OIS::MouseEvent &evt);
+ 	void onLeftPressed();
 
-	Ogre::Root*				m_pRoot;
-	Ogre::RenderWindow*		m_pRenderWnd;
-	Ogre::Viewport*			m_pViewport;
-	Ogre::Log*				m_pLog;
-	Ogre::Timer*			m_pTimer;
+	// Ogre::Root*				m_pRoot;
+	// Ogre::RenderWindow*		m_pRenderWnd;
+	// Ogre::Viewport*			m_pViewport;
+	// Ogre::Log*				m_pLog;
+	// Ogre::Timer*			m_pTimer;
 
-	OIS::InputManager*		m_pInputMgr;
-	OIS::Keyboard*			m_pKeyboard;
-	OIS::Mouse*				m_pMouse;
+	// OIS::InputManager*		m_pInputMgr;
+	// OIS::Keyboard*			m_pKeyboard;
+	// OIS::Mouse*				m_pMouse;
 
 protected:
-	Ogre::Camera*			m_pCamera;
-	Ogre::SceneManager*		m_pSceneMgr;
-    Ogre::FrameEvent    	m_FrameEvent;
+	// Ogre::Camera*			m_pCamera;
+	// Ogre::SceneManager*		m_pSceneMgr;
+    // Ogre::FrameEvent    	m_FrameEvent;
 
 private:
-	void moveCamera();
+	void updateCamera();
 	void getInput();
 
 
-	Ogre::RaySceneQuery*	m_pRSQ;
-	Ogre::Vector3			m_TranslateVector;
-	Ogre::Real				m_MoveSpeed;
-	Ogre::Degree			m_RotateSpeed;
+	// Ogre::RaySceneQuery*	m_pRSQ;
+	// Ogre::Vector3			m_TranslateVector;
+	// Ogre::Real				m_MoveSpeed;
+	// Ogre::Degree			m_RotateSpeed;
 
 	// Ogre::SceneNode*		m_pModelNode;
 	// Ogre::Entity*		m_pModelEntity;
