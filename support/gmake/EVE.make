@@ -116,14 +116,8 @@ ifeq ($(config),release64)
 endif
 
 OBJECTS := \
-	$(OBJDIR)/OgreFramework.o \
-	$(OBJDIR)/AppStateManager.o \
 	$(OBJDIR)/main.o \
-	$(OBJDIR)/PauseState.o \
 	$(OBJDIR)/SimApp.o \
-	$(OBJDIR)/GameState.o \
-	$(OBJDIR)/MenuState.o \
-	$(OBJDIR)/DotSceneLoader.o \
 
 RESOURCES := \
 
@@ -188,28 +182,10 @@ endif
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 endif
 
-$(OBJDIR)/OgreFramework.o: ../../source/OgreFramework.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/AppStateManager.o: ../../source/AppStateManager.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/main.o: ../../source/main.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/PauseState.o: ../../source/PauseState.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/SimApp.o: ../../source/SimApp.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/GameState.o: ../../source/GameState.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/MenuState.o: ../../source/MenuState.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/DotSceneLoader.o: ../../source/DotSceneLoader.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
