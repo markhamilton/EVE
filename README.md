@@ -23,7 +23,6 @@ The current plans with the software are to:
 
 * Ogre3D -- http://www.ogre3d.org/tikiwiki/Installing+the+Ogre+SDK
 * OIS Object Oriented Input System -- http://sourceforge.net/projects/wgois/
-* TinyXML -- http://sourceforge.net/projects/tinyxml/
 
 All other dependencies should be included in the repository. They should compile with virtually any platform as well. Make sure to check out recursively.
 
