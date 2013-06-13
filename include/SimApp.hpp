@@ -12,7 +12,7 @@ public:
 	SimApp();
 	~SimApp();
  
-	void initOgre();
+	bool initOgre(Ogre::String wndTitle, OIS::KeyListener *pKeyListener, OIS::MouseListener *pMouseListener);
 	void createScene();
 	void exit();
 
@@ -49,10 +49,14 @@ protected:
     Ogre::FrameEvent    	m_FrameEvent;
 
 private:
-	// Ogre::RaySceneQuery*	m_pRSQ;
-	// Ogre::Vector3		m_TranslateVector;
-	// Ogre::Real			m_MoveSpeed;
-	// Ogre::Degree			m_RotateSpeed;
+	void moveCamera();
+	void getInput();
+
+
+	Ogre::RaySceneQuery*	m_pRSQ;
+	Ogre::Vector3			m_TranslateVector;
+	Ogre::Real				m_MoveSpeed;
+	Ogre::Degree			m_RotateSpeed;
 
 	// Ogre::SceneNode*		m_pModelNode;
 	// Ogre::Entity*		m_pModelEntity;

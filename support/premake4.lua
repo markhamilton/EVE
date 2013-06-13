@@ -19,7 +19,7 @@ project "EVE"
 	language "C++"
 	includedirs { "../include" }
 	files { "../source/**" }
-	links { "OIS", "OGRE", "OGRE-Paging" }
+	links { "libOIS", "libOgreMain" }
 	defines { "EVE_SIM" }
 	kind "WindowedApp"
 

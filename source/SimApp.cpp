@@ -1,5 +1,7 @@
 #include "SimApp.hpp"
- 
+
+using namespace Ogre;
+
 SimApp::SimApp()
 {
 	// TODO: Make sure all of our scene objects are initialized to null
@@ -50,19 +52,19 @@ void SimApp::createScene()
     m_pRoot->createSceneManager(ST_GENERIC, "EveSceneMgr");
     m_pSceneMgr->setAmbientLight(Ogre::ColourValue(0.7f, 0.7f, 0.7f));
  
-    m_pRSQ = m_pSceneMgr->createRayQuery(Ray());
-    m_pRSQ->setQueryMask(OGRE_HEAD_MASK);
+    // m_pRSQ = m_pSceneMgr->createRayQuery(Ray());
+    // m_pRSQ->setQueryMask(OGRE_HEAD_MASK);
  
     m_pCamera = m_pSceneMgr->createCamera("OverviewCamera");
-    m_pCamera->setPosition(Vector3(5, 60, 60));
-    m_pCamera->lookAt(Vector3(5, 20, 0));
+    m_pCamera->setPosition(Ogre::Vector3(5, 60, 60));
+    m_pCamera->lookAt(Ogre::Vector3(5, 20, 0));
     m_pCamera->setNearClipDistance(5);
  
-    m_pCamera->setAspectRatio(Real(OgreFramework::getSingletonPtr()->m_pViewport->getActualWidth()) /
-        Real(OgreFramework::getSingletonPtr()->m_pViewport->getActualHeight()));
+    m_pCamera->setAspectRatio(Real(m_pViewport->getActualWidth()) /
+        Real(m_pViewport->getActualHeight()));
  
-    OgreFramework::getSingletonPtr()->m_pViewport->setCamera(m_pCamera);
-    m_pCurrentObject = 0;
+    m_pViewport->setCamera(m_pCamera);
+    // m_pCurrentObject = 0;
  
     // buildGUI();
 
@@ -80,7 +82,7 @@ void SimApp::createScene()
     // m_pOgreHeadEntity->setQueryFlags(OGRE_HEAD_MASK);
     // m_pOgreHeadNode = m_pSceneMgr->getRootSceneNode()->createChildSceneNode("CubeNode");
     // m_pOgreHeadNode->attachObject(m_pOgreHeadEntity);
-    // m_pOgreHeadNode->setPosition(Vector3(0, 0, -25));
+    // m_pOgreHeadNode->setPosition(Ogre::Vector3(0, 0, -25));
  
     // m_pOgreHeadMat = m_pOgreHeadEntity->getSubEntity(1)->getMaterial();
     // m_pOgreHeadMatHigh = m_pOgreHeadMat->clone("OgreHeadMatHigh");
@@ -154,14 +156,14 @@ bool SimApp::mouseReleased(const OIS::MouseEvent &evt, OIS::MouseButtonID id)
 
 void SimApp::onLeftPressed(const OIS::MouseEvent &evt)
 {
-    if(m_pCurrentObject)
-    {
-        m_pCurrentObject->showBoundingBox(false);
-        m_pCurrentEntity->getSubEntity(1)->setMaterial(m_pOgreHeadMat);
-    }
+    // if(m_pCurrentObject)
+    // {
+    //    m_pCurrentObject->showBoundingBox(false);
+    //    m_pCurrentEntity->getSubEntity(1)->setMaterial(m_pOgreHeadMat);
+    //}
  
-    Ogre::Ray mouseRay = m_pCamera->getCameraToViewportRay(OgreFramework::getSingletonPtr()->m_pMouse->getMouseState().X.abs / float(evt.state.width),
-        OgreFramework::getSingletonPtr()->m_pMouse->getMouseState().Y.abs / float(evt.state.height));
+    Ogre::Ray mouseRay = m_pCamera->getCameraToViewportRay(m_pMouse->getMouseState().X.abs / float(evt.state.width),
+        m_pMouse->getMouseState().Y.abs / float(evt.state.height));
     m_pRSQ->setRay(mouseRay);
     m_pRSQ->setSortByDistance(true);
  
@@ -173,11 +175,11 @@ void SimApp::onLeftPressed(const OIS::MouseEvent &evt)
         if(itr->movable)
         {
             m_pLog->logMessage("MovableName: " + itr->movable->getName());
-            m_pCurrentObject = m_pSceneMgr->getEntity(itr->movable->getName())->getParentSceneNode();
-            m_pLog->logMessage("ObjName " + m_pCurrentObject->getName());
-            m_pCurrentObject->showBoundingBox(true);
-            m_pCurrentEntity = m_pSceneMgr->getEntity(itr->movable->getName());
-            m_pCurrentEntity->getSubEntity(1)->setMaterial(m_pOgreHeadMatHigh);
+            // m_pCurrentObject = m_pSceneMgr->getEntity(itr->movable->getName())->getParentSceneNode();
+            // m_pLog->logMessage("ObjName " + m_pCurrentObject->getName());
+            // m_pCurrentObject->showBoundingBox(true);
+            // m_pCurrentEntity = m_pSceneMgr->getEntity(itr->movable->getName());
+            // m_pCurrentEntity->getSubEntity(1)->setMaterial(m_pOgreHeadMatHigh);
             break;
         }
     }
@@ -194,34 +196,34 @@ void SimApp::getInput()
 {
     if(m_bSettingsMode == false)
     {
-        if(OgreFramework::getSingletonPtr()->m_pKeyboard->isKeyDown(OIS::KC_A))
-            m_TranslateVector.x = -m_MoveScale;
+        // if(m_pKeyboard->isKeyDown(OIS::KC_A))
+        //     m_TranslateVector.x = -m_MoveScale;
  
-        if(OgreFramework::getSingletonPtr()->m_pKeyboard->isKeyDown(OIS::KC_D))
-            m_TranslateVector.x = m_MoveScale;
+        // if(m_pKeyboard->isKeyDown(OIS::KC_D))
+        //     m_TranslateVector.x = m_MoveScale;
  
-        if(OgreFramework::getSingletonPtr()->m_pKeyboard->isKeyDown(OIS::KC_W))
-            m_TranslateVector.z = -m_MoveScale;
+        // if(OgreFramework::getSingletonPtr()->m_pKeyboard->isKeyDown(OIS::KC_W))
+        //    m_TranslateVector.z = -m_MoveScale;
  
-        if(OgreFramework::getSingletonPtr()->m_pKeyboard->isKeyDown(OIS::KC_S))
-            m_TranslateVector.z = m_MoveScale;
+        //if(m_pKeyboard->isKeyDown(OIS::KC_S))
+        //    m_TranslateVector.z = m_MoveScale;
  
-        if(OgreFramework::getSingletonPtr()->m_pKeyboard->isKeyDown(OIS::KC_Q))
-            m_TranslateVector.y = -m_MoveScale;
+        // if(m_pKeyboard->isKeyDown(OIS::KC_Q))
+        //     m_TranslateVector.y = -m_MoveScale;
  
-        if(OgreFramework::getSingletonPtr()->m_pKeyboard->isKeyDown(OIS::KC_E))
-            m_TranslateVector.y = m_MoveScale;
+        // if(m_pKeyboard->isKeyDown(OIS::KC_E))
+        //    m_TranslateVector.y = m_MoveScale;
  
         //camera roll
-        if(OgreFramework::getSingletonPtr()->m_pKeyboard->isKeyDown(OIS::KC_Z))
-            m_pCamera->roll(Angle(-m_MoveScale));
+        // if(m_pKeyboard->isKeyDown(OIS::KC_Z))
+        //     m_pCamera->roll(Angle(-m_MoveScale));
  
-        if(OgreFramework::getSingletonPtr()->m_pKeyboard->isKeyDown(OIS::KC_X))
-            m_pCamera->roll(Angle(m_MoveScale));
+        // if(m_pKeyboard->isKeyDown(OIS::KC_X))
+        //     m_pCamera->roll(Angle(m_MoveScale));
  
         //reset roll
-        if(OgreFramework::getSingletonPtr()->m_pKeyboard->isKeyDown(OIS::KC_C))
-            m_pCamera->roll(-(m_pCamera->getRealOrientation().getRoll()));
+        // if(m_pKeyboard->isKeyDown(OIS::KC_C))
+        //     m_pCamera->roll(-(m_pCamera->getRealOrientation().getRoll()));
     }
 }
 
@@ -256,10 +258,10 @@ void SimApp::update(double timeSinceLastFrame)
     //     }
     // }
  
-    m_MoveScale = m_MoveSpeed   * timeSinceLastFrame;
-    m_RotScale  = m_RotateSpeed * timeSinceLastFrame;
+    // m_MoveScale = m_MoveSpeed   * timeSinceLastFrame;
+    // m_RotScale  = m_RotateSpeed * timeSinceLastFrame;
  
-    m_TranslateVector = Vector3::ZERO;
+    m_TranslateVector = Ogre::Vector3::ZERO;
  
     getInput();
     moveCamera();
@@ -315,11 +317,9 @@ void SimApp::update(double timeSinceLastFrame)
 //     }
 // }
 
-bool SimApp::pause()
+void SimApp::pause()
 {
     m_pLog->logMessage("Pausing Simulator...");
- 
-    return true;
 }
  
 void SimApp::resume()
