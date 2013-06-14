@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ork3" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/ork3d" prefix_auto="1" extension_auto="1" />
+				<Option object_output="build/Debug/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-mthreads" />
+				</Compiler>
+				<Linker>
+					<Add library="pthreadGCE2" />
+					<Add library="$(#glut)" />
+					<Add library="glu32" />
+					<Add library="opengl32" />
+					<Add library="gdi32" />
+					<Add library="winmm" />
+				</Linker>
+			</Target>
+			<Target title="Debug_UNIX">
+				<Option output="bin/ork3d" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/debug/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-pg" />
+					<Add option="-g" />
+					<Add option="-fPIC" />
+				</Compiler>
+				<Linker>
+					<Add option="-pg" />
+					<Add library="glut" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/ork3" prefix_auto="1" extension_auto="1" />
+				<Option object_output="build/Release/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-mthreads" />
+					<Add option="-DNDEBUG" />
+				</Compiler>
+				<Linker>
+					<Add library="pthreadGCE2" />
+					<Add library="$(#glut)" />
+					<Add library="glu32" />
+					<Add library="opengl32" />
+					<Add library="gdi32" />
+					<Add library="winmm" />
+				</Linker>
+			</Target>
+			<Target title="Release_UNIX">
+				<Option output="bin/ork3" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/release/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-fPIC" />
+					<Add option="-DNDEBUG" />
+				</Compiler>
+				<Linker>
+					<Add library="glut" />
+				</Linker>
+			</Target>
+			<Target title="Test">
+				<Option output="build/Debug/ork-test" prefix_auto="1" extension_auto="1" />
+				<Option object_output="build/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="ALL GL4" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-mthreads" />
+				</Compiler>
+				<Linker>
+					<Add library="pthreadGCE2" />
+					<Add library="$(#glut)" />
+					<Add library="glu32" />
+					<Add library="opengl32" />
+					<Add library="gdi32" />
+					<Add library="winmm" />
+				</Linker>
+			</Target>
+			<Target title="Test_UNIX">
+				<Option output="bin/ork-test" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="ALL GL4" />
+				<Compiler>
+					<Add option="-pg" />
+					<Add option="-g" />
+					<Add option="-fPIC" />
+				</Compiler>
+				<Linker>
+					<Add option="-pg" />
+					<Add library="glut" />
+					<Add library="pthread" />
+					<Add library="rt" />
+					<Add directory="$(#glut)" />
+				</Linker>
+			</Target>
+			<Target title="Examples">
+				<Option output="build/Debug/ork-examples" prefix_auto="1" extension_auto="1" />
+				<Option object_output="build/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="scenegraphresource examples exampleScene" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-mthreads" />
+				</Compiler>
+				<Linker>
+					<Add library="pthreadGCE2" />
+					<Add library="$(#glut)" />
+					<Add library="glu32" />
+					<Add library="opengl32" />
+					<Add library="gdi32" />
+					<Add library="winmm" />
+				</Linker>
+			</Target>
+			<Target title="Examples_Release">
+				<Option output="build/Release/ork-examples" prefix_auto="1" extension_auto="1" />
+				<Option object_output="build/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="scenegraphresource examples exampleScene" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-mthreads" />
+					<Add option="-DNDEBUG" />
+				</Compiler>
+				<Linker>
+					<Add library="pthreadGCE2" />
+					<Add library="$(#glut)" />
+					<Add library="glu32" />
+					<Add library="opengl32" />
+					<Add library="gdi32" />
+					<Add library="winmm" />
+				</Linker>
+			</Target>
+			<Target title="Examples_UNIX">
+				<Option output="bin/ork-examples" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="scenegraphresource examples exampleScene" />
+				<Compiler>
+					<Add option="-pg" />
+					<Add option="-g" />
+					<Add option="-fPIC" />
+				</Compiler>
+				<Linker>
+					<Add option="-pg" />
+					<Add library="pthread" />
+					<Add library="rt" />
+					<Add directory="$(#glut)" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-march=i686" />
+			<Add option="-pedantic-errors" />
+			<Add option="-pedantic" />
+			<Add option="-Wall" />
+			<Add option="-ansi" />
+			<Add option="-Wno-long-long" />
+			<Add option="-fno-strict-aliasing" />
+			<Add option="-DORK_API=" />
+			<Add option="-DTIXML_USE_STL" />
+			<Add option="-DSTBI_NO_STDIO" />
+			<Add option="-DSTBI_NO_WRITE" />
+			<Add option="-DGLUT_NO_WARNING_DISABLE" />
+			<Add option="-DGLUT_NO_LIB_PRAGMA" />
+			<Add option="-D_STDCALL_SUPPORTED" />
+			<Add option="-D_M_IX86" />
+			<Add option="-D$(#glut.cflags)" />
+			<Add directory="libraries" />
+		</Compiler>
+		<Linker>
+			<Add option="$(#glew)" />
+		</Linker>
+		<Unit filename="examples/Main.cpp">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/Main.h">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/MinimalExample.cpp">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/RenderExample.cpp">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/ResourceExample.cpp">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/SceneGraphExample.cpp">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/SceneGraphResourceExample.cpp">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/TessellationExample.cpp">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/meshes/cube.mesh">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/meshes/plane.mesh">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/meshes/quad.mesh">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/meshes/sphere.mesh">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/methods/cameraMethod.xml">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/methods/cameraMethodPostprocess.xml">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/methods/infoMethod.xml">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/methods/lightMethod.xml">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/methods/logMethod.xml">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/methods/meshMethod.xml">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/methods/objectMethod.xml">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/methods/skyboxMethod.xml">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/scenes/cubesScene.xml">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/scenes/exampleScene.xml">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/scenes/postprocessScene.xml">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/scenes/skyboxScene.xml">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/shaders/camera.glsl">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/shaders/camera.xml">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/shaders/flat.glsl">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/shaders/flat.xml">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/shaders/plastic.xml">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/shaders/plasticFS.glsl">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/shaders/plasticVS.glsl">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/shaders/postprocess.glsl">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/shaders/postprocess.xml">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/shaders/skybox.glsl">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/shaders/skybox.xml">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/shaders/skyboxArray.xml">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/shaders/spotlight.glsl">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/shaders/spotlight.xml">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/shaders/text.glsl">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/shaders/text.xml">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/shaders/texturedPlastic.glsl">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/shaders/texturedPlastic.xml">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/textures/checker.png">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/textures/checker.xml">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/textures/cubemap.png">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/textures/cubemap.xml">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/textures/cubemapArray.png">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/textures/cubemapArray.xml">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/textures/defaultFont.xml">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/textures/lucidaConsole.png">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/textures/lucidaConsole.xml">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/textures/offscreenColor.xml">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="examples/textures/offscreenDepth.xml">
+			<Option target="Examples" />
+			<Option target="Examples_UNIX" />
+			<Option target="Examples_Release" />
+		</Unit>
+		<Unit filename="libraries/pmath.h" />
+		<Unit filename="libraries/stbi/stb_image.cpp" />
+		<Unit filename="libraries/stbi/stb_image.h" />
+		<Unit filename="libraries/tinyxml/tinyxml.cpp" />
+		<Unit filename="libraries/tinyxml/tinyxml.h" />
+		<Unit filename="libraries/tinyxml/tinyxmlerror.cpp" />
+		<Unit filename="libraries/tinyxml/tinyxmlparser.cpp" />
+		<Unit filename="ork/core/Atomic.h" />
+		<Unit filename="ork/core/Factory.h" />
+		<Unit filename="ork/core/FileLogger.cpp" />
+		<Unit filename="ork/core/FileLogger.h" />
+		<Unit filename="ork/core/GPUTimer.cpp" />
+		<Unit filename="ork/core/GPUTimer.h" />
+		<Unit filename="ork/core/Iterator.h" />
+		<Unit filename="ork/core/Logger.cpp" />
+		<Unit filename="ork/core/Logger.h" />
+		<Unit filename="ork/core/Object.cpp" />
+		<Unit filename="ork/core/Object.h" />
+		<Unit filename="ork/core/Timer.cpp" />
+		<Unit filename="ork/core/Timer.h" />
+		<Unit filename="ork/math/box2.h" />
+		<Unit filename="ork/math/box3.h" />
+		<Unit filename="ork/math/half.cpp" />
+		<Unit filename="ork/math/half.h" />
+		<Unit filename="ork/math/mat2.h" />
+		<Unit filename="ork/math/mat3.h" />
+		<Unit filename="ork/math/mat4.h" />
+		<Unit filename="ork/math/quat.h" />
+		<Unit filename="ork/math/vec2.h" />
+		<Unit filename="ork/math/vec3.h" />
+		<Unit filename="ork/math/vec4.h" />
+		<Unit filename="ork/render/AttributeBuffer.cpp" />
+		<Unit filename="ork/render/AttributeBuffer.h" />
+		<Unit filename="ork/render/Buffer.cpp" />
+		<Unit filename="ork/render/Buffer.h" />
+		<Unit filename="ork/render/CPUBuffer.cpp" />
+		<Unit filename="ork/render/CPUBuffer.h" />
+		<Unit filename="ork/render/FrameBuffer.cpp" />
+		<Unit filename="ork/render/FrameBuffer.h" />
+		<Unit filename="ork/render/GPUBuffer.cpp" />
+		<Unit filename="ork/render/GPUBuffer.h" />
+		<Unit filename="ork/render/Mesh.h" />
+		<Unit filename="ork/render/MeshBuffers.cpp" />
+		<Unit filename="ork/render/MeshBuffers.h" />
+		<Unit filename="ork/render/Module.cpp" />
+		<Unit filename="ork/render/Module.h" />
+		<Unit filename="ork/render/Program.cpp" />
+		<Unit filename="ork/render/Program.h" />
+		<Unit filename="ork/render/Query.cpp" />
+		<Unit filename="ork/render/Query.h" />
+		<Unit filename="ork/render/RenderBuffer.cpp" />
+		<Unit filename="ork/render/RenderBuffer.h" />
+		<Unit filename="ork/render/Sampler.cpp" />
+		<Unit filename="ork/render/Sampler.h" />
+		<Unit filename="ork/render/Texture.cpp" />
+		<Unit filename="ork/render/Texture.h" />
+		<Unit filename="ork/render/Texture1D.cpp" />
+		<Unit filename="ork/render/Texture1D.h" />
+		<Unit filename="ork/render/Texture1DArray.cpp" />
+		<Unit filename="ork/render/Texture1DArray.h" />
+		<Unit filename="ork/render/Texture2D.cpp" />
+		<Unit filename="ork/render/Texture2D.h" />
+		<Unit filename="ork/render/Texture2DArray.cpp" />
+		<Unit filename="ork/render/Texture2DArray.h" />
+		<Unit filename="ork/render/Texture2DMultisample.cpp" />
+		<Unit filename="ork/render/Texture2DMultisample.h" />
+		<Unit filename="ork/render/Texture2DMultisampleArray.cpp" />
+		<Unit filename="ork/render/Texture2DMultisampleArray.h" />
+		<Unit filename="ork/render/Texture3D.cpp" />
+		<Unit filename="ork/render/Texture3D.h" />
+		<Unit filename="ork/render/TextureBuffer.cpp" />
+		<Unit filename="ork/render/TextureBuffer.h" />
+		<Unit filename="ork/render/TextureCube.cpp" />
+		<Unit filename="ork/render/TextureCube.h" />
+		<Unit filename="ork/render/TextureCubeArray.cpp" />
+		<Unit filename="ork/render/TextureCubeArray.h" />
+		<Unit filename="ork/render/TextureRectangle.cpp" />
+		<Unit filename="ork/render/TextureRectangle.h" />
+		<Unit filename="ork/render/TransformFeedback.cpp" />
+		<Unit filename="ork/render/TransformFeedback.h" />
+		<Unit filename="ork/render/Types.cpp" />
+		<Unit filename="ork/render/Types.h" />
+		<Unit filename="ork/render/Uniform.cpp" />
+		<Unit filename="ork/render/Uniform.h" />
+		<Unit filename="ork/render/Value.cpp" />
+		<Unit filename="ork/render/Value.h" />
+		<Unit filename="ork/resource/CompiledResourceLoader.cpp" />
+		<Unit filename="ork/resource/CompiledResourceLoader.h" />
+		<Unit filename="ork/resource/Resource.cpp" />
+		<Unit filename="ork/resource/Resource.h" />
+		<Unit filename="ork/resource/ResourceCompiler.cpp" />
+		<Unit filename="ork/resource/ResourceCompiler.h" />
+		<Unit filename="ork/resource/ResourceDescriptor.cpp" />
+		<Unit filename="ork/resource/ResourceDescriptor.h" />
+		<Unit filename="ork/resource/ResourceFactory.cpp" />
+		<Unit filename="ork/resource/ResourceFactory.h" />
+		<Unit filename="ork/resource/ResourceLoader.cpp" />
+		<Unit filename="ork/resource/ResourceLoader.h" />
+		<Unit filename="ork/resource/ResourceManager.cpp" />
+		<Unit filename="ork/resource/ResourceManager.h" />
+		<Unit filename="ork/resource/ResourceTemplate.h" />
+		<Unit filename="ork/resource/XMLResourceLoader.cpp" />
+		<Unit filename="ork/resource/XMLResourceLoader.h" />
+		<Unit filename="ork/scenegraph/AbstractTask.cpp" />
+		<Unit filename="ork/scenegraph/AbstractTask.h" />
+		<Unit filename="ork/scenegraph/CallMethodTask.cpp" />
+		<Unit filename="ork/scenegraph/CallMethodTask.h" />
+		<Unit filename="ork/scenegraph/DrawMeshTask.cpp" />
+		<Unit filename="ork/scenegraph/DrawMeshTask.h" />
+		<Unit filename="ork/scenegraph/LoopTask.cpp" />
+		<Unit filename="ork/scenegraph/LoopTask.h" />
+		<Unit filename="ork/scenegraph/Method.cpp" />
+		<Unit filename="ork/scenegraph/Method.h" />
+		<Unit filename="ork/scenegraph/SceneManager.cpp" />
+		<Unit filename="ork/scenegraph/SceneManager.h" />
+		<Unit filename="ork/scenegraph/SceneNode.cpp" />
+		<Unit filename="ork/scenegraph/SceneNode.h" />
+		<Unit filename="ork/scenegraph/SequenceTask.cpp" />
+		<Unit filename="ork/scenegraph/SequenceTask.h" />
+		<Unit filename="ork/scenegraph/SetProgramTask.cpp" />
+		<Unit filename="ork/scenegraph/SetProgramTask.h" />
+		<Unit filename="ork/scenegraph/SetStateTask.cpp" />
+		<Unit filename="ork/scenegraph/SetStateTask.h" />
+		<Unit filename="ork/scenegraph/SetTargetTask.cpp" />
+		<Unit filename="ork/scenegraph/SetTargetTask.h" />
+		<Unit filename="ork/scenegraph/SetTransformsTask.cpp" />
+		<Unit filename="ork/scenegraph/SetTransformsTask.h" />
+		<Unit filename="ork/scenegraph/ShowInfoTask.cpp" />
+		<Unit filename="ork/scenegraph/ShowInfoTask.h" />
+		<Unit filename="ork/scenegraph/ShowLogTask.cpp" />
+		<Unit filename="ork/scenegraph/ShowLogTask.h" />
+		<Unit filename="ork/taskgraph/MultithreadScheduler.cpp" />
+		<Unit filename="ork/taskgraph/MultithreadScheduler.h" />
+		<Unit filename="ork/taskgraph/Scheduler.cpp" />
+		<Unit filename="ork/taskgraph/Scheduler.h" />
+		<Unit filename="ork/taskgraph/Task.cpp" />
+		<Unit filename="ork/taskgraph/Task.h" />
+		<Unit filename="ork/taskgraph/TaskFactory.cpp" />
+		<Unit filename="ork/taskgraph/TaskFactory.h" />
+		<Unit filename="ork/taskgraph/TaskGraph.cpp" />
+		<Unit filename="ork/taskgraph/TaskGraph.h" />
+		<Unit filename="ork/ui/EventHandler.cpp" />
+		<Unit filename="ork/ui/EventHandler.h" />
+		<Unit filename="ork/ui/GlutWindow.cpp" />
+		<Unit filename="ork/ui/GlutWindow.h" />
+		<Unit filename="ork/ui/Window.cpp" />
+		<Unit filename="ork/ui/Window.h" />
+		<Unit filename="ork/util/Font.cpp" />
+		<Unit filename="ork/util/Font.h" />
+		<Unit filename="test/Test.cpp">
+			<Option target="Test" />
+			<Option target="Test_UNIX" />
+		</Unit>
+		<Unit filename="test/Test.h">
+			<Option target="Test" />
+			<Option target="Test_UNIX" />
+		</Unit>
+		<Unit filename="test/TestFrameBuffer.cpp">
+			<Option target="Test" />
+			<Option target="Test_UNIX" />
+		</Unit>
+		<Unit filename="test/TestProgram.cpp">
+			<Option target="Test" />
+			<Option target="Test_UNIX" />
+		</Unit>
+		<Unit filename="test/TestResource.cpp">
+			<Option target="Test" />
+			<Option target="Test_UNIX" />
+		</Unit>
+		<Unit filename="test/TestTexture.cpp">
+			<Option target="Test" />
+			<Option target="Test_UNIX" />
+		</Unit>
+		<Unit filename="test/TestUniform.cpp">
+			<Option target="Test" />
+			<Option target="Test_UNIX" />
+		</Unit>
+		<Unit filename="test/TestUniformBlock.cpp">
+			<Option target="Test" />
+			<Option target="Test_UNIX" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

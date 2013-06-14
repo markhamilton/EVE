@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ork", "ork.vcxproj", "{8B361006-4618-4A69-834D-5C00D6405571}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Examples|Win32 = Examples|Win32
+		Release|Win32 = Release|Win32
+		Test|Win32 = Test|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B361006-4618-4A69-834D-5C00D6405571}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8B361006-4618-4A69-834D-5C00D6405571}.Debug|Win32.Build.0 = Debug|Win32
+		{8B361006-4618-4A69-834D-5C00D6405571}.Examples|Win32.ActiveCfg = Examples|Win32
+		{8B361006-4618-4A69-834D-5C00D6405571}.Examples|Win32.Build.0 = Examples|Win32
+		{8B361006-4618-4A69-834D-5C00D6405571}.Release|Win32.ActiveCfg = Release|Win32
+		{8B361006-4618-4A69-834D-5C00D6405571}.Release|Win32.Build.0 = Release|Win32
+		{8B361006-4618-4A69-834D-5C00D6405571}.Test|Win32.ActiveCfg = Test|Win32
+		{8B361006-4618-4A69-834D-5C00D6405571}.Test|Win32.Build.0 = Test|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

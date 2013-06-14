@@ -1,0 +1,543 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ork">
+      <UniqueIdentifier>{e066532d-0daf-4f2e-94be-0436c85562a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ork\core">
+      <UniqueIdentifier>{5ee97cff-b762-4d53-b5c6-5536adf01f29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ork\math">
+      <UniqueIdentifier>{283e549b-607c-4aba-b618-23b8344becba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ork\render">
+      <UniqueIdentifier>{4d71d816-4baf-40aa-a6bb-e1d59c6a64fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ork\resource">
+      <UniqueIdentifier>{6ff91e6a-9ad1-4771-8668-e38c0ff78476}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ork\scenegraph">
+      <UniqueIdentifier>{7994cfc2-e958-4931-a88a-6396b78eaa1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ork\taskgraph">
+      <UniqueIdentifier>{9d79c99e-d0e3-4e43-b859-fd8622897972}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ork\ui">
+      <UniqueIdentifier>{9368c3a0-d002-4f4f-a2ef-7f755fa57884}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ork\util">
+      <UniqueIdentifier>{68ff2115-c587-44e3-b04b-b8b34392749c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="examples">
+      <UniqueIdentifier>{fbbb58da-5f85-4f40-8bc1-fba7c699619a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test">
+      <UniqueIdentifier>{e44100d0-79f5-4f5b-9636-ca68042a2060}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libraries">
+      <UniqueIdentifier>{d8bb75bf-80c3-4dbd-926b-cb3565a2b4ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libraries\tinyxml">
+      <UniqueIdentifier>{ebe040ac-f492-4283-aa3d-0e942cdfa7f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libraries\stbi">
+      <UniqueIdentifier>{b1d9deca-8386-4e96-8a45-4b5a904176f2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ork\core\Atomic.h">
+      <Filter>ork\core</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\core\Factory.h">
+      <Filter>ork\core</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\core\FileLogger.h">
+      <Filter>ork\core</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\core\GPUTimer.h">
+      <Filter>ork\core</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\core\Iterator.h">
+      <Filter>ork\core</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\core\Logger.h">
+      <Filter>ork\core</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\core\Object.h">
+      <Filter>ork\core</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\core\Timer.h">
+      <Filter>ork\core</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\math\box2.h">
+      <Filter>ork\math</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\math\box3.h">
+      <Filter>ork\math</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\math\half.h">
+      <Filter>ork\math</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\math\mat2.h">
+      <Filter>ork\math</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\math\mat3.h">
+      <Filter>ork\math</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\math\mat4.h">
+      <Filter>ork\math</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\math\quat.h">
+      <Filter>ork\math</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\math\vec2.h">
+      <Filter>ork\math</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\math\vec3.h">
+      <Filter>ork\math</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\math\vec4.h">
+      <Filter>ork\math</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\render\AttributeBuffer.h">
+      <Filter>ork\render</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\render\Buffer.h">
+      <Filter>ork\render</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\render\CPUBuffer.h">
+      <Filter>ork\render</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\render\FrameBuffer.h">
+      <Filter>ork\render</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\render\GPUBuffer.h">
+      <Filter>ork\render</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\render\Mesh.h">
+      <Filter>ork\render</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\render\MeshBuffers.h">
+      <Filter>ork\render</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\render\Module.h">
+      <Filter>ork\render</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\render\Program.h">
+      <Filter>ork\render</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\render\Query.h">
+      <Filter>ork\render</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\render\RenderBuffer.h">
+      <Filter>ork\render</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\render\Sampler.h">
+      <Filter>ork\render</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\render\Texture.h">
+      <Filter>ork\render</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\render\Texture1D.h">
+      <Filter>ork\render</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\render\Texture1DArray.h">
+      <Filter>ork\render</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\render\Texture2D.h">
+      <Filter>ork\render</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\render\Texture2DArray.h">
+      <Filter>ork\render</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\render\Texture2DMultisample.h">
+      <Filter>ork\render</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\render\Texture2DMultisampleArray.h">
+      <Filter>ork\render</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\render\Texture3D.h">
+      <Filter>ork\render</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\render\TextureBuffer.h">
+      <Filter>ork\render</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\render\TextureCube.h">
+      <Filter>ork\render</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\render\TextureCubeArray.h">
+      <Filter>ork\render</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\render\TextureRectangle.h">
+      <Filter>ork\render</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\render\TransformFeedback.h">
+      <Filter>ork\render</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\render\Types.h">
+      <Filter>ork\render</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\render\Uniform.h">
+      <Filter>ork\render</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\render\Value.h">
+      <Filter>ork\render</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\resource\CompiledResourceLoader.h">
+      <Filter>ork\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\resource\Resource.h">
+      <Filter>ork\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\resource\ResourceCompiler.h">
+      <Filter>ork\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\resource\ResourceDescriptor.h">
+      <Filter>ork\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\resource\ResourceFactory.h">
+      <Filter>ork\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\resource\ResourceLoader.h">
+      <Filter>ork\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\resource\ResourceManager.h">
+      <Filter>ork\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\resource\ResourceTemplate.h">
+      <Filter>ork\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\resource\XMLResourceLoader.h">
+      <Filter>ork\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\scenegraph\AbstractTask.h">
+      <Filter>ork\scenegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\scenegraph\CallMethodTask.h">
+      <Filter>ork\scenegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\scenegraph\DrawMeshTask.h">
+      <Filter>ork\scenegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\scenegraph\LoopTask.h">
+      <Filter>ork\scenegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\scenegraph\Method.h">
+      <Filter>ork\scenegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\scenegraph\SceneManager.h">
+      <Filter>ork\scenegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\scenegraph\SceneNode.h">
+      <Filter>ork\scenegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\scenegraph\SequenceTask.h">
+      <Filter>ork\scenegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\scenegraph\SetProgramTask.h">
+      <Filter>ork\scenegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\scenegraph\SetStateTask.h">
+      <Filter>ork\scenegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\scenegraph\SetTargetTask.h">
+      <Filter>ork\scenegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\scenegraph\SetTransformsTask.h">
+      <Filter>ork\scenegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\scenegraph\ShowInfoTask.h">
+      <Filter>ork\scenegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\scenegraph\ShowLogTask.h">
+      <Filter>ork\scenegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\taskgraph\MultithreadScheduler.h">
+      <Filter>ork\taskgraph</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\taskgraph\Scheduler.h">
+      <Filter>ork\taskgraph</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\taskgraph\Task.h">
+      <Filter>ork\taskgraph</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\taskgraph\TaskFactory.h">
+      <Filter>ork\taskgraph</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\taskgraph\TaskGraph.h">
+      <Filter>ork\taskgraph</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\ui\EventHandler.h">
+      <Filter>ork\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\ui\GlutWindow.h">
+      <Filter>ork\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\ui\Window.h">
+      <Filter>ork\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ork\util\Font.h">
+      <Filter>ork\util</Filter>
+    </ClInclude>
+    <ClInclude Include="test\Test.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="examples\Main.h">
+      <Filter>examples</Filter>
+    </ClInclude>
+    <ClInclude Include="libraries\pmath.h">
+      <Filter>libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="libraries\stbi\stb_image.h">
+      <Filter>libraries\stbi</Filter>
+    </ClInclude>
+    <ClInclude Include="libraries\tinyxml\tinyxml.h">
+      <Filter>libraries\tinyxml</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ork\core\FileLogger.cpp">
+      <Filter>ork\core</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\core\GPUTimer.cpp">
+      <Filter>ork\core</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\core\Logger.cpp">
+      <Filter>ork\core</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\core\Object.cpp">
+      <Filter>ork\core</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\core\Timer.cpp">
+      <Filter>ork\core</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\math\half.cpp">
+      <Filter>ork\math</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\render\AttributeBuffer.cpp">
+      <Filter>ork\render</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\render\Buffer.cpp">
+      <Filter>ork\render</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\render\CPUBuffer.cpp">
+      <Filter>ork\render</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\render\FrameBuffer.cpp">
+      <Filter>ork\render</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\render\GPUBuffer.cpp">
+      <Filter>ork\render</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\render\MeshBuffers.cpp">
+      <Filter>ork\render</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\render\Module.cpp">
+      <Filter>ork\render</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\render\Program.cpp">
+      <Filter>ork\render</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\render\Query.cpp">
+      <Filter>ork\render</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\render\RenderBuffer.cpp">
+      <Filter>ork\render</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\render\Sampler.cpp">
+      <Filter>ork\render</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\render\Texture.cpp">
+      <Filter>ork\render</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\render\Texture1D.cpp">
+      <Filter>ork\render</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\render\Texture1DArray.cpp">
+      <Filter>ork\render</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\render\Texture2D.cpp">
+      <Filter>ork\render</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\render\Texture2DArray.cpp">
+      <Filter>ork\render</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\render\Texture2DMultisample.cpp">
+      <Filter>ork\render</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\render\Texture2DMultisampleArray.cpp">
+      <Filter>ork\render</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\render\Texture3D.cpp">
+      <Filter>ork\render</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\render\TextureBuffer.cpp">
+      <Filter>ork\render</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\render\TextureCube.cpp">
+      <Filter>ork\render</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\render\TextureCubeArray.cpp">
+      <Filter>ork\render</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\render\TextureRectangle.cpp">
+      <Filter>ork\render</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\render\TransformFeedback.cpp">
+      <Filter>ork\render</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\render\Types.cpp">
+      <Filter>ork\render</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\render\Uniform.cpp">
+      <Filter>ork\render</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\render\Value.cpp">
+      <Filter>ork\render</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\resource\CompiledResourceLoader.cpp">
+      <Filter>ork\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\resource\Resource.cpp">
+      <Filter>ork\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\resource\ResourceCompiler.cpp">
+      <Filter>ork\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\resource\ResourceDescriptor.cpp">
+      <Filter>ork\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\resource\ResourceFactory.cpp">
+      <Filter>ork\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\resource\ResourceLoader.cpp">
+      <Filter>ork\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\resource\ResourceManager.cpp">
+      <Filter>ork\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\resource\XMLResourceLoader.cpp">
+      <Filter>ork\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\scenegraph\AbstractTask.cpp">
+      <Filter>ork\scenegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\scenegraph\CallMethodTask.cpp">
+      <Filter>ork\scenegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\scenegraph\DrawMeshTask.cpp">
+      <Filter>ork\scenegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\scenegraph\LoopTask.cpp">
+      <Filter>ork\scenegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\scenegraph\Method.cpp">
+      <Filter>ork\scenegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\scenegraph\SceneManager.cpp">
+      <Filter>ork\scenegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\scenegraph\SceneNode.cpp">
+      <Filter>ork\scenegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\scenegraph\SequenceTask.cpp">
+      <Filter>ork\scenegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\scenegraph\SetProgramTask.cpp">
+      <Filter>ork\scenegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\scenegraph\SetStateTask.cpp">
+      <Filter>ork\scenegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\scenegraph\SetTargetTask.cpp">
+      <Filter>ork\scenegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\scenegraph\SetTransformsTask.cpp">
+      <Filter>ork\scenegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\scenegraph\ShowInfoTask.cpp">
+      <Filter>ork\scenegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\scenegraph\ShowLogTask.cpp">
+      <Filter>ork\scenegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\taskgraph\MultithreadScheduler.cpp">
+      <Filter>ork\taskgraph</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\taskgraph\Scheduler.cpp">
+      <Filter>ork\taskgraph</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\taskgraph\Task.cpp">
+      <Filter>ork\taskgraph</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\taskgraph\TaskFactory.cpp">
+      <Filter>ork\taskgraph</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\taskgraph\TaskGraph.cpp">
+      <Filter>ork\taskgraph</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\ui\EventHandler.cpp">
+      <Filter>ork\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\ui\GlutWindow.cpp">
+      <Filter>ork\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\ui\Window.cpp">
+      <Filter>ork\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ork\util\Font.cpp">
+      <Filter>ork\util</Filter>
+    </ClCompile>
+    <ClCompile Include="test\Test.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\TestFrameBuffer.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\TestResource.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\TestTexture.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\TestUniform.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\TestUniformBlock.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\Main.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\MinimalExample.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\RenderExample.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\ResourceExample.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\SceneGraphExample.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\SceneGraphResourceExample.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\TessellationExample.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\stbi\stb_image.cpp">
+      <Filter>libraries\stbi</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\tinyxml\tinyxml.cpp">
+      <Filter>libraries\tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\tinyxml\tinyxmlerror.cpp">
+      <Filter>libraries\tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\tinyxml\tinyxmlparser.cpp">
+      <Filter>libraries\tinyxml</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

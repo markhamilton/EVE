@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Examples|Win32">
+      <Configuration>Examples</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Test|Win32">
+      <Configuration>Test</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="examples\Main.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="libraries\pmath.h" />
+    <ClInclude Include="libraries\stbi\stb_image.h" />
+    <ClInclude Include="libraries\tinyxml\tinyxml.h" />
+    <ClInclude Include="ork\core\Atomic.h" />
+    <ClInclude Include="ork\core\Factory.h" />
+    <ClInclude Include="ork\core\FileLogger.h" />
+    <ClInclude Include="ork\core\GPUTimer.h" />
+    <ClInclude Include="ork\core\Iterator.h" />
+    <ClInclude Include="ork\core\Logger.h" />
+    <ClInclude Include="ork\core\Object.h" />
+    <ClInclude Include="ork\core\Timer.h" />
+    <ClInclude Include="ork\math\box2.h" />
+    <ClInclude Include="ork\math\box3.h" />
+    <ClInclude Include="ork\math\half.h" />
+    <ClInclude Include="ork\math\mat2.h" />
+    <ClInclude Include="ork\math\mat3.h" />
+    <ClInclude Include="ork\math\mat4.h" />
+    <ClInclude Include="ork\math\quat.h" />
+    <ClInclude Include="ork\math\vec2.h" />
+    <ClInclude Include="ork\math\vec3.h" />
+    <ClInclude Include="ork\math\vec4.h" />
+    <ClInclude Include="ork\render\AttributeBuffer.h" />
+    <ClInclude Include="ork\render\Buffer.h" />
+    <ClInclude Include="ork\render\CPUBuffer.h" />
+    <ClInclude Include="ork\render\FrameBuffer.h" />
+    <ClInclude Include="ork\render\GPUBuffer.h" />
+    <ClInclude Include="ork\render\Mesh.h" />
+    <ClInclude Include="ork\render\MeshBuffers.h" />
+    <ClInclude Include="ork\render\Module.h" />
+    <ClInclude Include="ork\render\Program.h" />
+    <ClInclude Include="ork\render\Query.h" />
+    <ClInclude Include="ork\render\RenderBuffer.h" />
+    <ClInclude Include="ork\render\Sampler.h" />
+    <ClInclude Include="ork\render\Texture.h" />
+    <ClInclude Include="ork\render\Texture1D.h" />
+    <ClInclude Include="ork\render\Texture1DArray.h" />
+    <ClInclude Include="ork\render\Texture2D.h" />
+    <ClInclude Include="ork\render\Texture2DArray.h" />
+    <ClInclude Include="ork\render\Texture2DMultisample.h" />
+    <ClInclude Include="ork\render\Texture2DMultisampleArray.h" />
+    <ClInclude Include="ork\render\Texture3D.h" />
+    <ClInclude Include="ork\render\TextureBuffer.h" />
+    <ClInclude Include="ork\render\TextureCube.h" />
+    <ClInclude Include="ork\render\TextureCubeArray.h" />
+    <ClInclude Include="ork\render\TextureRectangle.h" />
+    <ClInclude Include="ork\render\TransformFeedback.h" />
+    <ClInclude Include="ork\render\Types.h" />
+    <ClInclude Include="ork\render\Uniform.h" />
+    <ClInclude Include="ork\render\Value.h" />
+    <ClInclude Include="ork\resource\CompiledResourceLoader.h" />
+    <ClInclude Include="ork\resource\Resource.h" />
+    <ClInclude Include="ork\resource\ResourceCompiler.h" />
+    <ClInclude Include="ork\resource\ResourceDescriptor.h" />
+    <ClInclude Include="ork\resource\ResourceFactory.h" />
+    <ClInclude Include="ork\resource\ResourceLoader.h" />
+    <ClInclude Include="ork\resource\ResourceManager.h" />
+    <ClInclude Include="ork\resource\ResourceTemplate.h" />
+    <ClInclude Include="ork\resource\XMLResourceLoader.h" />
+    <ClInclude Include="ork\scenegraph\AbstractTask.h" />
+    <ClInclude Include="ork\scenegraph\CallMethodTask.h" />
+    <ClInclude Include="ork\scenegraph\DrawMeshTask.h" />
+    <ClInclude Include="ork\scenegraph\LoopTask.h" />
+    <ClInclude Include="ork\scenegraph\Method.h" />
+    <ClInclude Include="ork\scenegraph\SceneManager.h" />
+    <ClInclude Include="ork\scenegraph\SceneNode.h" />
+    <ClInclude Include="ork\scenegraph\SequenceTask.h" />
+    <ClInclude Include="ork\scenegraph\SetProgramTask.h" />
+    <ClInclude Include="ork\scenegraph\SetStateTask.h" />
+    <ClInclude Include="ork\scenegraph\SetTargetTask.h" />
+    <ClInclude Include="ork\scenegraph\SetTransformsTask.h" />
+    <ClInclude Include="ork\scenegraph\ShowInfoTask.h" />
+    <ClInclude Include="ork\scenegraph\ShowLogTask.h" />
+    <ClInclude Include="ork\taskgraph\MultithreadScheduler.h" />
+    <ClInclude Include="ork\taskgraph\Scheduler.h" />
+    <ClInclude Include="ork\taskgraph\Task.h" />
+    <ClInclude Include="ork\taskgraph\TaskFactory.h" />
+    <ClInclude Include="ork\taskgraph\TaskGraph.h" />
+    <ClInclude Include="ork\ui\EventHandler.h" />
+    <ClInclude Include="ork\ui\GlutWindow.h" />
+    <ClInclude Include="ork\ui\Window.h" />
+    <ClInclude Include="ork\util\Font.h" />
+    <ClInclude Include="test\Test.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Examples|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="examples\Main.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="examples\MinimalExample.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="examples\RenderExample.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="examples\ResourceExample.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="examples\SceneGraphExample.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="examples\SceneGraphResourceExample.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="examples\TessellationExample.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="libraries\stbi\stb_image.cpp" />
+    <ClCompile Include="libraries\tinyxml\tinyxml.cpp" />
+    <ClCompile Include="libraries\tinyxml\tinyxmlerror.cpp" />
+    <ClCompile Include="libraries\tinyxml\tinyxmlparser.cpp" />
+    <ClCompile Include="ork\core\FileLogger.cpp" />
+    <ClCompile Include="ork\core\GPUTimer.cpp" />
+    <ClCompile Include="ork\core\Logger.cpp" />
+    <ClCompile Include="ork\core\Object.cpp" />
+    <ClCompile Include="ork\core\Timer.cpp" />
+    <ClCompile Include="ork\math\half.cpp" />
+    <ClCompile Include="ork\render\AttributeBuffer.cpp" />
+    <ClCompile Include="ork\render\Buffer.cpp" />
+    <ClCompile Include="ork\render\CPUBuffer.cpp" />
+    <ClCompile Include="ork\render\FrameBuffer.cpp" />
+    <ClCompile Include="ork\render\GPUBuffer.cpp" />
+    <ClCompile Include="ork\render\MeshBuffers.cpp" />
+    <ClCompile Include="ork\render\Module.cpp" />
+    <ClCompile Include="ork\render\Program.cpp" />
+    <ClCompile Include="ork\render\Query.cpp" />
+    <ClCompile Include="ork\render\RenderBuffer.cpp" />
+    <ClCompile Include="ork\render\Sampler.cpp" />
+    <ClCompile Include="ork\render\Texture.cpp" />
+    <ClCompile Include="ork\render\Texture1D.cpp" />
+    <ClCompile Include="ork\render\Texture1DArray.cpp" />
+    <ClCompile Include="ork\render\Texture2D.cpp" />
+    <ClCompile Include="ork\render\Texture2DArray.cpp" />
+    <ClCompile Include="ork\render\Texture2DMultisample.cpp" />
+    <ClCompile Include="ork\render\Texture2DMultisampleArray.cpp" />
+    <ClCompile Include="ork\render\Texture3D.cpp" />
+    <ClCompile Include="ork\render\TextureBuffer.cpp" />
+    <ClCompile Include="ork\render\TextureCube.cpp" />
+    <ClCompile Include="ork\render\TextureCubeArray.cpp" />
+    <ClCompile Include="ork\render\TextureRectangle.cpp" />
+    <ClCompile Include="ork\render\TransformFeedback.cpp" />
+    <ClCompile Include="ork\render\Types.cpp" />
+    <ClCompile Include="ork\render\Uniform.cpp" />
+    <ClCompile Include="ork\render\Value.cpp" />
+    <ClCompile Include="ork\resource\CompiledResourceLoader.cpp" />
+    <ClCompile Include="ork\resource\Resource.cpp" />
+    <ClCompile Include="ork\resource\ResourceCompiler.cpp" />
+    <ClCompile Include="ork\resource\ResourceDescriptor.cpp" />
+    <ClCompile Include="ork\resource\ResourceFactory.cpp" />
+    <ClCompile Include="ork\resource\ResourceLoader.cpp" />
+    <ClCompile Include="ork\resource\ResourceManager.cpp" />
+    <ClCompile Include="ork\resource\XMLResourceLoader.cpp" />
+    <ClCompile Include="ork\scenegraph\AbstractTask.cpp" />
+    <ClCompile Include="ork\scenegraph\CallMethodTask.cpp" />
+    <ClCompile Include="ork\scenegraph\DrawMeshTask.cpp" />
+    <ClCompile Include="ork\scenegraph\LoopTask.cpp" />
+    <ClCompile Include="ork\scenegraph\Method.cpp" />
+    <ClCompile Include="ork\scenegraph\SceneManager.cpp" />
+    <ClCompile Include="ork\scenegraph\SceneNode.cpp" />
+    <ClCompile Include="ork\scenegraph\SequenceTask.cpp" />
+    <ClCompile Include="ork\scenegraph\SetProgramTask.cpp" />
+    <ClCompile Include="ork\scenegraph\SetStateTask.cpp" />
+    <ClCompile Include="ork\scenegraph\SetTargetTask.cpp" />
+    <ClCompile Include="ork\scenegraph\SetTransformsTask.cpp" />
+    <ClCompile Include="ork\scenegraph\ShowInfoTask.cpp" />
+    <ClCompile Include="ork\scenegraph\ShowLogTask.cpp" />
+    <ClCompile Include="ork\taskgraph\MultithreadScheduler.cpp" />
+    <ClCompile Include="ork\taskgraph\Scheduler.cpp" />
+    <ClCompile Include="ork\taskgraph\Task.cpp" />
+    <ClCompile Include="ork\taskgraph\TaskFactory.cpp" />
+    <ClCompile Include="ork\taskgraph\TaskGraph.cpp" />
+    <ClCompile Include="ork\ui\EventHandler.cpp" />
+    <ClCompile Include="ork\ui\GlutWindow.cpp" />
+    <ClCompile Include="ork\ui\Window.cpp" />
+    <ClCompile Include="ork\util\Font.cpp" />
+    <ClCompile Include="test\Test.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Examples|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="test\TestFrameBuffer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Examples|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="test\TestResource.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Examples|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="test\TestTexture.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Examples|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="test\TestUniform.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Examples|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="test\TestUniformBlock.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Examples|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8B361006-4618-4A69-834D-5C00D6405571}</ProjectGuid>
+    <RootNamespace>ork</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\Program Files\pthreads-2.8.0\Pre-built.2\include;C:\Program Files\glut-3.7.6_3;C:\Program Files\glew-1.5.6\include;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)</OutDir>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>C:\Program Files\pthreads-2.8.0\Pre-built.2\include;C:\Program Files\glut-3.7.6_3;C:\Program Files\glew-1.5.6\include;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">
+    <IncludePath>C:\Program Files\pthreads-2.8.0\Pre-built.2\include;C:\Program Files\glut-3.7.6_3;C:\Program Files\glew-1.5.6\include;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)Debug\</OutDir>
+    <IntDir>Debug\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Examples|Win32'">
+    <IncludePath>C:\Program Files\pthreads-2.8.0\Pre-built.2\include;C:\Program Files\glut-3.7.6_3;C:\Program Files\glew-1.5.6\include;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)Debug\</OutDir>
+    <IntDir>Debug\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;libraries</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ORK_API=__declspec(dllexport);TIXML_USE_STL;STBI_NO_STDIO;STBI_NO_WRITE;GLUT_NO_WARNING_DISABLE;GLUT_NO_LIB_PRAGMA;_STDCALL_SUPPORTED;_CRT_SECURE_NO_WARNINGS;_M_IX86;_MBCS</PreprocessorDefinitions>
+      <AdditionalOptions>/wd4100 /wd4127 /wd4512 /wd4244 /wd4251 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Program Files\pthreads-2.8.0\Pre-built.2\lib;C:\Program Files\glut-3.7.6_3;C:\Program Files\glew-1.5.6\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32.lib;opengl32.lib;glu32.lib;glut32.lib;pthreadVCE2.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>.;libraries</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;ORK_API=__declspec(dllexport);TIXML_USE_STL;STBI_NO_STDIO;STBI_NO_WRITE;GLUT_NO_WARNING_DISABLE;GLUT_NO_LIB_PRAGMA;_STDCALL_SUPPORTED;_CRT_SECURE_NO_WARNINGS;_M_IX86;_MBCS</PreprocessorDefinitions>
+      <AdditionalOptions>/wd4100 /wd4127 /wd4512 /wd4244 /wd4251 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>glew32.lib;opengl32.lib;glu32.lib;glut32.lib;pthreadVCE2.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files\pthreads-2.8.0\Pre-built.2\lib;C:\Program Files\glut-3.7.6_3;C:\Program Files\glew-1.5.6\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;libraries</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ORK_API=;TIXML_USE_STL;STBI_NO_STDIO;STBI_NO_WRITE;GLUT_NO_WARNING_DISABLE;GLUT_NO_LIB_PRAGMA;_STDCALL_SUPPORTED;_CRT_SECURE_NO_WARNINGS;_M_IX86;_MBCS</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
+      <AdditionalOptions>/wd4100 /wd4127 /wd4512 /wd4244 /MP4
+ %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>glew32.lib;opengl32.lib;glu32.lib;glut32.lib;pthreadVCE2.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files\pthreads-2.8.0\Pre-built.2\lib;C:\Program Files\glut-3.7.6_3;C:\Program Files\glew-1.5.6\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Examples|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;libraries</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ORK_API=;TIXML_USE_STL;STBI_NO_STDIO;STBI_NO_WRITE;GLUT_NO_WARNING_DISABLE;GLUT_NO_LIB_PRAGMA;_STDCALL_SUPPORTED;_CRT_SECURE_NO_WARNINGS;_M_IX86;_MBCS</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
+      <AdditionalOptions>/wd4100 /wd4127 /wd4512 /wd4244 /MP4
+ %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>glew32.lib;opengl32.lib;glu32.lib;glut32.lib;pthreadVCE2.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files\pthreads-2.8.0\Pre-built.2\lib;C:\Program Files\glut-3.7.6_3;C:\Program Files\glew-1.5.6\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
