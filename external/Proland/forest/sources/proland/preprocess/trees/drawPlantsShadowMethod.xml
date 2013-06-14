@@ -1,4 +1,0 @@
-const char* drawPlantsShadowMethodSource = "\
-<?xml version=\"1.0\" ?>\n\
-<drawPlantsShadow name=\"terrain\" plants=\"trees\"/>\n\
-";

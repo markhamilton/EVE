@@ -1,5 +1,0 @@
-<?xml version="1.0" ?>
-<sequence>
-    <updateTerrain name="this.terrain"/>
-    <updateTileSamplers name="this.terrain"/>
-</sequence>

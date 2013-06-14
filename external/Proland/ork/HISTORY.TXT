@@ -1,3 +1,0 @@
-Ork 3.1 (october 2010)
-
-Release of Ork as an Open Source project, with LGPL license.
