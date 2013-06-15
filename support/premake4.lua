@@ -52,7 +52,7 @@ project "Irrlicht"
 	uuid "A42ADB24-5672-1A42-8A85-5820260C9566"
 	language "C++"
 	defines { "_IRR_STATIC_LIB_" }
-	links { "libopengl" }
+	links { "glut" }
 	includedirs {
 		"../external/irrlicht/include",
 		"../external/irrlicht/source/aesGladman",
