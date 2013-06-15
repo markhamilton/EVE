@@ -1,32 +1,17 @@
+--------------------------------------------------------------------------------
 -- TODO: Add console builds linked with ncurses
+--------------------------------------------------------------------------------
 
--- This makes the script a little bit cleaner
-
+-- if not os.isdir("../debug") then os.mkdir("../debug") end
 
 --------------------------------------------------------------------------------
--- EVE Flight Simulator 
---------------------------------------------------------------------------------
+
 solution "EVE"
 	debugdir "../debug"
 	location (_WORKING_DIR.."/"..(_ACTION or ""))
 	targetdir (_WORKING_DIR.."/../bin") 
 
-if not os.isdir("../debug") then os.mkdir("../debug") end
-
-project "EVE"
-	uuid "D20CBF50-D363-11E2-8B8B-0800200C9A66"
-	language "C++"
-	includedirs { "../include" }
-	files { "../source/**" }
-	-- links { "libOIS", "libOgreMain" }
-	defines { "EVE_SIM" }
-	kind "WindowedApp"
-
-	configurations {
-		"Debug",
-		"Release"
-	}
-
+	configurations { "Debug", "Release" }
 	platforms { "x32", "x64" }
 
 	configuration { "windows" }
@@ -34,10 +19,6 @@ project "EVE"
 
 	configuration { "windows", "x64" }
 		defines { "WIN64" }
-
-	configuration { "linux" }
-		links { "m", "pthread" }
-		linkoptions { "-lstdc++" }
 
 	configuration "Debug"
 		defines { "DEBUG" }
@@ -47,15 +28,31 @@ project "EVE"
 		defines { "NDEBUG" }
 		flags { "Optimize" }
 
-
-
 --------------------------------------------------------------------------------
--- Irrlicht Graphics Engine 
+
+project "EVE"
+	uuid "D20CBF50-D363-11E2-8B8B-0800200C9A66"
+	language "C++"
+	includedirs { 
+		"../include",
+		"../external/irrlicht/include"
+	}
+	files { "../source/**" }
+	links { "Irrlicht" }
+	defines { "EVE_SIM" }
+	kind "WindowedApp"
+
+	configuration { "linux" }
+		links { "m", "pthread" }
+		linkoptions { "-lstdc++" }
+
 --------------------------------------------------------------------------------
 
 project "Irrlicht"
 	uuid "A42ADB24-5672-1A42-8A85-5820260C9566"
 	language "C++"
+	defines { "_IRR_STATIC_LIB_" }
+	links { "libopengl" }
 	includedirs {
 		"../external/irrlicht/include",
 		"../external/irrlicht/source/aesGladman",
@@ -91,27 +88,4 @@ project "Irrlicht"
 	}
 	kind "StaticLib"
 
-	configurations {
-		"Debug",
-		"Release"
-	}
-
-	platforms { "x32", "x64" }
-
-	configuration { "windows" }
-		defines { "WINDOWS" }
-
-	configuration { "windows", "x64" }
-		defines { "WIN64" }
-
-	configuration { "linux" }
-		linkoptions { "-lstdc++" }
-
-	configuration "Debug"
-		defines { "DEBUG" }
-		flags { "Symbols" }
-
-	configuration "Release"
-		defines { "NDEBUG" }
-		flags { "Optimize" }
-
+--------------------------------------------------------------------------------

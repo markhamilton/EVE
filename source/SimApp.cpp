@@ -1,5 +1,12 @@
 #include "SimApp.hpp"
 
+using namespace irr;
+using namespace core;
+using namespace scene;
+using namespace video;
+using namespace io;
+using namespace gui;
+
 SimApp::SimApp()
 {
 }
@@ -11,13 +18,35 @@ SimApp::~SimApp()
  
 void SimApp::start()
 {
+	IrrlichtDevice *device = createDevice(EDT_SOFTWARE, dimension2d<u32>(512, 384), 16, false, false, false, 0);
+	
+	IVideoDriver* driver = device->getVideoDriver();
+	ISceneManager* smgr = device->getSceneManager();
+	IGUIEnvironment* guienv = device->getGUIEnvironment();
+
+	guienv->addStaticText(L"EVE Flight Simulator",
+		rect<int>(10,10,200,22), true);
+
+	while(device->run())
+	{
+		driver->beginScene(true, true, SColor(255,100,101,140));
+
+		smgr->drawAll();
+		guienv->drawAll();
+
+		driver->endScene();
+	}
+
+	// io::IFileSystem *irrFile;
+	// ITimer *irrTimer;
+	// ILogger *irrLog;
 	// if(!initOgre("EVE Flight Simulator", 0, 0))
 	// m_pLog->logMessage("Simulator initialized!");
 }
  
 void SimApp::createScene()
 {
-    // m_pLog->logMessage("Entering scene...");
+	// m_pLog->logMessage("Entering scene...");
 	// TODO: Init scene, camera, gui, simulation models, lighting
 	// TODO: Load scene objects here
 }
@@ -52,55 +81,55 @@ void SimApp::updateCamera()
 
 void SimApp::getInput()
 {
-    if(m_bSettingsMode == false)
-    {
-        // if(m_pKeyboard->isKeyDown(OIS::KC_A))
-        //     m_TranslateVector.x = -m_MoveScale;
+	if(m_bSettingsMode == false)
+	{
+		// if(m_pKeyboard->isKeyDown(OIS::KC_A))
+		//     m_TranslateVector.x = -m_MoveScale;
  
-        // if(m_pKeyboard->isKeyDown(OIS::KC_D))
-        //     m_TranslateVector.x = m_MoveScale;
+		// if(m_pKeyboard->isKeyDown(OIS::KC_D))
+		//     m_TranslateVector.x = m_MoveScale;
  
-        // if(OgreFramework::getSingletonPtr()->m_pKeyboard->isKeyDown(OIS::KC_W))
-        //    m_TranslateVector.z = -m_MoveScale;
+		// if(OgreFramework::getSingletonPtr()->m_pKeyboard->isKeyDown(OIS::KC_W))
+		//    m_TranslateVector.z = -m_MoveScale;
  
-        //if(m_pKeyboard->isKeyDown(OIS::KC_S))
-        //    m_TranslateVector.z = m_MoveScale;
+		//if(m_pKeyboard->isKeyDown(OIS::KC_S))
+		//    m_TranslateVector.z = m_MoveScale;
  
-        // if(m_pKeyboard->isKeyDown(OIS::KC_Q))
-        //     m_TranslateVector.y = -m_MoveScale;
+		// if(m_pKeyboard->isKeyDown(OIS::KC_Q))
+		//     m_TranslateVector.y = -m_MoveScale;
  
-        // if(m_pKeyboard->isKeyDown(OIS::KC_E))
-        //    m_TranslateVector.y = m_MoveScale;
+		// if(m_pKeyboard->isKeyDown(OIS::KC_E))
+		//    m_TranslateVector.y = m_MoveScale;
  
-        //camera roll
-        // if(m_pKeyboard->isKeyDown(OIS::KC_Z))
-        //     m_pCamera->roll(Angle(-m_MoveScale));
+		//camera roll
+		// if(m_pKeyboard->isKeyDown(OIS::KC_Z))
+		//     m_pCamera->roll(Angle(-m_MoveScale));
  
-        // if(m_pKeyboard->isKeyDown(OIS::KC_X))
-        //     m_pCamera->roll(Angle(m_MoveScale));
+		// if(m_pKeyboard->isKeyDown(OIS::KC_X))
+		//     m_pCamera->roll(Angle(m_MoveScale));
  
-        //reset roll
-        // if(m_pKeyboard->isKeyDown(OIS::KC_C))
-        //     m_pCamera->roll(-(m_pCamera->getRealOrientation().getRoll()));
-    }
+		//reset roll
+		// if(m_pKeyboard->isKeyDown(OIS::KC_C))
+		//     m_pCamera->roll(-(m_pCamera->getRealOrientation().getRoll()));
+	}
 }
 
 void SimApp::update(double timeSinceLastFrame)
 {
-    if(m_bQuit == true)
-    {
-    	// TODO: Quit
-        return;
-    }
+	if(m_bQuit == true)
+	{
+		// TODO: Quit
+		return;
+	}
 
-    // TODO: Update UI to reflect scene information
+	// TODO: Update UI to reflect scene information
 
-    // TODO: Update position based on speed, which is based on time
-    // m_MoveScale = m_MoveSpeed   * timeSinceLastFrame;
-    // m_RotScale  = m_RotateSpeed * timeSinceLastFrame;
+	// TODO: Update position based on speed, which is based on time
+	// m_MoveScale = m_MoveSpeed   * timeSinceLastFrame;
+	// m_RotScale  = m_RotateSpeed * timeSinceLastFrame;
  
-    getInput();
-    updateCamera();
+	getInput();
+	updateCamera();
 }
 
 // TODO: GUI
@@ -155,17 +184,17 @@ void SimApp::update(double timeSinceLastFrame)
 
 void SimApp::pause()
 {
-    // m_pLog->logMessage("Pausing Simulator...");
+	// m_pLog->logMessage("Pausing Simulator...");
 }
  
 void SimApp::resume()
 {
-    // m_pLog->logMessage("Resuming Simulator...");
+	// m_pLog->logMessage("Resuming Simulator...");
 }
 
 void SimApp::exit()
 {
-    // m_pLog->logMessage("Leaving Simulator...");
+	// m_pLog->logMessage("Leaving Simulator...");
  
 	// TODO: Destroy all scene objects
 }

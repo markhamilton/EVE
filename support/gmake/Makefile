@@ -12,7 +12,7 @@ PROJECTS := EVE Irrlicht
 
 all: $(PROJECTS)
 
-EVE: 
+EVE: Irrlicht
 	@echo "==== Building EVE ($(config)) ===="
 	@${MAKE} --no-print-directory -C . -f EVE.make
 
@@ -30,10 +30,6 @@ help:
 	@echo "CONFIGURATIONS:"
 	@echo "   debug32"
 	@echo "   release32"
-	@echo "   debug32"
-	@echo "   release32"
-	@echo "   debug64"
-	@echo "   release64"
 	@echo "   debug64"
 	@echo "   release64"
 	@echo ""

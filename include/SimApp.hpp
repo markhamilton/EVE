@@ -1,6 +1,7 @@
 #ifndef SIMAPP_HPP
 #define SIMAPP_HPP
 
+#include <irrlicht.h>
 #include <stdio.h>
 #include <string>
 
