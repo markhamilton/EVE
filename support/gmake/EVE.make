@@ -28,7 +28,7 @@ ifndef RESCOMP
 endif
 
 ifeq ($(config),debug32)
-  OBJDIR     = obj/x32/Debug
+  OBJDIR     = obj/x32/Debug/EVE
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE
   DEFINES   += -DEVE_SIM -DDEBUG
@@ -50,7 +50,51 @@ ifeq ($(config),debug32)
 endif
 
 ifeq ($(config),release32)
-  OBJDIR     = obj/x32/Release
+  OBJDIR     = obj/x32/Release/EVE
+  TARGETDIR  = ../../bin
+  TARGET     = $(TARGETDIR)/EVE
+  DEFINES   += -DEVE_SIM -DNDEBUG
+  INCLUDES  += -I../../include
+  CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m32
+  CXXFLAGS  += $(CFLAGS) 
+  LDFLAGS   += -s -m32 -L/usr/lib32 -lstdc++
+  RESFLAGS  += $(DEFINES) $(INCLUDES) 
+  LIBS      += -lm -lpthread
+  LDDEPS    += 
+  LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
+  define PREBUILDCMDS
+  endef
+  define PRELINKCMDS
+  endef
+  define POSTBUILDCMDS
+  endef
+endif
+
+ifeq ($(config),debug32)
+  OBJDIR     = obj/x32/Debug/EVE
+  TARGETDIR  = ../../bin
+  TARGET     = $(TARGETDIR)/EVE
+  DEFINES   += -DEVE_SIM -DDEBUG
+  INCLUDES  += -I../../include
+  CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m32
+  CXXFLAGS  += $(CFLAGS) 
+  LDFLAGS   += -m32 -L/usr/lib32 -lstdc++
+  RESFLAGS  += $(DEFINES) $(INCLUDES) 
+  LIBS      += -lm -lpthread
+  LDDEPS    += 
+  LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
+  define PREBUILDCMDS
+  endef
+  define PRELINKCMDS
+  endef
+  define POSTBUILDCMDS
+  endef
+endif
+
+ifeq ($(config),release32)
+  OBJDIR     = obj/x32/Release/EVE
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE
   DEFINES   += -DEVE_SIM -DNDEBUG
@@ -72,7 +116,7 @@ ifeq ($(config),release32)
 endif
 
 ifeq ($(config),debug64)
-  OBJDIR     = obj/x64/Debug
+  OBJDIR     = obj/x64/Debug/EVE
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE
   DEFINES   += -DEVE_SIM -DDEBUG
@@ -94,7 +138,51 @@ ifeq ($(config),debug64)
 endif
 
 ifeq ($(config),release64)
-  OBJDIR     = obj/x64/Release
+  OBJDIR     = obj/x64/Release/EVE
+  TARGETDIR  = ../../bin
+  TARGET     = $(TARGETDIR)/EVE
+  DEFINES   += -DEVE_SIM -DNDEBUG
+  INCLUDES  += -I../../include
+  CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m64
+  CXXFLAGS  += $(CFLAGS) 
+  LDFLAGS   += -s -m64 -L/usr/lib64 -lstdc++
+  RESFLAGS  += $(DEFINES) $(INCLUDES) 
+  LIBS      += -lm -lpthread
+  LDDEPS    += 
+  LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
+  define PREBUILDCMDS
+  endef
+  define PRELINKCMDS
+  endef
+  define POSTBUILDCMDS
+  endef
+endif
+
+ifeq ($(config),debug64)
+  OBJDIR     = obj/x64/Debug/EVE
+  TARGETDIR  = ../../bin
+  TARGET     = $(TARGETDIR)/EVE
+  DEFINES   += -DEVE_SIM -DDEBUG
+  INCLUDES  += -I../../include
+  CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m64
+  CXXFLAGS  += $(CFLAGS) 
+  LDFLAGS   += -m64 -L/usr/lib64 -lstdc++
+  RESFLAGS  += $(DEFINES) $(INCLUDES) 
+  LIBS      += -lm -lpthread
+  LDDEPS    += 
+  LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
+  define PREBUILDCMDS
+  endef
+  define PRELINKCMDS
+  endef
+  define POSTBUILDCMDS
+  endef
+endif
+
+ifeq ($(config),release64)
+  OBJDIR     = obj/x64/Release/EVE
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE
   DEFINES   += -DEVE_SIM -DNDEBUG

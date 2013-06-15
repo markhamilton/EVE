@@ -6,7 +6,7 @@ ifndef config
 endif
 export config
 
-PROJECTS := EVE
+PROJECTS := EVE Irrlicht
 
 .PHONY: all clean help $(PROJECTS)
 
@@ -16,8 +16,13 @@ EVE:
 	@echo "==== Building EVE ($(config)) ===="
 	@${MAKE} --no-print-directory -C . -f EVE.make
 
+Irrlicht: 
+	@echo "==== Building Irrlicht ($(config)) ===="
+	@${MAKE} --no-print-directory -C . -f Irrlicht.make
+
 clean:
 	@${MAKE} --no-print-directory -C . -f EVE.make clean
+	@${MAKE} --no-print-directory -C . -f Irrlicht.make clean
 
 help:
 	@echo "Usage: make [config=name] [target]"
@@ -25,6 +30,10 @@ help:
 	@echo "CONFIGURATIONS:"
 	@echo "   debug32"
 	@echo "   release32"
+	@echo "   debug32"
+	@echo "   release32"
+	@echo "   debug64"
+	@echo "   release64"
 	@echo "   debug64"
 	@echo "   release64"
 	@echo ""
@@ -32,5 +41,6 @@ help:
 	@echo "   all (default)"
 	@echo "   clean"
 	@echo "   EVE"
+	@echo "   Irrlicht"
 	@echo ""
 	@echo "For more information, see http://industriousone.com/premake/quick-start"
