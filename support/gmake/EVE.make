@@ -36,9 +36,9 @@ ifeq ($(config),debug32)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
+  LDFLAGS   += -L/usr/lib/x86_64-linux-gnu -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libIrrlicht.a -lm -lpthread
+  LIBS      += ../../bin/libIrrlicht.a -lpng -lm -lpthread -lGL
   LDDEPS    += ../../bin/libIrrlicht.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -58,9 +58,9 @@ ifeq ($(config),release32)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -L../../bin -s -m32 -L/usr/lib32 -lstdc++
+  LDFLAGS   += -L/usr/lib/x86_64-linux-gnu -L../../bin -s -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libIrrlicht.a -lm -lpthread
+  LIBS      += ../../bin/libIrrlicht.a -lpng -lm -lpthread -lGL
   LDDEPS    += ../../bin/libIrrlicht.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -80,9 +80,9 @@ ifeq ($(config),debug64)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
+  LDFLAGS   += -L/usr/lib/x86_64-linux-gnu -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libIrrlicht.a -lm -lpthread
+  LIBS      += ../../bin/libIrrlicht.a -lpng -lm -lpthread -lGL
   LDDEPS    += ../../bin/libIrrlicht.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -102,9 +102,9 @@ ifeq ($(config),release64)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -L../../bin -s -m64 -L/usr/lib64 -lstdc++
+  LDFLAGS   += -L/usr/lib/x86_64-linux-gnu -L../../bin -s -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libIrrlicht.a -lm -lpthread
+  LIBS      += ../../bin/libIrrlicht.a -lpng -lm -lpthread -lGL
   LDDEPS    += ../../bin/libIrrlicht.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS

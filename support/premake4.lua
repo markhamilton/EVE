@@ -7,7 +7,7 @@
 --------------------------------------------------------------------------------
 
 solution "EVE"
-	debugdir "../debug"
+	-- debugdir "../debug"
 	location (_WORKING_DIR.."/"..(_ACTION or ""))
 	targetdir (_WORKING_DIR.."/../bin") 
 
@@ -38,12 +38,13 @@ project "EVE"
 		"../external/irrlicht/include"
 	}
 	files { "../source/**" }
-	links { "Irrlicht" }
+	links { "Irrlicht", "png" }
 	defines { "EVE_SIM" }
 	kind "WindowedApp"
 
 	configuration { "linux" }
-		links { "m", "pthread" }
+		libdirs { "/usr/lib/x86_64-linux-gnu" } 
+		links { "m", "pthread", "GL" }
 		linkoptions { "-lstdc++" }
 
 --------------------------------------------------------------------------------
@@ -52,7 +53,6 @@ project "Irrlicht"
 	uuid "A42ADB24-5672-1A42-8A85-5820260C9566"
 	language "C++"
 	defines { "_IRR_STATIC_LIB_" }
-	links { "glut" }
 	includedirs {
 		"../external/irrlicht/include",
 		"../external/irrlicht/source/aesGladman",
@@ -68,24 +68,30 @@ project "Irrlicht"
 		"../external/irrlicht/source/Irrlicht/aesGladman/*.h",
 		"../external/irrlicht/source/Irrlicht/jpeglib/*.c",
 		"../external/irrlicht/source/Irrlicht/jpeglib/*.h",
-		"../external/irrlicht/source/Irrlicht/libpng/source/*.c",
-		"../external/irrlicht/source/Irrlicht/libpng/source/*.h",
-		"../external/irrlicht/source/Irrlicht/bzip2/source/*.c",
-		"../external/irrlicht/source/Irrlicht/bzip2/source/*.h",
-		"../external/irrlicht/source/Irrlicht/lzma/source/*.c",
-		"../external/irrlicht/source/Irrlicht/lzma/source/*.h",
-		"../external/irrlicht/source/Irrlicht/zlib/source/*.c",
-		"../external/irrlicht/source/Irrlicht/zlib/source/*.h",
+		"../external/irrlicht/source/Irrlicht/libpng/*.c",
+		"../external/irrlicht/source/Irrlicht/libpng/*.h",
+		"../external/irrlicht/source/Irrlicht/bzip2/*.c",
+		"../external/irrlicht/source/Irrlicht/bzip2/*.h",
+		"../external/irrlicht/source/Irrlicht/lzma/*.c",
+		"../external/irrlicht/source/Irrlicht/lzma/*.h",
+		"../external/irrlicht/source/Irrlicht/zlib/*.c",
+		"../external/irrlicht/source/Irrlicht/zlib/*.h",
 	}
 	excludes {
 		"../external/irrlicht/source/Irrlicht/libpng/example.c",
+		"../external/irrlicht/source/Irrlicht/jpeglib/example.c",
 		"../external/irrlicht/source/Irrlicht/jpeglib/jmemdos.c",
 		"../external/irrlicht/source/Irrlicht/jpeglib/jmemmac.c",
-		"../external/irrlicht/source/Irrlicht/jpeglib/example.c",
 		"../external/irrlicht/source/Irrlicht/jpeglib/rdjpgcom.c",
 		"../external/irrlicht/source/Irrlicht/jpeglib/wrjpgcom.c",
 		"../external/irrlicht/source/Irrlicht/jpeglib/cdjpeg.c",
+		"../external/irrlicht/source/Irrlicht/jpeglib/jpegtran.c",
+		"../external/irrlicht/source/Irrlicht/bzip2/dlltest.c",
+		"../external/irrlicht/source/Irrlicht/bzip2/bzip2.c",
 	}
 	kind "StaticLib"
+
+	configuration { "windows" }
+		links { "opengl32" }
 
 --------------------------------------------------------------------------------
