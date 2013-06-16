@@ -1,0 +1,6 @@
+[submodule "external/evds"]
+	path = external/evds
+	url = git://github.com/FoxWorks/EVDS.git
+[submodule "external/simc"]
+	path = external/simc
+	url = git://github.com/FoxWorks/SIMC.git

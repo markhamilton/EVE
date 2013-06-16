@@ -1,5 +1,6 @@
 --------------------------------------------------------------------------------
 -- TODO: Add console builds linked with ncurses
+-- TODO: Testing in Windows
 --------------------------------------------------------------------------------
 
 -- if not os.isdir("../debug") then os.mkdir("../debug") end
@@ -7,6 +8,7 @@
 --------------------------------------------------------------------------------
 
 solution "EVE"
+
 	-- debugdir "../debug"
 	location (_WORKING_DIR.."/"..(_ACTION or ""))
 	targetdir (_WORKING_DIR.."/../bin") 
@@ -28,6 +30,7 @@ solution "EVE"
 		defines { "NDEBUG" }
 		flags { "Optimize" }
 
+
 --------------------------------------------------------------------------------
 
 project "EVE"
@@ -43,8 +46,7 @@ project "EVE"
 	kind "WindowedApp"
 
 	configuration { "linux" }
-		libdirs { "/usr/lib/x86_64-linux-gnu" } 
-		links { "m", "pthread", "GL" }
+		links { "m", "pthread", "GL", "X11", "Xxf86vm" }
 		linkoptions { "-lstdc++" }
 
 --------------------------------------------------------------------------------
@@ -95,3 +97,9 @@ project "Irrlicht"
 		links { "opengl32" }
 
 --------------------------------------------------------------------------------
+SIMC_STANDALONE = false
+EVDS_STANDALONE = false
+
+dofile("./../external/simc/support/premake4_common.lua");
+dofile("./../external/simc/support/premake4.lua");
+dofile("./../external/evds/support/premake4.lua");

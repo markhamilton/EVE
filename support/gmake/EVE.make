@@ -36,10 +36,10 @@ ifeq ($(config),debug32)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -L/usr/lib/x86_64-linux-gnu -L../../bin -m32 -L/usr/lib32 -lstdc++
+  LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libIrrlicht.a -lpng -lm -lpthread -lGL
-  LDDEPS    += ../../bin/libIrrlicht.a
+  LIBS      += ../../bin/libIrrlichtd32.a -lpng -lm -lpthread -lGL -lX11 -lXxf86vm
+  LDDEPS    += ../../bin/libIrrlichtd32.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -58,9 +58,229 @@ ifeq ($(config),release32)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -L/usr/lib/x86_64-linux-gnu -L../../bin -s -m32 -L/usr/lib32 -lstdc++
+  LDFLAGS   += -L../../bin -s -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libIrrlicht.a -lpng -lm -lpthread -lGL
+  LIBS      += ../../bin/libIrrlicht32.a -lpng -lm -lpthread -lGL -lX11 -lXxf86vm
+  LDDEPS    += ../../bin/libIrrlicht32.a
+  LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
+  define PREBUILDCMDS
+  endef
+  define PRELINKCMDS
+  endef
+  define POSTBUILDCMDS
+  endef
+endif
+
+ifeq ($(config),debug32)
+  OBJDIR     = obj/x32/Debug/EVE
+  TARGETDIR  = ../../bin
+  TARGET     = $(TARGETDIR)/EVE
+  DEFINES   += -DDEBUG -DEVE_SIM
+  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m32
+  CXXFLAGS  += $(CFLAGS) 
+  LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
+  RESFLAGS  += $(DEFINES) $(INCLUDES) 
+  LIBS      += ../../bin/libIrrlichtd32.a -lpng -lm -lpthread -lGL -lX11 -lXxf86vm
+  LDDEPS    += ../../bin/libIrrlichtd32.a
+  LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
+  define PREBUILDCMDS
+  endef
+  define PRELINKCMDS
+  endef
+  define POSTBUILDCMDS
+  endef
+endif
+
+ifeq ($(config),release32)
+  OBJDIR     = obj/x32/Release/EVE
+  TARGETDIR  = ../../bin
+  TARGET     = $(TARGETDIR)/EVE
+  DEFINES   += -DNDEBUG -DEVE_SIM
+  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m32
+  CXXFLAGS  += $(CFLAGS) 
+  LDFLAGS   += -L../../bin -s -m32 -L/usr/lib32 -lstdc++
+  RESFLAGS  += $(DEFINES) $(INCLUDES) 
+  LIBS      += ../../bin/libIrrlicht32.a -lpng -lm -lpthread -lGL -lX11 -lXxf86vm
+  LDDEPS    += ../../bin/libIrrlicht32.a
+  LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
+  define PREBUILDCMDS
+  endef
+  define PRELINKCMDS
+  endef
+  define POSTBUILDCMDS
+  endef
+endif
+
+ifeq ($(config),debugdynamic32)
+  OBJDIR     = obj/x32/DebugDynamic/EVE
+  TARGETDIR  = ../../bin
+  TARGET     = $(TARGETDIR)/EVE
+  DEFINES   += -DEVE_SIM
+  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
+  CXXFLAGS  += $(CFLAGS) 
+  LDFLAGS   += -L../../bin -s -m32 -L/usr/lib32 -lstdc++
+  RESFLAGS  += $(DEFINES) $(INCLUDES) 
+  LIBS      += ../../bin/libIrrlichtd32.a -lpng -lm -lpthread -lGL -lX11 -lXxf86vm
+  LDDEPS    += ../../bin/libIrrlichtd32.a
+  LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
+  define PREBUILDCMDS
+  endef
+  define PRELINKCMDS
+  endef
+  define POSTBUILDCMDS
+  endef
+endif
+
+ifeq ($(config),releasedynamic32)
+  OBJDIR     = obj/x32/ReleaseDynamic/EVE
+  TARGETDIR  = ../../bin
+  TARGET     = $(TARGETDIR)/EVE
+  DEFINES   += -DEVE_SIM
+  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
+  CXXFLAGS  += $(CFLAGS) 
+  LDFLAGS   += -L../../bin -s -m32 -L/usr/lib32 -lstdc++
+  RESFLAGS  += $(DEFINES) $(INCLUDES) 
+  LIBS      += ../../bin/libIrrlicht32.a -lpng -lm -lpthread -lGL -lX11 -lXxf86vm
+  LDDEPS    += ../../bin/libIrrlicht32.a
+  LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
+  define PREBUILDCMDS
+  endef
+  define PRELINKCMDS
+  endef
+  define POSTBUILDCMDS
+  endef
+endif
+
+ifeq ($(config),debugsinglethread32)
+  OBJDIR     = obj/x32/DebugSingleThread/EVE
+  TARGETDIR  = ../../bin
+  TARGET     = $(TARGETDIR)/EVE
+  DEFINES   += -DEVE_SIM
+  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
+  CXXFLAGS  += $(CFLAGS) 
+  LDFLAGS   += -L../../bin -s -m32 -L/usr/lib32 -lstdc++
+  RESFLAGS  += $(DEFINES) $(INCLUDES) 
+  LIBS      += ../../bin/libIrrlicht_std32.a -lpng -lm -lpthread -lGL -lX11 -lXxf86vm
+  LDDEPS    += ../../bin/libIrrlicht_std32.a
+  LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
+  define PREBUILDCMDS
+  endef
+  define PRELINKCMDS
+  endef
+  define POSTBUILDCMDS
+  endef
+endif
+
+ifeq ($(config),releasesinglethread32)
+  OBJDIR     = obj/x32/ReleaseSingleThread/EVE
+  TARGETDIR  = ../../bin
+  TARGET     = $(TARGETDIR)/EVE
+  DEFINES   += -DEVE_SIM
+  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
+  CXXFLAGS  += $(CFLAGS) 
+  LDFLAGS   += -L../../bin -s -m32 -L/usr/lib32 -lstdc++
+  RESFLAGS  += $(DEFINES) $(INCLUDES) 
+  LIBS      += ../../bin/libIrrlicht_st32.a -lpng -lm -lpthread -lGL -lX11 -lXxf86vm
+  LDDEPS    += ../../bin/libIrrlicht_st32.a
+  LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
+  define PREBUILDCMDS
+  endef
+  define PRELINKCMDS
+  endef
+  define POSTBUILDCMDS
+  endef
+endif
+
+ifeq ($(config),debugsinglethreaddynamic32)
+  OBJDIR     = obj/x32/DebugSingleThreadDynamic/EVE
+  TARGETDIR  = ../../bin
+  TARGET     = $(TARGETDIR)/EVE
+  DEFINES   += -DEVE_SIM
+  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
+  CXXFLAGS  += $(CFLAGS) 
+  LDFLAGS   += -L../../bin -s -m32 -L/usr/lib32 -lstdc++
+  RESFLAGS  += $(DEFINES) $(INCLUDES) 
+  LIBS      += ../../bin/libIrrlicht_std32.a -lpng -lm -lpthread -lGL -lX11 -lXxf86vm
+  LDDEPS    += ../../bin/libIrrlicht_std32.a
+  LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
+  define PREBUILDCMDS
+  endef
+  define PRELINKCMDS
+  endef
+  define POSTBUILDCMDS
+  endef
+endif
+
+ifeq ($(config),releasesinglethreaddynamic32)
+  OBJDIR     = obj/x32/ReleaseSingleThreadDynamic/EVE
+  TARGETDIR  = ../../bin
+  TARGET     = $(TARGETDIR)/EVE
+  DEFINES   += -DEVE_SIM
+  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
+  CXXFLAGS  += $(CFLAGS) 
+  LDFLAGS   += -L../../bin -s -m32 -L/usr/lib32 -lstdc++
+  RESFLAGS  += $(DEFINES) $(INCLUDES) 
+  LIBS      += ../../bin/libIrrlicht_st32.a -lpng -lm -lpthread -lGL -lX11 -lXxf86vm
+  LDDEPS    += ../../bin/libIrrlicht_st32.a
+  LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
+  define PREBUILDCMDS
+  endef
+  define PRELINKCMDS
+  endef
+  define POSTBUILDCMDS
+  endef
+endif
+
+ifeq ($(config),debug64)
+  OBJDIR     = obj/x64/Debug/EVE
+  TARGETDIR  = ../../bin
+  TARGET     = $(TARGETDIR)/EVE
+  DEFINES   += -DDEBUG -DEVE_SIM
+  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m64
+  CXXFLAGS  += $(CFLAGS) 
+  LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
+  RESFLAGS  += $(DEFINES) $(INCLUDES) 
+  LIBS      += ../../bin/libIrrlichtd.a -lpng -lm -lpthread -lGL -lX11 -lXxf86vm
+  LDDEPS    += ../../bin/libIrrlichtd.a
+  LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
+  define PREBUILDCMDS
+  endef
+  define PRELINKCMDS
+  endef
+  define POSTBUILDCMDS
+  endef
+endif
+
+ifeq ($(config),release64)
+  OBJDIR     = obj/x64/Release/EVE
+  TARGETDIR  = ../../bin
+  TARGET     = $(TARGETDIR)/EVE
+  DEFINES   += -DNDEBUG -DEVE_SIM
+  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m64
+  CXXFLAGS  += $(CFLAGS) 
+  LDFLAGS   += -L../../bin -s -m64 -L/usr/lib64 -lstdc++
+  RESFLAGS  += $(DEFINES) $(INCLUDES) 
+  LIBS      += ../../bin/libIrrlicht.a -lpng -lm -lpthread -lGL -lX11 -lXxf86vm
   LDDEPS    += ../../bin/libIrrlicht.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -80,10 +300,10 @@ ifeq ($(config),debug64)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -L/usr/lib/x86_64-linux-gnu -L../../bin -m64 -L/usr/lib64 -lstdc++
+  LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libIrrlicht.a -lpng -lm -lpthread -lGL
-  LDDEPS    += ../../bin/libIrrlicht.a
+  LIBS      += ../../bin/libIrrlichtd.a -lpng -lm -lpthread -lGL -lX11 -lXxf86vm
+  LDDEPS    += ../../bin/libIrrlichtd.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -102,10 +322,142 @@ ifeq ($(config),release64)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -L/usr/lib/x86_64-linux-gnu -L../../bin -s -m64 -L/usr/lib64 -lstdc++
+  LDFLAGS   += -L../../bin -s -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libIrrlicht.a -lpng -lm -lpthread -lGL
+  LIBS      += ../../bin/libIrrlicht.a -lpng -lm -lpthread -lGL -lX11 -lXxf86vm
   LDDEPS    += ../../bin/libIrrlicht.a
+  LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
+  define PREBUILDCMDS
+  endef
+  define PRELINKCMDS
+  endef
+  define POSTBUILDCMDS
+  endef
+endif
+
+ifeq ($(config),debugdynamic64)
+  OBJDIR     = obj/x64/DebugDynamic/EVE
+  TARGETDIR  = ../../bin
+  TARGET     = $(TARGETDIR)/EVE
+  DEFINES   += -DEVE_SIM
+  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
+  CXXFLAGS  += $(CFLAGS) 
+  LDFLAGS   += -L../../bin -s -m64 -L/usr/lib64 -lstdc++
+  RESFLAGS  += $(DEFINES) $(INCLUDES) 
+  LIBS      += ../../bin/libIrrlichtd.a -lpng -lm -lpthread -lGL -lX11 -lXxf86vm
+  LDDEPS    += ../../bin/libIrrlichtd.a
+  LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
+  define PREBUILDCMDS
+  endef
+  define PRELINKCMDS
+  endef
+  define POSTBUILDCMDS
+  endef
+endif
+
+ifeq ($(config),releasedynamic64)
+  OBJDIR     = obj/x64/ReleaseDynamic/EVE
+  TARGETDIR  = ../../bin
+  TARGET     = $(TARGETDIR)/EVE
+  DEFINES   += -DEVE_SIM
+  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
+  CXXFLAGS  += $(CFLAGS) 
+  LDFLAGS   += -L../../bin -s -m64 -L/usr/lib64 -lstdc++
+  RESFLAGS  += $(DEFINES) $(INCLUDES) 
+  LIBS      += ../../bin/libIrrlicht.a -lpng -lm -lpthread -lGL -lX11 -lXxf86vm
+  LDDEPS    += ../../bin/libIrrlicht.a
+  LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
+  define PREBUILDCMDS
+  endef
+  define PRELINKCMDS
+  endef
+  define POSTBUILDCMDS
+  endef
+endif
+
+ifeq ($(config),debugsinglethread64)
+  OBJDIR     = obj/x64/DebugSingleThread/EVE
+  TARGETDIR  = ../../bin
+  TARGET     = $(TARGETDIR)/EVE
+  DEFINES   += -DEVE_SIM
+  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
+  CXXFLAGS  += $(CFLAGS) 
+  LDFLAGS   += -L../../bin -s -m64 -L/usr/lib64 -lstdc++
+  RESFLAGS  += $(DEFINES) $(INCLUDES) 
+  LIBS      += ../../bin/libIrrlicht_std.a -lpng -lm -lpthread -lGL -lX11 -lXxf86vm
+  LDDEPS    += ../../bin/libIrrlicht_std.a
+  LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
+  define PREBUILDCMDS
+  endef
+  define PRELINKCMDS
+  endef
+  define POSTBUILDCMDS
+  endef
+endif
+
+ifeq ($(config),releasesinglethread64)
+  OBJDIR     = obj/x64/ReleaseSingleThread/EVE
+  TARGETDIR  = ../../bin
+  TARGET     = $(TARGETDIR)/EVE
+  DEFINES   += -DEVE_SIM
+  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
+  CXXFLAGS  += $(CFLAGS) 
+  LDFLAGS   += -L../../bin -s -m64 -L/usr/lib64 -lstdc++
+  RESFLAGS  += $(DEFINES) $(INCLUDES) 
+  LIBS      += ../../bin/libIrrlicht_st.a -lpng -lm -lpthread -lGL -lX11 -lXxf86vm
+  LDDEPS    += ../../bin/libIrrlicht_st.a
+  LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
+  define PREBUILDCMDS
+  endef
+  define PRELINKCMDS
+  endef
+  define POSTBUILDCMDS
+  endef
+endif
+
+ifeq ($(config),debugsinglethreaddynamic64)
+  OBJDIR     = obj/x64/DebugSingleThreadDynamic/EVE
+  TARGETDIR  = ../../bin
+  TARGET     = $(TARGETDIR)/EVE
+  DEFINES   += -DEVE_SIM
+  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
+  CXXFLAGS  += $(CFLAGS) 
+  LDFLAGS   += -L../../bin -s -m64 -L/usr/lib64 -lstdc++
+  RESFLAGS  += $(DEFINES) $(INCLUDES) 
+  LIBS      += ../../bin/libIrrlicht_std.a -lpng -lm -lpthread -lGL -lX11 -lXxf86vm
+  LDDEPS    += ../../bin/libIrrlicht_std.a
+  LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
+  define PREBUILDCMDS
+  endef
+  define PRELINKCMDS
+  endef
+  define POSTBUILDCMDS
+  endef
+endif
+
+ifeq ($(config),releasesinglethreaddynamic64)
+  OBJDIR     = obj/x64/ReleaseSingleThreadDynamic/EVE
+  TARGETDIR  = ../../bin
+  TARGET     = $(TARGETDIR)/EVE
+  DEFINES   += -DEVE_SIM
+  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
+  CXXFLAGS  += $(CFLAGS) 
+  LDFLAGS   += -L../../bin -s -m64 -L/usr/lib64 -lstdc++
+  RESFLAGS  += $(DEFINES) $(INCLUDES) 
+  LIBS      += ../../bin/libIrrlicht_st.a -lpng -lm -lpthread -lGL -lX11 -lXxf86vm
+  LDDEPS    += ../../bin/libIrrlicht_st.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef

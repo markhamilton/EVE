@@ -6,7 +6,7 @@ ifndef config
 endif
 export config
 
-PROJECTS := EVE Irrlicht
+PROJECTS := EVE Irrlicht simc evds
 
 .PHONY: all clean help $(PROJECTS)
 
@@ -20,9 +20,19 @@ Irrlicht:
 	@echo "==== Building Irrlicht ($(config)) ===="
 	@${MAKE} --no-print-directory -C . -f Irrlicht.make
 
+simc: 
+	@echo "==== Building simc ($(config)) ===="
+	@${MAKE} --no-print-directory -C . -f simc.make
+
+evds: 
+	@echo "==== Building evds ($(config)) ===="
+	@${MAKE} --no-print-directory -C . -f evds.make
+
 clean:
 	@${MAKE} --no-print-directory -C . -f EVE.make clean
 	@${MAKE} --no-print-directory -C . -f Irrlicht.make clean
+	@${MAKE} --no-print-directory -C . -f simc.make clean
+	@${MAKE} --no-print-directory -C . -f evds.make clean
 
 help:
 	@echo "Usage: make [config=name] [target]"
@@ -30,13 +40,31 @@ help:
 	@echo "CONFIGURATIONS:"
 	@echo "   debug32"
 	@echo "   release32"
+	@echo "   debug32"
+	@echo "   release32"
+	@echo "   debugdynamic32"
+	@echo "   releasedynamic32"
+	@echo "   debugsinglethread32"
+	@echo "   releasesinglethread32"
+	@echo "   debugsinglethreaddynamic32"
+	@echo "   releasesinglethreaddynamic32"
 	@echo "   debug64"
 	@echo "   release64"
+	@echo "   debug64"
+	@echo "   release64"
+	@echo "   debugdynamic64"
+	@echo "   releasedynamic64"
+	@echo "   debugsinglethread64"
+	@echo "   releasesinglethread64"
+	@echo "   debugsinglethreaddynamic64"
+	@echo "   releasesinglethreaddynamic64"
 	@echo ""
 	@echo "TARGETS:"
 	@echo "   all (default)"
 	@echo "   clean"
 	@echo "   EVE"
 	@echo "   Irrlicht"
+	@echo "   simc"
+	@echo "   evds"
 	@echo ""
 	@echo "For more information, see http://industriousone.com/premake/quick-start"
