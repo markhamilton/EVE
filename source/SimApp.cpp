@@ -18,18 +18,31 @@ SimApp::~SimApp()
  
 void SimApp::start()
 {
-	IrrlichtDevice *device = createDevice(EDT_SOFTWARE, dimension2d<u32>(512, 384), 16, false, false, false, 0);
-	
+	SIrrlichtCreationParameters params = SIrrlichtCreationParameters();
+	params.AntiAlias = 24;
+	params.DriverType = video::EDT_OPENGL;
+	params.WindowSize = core::dimension2d<u32>(800, 600);
+	IrrlichtDevice *device = createDeviceEx(params);
+
+	device->setWindowCaption(L"Eve Flight Simulator");
+
 	IVideoDriver* driver = device->getVideoDriver();
 	ISceneManager* smgr = device->getSceneManager();
 	IGUIEnvironment* guienv = device->getGUIEnvironment();
 
-	guienv->addStaticText(L"EVE Flight Simulator",
-		rect<int>(10,10,200,22), true);
+	IMeshSceneNode* earth = smgr->addSphereSceneNode(40.0f, 160, 0, -1, core::vector3df(0, 0, 0), core::vector3df(0, 0, 0));
+	earth->setMaterialFlag(video::EMF_LIGHTING, false);
+	earth->setMaterialTexture(0, driver->getTexture("../assets/earth.jpg"));
+
+	ICameraSceneNode* cam = smgr->addCameraSceneNodeMaya(earth, -1500.f, 200.f, 1500.f, -1, 70.f, true);
+	cam->setTarget(vector3df(0, 0, 0));
+
+	IGUIStaticText* title = guienv->addStaticText(L"Eve Flight Simulator", rect<int>(10,10,200,20), false);
+	title->setOverrideColor(SColor(255, 255, 255, 255));
 
 	while(device->run())
 	{
-		driver->beginScene(true, true, SColor(255,100,101,140));
+		driver->beginScene(true, true, SColor(255, 0, 0, 0));
 
 		smgr->drawAll();
 		guienv->drawAll();
