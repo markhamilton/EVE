@@ -214,7 +214,9 @@ bool SimApp::init(const wchar_t* wndTitle)
 		m_pDriver->getTexture("../assets/skybox/starfield_front.jpg"),
 		m_pDriver->getTexture("../assets/skybox/starfield_back.jpg"));
 
-	Planet* earth = new Planet(m_pDriver, m_pSmgr, L"earth", 40.0f);
+	// TODO: Create PlanetManager
+	// TODO: Load planet data dynamically via a kinetic snapshot of our galaxy (XML format)
+	Planet* earth = new Planet(m_pDriver, m_pSmgr, L"earth", "../assets/earth.jpg", 40.0f);
 
 	m_pModelingCam = m_pSmgr->addCameraSceneNodeMaya(0, -1500.f, 200.f, 1500.f, -1, 70.f, true);
 	m_pModelingCam->setTarget(vector3df(0, 0, 0));

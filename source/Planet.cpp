@@ -1,7 +1,7 @@
 #include "Planet.hpp"
 
 
-Planet::Planet(video::IVideoDriver* Driver, scene::ISceneManager* Smgr, const wchar_t* Name, const f32 Radius)
+Planet::Planet(video::IVideoDriver* Driver, scene::ISceneManager* Smgr, const wchar_t* Name, const io::path &Texture, const f32 Radius)
 {
 	// TODO: Get singleton for the driver and scenemanager instead of passing states
 	// TODO: Create Quadrilateralized spherical cube
@@ -10,5 +10,5 @@ Planet::Planet(video::IVideoDriver* Driver, scene::ISceneManager* Smgr, const wc
 
 	IMeshSceneNode* planet = Smgr->addSphereSceneNode(Radius, 160, 0, -1, vector3df(0, 0, 0), vector3df(0, 0, 0));
 	planet->setMaterialFlag(video::EMF_LIGHTING, false);
-	planet->setMaterialTexture(0, Driver->getTexture("../assets/earth.jpg"));
+	planet->setMaterialTexture(0, Driver->getTexture(Texture));
 }
