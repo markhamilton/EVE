@@ -43,8 +43,10 @@ protected:
 	IVideoDriver* 		m_pDriver;
  	ISceneManager* 		m_pSmgr;
 	IGUIEnvironment*	m_pGui;
+	ILogger*			m_pLog;
 
 	ICameraSceneNode*	m_pModelingCam;
+	IGUIStaticText*		m_pFpsCounter;
 
 private:
 	// void buildGUI();

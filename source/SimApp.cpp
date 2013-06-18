@@ -6,19 +6,24 @@ SimApp::SimApp()
 	m_pDriver		= 0;
 	m_pSmgr			= 0;
 	m_pGui			= 0;
+	m_pLog			= 0;
 
 	m_pModelingCam	= 0;
+	m_pFpsCounter	= 0;
 }
  
 SimApp::~SimApp()
 {
-	// m_pLog->logMessage("Shutting down EVE...");
+	m_pLog->log("Shutting down EVE...");
 }
  
 void SimApp::start()
 {
 	init(L"Eve Flight Simulator");
 
+	m_pLog->log("Ready!");
+
+	int lastFPS = -1;
 	while(m_pDevice->run())
 	{
 		m_pDriver->beginScene(true, true, SColor(255, 0, 0, 0));
@@ -27,14 +32,23 @@ void SimApp::start()
 		m_pGui->drawAll();
 
 		m_pDriver->endScene();
-	}
 
-	// TODO: Log closing
+		// Update FPS Counter.
+		int fps = m_pDriver->getFPS();
+		if(lastFPS != fps || lastFPS == -1)
+		{
+			core::stringw strfps = "FPS: ";
+			strfps += fps;
+			m_pFpsCounter->setText(strfps.c_str());
+
+			lastFPS = fps;
+		}
+	}
 }
  
 void SimApp::createScene()
 {
-	// TODO: Log create scene
+	m_pLog->log("Creating scene...");
 	// TODO: Init scene, camera, gui, simulation models, lighting
 	// TODO: Load scene objects here
 }
@@ -204,6 +218,7 @@ bool SimApp::init(const wchar_t* wndTitle)
 	m_pDriver	= m_pDevice->getVideoDriver();
 	m_pSmgr		= m_pDevice->getSceneManager();
 	m_pGui 		= m_pDevice->getGUIEnvironment();
+	m_pLog		= m_pDevice->getLogger();
 
 	// TODO: Replace with a more realistic rendering 
 	m_pSmgr->addSkyBoxSceneNode(
@@ -221,6 +236,11 @@ bool SimApp::init(const wchar_t* wndTitle)
 	m_pModelingCam = m_pSmgr->addCameraSceneNodeMaya(0, -1500.f, 200.f, 1500.f, -1, 70.f, true);
 	m_pModelingCam->setTarget(vector3df(0, 0, 0));
 
+	// TODO: Instead of overriding colors, set theme colors to lights and pastels
+
 	IGUIStaticText* title = m_pGui->addStaticText(wndTitle, rect<int>(10,10,200,20), false);
 	title->setOverrideColor(SColor(255, 255, 255, 255));
+
+	m_pFpsCounter = m_pGui->addStaticText(L"FPS:", rect<int>(10,20,200,40), false);
+	m_pFpsCounter->setOverrideColor(SColor(255, 255, 255, 255));
 }
