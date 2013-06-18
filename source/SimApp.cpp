@@ -1,14 +1,13 @@
 #include "SimApp.hpp"
 
-using namespace irr;
-using namespace core;
-using namespace scene;
-using namespace video;
-using namespace io;
-using namespace gui;
-
 SimApp::SimApp()
 {
+	m_pDevice		= 0;
+	m_pDriver		= 0;
+	m_pSmgr			= 0;
+	m_pGui			= 0;
+
+	m_pModelingCam	= 0;
 }
  
 SimApp::~SimApp()
@@ -18,48 +17,24 @@ SimApp::~SimApp()
  
 void SimApp::start()
 {
-	SIrrlichtCreationParameters params = SIrrlichtCreationParameters();
-	params.AntiAlias = 24;
-	params.DriverType = video::EDT_OPENGL;
-	params.WindowSize = core::dimension2d<u32>(800, 600);
-	IrrlichtDevice *device = createDeviceEx(params);
+	init(L"Eve Flight Simulator");
 
-	device->setWindowCaption(L"Eve Flight Simulator");
-
-	IVideoDriver* driver = device->getVideoDriver();
-	ISceneManager* smgr = device->getSceneManager();
-	IGUIEnvironment* guienv = device->getGUIEnvironment();
-
-	IMeshSceneNode* earth = smgr->addSphereSceneNode(40.0f, 160, 0, -1, core::vector3df(0, 0, 0), core::vector3df(0, 0, 0));
-	earth->setMaterialFlag(video::EMF_LIGHTING, false);
-	earth->setMaterialTexture(0, driver->getTexture("../assets/earth.jpg"));
-
-	ICameraSceneNode* cam = smgr->addCameraSceneNodeMaya(earth, -1500.f, 200.f, 1500.f, -1, 70.f, true);
-	cam->setTarget(vector3df(0, 0, 0));
-
-	IGUIStaticText* title = guienv->addStaticText(L"Eve Flight Simulator", rect<int>(10,10,200,20), false);
-	title->setOverrideColor(SColor(255, 255, 255, 255));
-
-	while(device->run())
+	while(m_pDevice->run())
 	{
-		driver->beginScene(true, true, SColor(255, 0, 0, 0));
+		m_pDriver->beginScene(true, true, SColor(255, 0, 0, 0));
 
-		smgr->drawAll();
-		guienv->drawAll();
+		m_pSmgr->drawAll();
+		m_pGui->drawAll();
 
-		driver->endScene();
+		m_pDriver->endScene();
 	}
 
-	// io::IFileSystem *irrFile;
-	// ITimer *irrTimer;
-	// ILogger *irrLog;
-	// if(!initOgre("EVE Flight Simulator", 0, 0))
-	// m_pLog->logMessage("Simulator initialized!");
+	// TODO: Log closing
 }
  
 void SimApp::createScene()
 {
-	// m_pLog->logMessage("Entering scene...");
+	// TODO: Log create scene
 	// TODO: Init scene, camera, gui, simulation models, lighting
 	// TODO: Load scene objects here
 }
@@ -127,7 +102,7 @@ void SimApp::getInput()
 	}
 }
 
-void SimApp::update(double timeSinceLastFrame)
+void SimApp::update(const double timeSinceLastFrame)
 {
 	if(m_bQuit == true)
 	{
@@ -213,14 +188,37 @@ void SimApp::exit()
 }
 
 
-bool SimApp::init(std::wstring wndTitle)
+// TODO: Create logger
+// TODO: Load app settings
+// TODO: Set up input listeners
+bool SimApp::init(const wchar_t* wndTitle)
 {
-	// TODO: Create logger
-	// TODO: Load app settings
-	// TODO: Init irrlicht
-	// TODO: Show init dialog
-	// TODO: Create main viewport, window
-	// TODO: Create camera if global camera is used (?)
-	// TODO: Init input managers 
-	// TODO: Set up input listeners
+
+	SIrrlichtCreationParameters params = SIrrlichtCreationParameters();
+	params.AntiAlias = 24;
+	params.DriverType = video::EDT_OPENGL;
+	params.WindowSize = core::dimension2d<u32>(800, 600);
+	m_pDevice = createDeviceEx(params);
+	m_pDevice->setWindowCaption(wndTitle);
+
+	m_pDriver	= m_pDevice->getVideoDriver();
+	m_pSmgr		= m_pDevice->getSceneManager();
+	m_pGui 		= m_pDevice->getGUIEnvironment();
+
+	// TODO: Replace with a more realistic rendering 
+	m_pSmgr->addSkyBoxSceneNode(
+		m_pDriver->getTexture("../assets/skybox/starfield_top.jpg"),
+		m_pDriver->getTexture("../assets/skybox/starfield_top.jpg"),
+		m_pDriver->getTexture("../assets/skybox/starfield_left.jpg"),
+		m_pDriver->getTexture("../assets/skybox/starfield_right.jpg"),
+		m_pDriver->getTexture("../assets/skybox/starfield_front.jpg"),
+		m_pDriver->getTexture("../assets/skybox/starfield_back.jpg"));
+
+	Planet* earth = new Planet(m_pDriver, m_pSmgr, L"earth", 40.0f);
+
+	m_pModelingCam = m_pSmgr->addCameraSceneNodeMaya(0, -1500.f, 200.f, 1500.f, -1, 70.f, true);
+	m_pModelingCam->setTarget(vector3df(0, 0, 0));
+
+	IGUIStaticText* title = m_pGui->addStaticText(wndTitle, rect<int>(10,10,200,20), false);
+	title->setOverrideColor(SColor(255, 255, 255, 255));
 }
