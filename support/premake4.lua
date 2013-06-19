@@ -8,8 +8,6 @@
 --------------------------------------------------------------------------------
 
 solution "EVE"
-
-	-- debugdir "../debug"
 	location (_WORKING_DIR.."/"..(_ACTION or ""))
 	targetdir (_WORKING_DIR.."/../bin") 
 
@@ -97,6 +95,7 @@ project "Irrlicht"
 		links { "opengl32" }
 
 --------------------------------------------------------------------------------
+
 SIMC_STANDALONE = false
 EVDS_STANDALONE = false
 
