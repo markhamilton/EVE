@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="simc" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug|x32">
+				<Option output="../../bin/libsimc.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x32/Debug/simc" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-m32" />
+					<Add option="-DDEBUG" />
+					<Add option="-DSIMC_LIBRARY" />
+					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/simc/external/tinyxml" />
+				</Compiler>
+				<Linker>
+					<Add option="-m32" />
+					<Add option="-L/usr/lib32" />
+				</Linker>
+			</Target>
+			<Target title="Release|x32">
+				<Option output="../../bin/libsimc.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x32/Release/simc" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-m32" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DSIMC_LIBRARY" />
+					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/simc/external/tinyxml" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add option="-L/usr/lib32" />
+				</Linker>
+			</Target>
+			<Target title="Debug|x32">
+				<Option output="../../bin/libsimc.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x32/Debug/simc" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-m32" />
+					<Add option="-DDEBUG" />
+					<Add option="-DSIMC_LIBRARY" />
+					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/simc/external/tinyxml" />
+				</Compiler>
+				<Linker>
+					<Add option="-m32" />
+					<Add option="-L/usr/lib32" />
+				</Linker>
+			</Target>
+			<Target title="Release|x32">
+				<Option output="../../bin/libsimc.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x32/Release/simc" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-m32" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DSIMC_LIBRARY" />
+					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/simc/external/tinyxml" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add option="-L/usr/lib32" />
+				</Linker>
+			</Target>
+			<Target title="DebugDynamic|x32">
+				<Option output="../../bin/libsimc.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x32/DebugDynamic/simc" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-m32" />
+					<Add option="-DSIMC_LIBRARY" />
+					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/simc/external/tinyxml" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add option="-L/usr/lib32" />
+				</Linker>
+			</Target>
+			<Target title="ReleaseDynamic|x32">
+				<Option output="../../bin/libsimc.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x32/ReleaseDynamic/simc" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-m32" />
+					<Add option="-DSIMC_LIBRARY" />
+					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/simc/external/tinyxml" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add option="-L/usr/lib32" />
+				</Linker>
+			</Target>
+			<Target title="DebugSingleThread|x32">
+				<Option output="../../bin/libsimc.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x32/DebugSingleThread/simc" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-m32" />
+					<Add option="-DSIMC_LIBRARY" />
+					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/simc/external/tinyxml" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add option="-L/usr/lib32" />
+				</Linker>
+			</Target>
+			<Target title="ReleaseSingleThread|x32">
+				<Option output="../../bin/libsimc.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x32/ReleaseSingleThread/simc" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-m32" />
+					<Add option="-DSIMC_LIBRARY" />
+					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/simc/external/tinyxml" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add option="-L/usr/lib32" />
+				</Linker>
+			</Target>
+			<Target title="DebugSingleThreadDynamic|x32">
+				<Option output="../../bin/libsimc.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x32/DebugSingleThreadDynamic/simc" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-m32" />
+					<Add option="-DSIMC_LIBRARY" />
+					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/simc/external/tinyxml" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add option="-L/usr/lib32" />
+				</Linker>
+			</Target>
+			<Target title="ReleaseSingleThreadDynamic|x32">
+				<Option output="../../bin/libsimc.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x32/ReleaseSingleThreadDynamic/simc" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-m32" />
+					<Add option="-DSIMC_LIBRARY" />
+					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/simc/external/tinyxml" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add option="-L/usr/lib32" />
+				</Linker>
+			</Target>
+			<Target title="Debug|x64">
+				<Option output="../../bin/libsimc.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x64/Debug/simc" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-m64" />
+					<Add option="-DDEBUG" />
+					<Add option="-DSIMC_LIBRARY" />
+					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/simc/external/tinyxml" />
+				</Compiler>
+				<Linker>
+					<Add option="-m64" />
+					<Add option="-L/usr/lib64" />
+				</Linker>
+			</Target>
+			<Target title="Release|x64">
+				<Option output="../../bin/libsimc.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x64/Release/simc" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-m64" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DSIMC_LIBRARY" />
+					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/simc/external/tinyxml" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m64" />
+					<Add option="-L/usr/lib64" />
+				</Linker>
+			</Target>
+			<Target title="Debug|x64">
+				<Option output="../../bin/libsimc.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x64/Debug/simc" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-m64" />
+					<Add option="-DDEBUG" />
+					<Add option="-DSIMC_LIBRARY" />
+					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/simc/external/tinyxml" />
+				</Compiler>
+				<Linker>
+					<Add option="-m64" />
+					<Add option="-L/usr/lib64" />
+				</Linker>
+			</Target>
+			<Target title="Release|x64">
+				<Option output="../../bin/libsimc.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x64/Release/simc" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-m64" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DSIMC_LIBRARY" />
+					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/simc/external/tinyxml" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m64" />
+					<Add option="-L/usr/lib64" />
+				</Linker>
+			</Target>
+			<Target title="DebugDynamic|x64">
+				<Option output="../../bin/libsimc.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x64/DebugDynamic/simc" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-m64" />
+					<Add option="-DSIMC_LIBRARY" />
+					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/simc/external/tinyxml" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m64" />
+					<Add option="-L/usr/lib64" />
+				</Linker>
+			</Target>
+			<Target title="ReleaseDynamic|x64">
+				<Option output="../../bin/libsimc.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x64/ReleaseDynamic/simc" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-m64" />
+					<Add option="-DSIMC_LIBRARY" />
+					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/simc/external/tinyxml" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m64" />
+					<Add option="-L/usr/lib64" />
+				</Linker>
+			</Target>
+			<Target title="DebugSingleThread|x64">
+				<Option output="../../bin/libsimc.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x64/DebugSingleThread/simc" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-m64" />
+					<Add option="-DSIMC_LIBRARY" />
+					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/simc/external/tinyxml" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m64" />
+					<Add option="-L/usr/lib64" />
+				</Linker>
+			</Target>
+			<Target title="ReleaseSingleThread|x64">
+				<Option output="../../bin/libsimc.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x64/ReleaseSingleThread/simc" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-m64" />
+					<Add option="-DSIMC_LIBRARY" />
+					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/simc/external/tinyxml" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m64" />
+					<Add option="-L/usr/lib64" />
+				</Linker>
+			</Target>
+			<Target title="DebugSingleThreadDynamic|x64">
+				<Option output="../../bin/libsimc.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x64/DebugSingleThreadDynamic/simc" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-m64" />
+					<Add option="-DSIMC_LIBRARY" />
+					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/simc/external/tinyxml" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m64" />
+					<Add option="-L/usr/lib64" />
+				</Linker>
+			</Target>
+			<Target title="ReleaseSingleThreadDynamic|x64">
+				<Option output="../../bin/libsimc.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x64/ReleaseSingleThreadDynamic/simc" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-m64" />
+					<Add option="-DSIMC_LIBRARY" />
+					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/simc/external/tinyxml" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m64" />
+					<Add option="-L/usr/lib64" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="../../external/simc/source/sim_queue.c">
+			<Option virtualFolder="external/simc/source" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/simc/source/sim_threading.c">
+			<Option virtualFolder="external/simc/source" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/simc/source/sim_xml.cpp">
+			<Option virtualFolder="external/simc/source" />
+		</Unit>
+		<Unit filename="../../external/simc/source/sim_curtime.c">
+			<Option virtualFolder="external/simc/source" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/simc/source/sim_linkedlist.c">
+			<Option virtualFolder="external/simc/source" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/simc/include/sim_core.h">
+			<Option virtualFolder="external/simc/include" />
+		</Unit>
+		<Unit filename="../../external/simc/include/sim_internal.h">
+			<Option virtualFolder="external/simc/include" />
+		</Unit>
+		<Unit filename="../../external/simc/include/sim_xml.h">
+			<Option virtualFolder="external/simc/include" />
+		</Unit>
+		<Extensions>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
+
