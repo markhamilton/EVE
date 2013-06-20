@@ -36,7 +36,9 @@ project "EVE"
 	language "C++"
 	includedirs { 
 		"../include",
-		"../external/irrlicht/include"
+		"../external/irrlicht/include",
+		"../external/evds/include",
+		"../external/simc/include",
 	}
 	files { "../source/**" }
 	links { "Irrlicht", "png" }

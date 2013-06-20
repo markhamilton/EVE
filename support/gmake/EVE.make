@@ -32,7 +32,7 @@ ifeq ($(config),debug32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE
   DEFINES   += -DDEBUG -DEVE_SIM
-  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/irrlicht/include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m32
   CXXFLAGS  += $(CFLAGS) 
@@ -54,7 +54,7 @@ ifeq ($(config),release32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE
   DEFINES   += -DNDEBUG -DEVE_SIM
-  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/irrlicht/include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m32
   CXXFLAGS  += $(CFLAGS) 
@@ -76,7 +76,7 @@ ifeq ($(config),debug32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE
   DEFINES   += -DDEBUG -DEVE_SIM
-  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/irrlicht/include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m32
   CXXFLAGS  += $(CFLAGS) 
@@ -98,7 +98,7 @@ ifeq ($(config),release32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE
   DEFINES   += -DNDEBUG -DEVE_SIM
-  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/irrlicht/include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m32
   CXXFLAGS  += $(CFLAGS) 
@@ -120,7 +120,7 @@ ifeq ($(config),debugdynamic32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE
   DEFINES   += -DEVE_SIM
-  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/irrlicht/include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
   CXXFLAGS  += $(CFLAGS) 
@@ -142,7 +142,7 @@ ifeq ($(config),releasedynamic32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE
   DEFINES   += -DEVE_SIM
-  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/irrlicht/include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
   CXXFLAGS  += $(CFLAGS) 
@@ -164,7 +164,7 @@ ifeq ($(config),debugsinglethread32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE
   DEFINES   += -DEVE_SIM
-  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/irrlicht/include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
   CXXFLAGS  += $(CFLAGS) 
@@ -186,7 +186,7 @@ ifeq ($(config),releasesinglethread32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE
   DEFINES   += -DEVE_SIM
-  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/irrlicht/include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
   CXXFLAGS  += $(CFLAGS) 
@@ -208,7 +208,7 @@ ifeq ($(config),debugsinglethreaddynamic32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE
   DEFINES   += -DEVE_SIM
-  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/irrlicht/include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
   CXXFLAGS  += $(CFLAGS) 
@@ -230,7 +230,7 @@ ifeq ($(config),releasesinglethreaddynamic32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE
   DEFINES   += -DEVE_SIM
-  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/irrlicht/include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
   CXXFLAGS  += $(CFLAGS) 
@@ -252,7 +252,7 @@ ifeq ($(config),debug64)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE
   DEFINES   += -DDEBUG -DEVE_SIM
-  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/irrlicht/include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m64
   CXXFLAGS  += $(CFLAGS) 
@@ -274,7 +274,7 @@ ifeq ($(config),release64)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE
   DEFINES   += -DNDEBUG -DEVE_SIM
-  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/irrlicht/include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m64
   CXXFLAGS  += $(CFLAGS) 
@@ -296,7 +296,7 @@ ifeq ($(config),debug64)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE
   DEFINES   += -DDEBUG -DEVE_SIM
-  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/irrlicht/include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m64
   CXXFLAGS  += $(CFLAGS) 
@@ -318,7 +318,7 @@ ifeq ($(config),release64)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE
   DEFINES   += -DNDEBUG -DEVE_SIM
-  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/irrlicht/include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m64
   CXXFLAGS  += $(CFLAGS) 
@@ -340,7 +340,7 @@ ifeq ($(config),debugdynamic64)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE
   DEFINES   += -DEVE_SIM
-  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/irrlicht/include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
   CXXFLAGS  += $(CFLAGS) 
@@ -362,7 +362,7 @@ ifeq ($(config),releasedynamic64)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE
   DEFINES   += -DEVE_SIM
-  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/irrlicht/include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
   CXXFLAGS  += $(CFLAGS) 
@@ -384,7 +384,7 @@ ifeq ($(config),debugsinglethread64)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE
   DEFINES   += -DEVE_SIM
-  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/irrlicht/include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
   CXXFLAGS  += $(CFLAGS) 
@@ -406,7 +406,7 @@ ifeq ($(config),releasesinglethread64)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE
   DEFINES   += -DEVE_SIM
-  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/irrlicht/include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
   CXXFLAGS  += $(CFLAGS) 
@@ -428,7 +428,7 @@ ifeq ($(config),debugsinglethreaddynamic64)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE
   DEFINES   += -DEVE_SIM
-  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/irrlicht/include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
   CXXFLAGS  += $(CFLAGS) 
@@ -450,7 +450,7 @@ ifeq ($(config),releasesinglethreaddynamic64)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE
   DEFINES   += -DEVE_SIM
-  INCLUDES  += -I../../include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/irrlicht/include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
   CXXFLAGS  += $(CFLAGS) 
@@ -468,6 +468,7 @@ ifeq ($(config),releasesinglethreaddynamic64)
 endif
 
 OBJECTS := \
+	$(OBJDIR)/PlanetManager.o \
 	$(OBJDIR)/main.o \
 	$(OBJDIR)/SimApp.o \
 	$(OBJDIR)/Planet.o \
@@ -535,6 +536,9 @@ endif
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 endif
 
+$(OBJDIR)/PlanetManager.o: ../../source/PlanetManager.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/main.o: ../../source/main.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
