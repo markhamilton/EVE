@@ -24,5 +24,5 @@ void PlanetManager::setWireframe(const bool State)
 
 void PlanetManager::loadSystem(const io::path &XmlFile, const core::vector3df RelativeOrigin)
 {
-	// TODO: Load a system and place all the objects 	
+	// TODO: Load a system and place all the objects
 }

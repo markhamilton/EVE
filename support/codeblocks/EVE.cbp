@@ -18,6 +18,8 @@
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/evds/include" />
+					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m32" />
@@ -45,6 +47,8 @@
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/evds/include" />
+					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -73,6 +77,8 @@
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/evds/include" />
+					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m32" />
@@ -100,6 +106,8 @@
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/evds/include" />
+					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -126,6 +134,8 @@
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/evds/include" />
+					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -152,6 +162,8 @@
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/evds/include" />
+					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -178,6 +190,8 @@
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/evds/include" />
+					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -204,6 +218,8 @@
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/evds/include" />
+					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -230,6 +246,8 @@
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/evds/include" />
+					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -256,6 +274,8 @@
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/evds/include" />
+					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -284,6 +304,8 @@
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/evds/include" />
+					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m64" />
@@ -311,6 +333,8 @@
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/evds/include" />
+					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -339,6 +363,8 @@
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/evds/include" />
+					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m64" />
@@ -366,6 +392,8 @@
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/evds/include" />
+					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -392,6 +420,8 @@
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/evds/include" />
+					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -418,6 +448,8 @@
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/evds/include" />
+					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -444,6 +476,8 @@
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/evds/include" />
+					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -470,6 +504,8 @@
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/evds/include" />
+					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -496,6 +532,8 @@
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/evds/include" />
+					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -522,6 +560,8 @@
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/evds/include" />
+					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -539,6 +579,9 @@
 				</Linker>
 			</Target>
 		</Build>
+		<Unit filename="../../source/PlanetManager.cpp">
+			<Option virtualFolder="source" />
+		</Unit>
 		<Unit filename="../../source/main.cpp">
 			<Option virtualFolder="source" />
 		</Unit>
@@ -547,6 +590,15 @@
 		</Unit>
 		<Unit filename="../../source/Planet.cpp">
 			<Option virtualFolder="source" />
+		</Unit>
+		<Unit filename="../../include/Planet.hpp">
+			<Option virtualFolder="include" />
+		</Unit>
+		<Unit filename="../../include/PlanetManager.hpp">
+			<Option virtualFolder="include" />
+		</Unit>
+		<Unit filename="../../include/SimApp.hpp">
+			<Option virtualFolder="include" />
 		</Unit>
 		<Extensions>
 		</Extensions>

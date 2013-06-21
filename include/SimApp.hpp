@@ -4,7 +4,6 @@
 #include <irrlicht.h>
 #include <stdio.h>
 #include <string>
-#include "Planet.hpp"
 
 using namespace irr;
 using namespace core;

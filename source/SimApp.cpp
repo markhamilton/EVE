@@ -1,3 +1,4 @@
+#include "Planet.hpp"
 #include "SimApp.hpp"
 
 SimApp::SimApp()
@@ -219,6 +220,8 @@ bool SimApp::init(const wchar_t* wndTitle)
 	m_pSmgr		= m_pDevice->getSceneManager();
 	m_pGui 		= m_pDevice->getGUIEnvironment();
 	m_pLog		= m_pDevice->getLogger();
+
+	m_pLog->setLogLevel(ELL_DEBUG);
 
 	// TODO: Replace with a more realistic rendering 
 	m_pSmgr->addSkyBoxSceneNode(

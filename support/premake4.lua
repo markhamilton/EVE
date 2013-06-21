@@ -40,7 +40,10 @@ project "EVE"
 		"../external/evds/include",
 		"../external/simc/include",
 	}
-	files { "../source/**" }
+	files {
+			"../source/**",
+			"../include/**",
+	}
 	links { "Irrlicht", "png" }
 	defines { "EVE_SIM" }
 	kind "WindowedApp"

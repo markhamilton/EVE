@@ -28,7 +28,7 @@ public:
 private:
 	IVideoDriver*			m_pDriver;
 	ISceneManager*			m_pSMgr;
-	// vector<Planet>			m_pPlanetList;
+	vector<Planet>			m_pPlanetList;
 };
 
 #endif

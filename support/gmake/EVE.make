@@ -471,6 +471,7 @@ OBJECTS := \
 	$(OBJDIR)/PlanetManager.o \
 	$(OBJDIR)/main.o \
 	$(OBJDIR)/SimApp.o \
+	$(OBJDIR)/Console.o \
 	$(OBJDIR)/Planet.o \
 
 RESOURCES := \
@@ -543,6 +544,9 @@ $(OBJDIR)/main.o: ../../source/main.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/SimApp.o: ../../source/SimApp.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/Console.o: ../../source/Console.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/Planet.o: ../../source/Planet.cpp
