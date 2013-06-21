@@ -14,7 +14,7 @@ PlanetManager::~PlanetManager()
 }
 void PlanetManager::addPlanet(const io::path &Texture)
 {
-
+	// TODO: Create planet object
 }
 
 void PlanetManager::setWireframe(const bool State)

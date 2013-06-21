@@ -12,7 +12,7 @@ solution "EVE"
 	targetdir (_WORKING_DIR.."/../bin") 
 
 	configurations { "Debug", "Release" }
-	platforms { "x32", "x64" }
+	platforms { "x64", "x32" }
 
 	configuration { "windows" }
 		defines { "WINDOWS" }
