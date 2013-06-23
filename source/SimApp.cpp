@@ -216,6 +216,9 @@ bool SimApp::init(const wchar_t* wndTitle)
 	m_pDevice = createDeviceEx(params);
 	m_pDevice->setWindowCaption(wndTitle);
 
+	m_pEventHandler = new EventHandler(m_pDevice);
+	m_pDevice->setEventReceiver(m_pEventHandler);
+
 	m_pDriver	= m_pDevice->getVideoDriver();
 	m_pSmgr		= m_pDevice->getSceneManager();
 	m_pGui 		= m_pDevice->getGUIEnvironment();

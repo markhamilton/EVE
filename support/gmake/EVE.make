@@ -468,10 +468,11 @@ ifeq ($(config),releasesinglethreaddynamic32)
 endif
 
 OBJECTS := \
+	$(OBJDIR)/EventHandler.o \
 	$(OBJDIR)/PlanetManager.o \
 	$(OBJDIR)/main.o \
-	$(OBJDIR)/SimApp.o \
 	$(OBJDIR)/Planet.o \
+	$(OBJDIR)/SimApp.o \
 	$(OBJDIR)/ScriptConsole.o \
 
 RESOURCES := \
@@ -537,16 +538,19 @@ endif
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 endif
 
+$(OBJDIR)/EventHandler.o: ../../source/EventHandler.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/PlanetManager.o: ../../source/PlanetManager.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/main.o: ../../source/main.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/SimApp.o: ../../source/SimApp.cpp
+$(OBJDIR)/Planet.o: ../../source/Planet.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/Planet.o: ../../source/Planet.cpp
+$(OBJDIR)/SimApp.o: ../../source/SimApp.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/ScriptConsole.o: ../../source/ScriptConsole.cpp

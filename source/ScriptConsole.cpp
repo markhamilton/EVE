@@ -34,8 +34,5 @@ void EveConsole::saveToFile(const io::path &Output)
 {
 	// TODO: Open file
 
-
-
-
 	// TODO: close file
 }

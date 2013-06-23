@@ -4,6 +4,7 @@
 #include <irrlicht.h>
 #include <stdio.h>
 #include <string>
+#include "EventHandler.hpp"
 
 using namespace irr;
 using namespace core;
@@ -46,6 +47,8 @@ protected:
 
 	ICameraSceneNode*	m_pModelingCam;
 	IGUIStaticText*		m_pFpsCounter;
+
+	EventHandler* 		m_pEventHandler;
 
 private:
 	// void buildGUI();
