@@ -9,6 +9,7 @@
 		<Project filename="simc.cbp">
 		</Project>
 		<Project filename="evds.cbp">
+			<Depends filename="simc.cbp" />
 		</Project>
 	</Workspace>
 </CodeBlocks_workspace_file>

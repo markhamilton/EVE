@@ -24,7 +24,7 @@ simc:
 	@echo "==== Building simc ($(config)) ===="
 	@${MAKE} --no-print-directory -C . -f simc.make
 
-evds: 
+evds: simc
 	@echo "==== Building evds ($(config)) ===="
 	@${MAKE} --no-print-directory -C . -f evds.make
 

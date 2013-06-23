@@ -470,8 +470,8 @@ endif
 OBJECTS := \
 	$(OBJDIR)/PlanetManager.o \
 	$(OBJDIR)/main.o \
-	$(OBJDIR)/Planet.o \
 	$(OBJDIR)/SimApp.o \
+	$(OBJDIR)/Planet.o \
 	$(OBJDIR)/ScriptConsole.o \
 
 RESOURCES := \
@@ -543,10 +543,10 @@ $(OBJDIR)/PlanetManager.o: ../../source/PlanetManager.cpp
 $(OBJDIR)/main.o: ../../source/main.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/Planet.o: ../../source/Planet.cpp
+$(OBJDIR)/SimApp.o: ../../source/SimApp.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/SimApp.o: ../../source/SimApp.cpp
+$(OBJDIR)/Planet.o: ../../source/Planet.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/ScriptConsole.o: ../../source/ScriptConsole.cpp

@@ -85,6 +85,7 @@ project "Irrlicht"
 	excludes {
 		"../external/irrlicht/source/Irrlicht/libpng/example.c",
 		"../external/irrlicht/source/Irrlicht/jpeglib/example.c",
+		"../external/irrlicht/source/Irrlicht/jpeglib/ansi2knr.c",
 		"../external/irrlicht/source/Irrlicht/jpeglib/jmemdos.c",
 		"../external/irrlicht/source/Irrlicht/jpeglib/jmemmac.c",
 		"../external/irrlicht/source/Irrlicht/jpeglib/rdjpgcom.c",
