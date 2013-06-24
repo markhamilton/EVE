@@ -25,9 +25,15 @@ public:
 	void setName(stringw Name);
 	stringw getName();
 
-	void setWireFrame(const bool State);
+	// Misc visualization parameters
+	void showWireframe(const bool State);
+	void showBoundingBox(const bool State);
+	void showNormal(const bool State);
+	void showVelocity(const bool State);
 
 private:
+	IMesh* createPlanetMesh(const s32 Radius);
+
 	aabbox3d<f32> 		m_pBox;
 	vector<S3DVertex>	m_pVertices;
 	SMaterial			m_pMaterial;

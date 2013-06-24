@@ -21,7 +21,10 @@ public:
 
 	void addPlanet(const io::path &Texture);
 
-	void setWireframe(const bool State);
+	void showWireframe(const bool State);
+	void showBoundingBox(const bool State);
+	void showNormal(const bool State);
+	void showVelocity(const bool State);
 
 	void loadSystem(const io::path &XmlFile, const core::vector3df RelativeOrigin);
 

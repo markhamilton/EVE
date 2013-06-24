@@ -73,8 +73,6 @@ Planet::~Planet()
 // 	return Material;
 // }
 
-
-
 void Planet::setName(stringw Name)
 {
 	m_pName = Name;
@@ -84,7 +82,22 @@ stringw Planet::getName()
 	return m_pName;
 }
 
-void Planet::setWireFrame(const bool State)
+void Planet::showWireframe(const bool State)
 {
-	// TODO: setWireFrame() -- Make sure to blank texture and set material flag to video::EMF_WIREFRAME
+	// TODO: Make sure to blank texture and set material flag to video::EMF_WIREFRAME
+}
+
+void Planet::showBoundingBox(const bool State)
+{
+
+}
+
+void Planet::showNormal(const bool State)
+{
+
+}
+
+void Planet::showVelocity(const bool State)
+{
+
 }
