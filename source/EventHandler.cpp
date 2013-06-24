@@ -17,8 +17,8 @@ bool EventHandler::OnEvent(const SEvent& event)
 bool EventHandler::handleKeyPresses(const SEvent& event)
 {
 	// check if user presses the key F9
-	if ((event.EventType == EET_KEY_INPUT_EVENT) &&
-			event.KeyInput.PressedDown)
+	if (event.EventType == EET_KEY_INPUT_EVENT &&
+		event.KeyInput.PressedDown)
 	{
 		if (event.KeyInput.Key == KEY_F9)
 		{
