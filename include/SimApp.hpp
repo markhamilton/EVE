@@ -5,6 +5,8 @@
 #include <stdio.h>
 #include <string>
 #include "EventHandler.hpp"
+#include "Planet.hpp"
+#include "PlanetManager.hpp"
 
 using namespace irr;
 using namespace core;
@@ -49,6 +51,7 @@ protected:
 	IGUIStaticText*		m_pFpsCounter;
 
 	EventHandler* 		m_pEventHandler;
+	PlanetManager*		m_pPlanetManager;
 
 private:
 	// void buildGUI();

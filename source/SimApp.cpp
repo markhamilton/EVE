@@ -1,16 +1,20 @@
-#include "Planet.hpp"
+// TODO: Load planet data dynamically via a kinetic snapshot of our galaxy (XML format)
+
 #include "SimApp.hpp"
 
 SimApp::SimApp()
 {
-	m_pDevice		= 0;
-	m_pDriver		= 0;
-	m_pSmgr			= 0;
-	m_pGui			= 0;
-	m_pLog			= 0;
+	m_pDevice			= 0;
+	m_pDriver			= 0;
+	m_pSmgr				= 0;
+	m_pGui				= 0;
+	m_pLog				= 0;
 
-	m_pModelingCam	= 0;
-	m_pFpsCounter	= 0;
+	m_pModelingCam		= 0;
+	m_pFpsCounter		= 0;
+
+	m_pEventHandler 	= 0;
+	m_pPlanetManager	= 0;
 }
  
 SimApp::~SimApp()
@@ -226,7 +230,7 @@ bool SimApp::init(const wchar_t* wndTitle)
 
 	m_pLog->setLogLevel(ELL_DEBUG);
 
-	// TODO: Replace with a more realistic rendering 
+	// TODO: Replace skybox with a more realistic rendering 
 	m_pSmgr->addSkyBoxSceneNode(
 		m_pDriver->getTexture("../assets/skybox/starfield_top.jpg"),
 		m_pDriver->getTexture("../assets/skybox/starfield_top.jpg"),
@@ -235,9 +239,8 @@ bool SimApp::init(const wchar_t* wndTitle)
 		m_pDriver->getTexture("../assets/skybox/starfield_front.jpg"),
 		m_pDriver->getTexture("../assets/skybox/starfield_back.jpg"));
 
-	// TODO: Create PlanetManager
-	// TODO: Load planet data dynamically via a kinetic snapshot of our galaxy (XML format)
-	Planet* earth = new Planet(m_pDriver, m_pSmgr, L"earth", "../assets/earth.jpg", 40.0f);
+	m_pPlanetManager = new PlanetManager(m_pDevice);
+	m_pPlanetManager->addPlanet(L"earth", "../assets/earth.jpg", 40.0f, vector3df(0,0,0));
 
 	m_pModelingCam = m_pSmgr->addCameraSceneNodeMaya(0, -1500.f, 200.f, 1500.f, -1, 70.f, true);
 	m_pModelingCam->setTarget(vector3df(0, 0, 0));

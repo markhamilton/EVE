@@ -16,10 +16,10 @@ using namespace core;
 class PlanetManager
 {
 public:
-	PlanetManager();
+	PlanetManager(IrrlichtDevice* Device);
 	~PlanetManager();
 
-	void addPlanet(const io::path &Texture);
+	void addPlanet(const stringw Name, const io::path &Texture, const f32 Radius, const vector3df Origin);
 
 	void showWireframe(const bool State);
 	void showBoundingBox(const bool State);
@@ -29,9 +29,10 @@ public:
 	void loadSystem(const io::path &XmlFile, const core::vector3df RelativeOrigin);
 
 private:
+	IrrlichtDevice*			m_pDevice;
 	IVideoDriver*			m_pDriver;
 	ISceneManager*			m_pSMgr;
-	vector<Planet>			m_pPlanetList;
+	vector<Planet*>			m_pPlanetList;
 };
 
 #endif

@@ -18,8 +18,7 @@ class Planet //: public scene::ISceneNode
 {
 public:
 	Planet();
-	Planet(ISceneNode* parent, ISceneManager* mgr, s32 id);
-	Planet(video::IVideoDriver* Driver, scene::ISceneManager* Smgr, const stringw Name, const io::path &Texture, const f32 Radius);
+	Planet(IrrlichtDevice* Device, const stringw Name, const io::path &Texture, const f32 Radius);
 	~Planet();
 
 	void setName(stringw Name);
@@ -34,14 +33,22 @@ public:
 private:
 	IMesh* createPlanetMesh(const s32 Radius);
 
+	IrrlichtDevice*		m_pDevice;
+	ISceneManager*		m_pSMgr;
+	IVideoDriver*		m_pDriver;
+
+	IMeshSceneNode*		m_pSceneNode;
+	SMaterial			m_pMaterial;
+
 	aabbox3d<f32> 		m_pBox;
 	vector<S3DVertex>	m_pVertices;
-	SMaterial			m_pMaterial;
 
 	stringw		        m_pName;
 	f32					m_pRadius;
 	f32					m_pFlattening;
 	f32					m_pGravity;
+
+	bool 				m_pWireframeMode;
 
 	// EVDS_OBJECT			m_pEvdsObject;
 };

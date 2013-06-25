@@ -2,39 +2,45 @@
 
 #include "PlanetManager.hpp"
 
-PlanetManager::PlanetManager()
+PlanetManager::PlanetManager(IrrlichtDevice* Device)
 {
-	m_pDriver = 0;
-	m_pSMgr = 0;
+	m_pDevice		= Device;
+	m_pDriver 		= Device->getVideoDriver();
+	m_pSMgr 		= Device->getSceneManager();
 }
 
 PlanetManager::~PlanetManager()
 {
 
 }
-void PlanetManager::addPlanet(const io::path &Texture)
+void PlanetManager::addPlanet(const stringw Name, const io::path &Texture, const f32 Radius, const vector3df Origin)
 {
-	// TODO: Create planet object
+	Planet* p = new Planet(m_pDevice, Name, Texture, Radius);
+	m_pPlanetList.push_back(p);
 }
 
 void PlanetManager::showWireframe(const bool State)
 {
-	// TODO: Loop through all planets and set their material flag to render wireframe
+	for(int ii = 0; ii < m_pPlanetList.size(); ii++)
+		m_pPlanetList[ii]->showWireframe(State);
 }
 
 void PlanetManager::showBoundingBox(const bool State)
 {
-	// TODO: Loop through all the planets and enable their bounding boxes
+	for(int ii = 0; ii < m_pPlanetList.size(); ii++)
+		m_pPlanetList[ii]->showBoundingBox(State);
 }
 
 void PlanetManager::showNormal(const bool State)
 {
-	// TODO: Loop through all the planets and show their normals
+	for(int ii = 0; ii < m_pPlanetList.size(); ii++)
+		m_pPlanetList[ii]->showNormal(State);
 }
 
 void PlanetManager::showVelocity(const bool State)
 {
-	// TODO: Loop through all the planets and show their velocity paths
+	for(int ii = 0; ii < m_pPlanetList.size(); ii++)
+		m_pPlanetList[ii]->showVelocity(State);
 }
 
 void PlanetManager::loadSystem(const io::path &XmlFile, const core::vector3df RelativeOrigin)
