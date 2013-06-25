@@ -48,7 +48,10 @@ private:
 	f32					m_pFlattening;
 	f32					m_pGravity;
 
-	bool 				m_pWireframeMode;
+	bool				m_pShowWireframe;
+	bool				m_pShowBoundingBox;
+	bool				m_pShowNormal;
+	bool				m_pShowVelocity;
 
 	// EVDS_OBJECT			m_pEvdsObject;
 };

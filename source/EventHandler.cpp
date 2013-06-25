@@ -1,9 +1,10 @@
 #include "EventHandler.hpp"
 
 
-EventHandler::EventHandler(IrrlichtDevice* Device)
+EventHandler::EventHandler(IrrlichtDevice* Device, PlanetManager* PlanetMgr)
 {
 	m_pDevice 			= Device;
+	m_pPlanetManager	= PlanetMgr;
 
 	m_pScreenShotCount 	= 0; // TODO: Load this from settings
 }
@@ -24,6 +25,10 @@ bool EventHandler::handleKeyPresses(const SEvent& event)
 		{
 			takeScreenShot();
 			return true;
+		}
+		else if (event.KeyInput.Key == KEY_F8)
+		{
+			m_pPlanetManager->toggleWireframe();
 		}
 	}
 

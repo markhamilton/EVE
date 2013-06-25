@@ -220,7 +220,8 @@ bool SimApp::init(const wchar_t* wndTitle)
 	m_pDevice = createDeviceEx(params);
 	m_pDevice->setWindowCaption(wndTitle);
 
-	m_pEventHandler = new EventHandler(m_pDevice);
+	m_pPlanetManager = new PlanetManager(m_pDevice);
+	m_pEventHandler = new EventHandler(m_pDevice, m_pPlanetManager);
 	m_pDevice->setEventReceiver(m_pEventHandler);
 
 	m_pDriver	= m_pDevice->getVideoDriver();
@@ -239,7 +240,6 @@ bool SimApp::init(const wchar_t* wndTitle)
 		m_pDriver->getTexture("../assets/skybox/starfield_front.jpg"),
 		m_pDriver->getTexture("../assets/skybox/starfield_back.jpg"));
 
-	m_pPlanetManager = new PlanetManager(m_pDevice);
 	m_pPlanetManager->addPlanet(L"earth", "../assets/earth.jpg", 40.0f, vector3df(0,0,0));
 
 	m_pModelingCam = m_pSmgr->addCameraSceneNodeMaya(0, -1500.f, 200.f, 1500.f, -1, 70.f, true);

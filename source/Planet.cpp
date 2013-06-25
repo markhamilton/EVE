@@ -6,7 +6,10 @@ Planet::Planet()
 {
 	m_pSceneNode 		= 0;
 
-	m_pWireframeMode	= false;
+	m_pShowWireframe 	= false;
+	m_pShowBoundingBox 	= false;
+	m_pShowNormal 		= false;
+	m_pShowVelocity 	= false;
 }
 
 // Planet::Planet(ISceneNode* parent, ISceneManager* mgr, s32 id)
@@ -94,20 +97,23 @@ void Planet::showWireframe(const bool State)
 	if(m_pSceneNode != 0)
 		m_pSceneNode->setMaterialFlag(video::EMF_WIREFRAME, State);
 
-	m_pWireframeMode = State;
+	m_pShowWireframe = State;
 }
 
 void Planet::showBoundingBox(const bool State)
 {
-
+	// TODO: Show/hide bounding box
+	m_pShowBoundingBox = State;
 }
 
 void Planet::showNormal(const bool State)
 {
-
+	// TODO: Show/hide normals
+	m_pShowNormal = State;
 }
 
 void Planet::showVelocity(const bool State)
 {
-
+	// TODO: Show/hide velocity markers
+	m_pShowVelocity = State;
 }

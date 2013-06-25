@@ -21,6 +21,11 @@ public:
 
 	void addPlanet(const stringw Name, const io::path &Texture, const f32 Radius, const vector3df Origin);
 
+	void toggleWireframe() 		{ showWireframe(!m_pShowWireframe); }
+	void toggleBoundingBox() 	{ showBoundingBox(!m_pShowBoundingBox); }
+	void toggleNormal() 		{ showNormal(!m_pShowNormal); }
+	void toggleVelocity() 		{ showVelocity(!m_pShowVelocity); }
+
 	void showWireframe(const bool State);
 	void showBoundingBox(const bool State);
 	void showNormal(const bool State);
@@ -33,6 +38,11 @@ private:
 	IVideoDriver*			m_pDriver;
 	ISceneManager*			m_pSMgr;
 	vector<Planet*>			m_pPlanetList;
+
+	bool					m_pShowWireframe;
+	bool					m_pShowBoundingBox;
+	bool					m_pShowNormal;
+	bool					m_pShowVelocity;
 };
 
 #endif
