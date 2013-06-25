@@ -38,10 +38,10 @@ private:
 	IVideoDriver*		m_pDriver;
 
 	IMeshSceneNode*		m_pSceneNode;
-	SMaterial			m_pMaterial;
+	// SMaterial			m_pMaterial;
 
-	aabbox3d<f32> 		m_pBox;
-	vector<S3DVertex>	m_pVertices;
+	// aabbox3d<f32> 		m_pBox;
+	// vector<S3DVertex>	m_pVertices;
 
 	stringw		        m_pName;
 	f32					m_pRadius;

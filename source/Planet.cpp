@@ -33,6 +33,48 @@ Planet::Planet()
 // 		m_pBox.addInternalPoint(m_pVertices[i].Pos);
 // }
 
+// SMesh* createCubeMesh(f32 cubeSize = 5.f)
+// {
+// 	video::SColor cubeColor(255,255,255,255);
+
+// 	SMeshBuffer* buffer = new SMeshBuffer();
+// 	SMeshBuffer* buffer2 = new SMeshBuffer();
+// 	u16 u[6] = { 0,2,1, 0,3,2};
+// 	u16 u2[6] = {0,11,10, 0,10,7};
+
+// 	for (s32 i=0; i<6; ++i)
+// 	{
+// 		buffer->Indices.push_back( u[i] );
+// 		buffer2->Indices.push_back( u2[i] );
+// 	}
+
+// 	buffer->Vertices.set_used(12);
+// 	buffer->Vertices[0] = video::S3DVertex(0,0,0, -1,-1,-1, cubeColor, 0, 1);
+// 	buffer->Vertices[1] = video::S3DVertex(1,0,0, 1,-1,-1, cubeColor, 1, 1);
+// 	buffer->Vertices[2] = video::S3DVertex(1,1,0, 1, 1,-1, cubeColor, 1, 0);
+// 	buffer->Vertices[3] = video::S3DVertex(0,1,0, -1, 1,-1, cubeColor, 0, 0);
+// 	buffer->Vertices[4] = video::S3DVertex(1,0,1, 1,-1, 1, cubeColor, 0, 1);
+// 	buffer->Vertices[5] = video::S3DVertex(1,1,1, 1, 1, 1, cubeColor, 0, 0);
+
+// 	buffer2->Vertices[0] = video::S3DVertex(0,1,1, -1, 1, 1, cubeColor, 1, 0);
+// 	buffer2->Vertices[1] = video::S3DVertex(0,0,1, -1,-1, 1, cubeColor, 1, 1);
+// 	buffer2->Vertices[2] = video::S3DVertex(0,1,1, -1, 1, 1, cubeColor, 0, 1);
+// 	buffer2->Vertices[3] = video::S3DVertex(0,1,0, -1, 1,-1, cubeColor, 1, 1);
+// 	buffer2->Vertices[4] = video::S3DVertex(1,0,1, 1,-1, 1, cubeColor, 1, 0);
+// 	buffer2->Vertices[5] = video::S3DVertex(1,0,0, 1,-1,-1, cubeColor, 0, 0);
+
+// 	buffer->BoundingBox.reset(0,0,0);
+
+// 	SMesh* cubeMesh = new SMesh();
+// 	cubeMesh->addMeshBuffer(buffer);
+// 	cubeMesh->addMeshBuffer(buffer2);
+
+// 	return cubeMesh;
+
+// 	// cubeSceneNode->getMaterial(0).Textures[0] = texture1
+// 	// cubeSceneNode->getMaterial(1).Textures[0] = texture2
+// }
+
 Planet::Planet(IrrlichtDevice* Device, const stringw Name, const io::path &Texture, const f32 Radius)
 {
 	m_pDevice = Device;
@@ -41,9 +83,11 @@ Planet::Planet(IrrlichtDevice* Device, const stringw Name, const io::path &Textu
 
 	m_pName = Name;
 
-	m_pSceneNode = m_pSMgr->addSphereSceneNode(Radius, 160, 0, -1, vector3df(0, 0, 0), vector3df(0, 0, 0));
+	// m_pSceneNode = m_pSMgr->addSphereSceneNode(Radius, 160, 0, -1, vector3df(0, 0, 0), vector3df(0, 0, 0));
+	m_pSceneNode = m_pSMgr->addCubeSceneNode(Radius, 0, -1, vector3df(0, 0, 0), vector3df(0, 0, 0));
 	m_pSceneNode->setMaterialFlag(video::EMF_LIGHTING, false);
-	m_pSceneNode->setMaterialTexture(0, m_pDriver->getTexture(Texture));
+
+	m_pSceneNode->setMaterialTexture(0, m_pDriver->getTexture("../assets/cubemap/earth/top.png"));
 }
 
 Planet::~Planet()
