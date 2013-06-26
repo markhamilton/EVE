@@ -470,7 +470,6 @@ endif
 OBJECTS := \
 	$(OBJDIR)/EventHandler.o \
 	$(OBJDIR)/PlanetManager.o \
-	$(OBJDIR)/main.o \
 	$(OBJDIR)/Planet.o \
 	$(OBJDIR)/SimApp.o \
 	$(OBJDIR)/ScriptConsole.o \
@@ -542,9 +541,6 @@ $(OBJDIR)/EventHandler.o: ../../source/EventHandler.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/PlanetManager.o: ../../source/PlanetManager.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/main.o: ../../source/main.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/Planet.o: ../../source/Planet.cpp
