@@ -6,19 +6,15 @@ ifndef config
 endif
 export config
 
-PROJECTS := EVE Irrlicht simc evds
+PROJECTS := EVE simc evds
 
 .PHONY: all clean help $(PROJECTS)
 
 all: $(PROJECTS)
 
-EVE: Irrlicht
+EVE: 
 	@echo "==== Building EVE ($(config)) ===="
 	@${MAKE} --no-print-directory -C . -f EVE.make
-
-Irrlicht: 
-	@echo "==== Building Irrlicht ($(config)) ===="
-	@${MAKE} --no-print-directory -C . -f Irrlicht.make
 
 simc: 
 	@echo "==== Building simc ($(config)) ===="
@@ -30,7 +26,6 @@ evds:
 
 clean:
 	@${MAKE} --no-print-directory -C . -f EVE.make clean
-	@${MAKE} --no-print-directory -C . -f Irrlicht.make clean
 	@${MAKE} --no-print-directory -C . -f simc.make clean
 	@${MAKE} --no-print-directory -C . -f evds.make clean
 
@@ -63,7 +58,6 @@ help:
 	@echo "   all (default)"
 	@echo "   clean"
 	@echo "   EVE"
-	@echo "   Irrlicht"
 	@echo "   simc"
 	@echo "   evds"
 	@echo ""

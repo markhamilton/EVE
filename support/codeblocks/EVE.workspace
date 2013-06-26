@@ -2,14 +2,10 @@
 <CodeBlocks_workspace_file>
 	<Workspace title="EVE">
 		<Project filename="EVE.cbp" active="1">
-			<Depends filename="Irrlicht.cbp" />
-		</Project>
-		<Project filename="Irrlicht.cbp">
 		</Project>
 		<Project filename="simc.cbp">
 		</Project>
 		<Project filename="evds.cbp">
-			<Depends filename="simc.cbp" />
 		</Project>
 	</Workspace>
 </CodeBlocks_workspace_file>

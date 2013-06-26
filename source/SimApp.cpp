@@ -39,7 +39,7 @@ SimApp::SimApp()
 
 	// m_pFpsCounter		= 0;
 
-	m_pInputManager		= 0;
+	m_pInputMgr			= 0;
 	m_pKeyboard			= 0;
 	m_pMouse			= 0;
 
@@ -48,41 +48,41 @@ SimApp::SimApp()
  
 SimApp::~SimApp()
 {
-	m_pLog->log("Shutting down EVE...");
+	// m_pLog->log("Shutting down EVE...");
 }
  
 void SimApp::start()
 {
-	init(L"Eve Flight Simulator");
+	init("Eve Flight Simulator");
 
-	m_pLog->log("Ready!");
+	// m_pLog->log("Ready!");
 
-	int lastFPS = -1;
-	while(m_pDevice->run())
-	{
-		m_pDriver->beginScene(true, true, SColor(255, 0, 0, 0));
+	// int lastFPS = -1;
+	// while(m_pDevice->run())
+	// {
+	// 	m_pDriver->beginScene(true, true, SColor(255, 0, 0, 0));
 
-		m_pSmgr->drawAll();
-		m_pGui->drawAll();
+	// 	m_pSmgr->drawAll();
+	// 	m_pGui->drawAll();
 
-		m_pDriver->endScene();
+	// 	m_pDriver->endScene();
 
-		// Update FPS Counter.
-		int fps = m_pDriver->getFPS();
-		if(lastFPS != fps || lastFPS == -1)
-		{
-			core::stringw strfps = "FPS: ";
-			strfps += fps;
-			m_pFpsCounter->setText(strfps.c_str());
+	// 	// Update FPS Counter.
+	// 	int fps = m_pDriver->getFPS();
+	// 	if(lastFPS != fps || lastFPS == -1)
+	// 	{
+	// 		core::stringw strfps = "FPS: ";
+	// 		strfps += fps;
+	// 		m_pFpsCounter->setText(strfps.c_str());
 
-			lastFPS = fps;
-		}
-	}
+	// 		lastFPS = fps;
+	// 	}
+	// }
 }
  
 void SimApp::createScene()
 {
-	m_pLog->log("Creating scene...");
+	// m_pLog->log("Creating scene...");
 	// TODO: Init scene, camera, gui, simulation models, lighting
 	// TODO: Load scene objects here
 }
@@ -239,47 +239,47 @@ void SimApp::exit()
 // TODO: Create logger
 // TODO: Load app settings
 // TODO: Set up input listeners
-bool SimApp::init(const wchar_t* wndTitle)
+bool SimApp::init(const Ogre::String wndTitle)
 {
 	// TODO: why is this needed?
 	Ogre::LogManager* logMgr = new Ogre::LogManager();
 
-	m_pLog = Ogre::LogManager::getSingleTon().createLog("eve.log", true, true, false);
+	m_pLog = Ogre::LogManager::getSingleton().createLog("eve.log", true, true, false);
 	m_pLog->setDebugOutputEnabled(true);
 
 	m_pRoot = new Ogre::Root();
 
-	SIrrlichtCreationParameters params = SIrrlichtCreationParameters();
-	params.AntiAlias = 24;
-	params.DriverType = video::EDT_OPENGL;
-	params.WindowSize = core::dimension2d<u32>(800, 600);
-	m_pDevice = createDeviceEx(params);
-	m_pDevice->setWindowCaption(wndTitle);
+	// SIrrlichtCreationParameters params = SIrrlichtCreationParameters();
+	// params.AntiAlias = 24;
+	// params.DriverType = video::EDT_OPENGL;
+	// params.WindowSize = core::dimension2d<u32>(800, 600);
+	// m_pDevice = createDeviceEx(params);
+	// m_pDevice->setWindowCaption(wndTitle);
 
-	m_pPlanetManager = new PlanetManager(m_pDevice);
-	m_pEventHandler = new EventHandler(m_pDevice, m_pPlanetManager);
-	m_pDevice->setEventReceiver(m_pEventHandler);
+	// m_pPlanetManager = new PlanetManager(m_pDevice);
+	// m_pEventHandler = new EventHandler(m_pDevice, m_pPlanetManager);
+	// m_pDevice->setEventReceiver(m_pEventHandler);
 
-	m_pDriver	= m_pDevice->getVideoDriver();
-	m_pSmgr		= m_pDevice->getSceneManager();
-	m_pGui 		= m_pDevice->getGUIEnvironment();
-	m_pLog		= m_pDevice->getLogger();
+	// m_pDriver	= m_pDevice->getVideoDriver();
+	// m_pSmgr		= m_pDevice->getSceneManager();
+	// m_pGui 		= m_pDevice->getGUIEnvironment();
+	// m_pLog		= m_pDevice->getLogger();
 
-	m_pLog->setLogLevel(ELL_DEBUG);
+	// m_pLog->setLogLevel(ELL_DEBUG);
 
-	// TODO: Replace skybox with a more realistic rendering 
-	m_pSmgr->addSkyBoxSceneNode(
-		m_pDriver->getTexture("../assets/skybox/starfield_top.jpg"),
-		m_pDriver->getTexture("../assets/skybox/starfield_top.jpg"),
-		m_pDriver->getTexture("../assets/skybox/starfield_left.jpg"),
-		m_pDriver->getTexture("../assets/skybox/starfield_right.jpg"),
-		m_pDriver->getTexture("../assets/skybox/starfield_front.jpg"),
-		m_pDriver->getTexture("../assets/skybox/starfield_back.jpg"));
+	// // TODO: Replace skybox with a more realistic rendering 
+	// m_pSmgr->addSkyBoxSceneNode(
+	// 	m_pDriver->getTexture("../assets/skybox/starfield_top.jpg"),
+	// 	m_pDriver->getTexture("../assets/skybox/starfield_top.jpg"),
+	// 	m_pDriver->getTexture("../assets/skybox/starfield_left.jpg"),
+	// 	m_pDriver->getTexture("../assets/skybox/starfield_right.jpg"),
+	// 	m_pDriver->getTexture("../assets/skybox/starfield_front.jpg"),
+	// 	m_pDriver->getTexture("../assets/skybox/starfield_back.jpg"));
 
-	m_pPlanetManager->addPlanet(L"earth", "../assets/earth.jpg", 40.0f, vector3df(0,0,0));
+	// m_pPlanetManager->addPlanet(L"earth", "../assets/earth.jpg", 40.0f, vector3df(0,0,0));
 
-	m_pModelingCam = m_pSmgr->addCameraSceneNodeMaya(0, -1500.f, 200.f, 1500.f, -1, 70.f, true);
-	m_pModelingCam->setTarget(vector3df(0, 0, 0));
+	// m_pModelingCam = m_pSmgr->addCameraSceneNodeMaya(0, -1500.f, 200.f, 1500.f, -1, 70.f, true);
+	// m_pModelingCam->setTarget(vector3df(0, 0, 0));
 
 	buildGUI();
 }
@@ -288,6 +288,6 @@ void SimApp::buildGUI()
 {
 	// TODO: Instead of overriding colors, set theme colors to lights and pastels
 
-	m_pFpsCounter = m_pGui->addStaticText(L"FPS:", rect<int>(10,10,200,40), false);
-	m_pFpsCounter->setOverrideColor(SColor(255, 255, 255, 255));
+	// m_pFpsCounter = m_pGui->addStaticText(L"FPS:", rect<int>(10,10,200,40), false);
+	// m_pFpsCounter->setOverrideColor(SColor(255, 255, 255, 255));
 }

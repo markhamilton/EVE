@@ -367,10 +367,6 @@
 			<Option virtualFolder="external/simc/source" />
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../../external/simc/source/sim_sarray.c">
-			<Option virtualFolder="external/simc/source" />
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="../../external/simc/source/sim_xml.cpp">
 			<Option virtualFolder="external/simc/source" />
 		</Unit>

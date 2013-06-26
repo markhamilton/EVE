@@ -30,7 +30,7 @@ public:
 	SimApp();
 	~SimApp();
  
-	bool init(const wchar_t* wndTitle);
+	bool init(const Ogre::String wndTitle);
 	void createScene();
 	void exit();
 

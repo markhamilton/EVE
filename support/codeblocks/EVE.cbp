@@ -7,7 +7,7 @@
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug|x64">
-				<Option output="../../bin/EVE" prefix_auto="0" extension_auto="0" />
+				<Option output="../../bin/EVEd" prefix_auto="0" extension_auto="0" />
 				<Option object_output="obj/x64/Debug/EVE" />
 				<Option type="0" />
 				<Option compiler="gcc" />
@@ -25,14 +25,9 @@
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
 					<Add option="-lstdc++" />
-					<Add directory="../../bin" />
-					<Add library="Irrlichtd" />
-					<Add library="png" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xxf86vm" />
+					<Add library="OgreMain" />
 				</Linker>
 			</Target>
 			<Target title="Release|x64">
@@ -42,6 +37,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add option="-g" />
 					<Add option="-m64" />
 					<Add option="-DNDEBUG" />
 					<Add option="-DEVE_SIM" />
@@ -51,22 +47,16 @@
 					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
-					<Add option="-s" />
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
 					<Add option="-lstdc++" />
-					<Add directory="../../bin" />
-					<Add library="Irrlicht" />
-					<Add library="png" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xxf86vm" />
+					<Add library="OgreMain" />
 				</Linker>
 			</Target>
 			<Target title="Debug|x64">
-				<Option output="../../bin/EVE" prefix_auto="0" extension_auto="0" />
+				<Option output="../../bin/EVEd" prefix_auto="0" extension_auto="0" />
 				<Option object_output="obj/x64/Debug/EVE" />
 				<Option type="0" />
 				<Option compiler="gcc" />
@@ -84,14 +74,9 @@
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
 					<Add option="-lstdc++" />
-					<Add directory="../../bin" />
-					<Add library="Irrlichtd" />
-					<Add library="png" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xxf86vm" />
+					<Add library="OgreMain" />
 				</Linker>
 			</Target>
 			<Target title="Release|x64">
@@ -101,6 +86,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add option="-g" />
 					<Add option="-m64" />
 					<Add option="-DNDEBUG" />
 					<Add option="-DEVE_SIM" />
@@ -110,46 +96,40 @@
 					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
-					<Add option="-s" />
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
 					<Add option="-lstdc++" />
-					<Add directory="../../bin" />
-					<Add library="Irrlicht" />
-					<Add library="png" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xxf86vm" />
+					<Add library="OgreMain" />
 				</Linker>
 			</Target>
 			<Target title="DebugDynamic|x64">
-				<Option output="../../bin/EVE" prefix_auto="0" extension_auto="0" />
+				<Option output="../../bin/EVEd" prefix_auto="0" extension_auto="0" />
 				<Option object_output="obj/x64/DebugDynamic/EVE" />
 				<Option type="0" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-g" />
 					<Add option="-m64" />
 					<Add option="-DEVE_SIM" />
+					<Add option="-DDEBUG" />
+					<Add option="-DEVDS_DYNAMIC" />
+					<Add option="-DIVSS_DYNAMIC" />
+					<Add option="-DRDRS_DYNAMIC" />
+					<Add option="-DSIMC_DYNAMIC" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
-					<Add option="-s" />
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
 					<Add option="-lstdc++" />
-					<Add directory="../../bin" />
-					<Add library="Irrlichtd" />
-					<Add library="png" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xxf86vm" />
+					<Add library="OgreMain" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseDynamic|x64">
@@ -158,142 +138,150 @@
 				<Option type="0" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-O2" />
+					<Add option="-g" />
 					<Add option="-m64" />
 					<Add option="-DEVE_SIM" />
+					<Add option="-DEVDS_DYNAMIC" />
+					<Add option="-DIVSS_DYNAMIC" />
+					<Add option="-DRDRS_DYNAMIC" />
+					<Add option="-DSIMC_DYNAMIC" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
-					<Add option="-s" />
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
 					<Add option="-lstdc++" />
-					<Add directory="../../bin" />
-					<Add library="Irrlicht" />
-					<Add library="png" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xxf86vm" />
+					<Add library="OgreMain" />
 				</Linker>
 			</Target>
 			<Target title="DebugSingleThread|x64">
-				<Option output="../../bin/EVE" prefix_auto="0" extension_auto="0" />
+				<Option output="../../bin/EVE_std" prefix_auto="0" extension_auto="0" />
 				<Option object_output="obj/x64/DebugSingleThread/EVE" />
 				<Option type="0" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-g" />
 					<Add option="-m64" />
 					<Add option="-DEVE_SIM" />
+					<Add option="-DDEBUG" />
+					<Add option="-DEVDS_SINGLETHREADED" />
+					<Add option="-DIVSS_SINGLETHREADED" />
+					<Add option="-DRDRS_SINGLETHREADED" />
+					<Add option="-DSIMC_SINGLETHREADED" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
-					<Add option="-s" />
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
 					<Add option="-lstdc++" />
-					<Add directory="../../bin" />
-					<Add library="Irrlicht_std" />
-					<Add library="png" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xxf86vm" />
+					<Add library="OgreMain" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseSingleThread|x64">
-				<Option output="../../bin/EVE" prefix_auto="0" extension_auto="0" />
+				<Option output="../../bin/EVE_st" prefix_auto="0" extension_auto="0" />
 				<Option object_output="obj/x64/ReleaseSingleThread/EVE" />
 				<Option type="0" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-O2" />
+					<Add option="-g" />
 					<Add option="-m64" />
 					<Add option="-DEVE_SIM" />
+					<Add option="-DEVDS_SINGLETHREADED" />
+					<Add option="-DIVSS_SINGLETHREADED" />
+					<Add option="-DRDRS_SINGLETHREADED" />
+					<Add option="-DSIMC_SINGLETHREADED" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
-					<Add option="-s" />
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
 					<Add option="-lstdc++" />
-					<Add directory="../../bin" />
-					<Add library="Irrlicht_st" />
-					<Add library="png" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xxf86vm" />
+					<Add library="OgreMain" />
 				</Linker>
 			</Target>
 			<Target title="DebugSingleThreadDynamic|x64">
-				<Option output="../../bin/EVE" prefix_auto="0" extension_auto="0" />
+				<Option output="../../bin/EVE_std" prefix_auto="0" extension_auto="0" />
 				<Option object_output="obj/x64/DebugSingleThreadDynamic/EVE" />
 				<Option type="0" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-g" />
 					<Add option="-m64" />
 					<Add option="-DEVE_SIM" />
+					<Add option="-DDEBUG" />
+					<Add option="-DEVDS_DYNAMIC" />
+					<Add option="-DIVSS_DYNAMIC" />
+					<Add option="-DRDRS_DYNAMIC" />
+					<Add option="-DSIMC_DYNAMIC" />
+					<Add option="-DEVDS_SINGLETHREADED" />
+					<Add option="-DIVSS_SINGLETHREADED" />
+					<Add option="-DRDRS_SINGLETHREADED" />
+					<Add option="-DSIMC_SINGLETHREADED" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
-					<Add option="-s" />
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
 					<Add option="-lstdc++" />
-					<Add directory="../../bin" />
-					<Add library="Irrlicht_std" />
-					<Add library="png" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xxf86vm" />
+					<Add library="OgreMain" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseSingleThreadDynamic|x64">
-				<Option output="../../bin/EVE" prefix_auto="0" extension_auto="0" />
+				<Option output="../../bin/EVE_st" prefix_auto="0" extension_auto="0" />
 				<Option object_output="obj/x64/ReleaseSingleThreadDynamic/EVE" />
 				<Option type="0" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-O2" />
+					<Add option="-g" />
 					<Add option="-m64" />
 					<Add option="-DEVE_SIM" />
+					<Add option="-DEVDS_DYNAMIC" />
+					<Add option="-DIVSS_DYNAMIC" />
+					<Add option="-DRDRS_DYNAMIC" />
+					<Add option="-DSIMC_DYNAMIC" />
+					<Add option="-DEVDS_SINGLETHREADED" />
+					<Add option="-DIVSS_SINGLETHREADED" />
+					<Add option="-DRDRS_SINGLETHREADED" />
+					<Add option="-DSIMC_SINGLETHREADED" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
-					<Add option="-s" />
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
 					<Add option="-lstdc++" />
-					<Add directory="../../bin" />
-					<Add library="Irrlicht_st" />
-					<Add library="png" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xxf86vm" />
+					<Add library="OgreMain" />
 				</Linker>
 			</Target>
 			<Target title="Debug|x32">
-				<Option output="../../bin/EVE" prefix_auto="0" extension_auto="0" />
+				<Option output="../../bin/EVEd32" prefix_auto="0" extension_auto="0" />
 				<Option object_output="obj/x32/Debug/EVE" />
 				<Option type="0" />
 				<Option compiler="gcc" />
@@ -311,23 +299,19 @@
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
 					<Add option="-lstdc++" />
-					<Add directory="../../bin" />
-					<Add library="Irrlichtd32" />
-					<Add library="png" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xxf86vm" />
+					<Add library="OgreMain" />
 				</Linker>
 			</Target>
 			<Target title="Release|x32">
-				<Option output="../../bin/EVE" prefix_auto="0" extension_auto="0" />
+				<Option output="../../bin/EVE32" prefix_auto="0" extension_auto="0" />
 				<Option object_output="obj/x32/Release/EVE" />
 				<Option type="0" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add option="-g" />
 					<Add option="-m32" />
 					<Add option="-DNDEBUG" />
 					<Add option="-DEVE_SIM" />
@@ -337,22 +321,16 @@
 					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
-					<Add option="-s" />
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
 					<Add option="-lstdc++" />
-					<Add directory="../../bin" />
-					<Add library="Irrlicht32" />
-					<Add library="png" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xxf86vm" />
+					<Add library="OgreMain" />
 				</Linker>
 			</Target>
 			<Target title="Debug|x32">
-				<Option output="../../bin/EVE" prefix_auto="0" extension_auto="0" />
+				<Option output="../../bin/EVEd32" prefix_auto="0" extension_auto="0" />
 				<Option object_output="obj/x32/Debug/EVE" />
 				<Option type="0" />
 				<Option compiler="gcc" />
@@ -370,23 +348,19 @@
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
 					<Add option="-lstdc++" />
-					<Add directory="../../bin" />
-					<Add library="Irrlichtd32" />
-					<Add library="png" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xxf86vm" />
+					<Add library="OgreMain" />
 				</Linker>
 			</Target>
 			<Target title="Release|x32">
-				<Option output="../../bin/EVE" prefix_auto="0" extension_auto="0" />
+				<Option output="../../bin/EVE32" prefix_auto="0" extension_auto="0" />
 				<Option object_output="obj/x32/Release/EVE" />
 				<Option type="0" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add option="-g" />
 					<Add option="-m32" />
 					<Add option="-DNDEBUG" />
 					<Add option="-DEVE_SIM" />
@@ -396,203 +370,205 @@
 					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
-					<Add option="-s" />
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
 					<Add option="-lstdc++" />
-					<Add directory="../../bin" />
-					<Add library="Irrlicht32" />
-					<Add library="png" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xxf86vm" />
+					<Add library="OgreMain" />
 				</Linker>
 			</Target>
 			<Target title="DebugDynamic|x32">
-				<Option output="../../bin/EVE" prefix_auto="0" extension_auto="0" />
+				<Option output="../../bin/EVEd32" prefix_auto="0" extension_auto="0" />
 				<Option object_output="obj/x32/DebugDynamic/EVE" />
 				<Option type="0" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-g" />
 					<Add option="-m32" />
 					<Add option="-DEVE_SIM" />
+					<Add option="-DDEBUG" />
+					<Add option="-DEVDS_DYNAMIC" />
+					<Add option="-DIVSS_DYNAMIC" />
+					<Add option="-DRDRS_DYNAMIC" />
+					<Add option="-DSIMC_DYNAMIC" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
-					<Add option="-s" />
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
 					<Add option="-lstdc++" />
-					<Add directory="../../bin" />
-					<Add library="Irrlichtd32" />
-					<Add library="png" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xxf86vm" />
+					<Add library="OgreMain" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseDynamic|x32">
-				<Option output="../../bin/EVE" prefix_auto="0" extension_auto="0" />
+				<Option output="../../bin/EVE32" prefix_auto="0" extension_auto="0" />
 				<Option object_output="obj/x32/ReleaseDynamic/EVE" />
 				<Option type="0" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-O2" />
+					<Add option="-g" />
 					<Add option="-m32" />
 					<Add option="-DEVE_SIM" />
+					<Add option="-DEVDS_DYNAMIC" />
+					<Add option="-DIVSS_DYNAMIC" />
+					<Add option="-DRDRS_DYNAMIC" />
+					<Add option="-DSIMC_DYNAMIC" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
-					<Add option="-s" />
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
 					<Add option="-lstdc++" />
-					<Add directory="../../bin" />
-					<Add library="Irrlicht32" />
-					<Add library="png" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xxf86vm" />
+					<Add library="OgreMain" />
 				</Linker>
 			</Target>
 			<Target title="DebugSingleThread|x32">
-				<Option output="../../bin/EVE" prefix_auto="0" extension_auto="0" />
+				<Option output="../../bin/EVE_std32" prefix_auto="0" extension_auto="0" />
 				<Option object_output="obj/x32/DebugSingleThread/EVE" />
 				<Option type="0" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-g" />
 					<Add option="-m32" />
 					<Add option="-DEVE_SIM" />
+					<Add option="-DDEBUG" />
+					<Add option="-DEVDS_SINGLETHREADED" />
+					<Add option="-DIVSS_SINGLETHREADED" />
+					<Add option="-DRDRS_SINGLETHREADED" />
+					<Add option="-DSIMC_SINGLETHREADED" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
-					<Add option="-s" />
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
 					<Add option="-lstdc++" />
-					<Add directory="../../bin" />
-					<Add library="Irrlicht_std32" />
-					<Add library="png" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xxf86vm" />
+					<Add library="OgreMain" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseSingleThread|x32">
-				<Option output="../../bin/EVE" prefix_auto="0" extension_auto="0" />
+				<Option output="../../bin/EVE_st32" prefix_auto="0" extension_auto="0" />
 				<Option object_output="obj/x32/ReleaseSingleThread/EVE" />
 				<Option type="0" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-O2" />
+					<Add option="-g" />
 					<Add option="-m32" />
 					<Add option="-DEVE_SIM" />
+					<Add option="-DEVDS_SINGLETHREADED" />
+					<Add option="-DIVSS_SINGLETHREADED" />
+					<Add option="-DRDRS_SINGLETHREADED" />
+					<Add option="-DSIMC_SINGLETHREADED" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
-					<Add option="-s" />
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
 					<Add option="-lstdc++" />
-					<Add directory="../../bin" />
-					<Add library="Irrlicht_st32" />
-					<Add library="png" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xxf86vm" />
+					<Add library="OgreMain" />
 				</Linker>
 			</Target>
 			<Target title="DebugSingleThreadDynamic|x32">
-				<Option output="../../bin/EVE" prefix_auto="0" extension_auto="0" />
+				<Option output="../../bin/EVE_std32" prefix_auto="0" extension_auto="0" />
 				<Option object_output="obj/x32/DebugSingleThreadDynamic/EVE" />
 				<Option type="0" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-g" />
 					<Add option="-m32" />
 					<Add option="-DEVE_SIM" />
+					<Add option="-DDEBUG" />
+					<Add option="-DEVDS_DYNAMIC" />
+					<Add option="-DIVSS_DYNAMIC" />
+					<Add option="-DRDRS_DYNAMIC" />
+					<Add option="-DSIMC_DYNAMIC" />
+					<Add option="-DEVDS_SINGLETHREADED" />
+					<Add option="-DIVSS_SINGLETHREADED" />
+					<Add option="-DRDRS_SINGLETHREADED" />
+					<Add option="-DSIMC_SINGLETHREADED" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
-					<Add option="-s" />
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
 					<Add option="-lstdc++" />
-					<Add directory="../../bin" />
-					<Add library="Irrlicht_std32" />
-					<Add library="png" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xxf86vm" />
+					<Add library="OgreMain" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseSingleThreadDynamic|x32">
-				<Option output="../../bin/EVE" prefix_auto="0" extension_auto="0" />
+				<Option output="../../bin/EVE_st32" prefix_auto="0" extension_auto="0" />
 				<Option object_output="obj/x32/ReleaseSingleThreadDynamic/EVE" />
 				<Option type="0" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-O2" />
+					<Add option="-g" />
 					<Add option="-m32" />
 					<Add option="-DEVE_SIM" />
+					<Add option="-DEVDS_DYNAMIC" />
+					<Add option="-DIVSS_DYNAMIC" />
+					<Add option="-DRDRS_DYNAMIC" />
+					<Add option="-DSIMC_DYNAMIC" />
+					<Add option="-DEVDS_SINGLETHREADED" />
+					<Add option="-DIVSS_SINGLETHREADED" />
+					<Add option="-DRDRS_SINGLETHREADED" />
+					<Add option="-DSIMC_SINGLETHREADED" />
 					<Add directory="../../include" />
 					<Add directory="../../external/irrlicht/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
 				</Compiler>
 				<Linker>
-					<Add option="-s" />
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
 					<Add option="-lstdc++" />
-					<Add directory="../../bin" />
-					<Add library="Irrlicht_st32" />
-					<Add library="png" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xxf86vm" />
+					<Add library="OgreMain" />
 				</Linker>
 			</Target>
 		</Build>
 		<Unit filename="../../source/PlanetManager.cpp">
-			<Option virtualFolder="source" />
-		</Unit>
-		<Unit filename="../../source/main.cpp">
-			<Option virtualFolder="source" />
+			<Option virtualFolder="." />
 		</Unit>
 		<Unit filename="../../source/SimApp.cpp">
-			<Option virtualFolder="source" />
+			<Option virtualFolder="." />
 		</Unit>
 		<Unit filename="../../source/Planet.cpp">
-			<Option virtualFolder="source" />
+			<Option virtualFolder="." />
+		</Unit>
+		<Unit filename="../../source/EventHandler.cpp">
+			<Option virtualFolder="." />
 		</Unit>
 		<Unit filename="../../source/ScriptConsole.cpp">
-			<Option virtualFolder="source" />
+			<Option virtualFolder="." />
 		</Unit>
 		<Unit filename="../../include/Planet.hpp">
 			<Option virtualFolder="include" />
@@ -604,6 +580,9 @@
 			<Option virtualFolder="include" />
 		</Unit>
 		<Unit filename="../../include/ScriptConsole.hpp">
+			<Option virtualFolder="include" />
+		</Unit>
+		<Unit filename="../../include/EventHandler.hpp">
 			<Option virtualFolder="include" />
 		</Unit>
 		<Extensions>

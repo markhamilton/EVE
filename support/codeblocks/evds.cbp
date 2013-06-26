@@ -104,8 +104,6 @@
 					<Add option="-shared" />
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
-					<Add directory="../../bin" />
-					<Add library="simc" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseDynamic|x64">
@@ -128,8 +126,6 @@
 					<Add option="-shared" />
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
-					<Add directory="../../bin" />
-					<Add library="simc" />
 				</Linker>
 			</Target>
 			<Target title="DebugSingleThread|x64">
@@ -188,8 +184,6 @@
 					<Add option="-shared" />
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
-					<Add directory="../../bin" />
-					<Add library="simc" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseSingleThreadDynamic|x64">
@@ -212,8 +206,6 @@
 					<Add option="-shared" />
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
-					<Add directory="../../bin" />
-					<Add library="simc" />
 				</Linker>
 			</Target>
 			<Target title="Debug|x32">
@@ -314,8 +306,6 @@
 					<Add option="-shared" />
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
-					<Add directory="../../bin" />
-					<Add library="simc" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseDynamic|x32">
@@ -338,8 +328,6 @@
 					<Add option="-shared" />
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
-					<Add directory="../../bin" />
-					<Add library="simc" />
 				</Linker>
 			</Target>
 			<Target title="DebugSingleThread|x32">
@@ -398,8 +386,6 @@
 					<Add option="-shared" />
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
-					<Add directory="../../bin" />
-					<Add library="simc" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseSingleThreadDynamic|x32">
@@ -422,8 +408,6 @@
 					<Add option="-shared" />
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
-					<Add directory="../../bin" />
-					<Add library="simc" />
 				</Linker>
 			</Target>
 		</Build>
