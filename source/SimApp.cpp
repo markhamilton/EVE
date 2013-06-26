@@ -29,16 +29,20 @@ int main(int argc, char **argv)
 
 SimApp::SimApp()
 {
-	m_pDevice			= 0;
-	m_pDriver			= 0;
+	m_pRoot				= 0;
 	m_pSmgr				= 0;
-	m_pGui				= 0;
+	m_pWindow			= 0;
+	m_pCamera			= 0;
+	m_pViewport			= 0;
 	m_pLog				= 0;
+	m_pTimer			= 0;
 
-	m_pModelingCam		= 0;
-	m_pFpsCounter		= 0;
+	// m_pFpsCounter		= 0;
 
-	m_pEventHandler 	= 0;
+	m_pInputManager		= 0;
+	m_pKeyboard			= 0;
+	m_pMouse			= 0;
+
 	m_pPlanetManager	= 0;
 }
  
@@ -237,6 +241,13 @@ void SimApp::exit()
 // TODO: Set up input listeners
 bool SimApp::init(const wchar_t* wndTitle)
 {
+	// TODO: why is this needed?
+	Ogre::LogManager* logMgr = new Ogre::LogManager();
+
+	m_pLog = Ogre::LogManager::getSingleTon().createLog("eve.log", true, true, false);
+	m_pLog->setDebugOutputEnabled(true);
+
+	m_pRoot = new Ogre::Root();
 
 	SIrrlichtCreationParameters params = SIrrlichtCreationParameters();
 	params.AntiAlias = 24;

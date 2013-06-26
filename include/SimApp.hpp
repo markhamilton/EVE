@@ -1,19 +1,28 @@
 #ifndef SIMAPP_HPP
 #define SIMAPP_HPP
 
-#include <irrlicht.h>
+#include <OGRE/OgreCamera.h>
+#include <OGRE/OgreEntity.h>
+#include <OGRE/OgreLogManager.h>
+#include <OGRE/OgreOverlay.h>
+#include <OGRE/OgreOverlayElement.h>
+#include <OGRE/OgreOverlayManager.h>
+#include <OGRE/OgreRoot.h>
+#include <OGRE/OgreViewport.h>
+#include <OGRE/OgreSceneManager.h>
+#include <OGRE/OgreRenderWindow.h>
+#include <OGRE/OgreConfigFile.h>
+ 
+#include <OIS/OISEvents.h>
+#include <OIS/OISInputManager.h>
+#include <OIS/OISKeyboard.h>
+#include <OIS/OISMouse.h>
+
 #include <stdio.h>
 #include <string>
 #include "EventHandler.hpp"
 #include "Planet.hpp"
 #include "PlanetManager.hpp"
-
-using namespace irr;
-using namespace core;
-using namespace scene;
-using namespace video;
-using namespace io;
-using namespace gui;
 
 class SimApp
 {
@@ -41,16 +50,20 @@ public:
  	void onLeftPressed();
 
 protected:
-	IrrlichtDevice* 	m_pDevice;
-	IVideoDriver* 		m_pDriver;
- 	ISceneManager* 		m_pSmgr;
-	IGUIEnvironment*	m_pGui;
-	ILogger*			m_pLog;
+	Ogre::Root* 		m_pRoot;
+	Ogre::SceneManager* m_pSmgr;
+	Ogre::RenderWindow* m_pWindow;
+	Ogre::Camera*		m_pCamera;
+	Ogre::Viewport*		m_pViewport;
+	Ogre::Log*			m_pLog;
+	Ogre::Timer*		m_pTimer;
 
-	ICameraSceneNode*	m_pModelingCam;
-	IGUIStaticText*		m_pFpsCounter;
+	// IGUIStaticText*		m_pFpsCounter;
 
-	EventHandler* 		m_pEventHandler;
+	OIS::InputManager*	m_pInputMgr;
+	OIS::Keyboard*		m_pKeyboard;
+	OIS::Mouse*			m_pMouse;
+
 	PlanetManager*		m_pPlanetManager;
 
 private:
