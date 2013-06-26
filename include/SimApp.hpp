@@ -54,8 +54,7 @@ protected:
 	PlanetManager*		m_pPlanetManager;
 
 private:
-	// void buildGUI();
-
+	void buildGUI();
 	void updateCamera();
 	void getInput();
 

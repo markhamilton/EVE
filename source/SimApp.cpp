@@ -270,11 +270,13 @@ bool SimApp::init(const wchar_t* wndTitle)
 	m_pModelingCam = m_pSmgr->addCameraSceneNodeMaya(0, -1500.f, 200.f, 1500.f, -1, 70.f, true);
 	m_pModelingCam->setTarget(vector3df(0, 0, 0));
 
+	buildGUI();
+}
+
+void SimApp::buildGUI()
+{
 	// TODO: Instead of overriding colors, set theme colors to lights and pastels
 
-	IGUIStaticText* title = m_pGui->addStaticText(wndTitle, rect<int>(10,10,200,20), false);
-	title->setOverrideColor(SColor(255, 255, 255, 255));
-
-	m_pFpsCounter = m_pGui->addStaticText(L"FPS:", rect<int>(10,20,200,40), false);
+	m_pFpsCounter = m_pGui->addStaticText(L"FPS:", rect<int>(10,10,200,40), false);
 	m_pFpsCounter->setOverrideColor(SColor(255, 255, 255, 255));
 }
