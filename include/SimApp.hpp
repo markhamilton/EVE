@@ -24,7 +24,7 @@
 #include "Planet.hpp"
 #include "PlanetManager.hpp"
 
-class SimApp
+class SimApp : public OIS::KeyListener, OIS::MouseListener
 {
 public:
 	SimApp();
@@ -40,14 +40,14 @@ public:
 	void update(const double timeSinceLastFrame);
  
 
-	bool keyPressed();
-	bool keyReleased();
+	bool keyPressed(const OIS::KeyEvent &keyEventRef);
+	bool keyReleased(const OIS::KeyEvent &keyEventRef);
  
-	bool mouseMoved();
-	bool mousePressed();
-	bool mouseReleased();
+	bool mouseMoved(const OIS::MouseEvent &evt);
+	bool mousePressed(const OIS::MouseEvent &evt, OIS::MouseButtonID id);
+	bool mouseReleased(const OIS::MouseEvent &evt, OIS::MouseButtonID id);
 
- 	void onLeftPressed();
+ 	void onLeftPressed(const OIS::MouseEvent &evt);
 
 protected:
 	Ogre::Root* 		m_pRoot;

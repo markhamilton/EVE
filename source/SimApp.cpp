@@ -87,33 +87,38 @@ void SimApp::createScene()
 	// TODO: Load scene objects here
 }
 
-// bool SimApp::keyPressed(const OIS::KeyEvent &keyEventRef)
-// {
-// }
+bool SimApp::keyPressed(const OIS::KeyEvent &keyEventRef)
+{
+}
 
-// bool SimApp::keyReleased(const OIS::KeyEvent &keyEventRef)
-// {
-// }
+bool SimApp::keyReleased(const OIS::KeyEvent &keyEventRef)
+{
+}
 
-// bool SimApp::mouseMoved(const OIS::MouseEvent &evt)
-// {
-// }
+bool SimApp::mouseMoved(const OIS::MouseEvent &evt)
+{
+}
 
-// bool SimApp::mousePressed(const OIS::MouseEvent &evt, OIS::MouseButtonID id)
-// {
-// }
+bool SimApp::mousePressed(const OIS::MouseEvent &evt, OIS::MouseButtonID id)
+{
+}
 
-// bool SimApp::mouseReleased(const OIS::MouseEvent &evt, OIS::MouseButtonID id)
-// {
-// }
+bool SimApp::mouseReleased(const OIS::MouseEvent &evt, OIS::MouseButtonID id)
+{
+}
 
-// void SimApp::onLeftPressed(const OIS::MouseEvent &evt)
-// {
-// }
+void SimApp::onLeftPressed(const OIS::MouseEvent &evt)
+{
+}
 
 void SimApp::updateCamera()
 {
+	// if(m_pKeyboard->isKeyDown(OIS::KC_LSHIFT)) 
+	// 	m_pCamera->moveRelative(m_TranslateVector);
+	// else
+	// 	m_pCamera->moveRelative(m_TranslateVector / 10);
 }
+
 
 void SimApp::getInput()
 {
@@ -301,13 +306,19 @@ bool SimApp::init(const Ogre::String wndTitle)
 	// TODO: Select driver
 	// TODO: 800x600 default res
 
-	m_pPlanetManager = new PlanetManager(m_pDevice);
+	// TODO: Init PlanetManager
+	// m_pPlanetManager = new PlanetManager();
+
+	m_pTimer = new Ogre::Timer();
+	m_pTimer->reset();
 
 	// TODO: Event receiver
 	// TODO: Skybox
 
 	// TODO: addPlanet
 	// m_pPlanetManager->addPlanet(L"earth", "../assets/earth.jpg", 40.0f, Ogre::Vector3(0, 0, 0));
+
+	m_pWindow->setActive(true);
 
 	buildGUI();
 
