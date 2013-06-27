@@ -249,45 +249,73 @@ bool SimApp::init(const Ogre::String wndTitle)
 
 	m_pRoot = new Ogre::Root();
 
-	// SIrrlichtCreationParameters params = SIrrlichtCreationParameters();
-	// params.AntiAlias = 24;
-	// params.DriverType = video::EDT_OPENGL;
-	// params.WindowSize = core::dimension2d<u32>(800, 600);
-	// m_pDevice = createDeviceEx(params);
-	// m_pDevice->setWindowCaption(wndTitle);
+	if(! m_pRoot->showConfigDialog())
+		return false;
 
-	// m_pPlanetManager = new PlanetManager(m_pDevice);
-	// m_pEventHandler = new EventHandler(m_pDevice, m_pPlanetManager);
-	// m_pDevice->setEventReceiver(m_pEventHandler);
+	m_pWindow = m_pRoot->initialise(true, wndTitle);
 
-	// m_pDriver	= m_pDevice->getVideoDriver();
-	// m_pSmgr		= m_pDevice->getSceneManager();
-	// m_pGui 		= m_pDevice->getGUIEnvironment();
-	// m_pLog		= m_pDevice->getLogger();
+	m_pSmgr = m_pRoot->createSceneManager(Ogre::ST_GENERIC, "SceneManager");
+	m_pSmgr->setAmbientLight(Ogre::ColourValue(1.f, 1.f, 1.f));
 
-	// m_pLog->setLogLevel(ELL_DEBUG);
+	m_pCamera = m_pSmgr->createCamera("Camera");
+	m_pCamera->setPosition(Ogre::Vector3(70, 0, 0));
+	m_pCamera->lookAt(Ogre::Vector3(0, 0, 0));
+	m_pCamera->setNearClipDistance(1);
 
-	// // TODO: Replace skybox with a more realistic rendering 
-	// m_pSmgr->addSkyBoxSceneNode(
-	// 	m_pDriver->getTexture("../assets/skybox/starfield_top.jpg"),
-	// 	m_pDriver->getTexture("../assets/skybox/starfield_top.jpg"),
-	// 	m_pDriver->getTexture("../assets/skybox/starfield_left.jpg"),
-	// 	m_pDriver->getTexture("../assets/skybox/starfield_right.jpg"),
-	// 	m_pDriver->getTexture("../assets/skybox/starfield_front.jpg"),
-	// 	m_pDriver->getTexture("../assets/skybox/starfield_back.jpg"));
+	m_pViewport = m_pWindow->addViewport(m_pCamera);
+	m_pViewport->setBackgroundColour(Ogre::ColourValue(0, 0, 0));
 
-	// m_pPlanetManager->addPlanet(L"earth", "../assets/earth.jpg", 40.0f, vector3df(0,0,0));
+	m_pCamera->setAspectRatio(Ogre::Real(m_pViewport->getActualWidth()) / Ogre::Real(m_pViewport->getActualHeight()));
 
-	// m_pModelingCam = m_pSmgr->addCameraSceneNodeMaya(0, -1500.f, 200.f, 1500.f, -1, 70.f, true);
-	// m_pModelingCam->setTarget(vector3df(0, 0, 0));
+	m_pViewport->setCamera(m_pCamera);
+
+	size_t hWnd = 0;
+	OIS::ParamList paramList;
+
+	m_pWindow->getCustomAttribute("WINDOW", &hWnd);
+
+	paramList.insert(OIS::ParamList::value_type("WINDOW", Ogre::StringConverter::toString(hWnd)));
+
+	m_pInputMgr = OIS::InputManager::createInputSystem(paramList);
+
+	m_pKeyboard = static_cast<OIS::Keyboard*>(m_pInputMgr->createInputObject(OIS::OISKeyboard, true));
+	m_pMouse = static_cast<OIS::Mouse*>(m_pInputMgr->createInputObject(OIS::OISMouse, true));
+
+	m_pMouse->getMouseState().height = m_pWindow->getHeight();
+	m_pMouse->getMouseState().width = m_pWindow->getWidth();
+
+	m_pKeyboard->setEventCallback(this);
+	m_pMouse->setEventCallback(this);
+
+	Ogre::ConfigFile configFile;
+	configFile.load("eve.cfg");
+
+	Ogre::ConfigFile::SectionIterator seci = configFile.getSectionIterator();
+	// TODO: Iterate through config file
+	// while(seci.hasMoreElements())
+	// {
+
+	// }
+
+	// TODO: Set antialiasing
+	// TODO: Select driver
+	// TODO: 800x600 default res
+
+	m_pPlanetManager = new PlanetManager(m_pDevice);
+
+	// TODO: Event receiver
+	// TODO: Skybox
+
+	// TODO: addPlanet
+	// m_pPlanetManager->addPlanet(L"earth", "../assets/earth.jpg", 40.0f, Ogre::Vector3(0, 0, 0));
 
 	buildGUI();
+
+	return true;
 }
 
 void SimApp::buildGUI()
 {
-	// TODO: Instead of overriding colors, set theme colors to lights and pastels
-
-	// m_pFpsCounter = m_pGui->addStaticText(L"FPS:", rect<int>(10,10,200,40), false);
-	// m_pFpsCounter->setOverrideColor(SColor(255, 255, 255, 255));
+	// TODO: GUI
+	// TODO: FPS counter
 }

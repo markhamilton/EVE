@@ -49,7 +49,7 @@ project "EVE"
 	kind "WindowedApp"
 
 	configuration { "linux" }
-		links { "m", "pthread", "OgreMain" }
+		links { "m", "pthread", "OgreMain", "OIS" }
 		linkoptions { "-lstdc++" }
 
 --------------------------------------------------------------------------------
