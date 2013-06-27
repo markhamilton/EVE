@@ -19,11 +19,37 @@ The current plans with the software are to:
 8. Use physical switches and VR head mounted displays (HMD) to get a realistic test drive.
 9. Realistic planetary and atmospheric simulations using publicly available data.
 10. Multiple visualization modes for satellites, planes, spacecraft, and more.
-11. ✓Premake script to compile for a variety of platforms and work with most IDEs.
+11. ✓Premake script to compile for a variety of platforms and work with most IDEs. (Visual Studio/Windows builds not tested.)
 12. Extension via Lua scripting.
+13. Provide pre-built binaries to make EveFS available for everyone.
 
 ## Dependencies
 
 * [Ogre3D](http://www.ogre3d.org/download)
 * [Premake4](http://industriousone.com/premake/download)
 
+## How to Build
+
+This guide is heavily geared towards building on Linux. If you have any improvements to the premake script or procedures for building on Windows, I will gladly accept pull requests to fix this process.
+
+That said, make sure you have the dependencies listed above. 
+
+### INSTALLING OGRE3D
+
+You will need to install Ogre3D or build the SDK from source in order to build and run this project.
+
+* Windows: Download and the [pre-built Ogre3D SDK](http://www.ogre3d.org/download/sdk).
+* Ubuntu Linux: [Install the PPA from launchpad](https://launchpad.net/~ogre-team/+archive/ogre).
+* Other Linux: [Guide to building from source](http://www.ogre3d.org/tikiwiki/Building+Ogre).
+
+### RUNNING PREMAKE
+
+There is a `premake4.lua` script in the `support` folder. This can generate project files for most major IDEs. Type `premake4 --help` from the command line to see output options.
+
+To generate project files for Visual Studio 2010, type:
+
+	premake4 vs2010
+
+There will be a new folder called vs2010 and the .sln and .cproj files will be in there for you. Open and hit F5 to build.
+
+I usually keep the code::blocks projects and GNU make build files all up to date; those are in their respective folders under `support`. Open the `support/codeblocks/EVE.workspace` file in order to open the project in codeblocks, or `cd` to the gmake folder to build from a Makefile.
