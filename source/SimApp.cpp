@@ -221,8 +221,8 @@ void SimApp::exit()
 bool SimApp::init(const Ogre::String wndTitle)
 {
 	initLogging();
-	initRoot(wndTitle);
 	initConfig();
+	initRoot(wndTitle);
 	initGUI();
 
 	return true;
@@ -243,15 +243,30 @@ bool SimApp::initConfig()
 	m_pLMgr->logMessage("Initializing Application Settings...", Ogre::LML_CRITICAL);
 
 	// TODO: Iterate through config file
+	// TODO: Use resource locations
 
-	// Ogre::ConfigFile configFile;
-	// configFile.load("eve.cfg");
-	// Ogre::ConfigFile::SectionIterator seci = configFile.getSectionIterator();
+	Ogre::ConfigFile configFile;
+	configFile.load("../assets/eve.cfg");
+	Ogre::ConfigFile::SectionIterator seci = configFile.getSectionIterator();
 
-	// while(seci.hasMoreElements())
-	// {
+	Ogre::String sectionString = "";
+	Ogre::String typeString = "";
+	Ogre::String paramString = "";
 
-	// }
+	while(seci.hasMoreElements())
+	{
+		sectionString = seci.peekNextKey();
+		Ogre::ConfigFile::SettingsMultiMap* settings = seci.getNext();
+
+		for(Ogre::ConfigFile::SettingsMultiMap::iterator seti = settings->begin(); seti != settings->end(); ++seti )
+		{
+			typeString = seti->first;
+			paramString = seti->second;
+
+			m_pLMgr->logMessage("[" + sectionString + "]" + typeString + "=" + paramString);
+			// TODO: pull string values in here
+		}
+	}
 
 	return true;
 }
@@ -262,8 +277,34 @@ bool SimApp::initRoot(Ogre::String wndTitle)
 
 	m_pRoot = new Ogre::Root();
 
-	if(! m_pRoot->showConfigDialog())
-		return false;
+	Ogre::ResourceGroupManager::getSingleton().addResourceLocation("../assets", "FileSystem", "General");
+
+	// const Ogre::RenderSystemList &renderSystems = m_pRoot->getAvailableRenderers();
+	// Ogre::RenderSystemList::const_iterator &rsi = renderSystems.begin();
+
+
+	// bool rendererFound = false;
+	// for(rsi = renderSystems.begin(); rsi != renderSystems.end(); rsi++)
+	// {
+	// 	Ogre::RenderSystem* rs = *rsi;
+	// 	Ogre::String rsName = rs->getName();
+
+	// 	if((int)rsName.find("OpenGL") >= 0)
+	// 	{
+	// 		m_pRoot->setRenderSystem(*rsi);
+	// 		rendererFound = true;
+	// 		break;
+	// 	}
+	// }
+
+	// if(!rendererFound) throw new exception();
+
+	// TODO: Tie in configuration settings to find appropriate renderer/res
+	// For now just pick the first renderer
+	m_pRoot->setRenderSystem(m_pRoot->getAvailableRenderers().front());
+
+	// if(! m_pRoot->showConfigDialog())
+	// 	return false;
 
 	m_pWindow = m_pRoot->initialise(true, wndTitle);
 
