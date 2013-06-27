@@ -29,6 +29,7 @@
 					<Add library="pthread" />
 					<Add library="OgreMain" />
 					<Add library="OIS" />
+					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="Release|x64">
@@ -55,6 +56,7 @@
 					<Add library="pthread" />
 					<Add library="OgreMain" />
 					<Add library="OIS" />
+					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="Debug|x64">
@@ -80,6 +82,7 @@
 					<Add library="pthread" />
 					<Add library="OgreMain" />
 					<Add library="OIS" />
+					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="Release|x64">
@@ -106,6 +109,7 @@
 					<Add library="pthread" />
 					<Add library="OgreMain" />
 					<Add library="OIS" />
+					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="DebugDynamic|x64">
@@ -135,6 +139,7 @@
 					<Add library="pthread" />
 					<Add library="OgreMain" />
 					<Add library="OIS" />
+					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseDynamic|x64">
@@ -164,6 +169,7 @@
 					<Add library="pthread" />
 					<Add library="OgreMain" />
 					<Add library="OIS" />
+					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="DebugSingleThread|x64">
@@ -193,6 +199,7 @@
 					<Add library="pthread" />
 					<Add library="OgreMain" />
 					<Add library="OIS" />
+					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseSingleThread|x64">
@@ -222,6 +229,7 @@
 					<Add library="pthread" />
 					<Add library="OgreMain" />
 					<Add library="OIS" />
+					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="DebugSingleThreadDynamic|x64">
@@ -255,6 +263,7 @@
 					<Add library="pthread" />
 					<Add library="OgreMain" />
 					<Add library="OIS" />
+					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseSingleThreadDynamic|x64">
@@ -288,6 +297,7 @@
 					<Add library="pthread" />
 					<Add library="OgreMain" />
 					<Add library="OIS" />
+					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="Debug|x32">
@@ -313,6 +323,7 @@
 					<Add library="pthread" />
 					<Add library="OgreMain" />
 					<Add library="OIS" />
+					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="Release|x32">
@@ -339,6 +350,7 @@
 					<Add library="pthread" />
 					<Add library="OgreMain" />
 					<Add library="OIS" />
+					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="Debug|x32">
@@ -364,6 +376,7 @@
 					<Add library="pthread" />
 					<Add library="OgreMain" />
 					<Add library="OIS" />
+					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="Release|x32">
@@ -390,6 +403,7 @@
 					<Add library="pthread" />
 					<Add library="OgreMain" />
 					<Add library="OIS" />
+					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="DebugDynamic|x32">
@@ -419,6 +433,7 @@
 					<Add library="pthread" />
 					<Add library="OgreMain" />
 					<Add library="OIS" />
+					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseDynamic|x32">
@@ -448,6 +463,7 @@
 					<Add library="pthread" />
 					<Add library="OgreMain" />
 					<Add library="OIS" />
+					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="DebugSingleThread|x32">
@@ -477,6 +493,7 @@
 					<Add library="pthread" />
 					<Add library="OgreMain" />
 					<Add library="OIS" />
+					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseSingleThread|x32">
@@ -506,6 +523,7 @@
 					<Add library="pthread" />
 					<Add library="OgreMain" />
 					<Add library="OIS" />
+					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="DebugSingleThreadDynamic|x32">
@@ -539,6 +557,7 @@
 					<Add library="pthread" />
 					<Add library="OgreMain" />
 					<Add library="OIS" />
+					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseSingleThreadDynamic|x32">
@@ -572,37 +591,38 @@
 					<Add library="pthread" />
 					<Add library="OgreMain" />
 					<Add library="OIS" />
+					<Add library="boost_system" />
 				</Linker>
 			</Target>
 		</Build>
-		<Unit filename="../../source/PlanetManager.cpp">
+		<Unit filename="../../source/EventHandler.cpp">
 			<Option virtualFolder="." />
 		</Unit>
-		<Unit filename="../../source/SimApp.cpp">
+		<Unit filename="../../source/PlanetManager.cpp">
 			<Option virtualFolder="." />
 		</Unit>
 		<Unit filename="../../source/Planet.cpp">
 			<Option virtualFolder="." />
 		</Unit>
-		<Unit filename="../../source/EventHandler.cpp">
+		<Unit filename="../../source/SimApp.cpp">
 			<Option virtualFolder="." />
 		</Unit>
 		<Unit filename="../../source/ScriptConsole.cpp">
 			<Option virtualFolder="." />
 		</Unit>
-		<Unit filename="../../include/Planet.hpp">
+		<Unit filename="../../include/PlanetManager.hpp">
 			<Option virtualFolder="include" />
 		</Unit>
-		<Unit filename="../../include/PlanetManager.hpp">
+		<Unit filename="../../include/EventHandler.hpp">
 			<Option virtualFolder="include" />
 		</Unit>
 		<Unit filename="../../include/SimApp.hpp">
 			<Option virtualFolder="include" />
 		</Unit>
-		<Unit filename="../../include/ScriptConsole.hpp">
+		<Unit filename="../../include/Planet.hpp">
 			<Option virtualFolder="include" />
 		</Unit>
-		<Unit filename="../../include/EventHandler.hpp">
+		<Unit filename="../../include/ScriptConsole.hpp">
 			<Option virtualFolder="include" />
 		</Unit>
 		<Extensions>

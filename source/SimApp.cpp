@@ -35,6 +35,7 @@ SimApp::SimApp()
 	m_pCamera			= 0;
 	m_pViewport			= 0;
 	m_pLog				= 0;
+	m_pLMgr 			= 0;
 	m_pTimer			= 0;
 
 	// m_pFpsCounter		= 0;
@@ -48,14 +49,20 @@ SimApp::SimApp()
  
 SimApp::~SimApp()
 {
-	// m_pLog->log("Shutting down EVE...");
+	m_pLMgr->logMessage("Shutting down EVE...");
 }
  
 void SimApp::start()
 {
 	init("Eve Flight Simulator");
 
-	// m_pLog->log("Ready!");
+	createScene();
+
+	m_pLMgr->logMessage("Ready!");
+
+	// TODO: Main loop
+	// TODO: Update scene
+	// TODO: Update GUI
 
 	// int lastFPS = -1;
 	// while(m_pDevice->run())
@@ -82,9 +89,11 @@ void SimApp::start()
  
 void SimApp::createScene()
 {
-	// m_pLog->log("Creating scene...");
+	m_pLog->logMessage("Creating scene...");
 	// TODO: Init scene, camera, gui, simulation models, lighting
 	// TODO: Load scene objects here
+	m_pPlanetManager = new PlanetManager();
+	m_pPlanetManager->addPlanet("earth", /*"../assets/earth.jpg",*/ 40.0f, Ogre::Vector3(0, 0, 0));
 }
 
 bool SimApp::keyPressed(const OIS::KeyEvent &keyEventRef)
@@ -120,7 +129,7 @@ void SimApp::updateCamera()
 }
 
 
-void SimApp::getInput()
+void SimApp::updateInput()
 {
 	if(m_bSettingsMode == false)
 	{
@@ -169,14 +178,147 @@ void SimApp::update(const double timeSinceLastFrame)
 	// m_MoveScale = m_MoveSpeed   * timeSinceLastFrame;
 	// m_RotScale  = m_RotateSpeed * timeSinceLastFrame;
  
-	getInput();
+	updateInput();
 	updateCamera();
 }
 
-// TODO: GUI
-//
-// void SimApp::buildGUI()
+// TODO: Implement this render mode switching feature
+// 
+// void SimApp::itemSelected(OgreBites::SelectMenu* menu)
 // {
+//     switch(menu->getSelectionIndex())
+//     {
+//     case 0:
+//         m_pCamera->setPolygonMode(Ogre::PM_SOLID);break;
+//     case 1:
+//         m_pCamera->setPolygonMode(Ogre::PM_WIREFRAME);break;
+//     case 2:
+//         m_pCamera->setPolygonMode(Ogre::PM_POINTS);break;
+//     }
+// }
+
+void SimApp::pause()
+{
+	m_pLMgr->logMessage("Pausing Simulator...");
+
+	// TODO: Pause simulation
+}
+ 
+void SimApp::resume()
+{
+	m_pLMgr->logMessage("Resuming Simulator...");
+
+	// TODO: Resume simulation
+}
+
+void SimApp::exit()
+{
+	m_pLMgr->logMessage("Shutting Down Simulator...");
+
+	m_pRoot->shutdown(); 
+}
+
+bool SimApp::init(const Ogre::String wndTitle)
+{
+	initLogging();
+	initRoot(wndTitle);
+	initConfig();
+	initGUI();
+
+	return true;
+}
+
+bool SimApp::initLogging()
+{
+	m_pLMgr = new Ogre::LogManager();
+	m_pLog = m_pLMgr->createLog("eve.log", true, true, false);
+	m_pLog->setDebugOutputEnabled(true);
+	m_pLog->setLogDetail(Ogre::LL_BOREME);
+
+	return true;
+}
+
+bool SimApp::initConfig()
+{
+	m_pLMgr->logMessage("Initializing Application Settings...", Ogre::LML_CRITICAL);
+
+	// TODO: Iterate through config file
+
+	// Ogre::ConfigFile configFile;
+	// configFile.load("eve.cfg");
+	// Ogre::ConfigFile::SectionIterator seci = configFile.getSectionIterator();
+
+	// while(seci.hasMoreElements())
+	// {
+
+	// }
+
+	return true;
+}
+
+bool SimApp::initRoot(Ogre::String wndTitle)
+{
+	m_pLMgr->logMessage("Initializing Root...", Ogre::LML_CRITICAL);
+
+	m_pRoot = new Ogre::Root();
+
+	if(! m_pRoot->showConfigDialog())
+		return false;
+
+	m_pWindow = m_pRoot->initialise(true, wndTitle);
+
+	m_pSmgr = m_pRoot->createSceneManager(Ogre::ST_GENERIC, "SceneManager");
+	m_pSmgr->setAmbientLight(Ogre::ColourValue(1.f, 1.f, 1.f));
+
+	m_pCamera = m_pSmgr->createCamera("Camera");
+	m_pCamera->setPosition(Ogre::Vector3(70, 0, 0));
+	m_pCamera->lookAt(Ogre::Vector3(0, 0, 0));
+	m_pCamera->setNearClipDistance(1);
+
+	m_pViewport = m_pWindow->addViewport(m_pCamera);
+	m_pViewport->setBackgroundColour(Ogre::ColourValue(0, 0, 0));
+
+	m_pCamera->setAspectRatio(Ogre::Real(m_pViewport->getActualWidth()) / Ogre::Real(m_pViewport->getActualHeight()));
+
+	m_pViewport->setCamera(m_pCamera);	
+
+	// TODO: Set antialiasing
+	// TODO: Select driver
+	// TODO: 800x600 default res
+
+	size_t hWnd = 0;
+	OIS::ParamList paramList;
+
+	m_pWindow->getCustomAttribute("WINDOW", &hWnd);
+
+	paramList.insert(OIS::ParamList::value_type("WINDOW", Ogre::StringConverter::toString(hWnd)));
+
+	m_pInputMgr = OIS::InputManager::createInputSystem(paramList);
+
+	m_pKeyboard = static_cast<OIS::Keyboard*>(m_pInputMgr->createInputObject(OIS::OISKeyboard, true));
+	m_pMouse = static_cast<OIS::Mouse*>(m_pInputMgr->createInputObject(OIS::OISMouse, true));
+
+	m_pMouse->getMouseState().height = m_pWindow->getHeight();
+	m_pMouse->getMouseState().width = m_pWindow->getWidth();
+
+	m_pKeyboard->setEventCallback(this);
+	m_pMouse->setEventCallback(this);
+
+	m_pTimer = new Ogre::Timer();
+	m_pTimer->reset();
+
+	m_pWindow->setActive(true);
+
+	return true;
+}
+
+bool SimApp::initGUI()
+{
+	m_pLMgr->logMessage("Initializing User Interface...", Ogre::LML_CRITICAL);
+
+	// TODO: GUI
+	// TODO: FPS counter
+
 // 	OgreFramework::getSingletonPtr()->m_pTrayMgr->showFrameStats(OgreBites::TL_BOTTOMLEFT);
 // 	OgreFramework::getSingletonPtr()->m_pTrayMgr->showLogo(OgreBites::TL_BOTTOMRIGHT);
 // 	OgreFramework::getSingletonPtr()->m_pTrayMgr->createLabel(OgreBites::TL_TOP, "GameLbl", "Game mode", 250);
@@ -205,128 +347,5 @@ void SimApp::update(const double timeSinceLastFrame)
 // 	chatModes.push_back("Wireframe mode");
 // 	chatModes.push_back("Point mode");
 // 	OgreFramework::getSingletonPtr()->m_pTrayMgr->createLongSelectMenu(OgreBites::TL_TOPRIGHT, "ChatModeSelMenu", "ChatMode", 200, 3, chatModes);
-// }
-
-
-// TODO: Implement this render mode switching feature
-// 
-// void SimApp::itemSelected(OgreBites::SelectMenu* menu)
-// {
-//     switch(menu->getSelectionIndex())
-//     {
-//     case 0:
-//         m_pCamera->setPolygonMode(Ogre::PM_SOLID);break;
-//     case 1:
-//         m_pCamera->setPolygonMode(Ogre::PM_WIREFRAME);break;
-//     case 2:
-//         m_pCamera->setPolygonMode(Ogre::PM_POINTS);break;
-//     }
-// }
-
-void SimApp::pause()
-{
-	// m_pLog->logMessage("Pausing Simulator...");
-}
- 
-void SimApp::resume()
-{
-	// m_pLog->logMessage("Resuming Simulator...");
-}
-
-void SimApp::exit()
-{
-	// m_pLog->logMessage("Leaving Simulator...");
- 
-	// TODO: Destroy all scene objects
-}
-
-
-// TODO: Create logger
-// TODO: Load app settings
-// TODO: Set up input listeners
-bool SimApp::init(const Ogre::String wndTitle)
-{
-	// TODO: why is this needed?
-	Ogre::LogManager* logMgr = new Ogre::LogManager();
-
-	m_pLog = Ogre::LogManager::getSingleton().createLog("eve.log", true, true, false);
-	m_pLog->setDebugOutputEnabled(true);
-
-	m_pRoot = new Ogre::Root();
-
-	if(! m_pRoot->showConfigDialog())
-		return false;
-
-	m_pWindow = m_pRoot->initialise(true, wndTitle);
-
-	m_pSmgr = m_pRoot->createSceneManager(Ogre::ST_GENERIC, "SceneManager");
-	m_pSmgr->setAmbientLight(Ogre::ColourValue(1.f, 1.f, 1.f));
-
-	m_pCamera = m_pSmgr->createCamera("Camera");
-	m_pCamera->setPosition(Ogre::Vector3(70, 0, 0));
-	m_pCamera->lookAt(Ogre::Vector3(0, 0, 0));
-	m_pCamera->setNearClipDistance(1);
-
-	m_pViewport = m_pWindow->addViewport(m_pCamera);
-	m_pViewport->setBackgroundColour(Ogre::ColourValue(0, 0, 0));
-
-	m_pCamera->setAspectRatio(Ogre::Real(m_pViewport->getActualWidth()) / Ogre::Real(m_pViewport->getActualHeight()));
-
-	m_pViewport->setCamera(m_pCamera);
-
-	size_t hWnd = 0;
-	OIS::ParamList paramList;
-
-	m_pWindow->getCustomAttribute("WINDOW", &hWnd);
-
-	paramList.insert(OIS::ParamList::value_type("WINDOW", Ogre::StringConverter::toString(hWnd)));
-
-	m_pInputMgr = OIS::InputManager::createInputSystem(paramList);
-
-	m_pKeyboard = static_cast<OIS::Keyboard*>(m_pInputMgr->createInputObject(OIS::OISKeyboard, true));
-	m_pMouse = static_cast<OIS::Mouse*>(m_pInputMgr->createInputObject(OIS::OISMouse, true));
-
-	m_pMouse->getMouseState().height = m_pWindow->getHeight();
-	m_pMouse->getMouseState().width = m_pWindow->getWidth();
-
-	m_pKeyboard->setEventCallback(this);
-	m_pMouse->setEventCallback(this);
-
-	Ogre::ConfigFile configFile;
-	configFile.load("eve.cfg");
-
-	Ogre::ConfigFile::SectionIterator seci = configFile.getSectionIterator();
-	// TODO: Iterate through config file
-	// while(seci.hasMoreElements())
-	// {
-
-	// }
-
-	// TODO: Set antialiasing
-	// TODO: Select driver
-	// TODO: 800x600 default res
-
-	// TODO: Init PlanetManager
-	// m_pPlanetManager = new PlanetManager();
-
-	m_pTimer = new Ogre::Timer();
-	m_pTimer->reset();
-
-	// TODO: Event receiver
-	// TODO: Skybox
-
-	// TODO: addPlanet
-	// m_pPlanetManager->addPlanet(L"earth", "../assets/earth.jpg", 40.0f, Ogre::Vector3(0, 0, 0));
-
-	m_pWindow->setActive(true);
-
-	buildGUI();
-
 	return true;
-}
-
-void SimApp::buildGUI()
-{
-	// TODO: GUI
-	// TODO: FPS counter
 }

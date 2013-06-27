@@ -359,11 +359,7 @@
 				</Linker>
 			</Target>
 		</Build>
-		<Unit filename="../../external/simc/source/sim_queue.c">
-			<Option virtualFolder="external/simc/source" />
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="../../external/simc/source/sim_threading.c">
+		<Unit filename="../../external/simc/source/sim_linkedlist.c">
 			<Option virtualFolder="external/simc/source" />
 			<Option compilerVar="CC" />
 		</Unit>
@@ -374,18 +370,34 @@
 			<Option virtualFolder="external/simc/source" />
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../../external/simc/source/sim_linkedlist.c">
+		<Unit filename="../../external/simc/source/sim_queue.c">
 			<Option virtualFolder="external/simc/source" />
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../../external/simc/include/sim_core.h">
-			<Option virtualFolder="external/simc/include" />
+		<Unit filename="../../external/simc/source/sim_threading.c">
+			<Option virtualFolder="external/simc/source" />
+			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="../../external/simc/include/sim_internal.h">
 			<Option virtualFolder="external/simc/include" />
 		</Unit>
+		<Unit filename="../../external/simc/include/sim_core.h">
+			<Option virtualFolder="external/simc/include" />
+		</Unit>
 		<Unit filename="../../external/simc/include/sim_xml.h">
 			<Option virtualFolder="external/simc/include" />
+		</Unit>
+		<Unit filename="../../external/simc/external/tinyxml/tinystr.cpp">
+			<Option virtualFolder="external/simc/external/tinyxml" />
+		</Unit>
+		<Unit filename="../../external/simc/external/tinyxml/tinyxml.cpp">
+			<Option virtualFolder="external/simc/external/tinyxml" />
+		</Unit>
+		<Unit filename="../../external/simc/external/tinyxml/tinyxmlerror.cpp">
+			<Option virtualFolder="external/simc/external/tinyxml" />
+		</Unit>
+		<Unit filename="../../external/simc/external/tinyxml/tinyxmlparser.cpp">
+			<Option virtualFolder="external/simc/external/tinyxml" />
 		</Unit>
 		<Extensions>
 		</Extensions>

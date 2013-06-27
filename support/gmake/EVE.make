@@ -38,7 +38,7 @@ ifeq ($(config),debug64)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -lm -lpthread -lOgreMain -lOIS
+  LIBS      += -lm -lpthread -lOgreMain -lOIS -lboost_system
   LDDEPS    += 
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -60,7 +60,7 @@ ifeq ($(config),release64)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -lm -lpthread -lOgreMain -lOIS
+  LIBS      += -lm -lpthread -lOgreMain -lOIS -lboost_system
   LDDEPS    += 
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -82,7 +82,7 @@ ifeq ($(config),debug64)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -lm -lpthread -lOgreMain -lOIS
+  LIBS      += -lm -lpthread -lOgreMain -lOIS -lboost_system
   LDDEPS    += 
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -104,7 +104,7 @@ ifeq ($(config),release64)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -lm -lpthread -lOgreMain -lOIS
+  LIBS      += -lm -lpthread -lOgreMain -lOIS -lboost_system
   LDDEPS    += 
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -126,7 +126,7 @@ ifeq ($(config),debugdynamic64)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -lm -lpthread -lOgreMain -lOIS
+  LIBS      += -lm -lpthread -lOgreMain -lOIS -lboost_system
   LDDEPS    += 
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -148,7 +148,7 @@ ifeq ($(config),releasedynamic64)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -lm -lpthread -lOgreMain -lOIS
+  LIBS      += -lm -lpthread -lOgreMain -lOIS -lboost_system
   LDDEPS    += 
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -170,7 +170,7 @@ ifeq ($(config),debugsinglethread64)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -lm -lpthread -lOgreMain -lOIS
+  LIBS      += -lm -lpthread -lOgreMain -lOIS -lboost_system
   LDDEPS    += 
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -192,7 +192,7 @@ ifeq ($(config),releasesinglethread64)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -lm -lpthread -lOgreMain -lOIS
+  LIBS      += -lm -lpthread -lOgreMain -lOIS -lboost_system
   LDDEPS    += 
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -214,7 +214,7 @@ ifeq ($(config),debugsinglethreaddynamic64)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -lm -lpthread -lOgreMain -lOIS
+  LIBS      += -lm -lpthread -lOgreMain -lOIS -lboost_system
   LDDEPS    += 
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -236,7 +236,7 @@ ifeq ($(config),releasesinglethreaddynamic64)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -lm -lpthread -lOgreMain -lOIS
+  LIBS      += -lm -lpthread -lOgreMain -lOIS -lboost_system
   LDDEPS    += 
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -258,7 +258,7 @@ ifeq ($(config),debug32)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -lm -lpthread -lOgreMain -lOIS
+  LIBS      += -lm -lpthread -lOgreMain -lOIS -lboost_system
   LDDEPS    += 
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -280,7 +280,7 @@ ifeq ($(config),release32)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -lm -lpthread -lOgreMain -lOIS
+  LIBS      += -lm -lpthread -lOgreMain -lOIS -lboost_system
   LDDEPS    += 
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -302,7 +302,7 @@ ifeq ($(config),debug32)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -lm -lpthread -lOgreMain -lOIS
+  LIBS      += -lm -lpthread -lOgreMain -lOIS -lboost_system
   LDDEPS    += 
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -324,7 +324,7 @@ ifeq ($(config),release32)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -lm -lpthread -lOgreMain -lOIS
+  LIBS      += -lm -lpthread -lOgreMain -lOIS -lboost_system
   LDDEPS    += 
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -346,7 +346,7 @@ ifeq ($(config),debugdynamic32)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -lm -lpthread -lOgreMain -lOIS
+  LIBS      += -lm -lpthread -lOgreMain -lOIS -lboost_system
   LDDEPS    += 
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -368,7 +368,7 @@ ifeq ($(config),releasedynamic32)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -lm -lpthread -lOgreMain -lOIS
+  LIBS      += -lm -lpthread -lOgreMain -lOIS -lboost_system
   LDDEPS    += 
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -390,7 +390,7 @@ ifeq ($(config),debugsinglethread32)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -lm -lpthread -lOgreMain -lOIS
+  LIBS      += -lm -lpthread -lOgreMain -lOIS -lboost_system
   LDDEPS    += 
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -412,7 +412,7 @@ ifeq ($(config),releasesinglethread32)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -lm -lpthread -lOgreMain -lOIS
+  LIBS      += -lm -lpthread -lOgreMain -lOIS -lboost_system
   LDDEPS    += 
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -434,7 +434,7 @@ ifeq ($(config),debugsinglethreaddynamic32)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -lm -lpthread -lOgreMain -lOIS
+  LIBS      += -lm -lpthread -lOgreMain -lOIS -lboost_system
   LDDEPS    += 
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -456,7 +456,7 @@ ifeq ($(config),releasesinglethreaddynamic32)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -lm -lpthread -lOgreMain -lOIS
+  LIBS      += -lm -lpthread -lOgreMain -lOIS -lboost_system
   LDDEPS    += 
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -468,10 +468,10 @@ ifeq ($(config),releasesinglethreaddynamic32)
 endif
 
 OBJECTS := \
-	$(OBJDIR)/PlanetManager.o \
-	$(OBJDIR)/SimApp.o \
-	$(OBJDIR)/Planet.o \
 	$(OBJDIR)/EventHandler.o \
+	$(OBJDIR)/PlanetManager.o \
+	$(OBJDIR)/Planet.o \
+	$(OBJDIR)/SimApp.o \
 	$(OBJDIR)/ScriptConsole.o \
 
 RESOURCES := \
@@ -537,16 +537,16 @@ endif
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 endif
 
-$(OBJDIR)/PlanetManager.o: ../../source/PlanetManager.cpp
+$(OBJDIR)/EventHandler.o: ../../source/EventHandler.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/SimApp.o: ../../source/SimApp.cpp
+$(OBJDIR)/PlanetManager.o: ../../source/PlanetManager.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/Planet.o: ../../source/Planet.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/EventHandler.o: ../../source/EventHandler.cpp
+$(OBJDIR)/SimApp.o: ../../source/SimApp.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/ScriptConsole.o: ../../source/ScriptConsole.cpp

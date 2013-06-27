@@ -5,6 +5,7 @@
 #include <string>
 #include <stdio.h>
 #include <OGRE/OgreRoot.h>
+#include <OGRE/OgreNumerics.h>
 #include "Planet.hpp"
 
 class PlanetManager
@@ -13,7 +14,7 @@ public:
 	// PlanetManager(IrrlichtDevice* Device);
 	~PlanetManager();
 
-	// void addPlanet(const stringw Name, const io::path &Texture, const f32 Radius, const vector3df Origin);
+	void addPlanet(const Ogre::String Name, const Ogre::PreciseReal Radius, const Ogre::Vector3 Origin);
 
 	// void toggleWireframe() 		{ showWireframe(!m_pShowWireframe); }
 	// void toggleBoundingBox() 	{ showBoundingBox(!m_pShowBoundingBox); }
@@ -25,7 +26,7 @@ public:
 	void showNormal(const bool State);
 	void showVelocity(const bool State);
 
-	// void loadSystem(const io::path &XmlFile, const core::vector3df RelativeOrigin);
+	// void loadSystem(const io::path &XmlFile, const Ogre::Vector3 RelativeOrigin);
 
 private:
 	// IrrlichtDevice*			m_pDevice;

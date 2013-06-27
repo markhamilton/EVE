@@ -411,58 +411,58 @@
 				</Linker>
 			</Target>
 		</Build>
-		<Unit filename="../../external/evds/source/evds_core/evds_object.c">
-			<Option virtualFolder="external/evds/source/evds_core" />
-		</Unit>
-		<Unit filename="../../external/evds/source/evds_core/evds_variable.c">
-			<Option virtualFolder="external/evds/source/evds_core" />
-		</Unit>
 		<Unit filename="../../external/evds/source/evds_core/evds_mesh.c">
-			<Option virtualFolder="external/evds/source/evds_core" />
-		</Unit>
-		<Unit filename="../../external/evds/source/evds_core/evds_modifier.c">
-			<Option virtualFolder="external/evds/source/evds_core" />
-		</Unit>
-		<Unit filename="../../external/evds/source/evds_core/evds_save.c">
-			<Option virtualFolder="external/evds/source/evds_core" />
-		</Unit>
-		<Unit filename="../../external/evds/source/evds_core/evds_system.c">
 			<Option virtualFolder="external/evds/source/evds_core" />
 		</Unit>
 		<Unit filename="../../external/evds/source/evds_core/evds_math.c">
 			<Option virtualFolder="external/evds/source/evds_core" />
 		</Unit>
-		<Unit filename="../../external/evds/source/evds_core/evds_env.c">
+		<Unit filename="../../external/evds/source/evds_core/evds_save.c">
+			<Option virtualFolder="external/evds/source/evds_core" />
+		</Unit>
+		<Unit filename="../../external/evds/source/evds_core/evds_object.c">
 			<Option virtualFolder="external/evds/source/evds_core" />
 		</Unit>
 		<Unit filename="../../external/evds/source/evds_core/evds_load.c">
 			<Option virtualFolder="external/evds/source/evds_core" />
 		</Unit>
-		<Unit filename="../../external/evds/source/evds_common/evds_planet.c">
-			<Option virtualFolder="external/evds/source/evds_common" />
+		<Unit filename="../../external/evds/source/evds_core/evds_variable.c">
+			<Option virtualFolder="external/evds/source/evds_core" />
 		</Unit>
-		<Unit filename="../../external/evds/source/evds_common/evds_gimbal.c">
+		<Unit filename="../../external/evds/source/evds_core/evds_system.c">
+			<Option virtualFolder="external/evds/source/evds_core" />
+		</Unit>
+		<Unit filename="../../external/evds/source/evds_core/evds_modifier.c">
+			<Option virtualFolder="external/evds/source/evds_core" />
+		</Unit>
+		<Unit filename="../../external/evds/source/evds_core/evds_env.c">
+			<Option virtualFolder="external/evds/source/evds_core" />
+		</Unit>
+		<Unit filename="../../external/evds/source/evds_common/evds_body.c">
 			<Option virtualFolder="external/evds/source/evds_common" />
 		</Unit>
 		<Unit filename="../../external/evds/source/evds_common/evds_database.c">
 			<Option virtualFolder="external/evds/source/evds_common" />
 		</Unit>
-		<Unit filename="../../external/evds/source/evds_common/evds_body.c">
-			<Option virtualFolder="external/evds/source/evds_common" />
-		</Unit>
-		<Unit filename="../../external/evds/source/evds_common/evds_prop_rk4.c">
-			<Option virtualFolder="external/evds/source/evds_common" />
-		</Unit>
-		<Unit filename="../../external/evds/source/evds_common/evds_engine.c">
+		<Unit filename="../../external/evds/source/evds_common/evds_prop_heun.c">
 			<Option virtualFolder="external/evds/source/evds_common" />
 		</Unit>
 		<Unit filename="../../external/evds/source/evds_common/evds_fueltank.c">
 			<Option virtualFolder="external/evds/source/evds_common" />
 		</Unit>
-		<Unit filename="../../external/evds/source/evds_common/evds_database.xml">
+		<Unit filename="../../external/evds/source/evds_common/evds_planet.c">
 			<Option virtualFolder="external/evds/source/evds_common" />
 		</Unit>
-		<Unit filename="../../external/evds/source/evds_common/evds_prop_heun.c">
+		<Unit filename="../../external/evds/source/evds_common/evds_engine.c">
+			<Option virtualFolder="external/evds/source/evds_common" />
+		</Unit>
+		<Unit filename="../../external/evds/source/evds_common/evds_gimbal.c">
+			<Option virtualFolder="external/evds/source/evds_common" />
+		</Unit>
+		<Unit filename="../../external/evds/source/evds_common/evds_prop_rk4.c">
+			<Option virtualFolder="external/evds/source/evds_common" />
+		</Unit>
+		<Unit filename="../../external/evds/source/evds_common/evds_database.xml">
 			<Option virtualFolder="external/evds/source/evds_common" />
 		</Unit>
 		<Unit filename="../../external/evds/include/evds_common.h">
@@ -471,10 +471,10 @@
 		<Unit filename="../../external/evds/include/evds_database.h">
 			<Option virtualFolder="external/evds/include" />
 		</Unit>
-		<Unit filename="../../external/evds/include/evds.h">
+		<Unit filename="../../external/evds/include/evds_internal.h">
 			<Option virtualFolder="external/evds/include" />
 		</Unit>
-		<Unit filename="../../external/evds/include/evds_internal.h">
+		<Unit filename="../../external/evds/include/evds.h">
 			<Option virtualFolder="external/evds/include" />
 		</Unit>
 		<Extensions>

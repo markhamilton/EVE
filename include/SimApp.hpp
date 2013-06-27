@@ -56,6 +56,7 @@ protected:
 	Ogre::Camera*		m_pCamera;
 	Ogre::Viewport*		m_pViewport;
 	Ogre::Log*			m_pLog;
+	Ogre::LogManager*	m_pLMgr;
 	Ogre::Timer*		m_pTimer;
 
 	// IGUIStaticText*		m_pFpsCounter;
@@ -67,9 +68,13 @@ protected:
 	PlanetManager*		m_pPlanetManager;
 
 private:
-	void buildGUI();
+	bool initLogging();
+	bool initRoot(Ogre::String wndTitle);
+	bool initConfig();
+	bool initGUI();
+
 	void updateCamera();
-	void getInput();
+	void updateInput();
 
 	bool		m_bSettingsMode;
     bool 		m_bQuit;

@@ -18,11 +18,11 @@ PlanetManager::~PlanetManager()
 {
 
 }
-// void PlanetManager::addPlanet(const stringw Name, const io::path &Texture, const f32 Radius, const vector3df Origin)
-// {
-// 	Planet* p = new Planet(m_pDevice, Name, Texture, Radius);
+void PlanetManager::addPlanet(const Ogre::String Name, const Ogre::PreciseReal Radius, const Ogre::Vector3 Origin)
+{
+	Planet* p = new Planet(/*m_pDevice, Name, Texture, Radius*/);
 // 	m_pPlanetList.push_back(p);
-// }
+}
 
 // void PlanetManager::showWireframe(const bool State)
 // {
@@ -56,7 +56,7 @@ PlanetManager::~PlanetManager()
 // 	m_pShowVelocity = State;
 // }
 
-// void PlanetManager::loadSystem(const io::path &XmlFile, const core::vector3df RelativeOrigin)
+// void PlanetManager::loadSystem(const io::path &XmlFile, const Ogre::Vector3 RelativeOrigin)
 // {
 // 	// TODO: Load a system and place all the objects
 // }
