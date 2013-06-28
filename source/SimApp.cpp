@@ -275,13 +275,16 @@ bool SimApp::initRoot(Ogre::String wndTitle)
 {
 	m_pLMgr->logMessage("Initializing Root...", Ogre::LML_CRITICAL);
 
-	m_pRoot = new Ogre::Root();
+	m_pRoot = new Ogre::Root("../assets/plugins.cfg", "../assets/eve.cfg");
 
-	Ogre::ResourceGroupManager::getSingleton().addResourceLocation("../assets", "FileSystem", "General");
+	// TODO: Windows support
+	// m_pRoot->loadPlugin("RenderSystem_GL");
 
-	// const Ogre::RenderSystemList &renderSystems = m_pRoot->getAvailableRenderers();
-	// Ogre::RenderSystemList::const_iterator &rsi = renderSystems.begin();
+	if(!m_pRoot->showConfigDialog())
+		return false;
 
+
+	// Ogre::RenderSystemList *renderSystems = m_pRoot->getAvailableRenderers();
 
 	// bool rendererFound = false;
 	// for(rsi = renderSystems.begin(); rsi != renderSystems.end(); rsi++)
@@ -296,15 +299,9 @@ bool SimApp::initRoot(Ogre::String wndTitle)
 	// 		break;
 	// 	}
 	// }
-
 	// if(!rendererFound) throw new exception();
 
-	// TODO: Tie in configuration settings to find appropriate renderer/res
-	// For now just pick the first renderer
-	m_pRoot->setRenderSystem(m_pRoot->getAvailableRenderers().front());
-
-	// if(! m_pRoot->showConfigDialog())
-	// 	return false;
+	Ogre::ResourceGroupManager::getSingleton().addResourceLocation("../assets", "FileSystem", "General");
 
 	m_pWindow = m_pRoot->initialise(true, wndTitle);
 
