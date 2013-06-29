@@ -342,10 +342,11 @@ bool SimApp::initRoot(Ogre::String wndTitle)
 	m_pKeyboard->setEventCallback(this);
 	m_pMouse->setEventCallback(this);
 
+	m_pWindow->setActive(true);
+
 	m_pTimer = new Ogre::Timer();
 	m_pTimer->reset();
 
-	m_pWindow->setActive(true);
 
 	return true;
 }
