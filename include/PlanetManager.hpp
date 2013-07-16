@@ -1,7 +1,6 @@
 #ifndef PLANETMANAGER_HPP
 #define PLANETMANAGER_HPP
 
-#include <GLFW/glfw3.h>
 #include <vector>
 #include <string>
 #include <stdio.h>

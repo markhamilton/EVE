@@ -2,23 +2,19 @@
 # Type "make help" for usage help
 
 ifndef config
-  config=debug64
+  config=release64
 endif
 export config
 
-PROJECTS := EVE glfw simc evds
+PROJECTS := EVE simc evds
 
 .PHONY: all clean help $(PROJECTS)
 
 all: $(PROJECTS)
 
-EVE: glfw evds simc
+EVE: evds simc
 	@echo "==== Building EVE ($(config)) ===="
 	@${MAKE} --no-print-directory -C . -f EVE.make
-
-glfw: 
-	@echo "==== Building glfw ($(config)) ===="
-	@${MAKE} --no-print-directory -C . -f glfw.make
 
 simc: 
 	@echo "==== Building simc ($(config)) ===="
@@ -30,7 +26,6 @@ evds:
 
 clean:
 	@${MAKE} --no-print-directory -C . -f EVE.make clean
-	@${MAKE} --no-print-directory -C . -f glfw.make clean
 	@${MAKE} --no-print-directory -C . -f simc.make clean
 	@${MAKE} --no-print-directory -C . -f evds.make clean
 
@@ -38,8 +33,8 @@ help:
 	@echo "Usage: make [config=name] [target]"
 	@echo ""
 	@echo "CONFIGURATIONS:"
-	@echo "   debug64"
 	@echo "   release64"
+	@echo "   debug64"
 	@echo "   debug64"
 	@echo "   release64"
 	@echo "   debugdynamic64"
@@ -48,8 +43,8 @@ help:
 	@echo "   releasesinglethread64"
 	@echo "   debugsinglethreaddynamic64"
 	@echo "   releasesinglethreaddynamic64"
-	@echo "   debug32"
 	@echo "   release32"
+	@echo "   debug32"
 	@echo "   debug32"
 	@echo "   release32"
 	@echo "   debugdynamic32"
@@ -63,7 +58,6 @@ help:
 	@echo "   all (default)"
 	@echo "   clean"
 	@echo "   EVE"
-	@echo "   glfw"
 	@echo "   simc"
 	@echo "   evds"
 	@echo ""

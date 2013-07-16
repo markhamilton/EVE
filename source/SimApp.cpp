@@ -26,7 +26,7 @@ SimApp::~SimApp()
 {
 	// m_pLMgr->logMessage("Shutting down EVE...");
 }
- 
+
 void SimApp::start()
 {
 	init("Eve Flight Simulator");
@@ -35,13 +35,15 @@ void SimApp::start()
 
 	// m_pLMgr->logMessage("Ready!");
 
+	glutMainLoop();
+
 	// TODO: Main loop
 	// TODO: Update scene
 	// TODO: Update GUI
 	// TODO: FPS Counter
 	// TODO: Logging
 }
- 
+
 void SimApp::createScene()
 {
 	//m_pLog->logMessage("Creating scene...");
@@ -50,6 +52,24 @@ void SimApp::createScene()
 	m_pPlanetManager = new PlanetManager();
 	// m_pPlanetManager->addPlanet("earth", 40.0f, Vector3f(0, 0, 0));
 }
+
+void SimApp::renderScene()
+{
+	char *argv[] = {"evefs"};
+	int argc = 1;
+	glutInit(&argc, argv);
+
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+	glBegin(GL_TRIANGLES);
+	glVertex3f(-0.5, -0.5, 0.0);
+	glVertex3f(0.5, 0.0, 0.0);
+	glVertex3f(0.0, 0.5, 0.0);
+	glEnd();
+
+	glutSwapBuffers();
+}
+
 
 // bool SimApp::keyPressed(const OIS::KeyEvent &keyEventRef)
 // {
@@ -177,7 +197,7 @@ bool SimApp::init(const std::string wndTitle)
 {
 	initLogging();
 	initConfig();
-	initRoot(wndTitle);
+	initWindow(wndTitle);
 	initGUI();
 
 	return true;
@@ -226,82 +246,16 @@ bool SimApp::initConfig()
 	return true;
 }
 
-bool SimApp::initRoot(const std::string wndTitle)
+bool SimApp::initWindow(const std::string wndTitle)
 {
 	// m_pLMgr->logMessage("Initializing Root...", Ogre::LML_CRITICAL);
 
-	// m_pRoot = new Ogre::Root("../assets/plugins.cfg", "../assets/eve.cfg");
+	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
+	glutInitWindowPosition(100, 100);
+	glutInitWindowSize(640, 480);
+	glutCreateWindow(wndTitle.c_str());
 
-	// TODO: Windows support
-	// m_pRoot->loadPlugin("RenderSystem_GL");
-
-	// if(!m_pRoot->showConfigDialog())
-	// 	return false;
-
-
-	// Ogre::RenderSystemList *renderSystems = m_pRoot->getAvailableRenderers();
-
-	// bool rendererFound = false;
-	// for(rsi = renderSystems.begin(); rsi != renderSystems.end(); rsi++)
-	// {
-	// 	Ogre::RenderSystem* rs = *rsi;
-	// 	Ogre::String rsName = rs->getName();
-
-	// 	if((int)rsName.find("OpenGL") >= 0)
-	// 	{
-	// 		m_pRoot->setRenderSystem(*rsi);
-	// 		rendererFound = true;
-	// 		break;
-	// 	}
-	// }
-	// if(!rendererFound) throw new exception();
-
-	// Ogre::ResourceGroupManager::getSingleton().addResourceLocation("../assets", "FileSystem", "General");
-
-	// m_pWindow = m_pRoot->initialise(true, wndTitle);
-
-	// m_pSmgr = m_pRoot->createSceneManager(Ogre::ST_GENERIC, "SceneManager");
-	// m_pSmgr->setAmbientLight(Ogre::ColourValue(1.f, 1.f, 1.f));
-
-	// m_pCamera = m_pSmgr->createCamera("Camera");
-	// m_pCamera->setPosition(Ogre::Vector3(70, 0, 0));
-	// m_pCamera->lookAt(Ogre::Vector3(0, 0, 0));
-	// m_pCamera->setNearClipDistance(1);
-
-	// m_pViewport = m_pWindow->addViewport(m_pCamera);
-	// m_pViewport->setBackgroundColour(Ogre::ColourValue(0, 0, 0));
-
-	// m_pCamera->setAspectRatio(Ogre::Real(m_pViewport->getActualWidth()) / Ogre::Real(m_pViewport->getActualHeight()));
-
-	//m_pViewport->setCamera(m_pCamera);	
-
-	// TODO: Set antialiasing
-	// TODO: Select driver
-	// TODO: 800x600 default res
-
-	// size_t hWnd = 0;
-	// OIS::ParamList paramList;
-
-	// m_pWindow->getCustomAttribute("WINDOW", &hWnd);
-
-	// paramList.insert(OIS::ParamList::value_type("WINDOW", Ogre::StringConverter::toString(hWnd)));
-
-	// m_pInputMgr = OIS::InputManager::createInputSystem(paramList);
-
-	// m_pKeyboard = static_cast<OIS::Keyboard*>(m_pInputMgr->createInputObject(OIS::OISKeyboard, true));
-	// m_pMouse = static_cast<OIS::Mouse*>(m_pInputMgr->createInputObject(OIS::OISMouse, true));
-
-	// m_pMouse->getMouseState().height = m_pWindow->getHeight();
-	// m_pMouse->getMouseState().width = m_pWindow->getWidth();
-
-	// m_pKeyboard->setEventCallback(this);
-	// m_pMouse->setEventCallback(this);
-
-	// m_pWindow->setActive(true);
-
-	// m_pTimer = new Ogre::Timer();
-	// m_pTimer->reset();
-
+	glutDisplayFunc(renderScene);
 
 	return true;
 }

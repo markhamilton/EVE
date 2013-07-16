@@ -6,6 +6,34 @@
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
+			<Target title="Release|x64">
+				<Option output="../../bin/EVE" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x64/Release/EVE" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-g" />
+					<Add option="-m64" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DEVE_SIM" />
+					<Add directory="../../include" />
+					<Add directory="../../external/glfw/include" />
+					<Add directory="../../external/evds/include" />
+					<Add directory="../../external/simc/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-m64" />
+					<Add option="-L/usr/lib64" />
+					<Add option="-lstdc++" />
+					<Add directory="../../bin" />
+					<Add library="glfw" />
+					<Add library="evds" />
+					<Add library="simc" />
+					<Add library="m" />
+					<Add library="pthread" />
+				</Linker>
+			</Target>
 			<Target title="Debug|x64">
 				<Option output="../../bin/EVEd" prefix_auto="0" extension_auto="0" />
 				<Option object_output="obj/x64/Debug/EVE" />
@@ -17,7 +45,7 @@
 					<Add option="-DDEBUG" />
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
-					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
 				</Compiler>
@@ -25,11 +53,39 @@
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
 					<Add option="-lstdc++" />
+					<Add directory="../../bin" />
+					<Add library="glfw" />
+					<Add library="evds" />
+					<Add library="simc" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="OgreMain" />
-					<Add library="OIS" />
-					<Add library="boost_system" />
+				</Linker>
+			</Target>
+			<Target title="Debug|x64">
+				<Option output="../../bin/EVEd" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x64/Debug/EVE" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-m64" />
+					<Add option="-DDEBUG" />
+					<Add option="-DEVE_SIM" />
+					<Add directory="../../include" />
+					<Add directory="../../external/glfw/include" />
+					<Add directory="../../external/evds/include" />
+					<Add directory="../../external/simc/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-m64" />
+					<Add option="-L/usr/lib64" />
+					<Add option="-lstdc++" />
+					<Add directory="../../bin" />
+					<Add library="glfw" />
+					<Add library="evds" />
+					<Add library="simc" />
+					<Add library="m" />
+					<Add library="pthread" />
 				</Linker>
 			</Target>
 			<Target title="Release|x64">
@@ -44,7 +100,7 @@
 					<Add option="-DNDEBUG" />
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
-					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
 				</Compiler>
@@ -52,64 +108,12 @@
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
 					<Add option="-lstdc++" />
+					<Add directory="../../bin" />
+					<Add library="glfw" />
+					<Add library="evds" />
+					<Add library="simc" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="OgreMain" />
-					<Add library="OIS" />
-					<Add library="boost_system" />
-				</Linker>
-			</Target>
-			<Target title="Debug|x64">
-				<Option output="../../bin/EVEd" prefix_auto="0" extension_auto="0" />
-				<Option object_output="obj/x64/Debug/EVE" />
-				<Option type="0" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add option="-g" />
-					<Add option="-m64" />
-					<Add option="-DDEBUG" />
-					<Add option="-DEVE_SIM" />
-					<Add directory="../../include" />
-					<Add directory="../../external/irrlicht/include" />
-					<Add directory="../../external/evds/include" />
-					<Add directory="../../external/simc/include" />
-				</Compiler>
-				<Linker>
-					<Add option="-m64" />
-					<Add option="-L/usr/lib64" />
-					<Add option="-lstdc++" />
-					<Add library="m" />
-					<Add library="pthread" />
-					<Add library="OgreMain" />
-					<Add library="OIS" />
-					<Add library="boost_system" />
-				</Linker>
-			</Target>
-			<Target title="Release|x64">
-				<Option output="../../bin/EVE" prefix_auto="0" extension_auto="0" />
-				<Option object_output="obj/x64/Release/EVE" />
-				<Option type="0" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add option="-O2" />
-					<Add option="-g" />
-					<Add option="-m64" />
-					<Add option="-DNDEBUG" />
-					<Add option="-DEVE_SIM" />
-					<Add directory="../../include" />
-					<Add directory="../../external/irrlicht/include" />
-					<Add directory="../../external/evds/include" />
-					<Add directory="../../external/simc/include" />
-				</Compiler>
-				<Linker>
-					<Add option="-m64" />
-					<Add option="-L/usr/lib64" />
-					<Add option="-lstdc++" />
-					<Add library="m" />
-					<Add library="pthread" />
-					<Add library="OgreMain" />
-					<Add library="OIS" />
-					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="DebugDynamic|x64">
@@ -127,7 +131,7 @@
 					<Add option="-DRDRS_DYNAMIC" />
 					<Add option="-DSIMC_DYNAMIC" />
 					<Add directory="../../include" />
-					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
 				</Compiler>
@@ -135,11 +139,12 @@
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
 					<Add option="-lstdc++" />
+					<Add directory="../../bin" />
+					<Add library="glfw" />
+					<Add library="evds" />
+					<Add library="simc" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="OgreMain" />
-					<Add library="OIS" />
-					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseDynamic|x64">
@@ -157,7 +162,7 @@
 					<Add option="-DRDRS_DYNAMIC" />
 					<Add option="-DSIMC_DYNAMIC" />
 					<Add directory="../../include" />
-					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
 				</Compiler>
@@ -165,11 +170,12 @@
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
 					<Add option="-lstdc++" />
+					<Add directory="../../bin" />
+					<Add library="glfw" />
+					<Add library="evds" />
+					<Add library="simc" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="OgreMain" />
-					<Add library="OIS" />
-					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="DebugSingleThread|x64">
@@ -187,7 +193,7 @@
 					<Add option="-DRDRS_SINGLETHREADED" />
 					<Add option="-DSIMC_SINGLETHREADED" />
 					<Add directory="../../include" />
-					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
 				</Compiler>
@@ -195,11 +201,12 @@
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
 					<Add option="-lstdc++" />
+					<Add directory="../../bin" />
+					<Add library="glfw" />
+					<Add library="evds" />
+					<Add library="simc" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="OgreMain" />
-					<Add library="OIS" />
-					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseSingleThread|x64">
@@ -217,7 +224,7 @@
 					<Add option="-DRDRS_SINGLETHREADED" />
 					<Add option="-DSIMC_SINGLETHREADED" />
 					<Add directory="../../include" />
-					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
 				</Compiler>
@@ -225,11 +232,12 @@
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
 					<Add option="-lstdc++" />
+					<Add directory="../../bin" />
+					<Add library="glfw" />
+					<Add library="evds" />
+					<Add library="simc" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="OgreMain" />
-					<Add library="OIS" />
-					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="DebugSingleThreadDynamic|x64">
@@ -251,7 +259,7 @@
 					<Add option="-DRDRS_SINGLETHREADED" />
 					<Add option="-DSIMC_SINGLETHREADED" />
 					<Add directory="../../include" />
-					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
 				</Compiler>
@@ -259,11 +267,12 @@
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
 					<Add option="-lstdc++" />
+					<Add directory="../../bin" />
+					<Add library="glfw" />
+					<Add library="evds" />
+					<Add library="simc" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="OgreMain" />
-					<Add library="OIS" />
-					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseSingleThreadDynamic|x64">
@@ -285,7 +294,7 @@
 					<Add option="-DRDRS_SINGLETHREADED" />
 					<Add option="-DSIMC_SINGLETHREADED" />
 					<Add directory="../../include" />
-					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
 				</Compiler>
@@ -293,37 +302,12 @@
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
 					<Add option="-lstdc++" />
+					<Add directory="../../bin" />
+					<Add library="glfw" />
+					<Add library="evds" />
+					<Add library="simc" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="OgreMain" />
-					<Add library="OIS" />
-					<Add library="boost_system" />
-				</Linker>
-			</Target>
-			<Target title="Debug|x32">
-				<Option output="../../bin/EVEd32" prefix_auto="0" extension_auto="0" />
-				<Option object_output="obj/x32/Debug/EVE" />
-				<Option type="0" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add option="-g" />
-					<Add option="-m32" />
-					<Add option="-DDEBUG" />
-					<Add option="-DEVE_SIM" />
-					<Add directory="../../include" />
-					<Add directory="../../external/irrlicht/include" />
-					<Add directory="../../external/evds/include" />
-					<Add directory="../../external/simc/include" />
-				</Compiler>
-				<Linker>
-					<Add option="-m32" />
-					<Add option="-L/usr/lib32" />
-					<Add option="-lstdc++" />
-					<Add library="m" />
-					<Add library="pthread" />
-					<Add library="OgreMain" />
-					<Add library="OIS" />
-					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="Release|x32">
@@ -338,7 +322,7 @@
 					<Add option="-DNDEBUG" />
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
-					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
 				</Compiler>
@@ -346,11 +330,12 @@
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
 					<Add option="-lstdc++" />
+					<Add directory="../../bin" />
+					<Add library="glfw" />
+					<Add library="evds" />
+					<Add library="simc" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="OgreMain" />
-					<Add library="OIS" />
-					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="Debug|x32">
@@ -364,7 +349,7 @@
 					<Add option="-DDEBUG" />
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
-					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
 				</Compiler>
@@ -372,11 +357,39 @@
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
 					<Add option="-lstdc++" />
+					<Add directory="../../bin" />
+					<Add library="glfw" />
+					<Add library="evds" />
+					<Add library="simc" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="OgreMain" />
-					<Add library="OIS" />
-					<Add library="boost_system" />
+				</Linker>
+			</Target>
+			<Target title="Debug|x32">
+				<Option output="../../bin/EVEd32" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x32/Debug/EVE" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-m32" />
+					<Add option="-DDEBUG" />
+					<Add option="-DEVE_SIM" />
+					<Add directory="../../include" />
+					<Add directory="../../external/glfw/include" />
+					<Add directory="../../external/evds/include" />
+					<Add directory="../../external/simc/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-m32" />
+					<Add option="-L/usr/lib32" />
+					<Add option="-lstdc++" />
+					<Add directory="../../bin" />
+					<Add library="glfw" />
+					<Add library="evds" />
+					<Add library="simc" />
+					<Add library="m" />
+					<Add library="pthread" />
 				</Linker>
 			</Target>
 			<Target title="Release|x32">
@@ -391,7 +404,7 @@
 					<Add option="-DNDEBUG" />
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
-					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
 				</Compiler>
@@ -399,11 +412,12 @@
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
 					<Add option="-lstdc++" />
+					<Add directory="../../bin" />
+					<Add library="glfw" />
+					<Add library="evds" />
+					<Add library="simc" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="OgreMain" />
-					<Add library="OIS" />
-					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="DebugDynamic|x32">
@@ -421,7 +435,7 @@
 					<Add option="-DRDRS_DYNAMIC" />
 					<Add option="-DSIMC_DYNAMIC" />
 					<Add directory="../../include" />
-					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
 				</Compiler>
@@ -429,11 +443,12 @@
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
 					<Add option="-lstdc++" />
+					<Add directory="../../bin" />
+					<Add library="glfw" />
+					<Add library="evds" />
+					<Add library="simc" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="OgreMain" />
-					<Add library="OIS" />
-					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseDynamic|x32">
@@ -451,7 +466,7 @@
 					<Add option="-DRDRS_DYNAMIC" />
 					<Add option="-DSIMC_DYNAMIC" />
 					<Add directory="../../include" />
-					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
 				</Compiler>
@@ -459,11 +474,12 @@
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
 					<Add option="-lstdc++" />
+					<Add directory="../../bin" />
+					<Add library="glfw" />
+					<Add library="evds" />
+					<Add library="simc" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="OgreMain" />
-					<Add library="OIS" />
-					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="DebugSingleThread|x32">
@@ -481,7 +497,7 @@
 					<Add option="-DRDRS_SINGLETHREADED" />
 					<Add option="-DSIMC_SINGLETHREADED" />
 					<Add directory="../../include" />
-					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
 				</Compiler>
@@ -489,11 +505,12 @@
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
 					<Add option="-lstdc++" />
+					<Add directory="../../bin" />
+					<Add library="glfw" />
+					<Add library="evds" />
+					<Add library="simc" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="OgreMain" />
-					<Add library="OIS" />
-					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseSingleThread|x32">
@@ -511,7 +528,7 @@
 					<Add option="-DRDRS_SINGLETHREADED" />
 					<Add option="-DSIMC_SINGLETHREADED" />
 					<Add directory="../../include" />
-					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
 				</Compiler>
@@ -519,11 +536,12 @@
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
 					<Add option="-lstdc++" />
+					<Add directory="../../bin" />
+					<Add library="glfw" />
+					<Add library="evds" />
+					<Add library="simc" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="OgreMain" />
-					<Add library="OIS" />
-					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="DebugSingleThreadDynamic|x32">
@@ -545,7 +563,7 @@
 					<Add option="-DRDRS_SINGLETHREADED" />
 					<Add option="-DSIMC_SINGLETHREADED" />
 					<Add directory="../../include" />
-					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
 				</Compiler>
@@ -553,11 +571,12 @@
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
 					<Add option="-lstdc++" />
+					<Add directory="../../bin" />
+					<Add library="glfw" />
+					<Add library="evds" />
+					<Add library="simc" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="OgreMain" />
-					<Add library="OIS" />
-					<Add library="boost_system" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseSingleThreadDynamic|x32">
@@ -579,7 +598,7 @@
 					<Add option="-DRDRS_SINGLETHREADED" />
 					<Add option="-DSIMC_SINGLETHREADED" />
 					<Add directory="../../include" />
-					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
 				</Compiler>
@@ -587,11 +606,12 @@
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
 					<Add option="-lstdc++" />
+					<Add directory="../../bin" />
+					<Add library="glfw" />
+					<Add library="evds" />
+					<Add library="simc" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="OgreMain" />
-					<Add library="OIS" />
-					<Add library="boost_system" />
 				</Linker>
 			</Target>
 		</Build>

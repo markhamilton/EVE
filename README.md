@@ -26,7 +26,6 @@ The current plans with the software are to:
 ## Dependencies
 
 * OpenGL support
-* GLFW (Included under `external/`)
 * [Premake4](http://industriousone.com/premake/download)
 
 ## How to Build

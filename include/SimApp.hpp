@@ -1,6 +1,7 @@
 #ifndef SIMAPP_HPP
 #define SIMAPP_HPP
 
+#include <GL/glut.h>
 #include <stdio.h>
 #include <string>
 #include "EventHandler.hpp"
@@ -21,13 +22,14 @@ public:
 	void pause();
 	void resume();
 	void update(const double timeSinceLastFrame);
+	void renderScene();
 
 protected:
 	PlanetManager*		m_pPlanetManager;
 
 private:
 	bool initLogging();
-	bool initRoot(const std::string wndTitle);
+	bool initWindow(const std::string wndTitle);
 	bool initConfig();
 	bool initGUI();
 
