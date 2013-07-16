@@ -13,7 +13,7 @@ The current plans with the software are to:
 2. Provide a simulated physics sandbox for you to test space flight in.
 3. Import and export parametric testing data.
 4. Take part in first-person test flights or perform batch simulations.
-5. Graphical interface using Ogre3D and command-line interface using ncurses.
+5. Graphical interface using OpenGL and command-line interface using ncurses.
 6. Send simulated sensor output interface to an 8086 emulator running your flight control software.
 7. Plug in live flight hardware to test hardware logic.
 8. Use physical switches and VR head mounted displays (HMD) to get a realistic test drive.
@@ -25,7 +25,8 @@ The current plans with the software are to:
 
 ## Dependencies
 
-* [Ogre3D](http://www.ogre3d.org/download)
+* OpenGL support
+* GLFW (Included under `external/`)
 * [Premake4](http://industriousone.com/premake/download)
 
 ## How to Build
@@ -33,14 +34,6 @@ The current plans with the software are to:
 This guide is heavily geared towards building on Linux. If you have any improvements to the premake script or procedures for building on Windows, I will gladly accept pull requests to fix this process.
 
 That said, make sure you have the dependencies listed above. 
-
-### INSTALLING OGRE3D
-
-You will need to install Ogre3D or build the SDK from source in order to build and run this project.
-
-* Windows: Download and the [pre-built Ogre3D SDK](http://www.ogre3d.org/download/sdk).
-* Ubuntu Linux: [Install the PPA from launchpad](https://launchpad.net/~ogre-team/+archive/ogre).
-* Other Linux: [Guide to building from source](http://www.ogre3d.org/tikiwiki/Building+Ogre).
 
 ### RUNNING PREMAKE
 
