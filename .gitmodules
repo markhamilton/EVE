@@ -4,3 +4,6 @@
 [submodule "external/simc"]
 	path = external/simc
 	url = git://github.com/FoxWorks/SIMC.git
+[submodule "external/glfw"]
+	path = external/glfw
+	url = https://github.com/glfw/glfw.git
