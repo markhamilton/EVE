@@ -1,11 +1,10 @@
 #ifndef PLANETMANAGER_HPP
 #define PLANETMANAGER_HPP
 
+#include <GLFW/glfw3.h>
 #include <vector>
 #include <string>
 #include <stdio.h>
-#include <OGRE/OgreRoot.h>
-#include <OGRE/OgreNumerics.h>
 #include "Planet.hpp"
 
 class PlanetManager
@@ -14,7 +13,7 @@ public:
 	// PlanetManager(IrrlichtDevice* Device);
 	~PlanetManager();
 
-	void addPlanet(const Ogre::String Name, const Ogre::PreciseReal Radius, const Ogre::Vector3 Origin);
+	// void addPlanet(const std::string Name, const double Radius, const Vector3f Origin);
 
 	// void toggleWireframe() 		{ showWireframe(!m_pShowWireframe); }
 	// void toggleBoundingBox() 	{ showBoundingBox(!m_pShowBoundingBox); }

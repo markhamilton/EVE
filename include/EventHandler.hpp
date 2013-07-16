@@ -1,7 +1,5 @@
 #include "PlanetManager.hpp"
 
-using namespace std;
-
 class EventHandler
 {
 public:

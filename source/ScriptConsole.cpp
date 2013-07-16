@@ -1,7 +1,6 @@
 // TODO: Trap logging events from Irrlicht and bring them into here
 // TODO: Load default console font from assets folder
 
-#include <OGRE/OgreRoot.h>
 #include "ScriptConsole.hpp"
 
 EveConsole::EveConsole()
@@ -15,7 +14,7 @@ EveConsole::~EveConsole()
 
 }
 
-void EveConsole::writeLine(Ogre::String text, const ConsoleMessageType messageType)
+void EveConsole::writeLine(const std::string text, const ConsoleMessageType messageType)
 {
 	if( m_pMessageCount < MAX_CONSOLE_MESSAGES )
 	{

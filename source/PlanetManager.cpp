@@ -18,11 +18,11 @@ PlanetManager::~PlanetManager()
 {
 
 }
-void PlanetManager::addPlanet(const Ogre::String Name, const Ogre::PreciseReal Radius, const Ogre::Vector3 Origin)
-{
-	Planet* p = new Planet(/*m_pDevice, Name, Texture, Radius*/);
+// void PlanetManager::addPlanet(const std::string Name, const double Radius, const vector3f Origin)
+// {
+// 	Planet* p = new Planet();
 // 	m_pPlanetList.push_back(p);
-}
+// }
 
 // void PlanetManager::showWireframe(const bool State)
 // {

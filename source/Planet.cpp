@@ -127,11 +127,11 @@ Planet::~Planet()
 // 	return Material;
 // }
 
-void Planet::setName(Ogre::String Name)
+void Planet::setName(std::string Name)
 {
 	m_pName = Name;
 }
-Ogre::String Planet::getName()
+std::string Planet::getName()
 {
 	return m_pName;
 }

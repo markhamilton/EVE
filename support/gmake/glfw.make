@@ -28,17 +28,17 @@ ifndef RESCOMP
 endif
 
 ifeq ($(config),debug64)
-  OBJDIR     = obj/x64/Debug/evds
+  OBJDIR     = obj/x64/Debug/glfw
   TARGETDIR  = ../../bin
-  TARGET     = $(TARGETDIR)/libevds.a
-  DEFINES   += -DDEBUG -DEVDS_LIBRARY -DSIMC_LIBRARY
-  INCLUDES  += -I../../external/evds/include -I../../external/evds/external/simc/include
+  TARGET     = $(TARGETDIR)/libglfwd.a
+  DEFINES   += -DDEBUG
+  INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -m64 -L/usr/lib64
+  LDFLAGS   += -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += 
+  LIBS      += -lm -lpthread
   LDDEPS    += 
   LINKCMD    = $(AR) -rcs $(TARGET) $(OBJECTS)
   define PREBUILDCMDS
@@ -50,17 +50,17 @@ ifeq ($(config),debug64)
 endif
 
 ifeq ($(config),release64)
-  OBJDIR     = obj/x64/Release/evds
+  OBJDIR     = obj/x64/Release/glfw
   TARGETDIR  = ../../bin
-  TARGET     = $(TARGETDIR)/libevds.a
-  DEFINES   += -DNDEBUG -DEVDS_LIBRARY -DSIMC_LIBRARY
-  INCLUDES  += -I../../external/evds/include -I../../external/evds/external/simc/include
+  TARGET     = $(TARGETDIR)/libglfw.a
+  DEFINES   += -DNDEBUG
+  INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
-  CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m64
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -g -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m64 -L/usr/lib64
+  LDFLAGS   += -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += 
+  LIBS      += -lm -lpthread
   LDDEPS    += 
   LINKCMD    = $(AR) -rcs $(TARGET) $(OBJECTS)
   define PREBUILDCMDS
@@ -72,17 +72,17 @@ ifeq ($(config),release64)
 endif
 
 ifeq ($(config),debug64)
-  OBJDIR     = obj/x64/Debug/evds
+  OBJDIR     = obj/x64/Debug/glfw
   TARGETDIR  = ../../bin
-  TARGET     = $(TARGETDIR)/libevds.a
-  DEFINES   += -DDEBUG -DEVDS_LIBRARY -DSIMC_LIBRARY
-  INCLUDES  += -I../../external/evds/include -I../../external/evds/external/simc/include
+  TARGET     = $(TARGETDIR)/libglfwd.a
+  DEFINES   += -DDEBUG
+  INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -m64 -L/usr/lib64
+  LDFLAGS   += -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += 
+  LIBS      += -lm -lpthread
   LDDEPS    += 
   LINKCMD    = $(AR) -rcs $(TARGET) $(OBJECTS)
   define PREBUILDCMDS
@@ -94,17 +94,17 @@ ifeq ($(config),debug64)
 endif
 
 ifeq ($(config),release64)
-  OBJDIR     = obj/x64/Release/evds
+  OBJDIR     = obj/x64/Release/glfw
   TARGETDIR  = ../../bin
-  TARGET     = $(TARGETDIR)/libevds.a
-  DEFINES   += -DNDEBUG -DEVDS_LIBRARY -DSIMC_LIBRARY
-  INCLUDES  += -I../../external/evds/include -I../../external/evds/external/simc/include
+  TARGET     = $(TARGETDIR)/libglfw.a
+  DEFINES   += -DNDEBUG
+  INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
-  CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m64
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -g -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m64 -L/usr/lib64
+  LDFLAGS   += -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += 
+  LIBS      += -lm -lpthread
   LDDEPS    += 
   LINKCMD    = $(AR) -rcs $(TARGET) $(OBJECTS)
   define PREBUILDCMDS
@@ -116,19 +116,19 @@ ifeq ($(config),release64)
 endif
 
 ifeq ($(config),debugdynamic64)
-  OBJDIR     = obj/x64/DebugDynamic/evds
+  OBJDIR     = obj/x64/DebugDynamic/glfw
   TARGETDIR  = ../../bin
-  TARGET     = $(TARGETDIR)/libevds.so
-  DEFINES   += -DEVDS_LIBRARY -DSIMC_LIBRARY
-  INCLUDES  += -I../../external/evds/include -I../../external/evds/external/simc/include
+  TARGET     = $(TARGETDIR)/libglfwd.a
+  DEFINES   += -DDEBUG -DEVDS_DYNAMIC -DIVSS_DYNAMIC -DRDRS_DYNAMIC -DSIMC_DYNAMIC
+  INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
-  CFLAGS    += $(CPPFLAGS) $(ARCH) -m64 -fPIC
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -shared -m64 -L/usr/lib64
+  LDFLAGS   += -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += 
+  LIBS      += -lm -lpthread
   LDDEPS    += 
-  LINKCMD    = $(CC) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
+  LINKCMD    = $(AR) -rcs $(TARGET) $(OBJECTS)
   define PREBUILDCMDS
   endef
   define PRELINKCMDS
@@ -138,19 +138,19 @@ ifeq ($(config),debugdynamic64)
 endif
 
 ifeq ($(config),releasedynamic64)
-  OBJDIR     = obj/x64/ReleaseDynamic/evds
+  OBJDIR     = obj/x64/ReleaseDynamic/glfw
   TARGETDIR  = ../../bin
-  TARGET     = $(TARGETDIR)/libevds.so
-  DEFINES   += -DEVDS_LIBRARY -DSIMC_LIBRARY
-  INCLUDES  += -I../../external/evds/include -I../../external/evds/external/simc/include
+  TARGET     = $(TARGETDIR)/libglfw.a
+  DEFINES   += -DEVDS_DYNAMIC -DIVSS_DYNAMIC -DRDRS_DYNAMIC -DSIMC_DYNAMIC
+  INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
-  CFLAGS    += $(CPPFLAGS) $(ARCH) -m64 -fPIC
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -g -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -shared -m64 -L/usr/lib64
+  LDFLAGS   += -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += 
+  LIBS      += -lm -lpthread
   LDDEPS    += 
-  LINKCMD    = $(CC) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
+  LINKCMD    = $(AR) -rcs $(TARGET) $(OBJECTS)
   define PREBUILDCMDS
   endef
   define PRELINKCMDS
@@ -160,17 +160,17 @@ ifeq ($(config),releasedynamic64)
 endif
 
 ifeq ($(config),debugsinglethread64)
-  OBJDIR     = obj/x64/DebugSingleThread/evds
+  OBJDIR     = obj/x64/DebugSingleThread/glfw
   TARGETDIR  = ../../bin
-  TARGET     = $(TARGETDIR)/libevds.a
-  DEFINES   += -DEVDS_LIBRARY -DSIMC_LIBRARY
-  INCLUDES  += -I../../external/evds/include -I../../external/evds/external/simc/include
+  TARGET     = $(TARGETDIR)/libglfw_std.a
+  DEFINES   += -DDEBUG -DEVDS_SINGLETHREADED -DIVSS_SINGLETHREADED -DRDRS_SINGLETHREADED -DSIMC_SINGLETHREADED
+  INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
-  CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m64 -L/usr/lib64
+  LDFLAGS   += -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += 
+  LIBS      += -lm -lpthread
   LDDEPS    += 
   LINKCMD    = $(AR) -rcs $(TARGET) $(OBJECTS)
   define PREBUILDCMDS
@@ -182,17 +182,17 @@ ifeq ($(config),debugsinglethread64)
 endif
 
 ifeq ($(config),releasesinglethread64)
-  OBJDIR     = obj/x64/ReleaseSingleThread/evds
+  OBJDIR     = obj/x64/ReleaseSingleThread/glfw
   TARGETDIR  = ../../bin
-  TARGET     = $(TARGETDIR)/libevds.a
-  DEFINES   += -DEVDS_LIBRARY -DSIMC_LIBRARY
-  INCLUDES  += -I../../external/evds/include -I../../external/evds/external/simc/include
+  TARGET     = $(TARGETDIR)/libglfw_st.a
+  DEFINES   += -DEVDS_SINGLETHREADED -DIVSS_SINGLETHREADED -DRDRS_SINGLETHREADED -DSIMC_SINGLETHREADED
+  INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
-  CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -g -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m64 -L/usr/lib64
+  LDFLAGS   += -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += 
+  LIBS      += -lm -lpthread
   LDDEPS    += 
   LINKCMD    = $(AR) -rcs $(TARGET) $(OBJECTS)
   define PREBUILDCMDS
@@ -204,19 +204,19 @@ ifeq ($(config),releasesinglethread64)
 endif
 
 ifeq ($(config),debugsinglethreaddynamic64)
-  OBJDIR     = obj/x64/DebugSingleThreadDynamic/evds
+  OBJDIR     = obj/x64/DebugSingleThreadDynamic/glfw
   TARGETDIR  = ../../bin
-  TARGET     = $(TARGETDIR)/libevds.so
-  DEFINES   += -DEVDS_LIBRARY -DSIMC_LIBRARY
-  INCLUDES  += -I../../external/evds/include -I../../external/evds/external/simc/include
+  TARGET     = $(TARGETDIR)/libglfw_std.a
+  DEFINES   += -DDEBUG -DEVDS_DYNAMIC -DIVSS_DYNAMIC -DRDRS_DYNAMIC -DSIMC_DYNAMIC -DEVDS_SINGLETHREADED -DIVSS_SINGLETHREADED -DRDRS_SINGLETHREADED -DSIMC_SINGLETHREADED
+  INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
-  CFLAGS    += $(CPPFLAGS) $(ARCH) -m64 -fPIC
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -shared -m64 -L/usr/lib64
+  LDFLAGS   += -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += 
+  LIBS      += -lm -lpthread
   LDDEPS    += 
-  LINKCMD    = $(CC) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
+  LINKCMD    = $(AR) -rcs $(TARGET) $(OBJECTS)
   define PREBUILDCMDS
   endef
   define PRELINKCMDS
@@ -226,61 +226,17 @@ ifeq ($(config),debugsinglethreaddynamic64)
 endif
 
 ifeq ($(config),releasesinglethreaddynamic64)
-  OBJDIR     = obj/x64/ReleaseSingleThreadDynamic/evds
+  OBJDIR     = obj/x64/ReleaseSingleThreadDynamic/glfw
   TARGETDIR  = ../../bin
-  TARGET     = $(TARGETDIR)/libevds.so
-  DEFINES   += -DEVDS_LIBRARY -DSIMC_LIBRARY
-  INCLUDES  += -I../../external/evds/include -I../../external/evds/external/simc/include
+  TARGET     = $(TARGETDIR)/libglfw_st.a
+  DEFINES   += -DEVDS_DYNAMIC -DIVSS_DYNAMIC -DRDRS_DYNAMIC -DSIMC_DYNAMIC -DEVDS_SINGLETHREADED -DIVSS_SINGLETHREADED -DRDRS_SINGLETHREADED -DSIMC_SINGLETHREADED
+  INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
-  CFLAGS    += $(CPPFLAGS) $(ARCH) -m64 -fPIC
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -g -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -shared -m64 -L/usr/lib64
+  LDFLAGS   += -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += 
-  LDDEPS    += 
-  LINKCMD    = $(CC) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
-  define PREBUILDCMDS
-  endef
-  define PRELINKCMDS
-  endef
-  define POSTBUILDCMDS
-  endef
-endif
-
-ifeq ($(config),debug32)
-  OBJDIR     = obj/x32/Debug/evds
-  TARGETDIR  = ../../bin
-  TARGET     = $(TARGETDIR)/libevds.a
-  DEFINES   += -DDEBUG -DEVDS_LIBRARY -DSIMC_LIBRARY
-  INCLUDES  += -I../../external/evds/include -I../../external/evds/external/simc/include
-  CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
-  CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m32
-  CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -m32 -L/usr/lib32
-  RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += 
-  LDDEPS    += 
-  LINKCMD    = $(AR) -rcs $(TARGET) $(OBJECTS)
-  define PREBUILDCMDS
-  endef
-  define PRELINKCMDS
-  endef
-  define POSTBUILDCMDS
-  endef
-endif
-
-ifeq ($(config),release32)
-  OBJDIR     = obj/x32/Release/evds
-  TARGETDIR  = ../../bin
-  TARGET     = $(TARGETDIR)/libevds.a
-  DEFINES   += -DNDEBUG -DEVDS_LIBRARY -DSIMC_LIBRARY
-  INCLUDES  += -I../../external/evds/include -I../../external/evds/external/simc/include
-  CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
-  CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m32
-  CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m32 -L/usr/lib32
-  RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += 
+  LIBS      += -lm -lpthread
   LDDEPS    += 
   LINKCMD    = $(AR) -rcs $(TARGET) $(OBJECTS)
   define PREBUILDCMDS
@@ -292,17 +248,17 @@ ifeq ($(config),release32)
 endif
 
 ifeq ($(config),debug32)
-  OBJDIR     = obj/x32/Debug/evds
+  OBJDIR     = obj/x32/Debug/glfw
   TARGETDIR  = ../../bin
-  TARGET     = $(TARGETDIR)/libevds.a
-  DEFINES   += -DDEBUG -DEVDS_LIBRARY -DSIMC_LIBRARY
-  INCLUDES  += -I../../external/evds/include -I../../external/evds/external/simc/include
+  TARGET     = $(TARGETDIR)/libglfwd32.a
+  DEFINES   += -DDEBUG
+  INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -m32 -L/usr/lib32
+  LDFLAGS   += -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += 
+  LIBS      += -lm -lpthread
   LDDEPS    += 
   LINKCMD    = $(AR) -rcs $(TARGET) $(OBJECTS)
   define PREBUILDCMDS
@@ -314,17 +270,61 @@ ifeq ($(config),debug32)
 endif
 
 ifeq ($(config),release32)
-  OBJDIR     = obj/x32/Release/evds
+  OBJDIR     = obj/x32/Release/glfw
   TARGETDIR  = ../../bin
-  TARGET     = $(TARGETDIR)/libevds.a
-  DEFINES   += -DNDEBUG -DEVDS_LIBRARY -DSIMC_LIBRARY
-  INCLUDES  += -I../../external/evds/include -I../../external/evds/external/simc/include
+  TARGET     = $(TARGETDIR)/libglfw32.a
+  DEFINES   += -DNDEBUG
+  INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
-  CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m32
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -g -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m32 -L/usr/lib32
+  LDFLAGS   += -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += 
+  LIBS      += -lm -lpthread
+  LDDEPS    += 
+  LINKCMD    = $(AR) -rcs $(TARGET) $(OBJECTS)
+  define PREBUILDCMDS
+  endef
+  define PRELINKCMDS
+  endef
+  define POSTBUILDCMDS
+  endef
+endif
+
+ifeq ($(config),debug32)
+  OBJDIR     = obj/x32/Debug/glfw
+  TARGETDIR  = ../../bin
+  TARGET     = $(TARGETDIR)/libglfwd32.a
+  DEFINES   += -DDEBUG
+  INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
+  CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m32
+  CXXFLAGS  += $(CFLAGS) 
+  LDFLAGS   += -m32 -L/usr/lib32 -lstdc++
+  RESFLAGS  += $(DEFINES) $(INCLUDES) 
+  LIBS      += -lm -lpthread
+  LDDEPS    += 
+  LINKCMD    = $(AR) -rcs $(TARGET) $(OBJECTS)
+  define PREBUILDCMDS
+  endef
+  define PRELINKCMDS
+  endef
+  define POSTBUILDCMDS
+  endef
+endif
+
+ifeq ($(config),release32)
+  OBJDIR     = obj/x32/Release/glfw
+  TARGETDIR  = ../../bin
+  TARGET     = $(TARGETDIR)/libglfw32.a
+  DEFINES   += -DNDEBUG
+  INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
+  CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -g -m32
+  CXXFLAGS  += $(CFLAGS) 
+  LDFLAGS   += -m32 -L/usr/lib32 -lstdc++
+  RESFLAGS  += $(DEFINES) $(INCLUDES) 
+  LIBS      += -lm -lpthread
   LDDEPS    += 
   LINKCMD    = $(AR) -rcs $(TARGET) $(OBJECTS)
   define PREBUILDCMDS
@@ -336,19 +336,19 @@ ifeq ($(config),release32)
 endif
 
 ifeq ($(config),debugdynamic32)
-  OBJDIR     = obj/x32/DebugDynamic/evds
+  OBJDIR     = obj/x32/DebugDynamic/glfw
   TARGETDIR  = ../../bin
-  TARGET     = $(TARGETDIR)/libevds.so
-  DEFINES   += -DEVDS_LIBRARY -DSIMC_LIBRARY
-  INCLUDES  += -I../../external/evds/include -I../../external/evds/external/simc/include
+  TARGET     = $(TARGETDIR)/libglfwd32.a
+  DEFINES   += -DDEBUG -DEVDS_DYNAMIC -DIVSS_DYNAMIC -DRDRS_DYNAMIC -DSIMC_DYNAMIC
+  INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
-  CFLAGS    += $(CPPFLAGS) $(ARCH) -m32 -fPIC
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -shared -m32 -L/usr/lib32
+  LDFLAGS   += -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += 
+  LIBS      += -lm -lpthread
   LDDEPS    += 
-  LINKCMD    = $(CC) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
+  LINKCMD    = $(AR) -rcs $(TARGET) $(OBJECTS)
   define PREBUILDCMDS
   endef
   define PRELINKCMDS
@@ -358,19 +358,19 @@ ifeq ($(config),debugdynamic32)
 endif
 
 ifeq ($(config),releasedynamic32)
-  OBJDIR     = obj/x32/ReleaseDynamic/evds
+  OBJDIR     = obj/x32/ReleaseDynamic/glfw
   TARGETDIR  = ../../bin
-  TARGET     = $(TARGETDIR)/libevds.so
-  DEFINES   += -DEVDS_LIBRARY -DSIMC_LIBRARY
-  INCLUDES  += -I../../external/evds/include -I../../external/evds/external/simc/include
+  TARGET     = $(TARGETDIR)/libglfw32.a
+  DEFINES   += -DEVDS_DYNAMIC -DIVSS_DYNAMIC -DRDRS_DYNAMIC -DSIMC_DYNAMIC
+  INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
-  CFLAGS    += $(CPPFLAGS) $(ARCH) -m32 -fPIC
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -g -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -shared -m32 -L/usr/lib32
+  LDFLAGS   += -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += 
+  LIBS      += -lm -lpthread
   LDDEPS    += 
-  LINKCMD    = $(CC) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
+  LINKCMD    = $(AR) -rcs $(TARGET) $(OBJECTS)
   define PREBUILDCMDS
   endef
   define PRELINKCMDS
@@ -380,17 +380,17 @@ ifeq ($(config),releasedynamic32)
 endif
 
 ifeq ($(config),debugsinglethread32)
-  OBJDIR     = obj/x32/DebugSingleThread/evds
+  OBJDIR     = obj/x32/DebugSingleThread/glfw
   TARGETDIR  = ../../bin
-  TARGET     = $(TARGETDIR)/libevds.a
-  DEFINES   += -DEVDS_LIBRARY -DSIMC_LIBRARY
-  INCLUDES  += -I../../external/evds/include -I../../external/evds/external/simc/include
+  TARGET     = $(TARGETDIR)/libglfw_std32.a
+  DEFINES   += -DDEBUG -DEVDS_SINGLETHREADED -DIVSS_SINGLETHREADED -DRDRS_SINGLETHREADED -DSIMC_SINGLETHREADED
+  INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
-  CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m32 -L/usr/lib32
+  LDFLAGS   += -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += 
+  LIBS      += -lm -lpthread
   LDDEPS    += 
   LINKCMD    = $(AR) -rcs $(TARGET) $(OBJECTS)
   define PREBUILDCMDS
@@ -402,17 +402,17 @@ ifeq ($(config),debugsinglethread32)
 endif
 
 ifeq ($(config),releasesinglethread32)
-  OBJDIR     = obj/x32/ReleaseSingleThread/evds
+  OBJDIR     = obj/x32/ReleaseSingleThread/glfw
   TARGETDIR  = ../../bin
-  TARGET     = $(TARGETDIR)/libevds.a
-  DEFINES   += -DEVDS_LIBRARY -DSIMC_LIBRARY
-  INCLUDES  += -I../../external/evds/include -I../../external/evds/external/simc/include
+  TARGET     = $(TARGETDIR)/libglfw_st32.a
+  DEFINES   += -DEVDS_SINGLETHREADED -DIVSS_SINGLETHREADED -DRDRS_SINGLETHREADED -DSIMC_SINGLETHREADED
+  INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
-  CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -g -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m32 -L/usr/lib32
+  LDFLAGS   += -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += 
+  LIBS      += -lm -lpthread
   LDDEPS    += 
   LINKCMD    = $(AR) -rcs $(TARGET) $(OBJECTS)
   define PREBUILDCMDS
@@ -424,19 +424,19 @@ ifeq ($(config),releasesinglethread32)
 endif
 
 ifeq ($(config),debugsinglethreaddynamic32)
-  OBJDIR     = obj/x32/DebugSingleThreadDynamic/evds
+  OBJDIR     = obj/x32/DebugSingleThreadDynamic/glfw
   TARGETDIR  = ../../bin
-  TARGET     = $(TARGETDIR)/libevds.so
-  DEFINES   += -DEVDS_LIBRARY -DSIMC_LIBRARY
-  INCLUDES  += -I../../external/evds/include -I../../external/evds/external/simc/include
+  TARGET     = $(TARGETDIR)/libglfw_std32.a
+  DEFINES   += -DDEBUG -DEVDS_DYNAMIC -DIVSS_DYNAMIC -DRDRS_DYNAMIC -DSIMC_DYNAMIC -DEVDS_SINGLETHREADED -DIVSS_SINGLETHREADED -DRDRS_SINGLETHREADED -DSIMC_SINGLETHREADED
+  INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
-  CFLAGS    += $(CPPFLAGS) $(ARCH) -m32 -fPIC
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -shared -m32 -L/usr/lib32
+  LDFLAGS   += -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += 
+  LIBS      += -lm -lpthread
   LDDEPS    += 
-  LINKCMD    = $(CC) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
+  LINKCMD    = $(AR) -rcs $(TARGET) $(OBJECTS)
   define PREBUILDCMDS
   endef
   define PRELINKCMDS
@@ -446,19 +446,19 @@ ifeq ($(config),debugsinglethreaddynamic32)
 endif
 
 ifeq ($(config),releasesinglethreaddynamic32)
-  OBJDIR     = obj/x32/ReleaseSingleThreadDynamic/evds
+  OBJDIR     = obj/x32/ReleaseSingleThreadDynamic/glfw
   TARGETDIR  = ../../bin
-  TARGET     = $(TARGETDIR)/libevds.so
-  DEFINES   += -DEVDS_LIBRARY -DSIMC_LIBRARY
-  INCLUDES  += -I../../external/evds/include -I../../external/evds/external/simc/include
+  TARGET     = $(TARGETDIR)/libglfw_st32.a
+  DEFINES   += -DEVDS_DYNAMIC -DIVSS_DYNAMIC -DRDRS_DYNAMIC -DSIMC_DYNAMIC -DEVDS_SINGLETHREADED -DIVSS_SINGLETHREADED -DRDRS_SINGLETHREADED -DSIMC_SINGLETHREADED
+  INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
-  CFLAGS    += $(CPPFLAGS) $(ARCH) -m32 -fPIC
+  CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -g -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -shared -m32 -L/usr/lib32
+  LDFLAGS   += -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += 
+  LIBS      += -lm -lpthread
   LDDEPS    += 
-  LINKCMD    = $(CC) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
+  LINKCMD    = $(AR) -rcs $(TARGET) $(OBJECTS)
   define PREBUILDCMDS
   endef
   define PRELINKCMDS
@@ -468,23 +468,23 @@ ifeq ($(config),releasesinglethreaddynamic32)
 endif
 
 OBJECTS := \
-	$(OBJDIR)/evds_mesh.o \
-	$(OBJDIR)/evds_math.o \
-	$(OBJDIR)/evds_save.o \
-	$(OBJDIR)/evds_object.o \
-	$(OBJDIR)/evds_load.o \
-	$(OBJDIR)/evds_variable.o \
-	$(OBJDIR)/evds_system.o \
-	$(OBJDIR)/evds_modifier.o \
-	$(OBJDIR)/evds_env.o \
-	$(OBJDIR)/evds_body.o \
-	$(OBJDIR)/evds_database.o \
-	$(OBJDIR)/evds_prop_heun.o \
-	$(OBJDIR)/evds_fueltank.o \
-	$(OBJDIR)/evds_planet.o \
-	$(OBJDIR)/evds_engine.o \
-	$(OBJDIR)/evds_gimbal.o \
-	$(OBJDIR)/evds_prop_rk4.o \
+	$(OBJDIR)/clipboard.o \
+	$(OBJDIR)/context.o \
+	$(OBJDIR)/gamma.o \
+	$(OBJDIR)/init.o \
+	$(OBJDIR)/input.o \
+	$(OBJDIR)/joystick.o \
+	$(OBJDIR)/monitor.o \
+	$(OBJDIR)/time.o \
+	$(OBJDIR)/window.o \
+	$(OBJDIR)/x11_window.o \
+	$(OBJDIR)/x11_clipboard.o \
+	$(OBJDIR)/x11_gamma.o \
+	$(OBJDIR)/x11_time.o \
+	$(OBJDIR)/x11_init.o \
+	$(OBJDIR)/x11_unicode.o \
+	$(OBJDIR)/x11_monitor.o \
+	$(OBJDIR)/x11_joystick.o \
 
 RESOURCES := \
 
@@ -502,7 +502,7 @@ all: $(TARGETDIR) $(OBJDIR) prebuild prelink $(TARGET)
 	@:
 
 $(TARGET): $(GCH) $(OBJECTS) $(LDDEPS) $(RESOURCES)
-	@echo Linking evds
+	@echo Linking glfw
 	$(SILENT) $(LINKCMD)
 	$(POSTBUILDCMDS)
 
@@ -523,7 +523,7 @@ else
 endif
 
 clean:
-	@echo Cleaning evds
+	@echo Cleaning glfw
 ifeq (posix,$(SHELLTYPE))
 	$(SILENT) rm -f  $(TARGET)
 	$(SILENT) rm -rf $(OBJDIR)
@@ -549,55 +549,55 @@ endif
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 endif
 
-$(OBJDIR)/evds_mesh.o: ../../external/evds/source/evds_core/evds_mesh.c
+$(OBJDIR)/clipboard.o: ../../external/glfw/src/clipboard.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/evds_math.o: ../../external/evds/source/evds_core/evds_math.c
+$(OBJDIR)/context.o: ../../external/glfw/src/context.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/evds_save.o: ../../external/evds/source/evds_core/evds_save.c
+$(OBJDIR)/gamma.o: ../../external/glfw/src/gamma.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/evds_object.o: ../../external/evds/source/evds_core/evds_object.c
+$(OBJDIR)/init.o: ../../external/glfw/src/init.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/evds_load.o: ../../external/evds/source/evds_core/evds_load.c
+$(OBJDIR)/input.o: ../../external/glfw/src/input.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/evds_variable.o: ../../external/evds/source/evds_core/evds_variable.c
+$(OBJDIR)/joystick.o: ../../external/glfw/src/joystick.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/evds_system.o: ../../external/evds/source/evds_core/evds_system.c
+$(OBJDIR)/monitor.o: ../../external/glfw/src/monitor.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/evds_modifier.o: ../../external/evds/source/evds_core/evds_modifier.c
+$(OBJDIR)/time.o: ../../external/glfw/src/time.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/evds_env.o: ../../external/evds/source/evds_core/evds_env.c
+$(OBJDIR)/window.o: ../../external/glfw/src/window.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/evds_body.o: ../../external/evds/source/evds_common/evds_body.c
+$(OBJDIR)/x11_window.o: ../../external/glfw/src/x11_window.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/evds_database.o: ../../external/evds/source/evds_common/evds_database.c
+$(OBJDIR)/x11_clipboard.o: ../../external/glfw/src/x11_clipboard.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/evds_prop_heun.o: ../../external/evds/source/evds_common/evds_prop_heun.c
+$(OBJDIR)/x11_gamma.o: ../../external/glfw/src/x11_gamma.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/evds_fueltank.o: ../../external/evds/source/evds_common/evds_fueltank.c
+$(OBJDIR)/x11_time.o: ../../external/glfw/src/x11_time.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/evds_planet.o: ../../external/evds/source/evds_common/evds_planet.c
+$(OBJDIR)/x11_init.o: ../../external/glfw/src/x11_init.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/evds_engine.o: ../../external/evds/source/evds_common/evds_engine.c
+$(OBJDIR)/x11_unicode.o: ../../external/glfw/src/x11_unicode.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/evds_gimbal.o: ../../external/evds/source/evds_common/evds_gimbal.c
+$(OBJDIR)/x11_monitor.o: ../../external/glfw/src/x11_monitor.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/evds_prop_rk4.o: ../../external/evds/source/evds_common/evds_prop_rk4.c
+$(OBJDIR)/x11_joystick.o: ../../external/glfw/src/x11_joystick.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 

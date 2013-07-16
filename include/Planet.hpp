@@ -4,11 +4,9 @@
 #define PLANET_HPP
 
 #include <vector>
-#include <OGRE/OgreRoot.h>
 #include <string>
 #include "evds.h"
 
-using namespace std;
 
 class Planet
 {
@@ -17,8 +15,8 @@ public:
 	// Planet(IrrlichtDevice* Device, const stringw Name, const io::path &Texture, const f32 Radius);
 	~Planet();
 
-	void setName(Ogre::String Name);
-	Ogre::String getName();
+	void setName(std::string Name);
+	std::string getName();
 
 	// Misc visualization parameters
 	// void showWireframe(const bool State);
@@ -39,13 +37,13 @@ private:
 	// aabbox3d<f32> 		m_pBox;
 	// vector<S3DVertex>	m_pVertices;
 
-	Ogre::String	        m_pName;
+	std::string	        m_pName;
 	// Ogre::Degree		m_RotateSpeed;
 	// f32					m_pRadius;
 	// f32					m_pFlattening;
 	// f32					m_pGravity;
 
-	Ogre::Vector3		m_pOrigin;
+	// Ogre::Vector3		m_pOrigin;
 
 	bool				m_pShowWireframe;
 	bool				m_pShowBoundingBox;
