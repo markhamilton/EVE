@@ -43,7 +43,7 @@ project "EVE"
 			"../source/**",
 			"../include/**",
 	}
-	links { "evds", "simc" }
+	links { "evds", "simc", "glfw3" }
 	defines { "EVE_SIM" }
 	kind "WindowedApp"
 
@@ -51,8 +51,40 @@ project "EVE"
 		links { "" }
 
 	configuration { "linux" }
-		links { "m", "pthread", "GL", "glut" }
+		links { "m", "pthread", "Xxf86vm", "GL", "X11", "Xrandr", "Xi" }
 		linkoptions { "-lstdc++" }
+
+--------------------------------------------------------------------------------
+
+	project "glfw"
+		uuid "D15A53B8-EDE5-8C4E-90AF-09F47C48DA45"
+		kind "StaticLib"
+		language "C"
+		includedirs {
+			"../external/glfw/include",
+			"../external/glfw/deps"
+		}
+		files {
+			"../external/glfw/src/internal.h",
+			"../external/glfw/src/clipboard.c",
+			"../external/glfw/src/context.c",
+			"../external/glfw/src/gamma.c",
+			"../external/glfw/src/init.c",
+			"../external/glfw/src/input.c",
+			"../external/glfw/src/joystick.c",
+			"../external/glfw/src/monitor.c",
+			"../external/glfw/src/time.c",
+			"../external/glfw/src/window.c",
+		}
+		configuration { "windows" }
+			files {
+				"../external/glfw/src/win32_*.c",
+				"../external/glfw/src/wgl_*.c"
+			}
+			includedirs { "../external/config/glfw_win32" }
+		configuration { "linux" }
+			files { "../external/glfw/src/x11_*.c" }
+			includedirs { "../external/config/glfw_x11" }
 
 --------------------------------------------------------------------------------
 
