@@ -6,6 +6,7 @@
 		<Project filename="EVE.cbp">
 			<Depends filename="evds.cbp" />
 			<Depends filename="simc.cbp" />
+			<Depends filename="Irrlicht.cbp" />
 		</Project>
 		<Project filename="simc.cbp">
 		</Project>

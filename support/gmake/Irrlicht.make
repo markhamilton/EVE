@@ -688,6 +688,21 @@ OBJECTS := \
 	$(OBJDIR)/CAnimatedMeshMD3.o \
 	$(OBJDIR)/CWaterSurfaceSceneNode.o \
 	$(OBJDIR)/CSceneNodeAnimatorFollowSpline.o \
+	$(OBJDIR)/uncompr.o \
+	$(OBJDIR)/gzlib.o \
+	$(OBJDIR)/inftrees.o \
+	$(OBJDIR)/compress.o \
+	$(OBJDIR)/infback.o \
+	$(OBJDIR)/gzread.o \
+	$(OBJDIR)/gzwrite.o \
+	$(OBJDIR)/adler32.o \
+	$(OBJDIR)/inflate.o \
+	$(OBJDIR)/trees.o \
+	$(OBJDIR)/zutil.o \
+	$(OBJDIR)/inffast.o \
+	$(OBJDIR)/deflate.o \
+	$(OBJDIR)/crc32.o \
+	$(OBJDIR)/gzclose.o \
 	$(OBJDIR)/jdcoefct.o \
 	$(OBJDIR)/jmemname.o \
 	$(OBJDIR)/jctrans.o \
@@ -733,6 +748,7 @@ OBJECTS := \
 	$(OBJDIR)/jcapistd.o \
 	$(OBJDIR)/jmemmgr.o \
 	$(OBJDIR)/wrgif.o \
+	$(OBJDIR)/jcsample.o \
 	$(OBJDIR)/jmemnobs.o \
 	$(OBJDIR)/rdgif.o \
 	$(OBJDIR)/jfdctint.o \
@@ -742,6 +758,7 @@ OBJECTS := \
 	$(OBJDIR)/jidctfst.o \
 	$(OBJDIR)/jcomapi.o \
 	$(OBJDIR)/jcdctmgr.o \
+	$(OBJDIR)/jdsample.o \
 	$(OBJDIR)/jcmainct.o \
 	$(OBJDIR)/jcinit.o \
 	$(OBJDIR)/djpeg.o \
@@ -767,21 +784,26 @@ OBJECTS := \
 	$(OBJDIR)/pngwtran.o \
 	$(OBJDIR)/pngtrans.o \
 	$(OBJDIR)/LzmaDec.o \
-	$(OBJDIR)/uncompr.o \
-	$(OBJDIR)/gzlib.o \
-	$(OBJDIR)/inftrees.o \
-	$(OBJDIR)/compress.o \
-	$(OBJDIR)/infback.o \
-	$(OBJDIR)/gzread.o \
-	$(OBJDIR)/gzwrite.o \
-	$(OBJDIR)/adler32.o \
-	$(OBJDIR)/inflate.o \
-	$(OBJDIR)/trees.o \
-	$(OBJDIR)/zutil.o \
-	$(OBJDIR)/inffast.o \
-	$(OBJDIR)/deflate.o \
-	$(OBJDIR)/crc32.o \
-	$(OBJDIR)/gzclose.o \
+	$(OBJDIR)/bzlib.o \
+	$(OBJDIR)/unzcrash.o \
+	$(OBJDIR)/mk251.o \
+	$(OBJDIR)/randtable.o \
+	$(OBJDIR)/blocksort.o \
+	$(OBJDIR)/huffman.o \
+	$(OBJDIR)/crctable.o \
+	$(OBJDIR)/spewG.o \
+	$(OBJDIR)/decompress.o \
+	$(OBJDIR)/bzip2recover.o \
+	$(OBJDIR)/bzcompress.o \
+	$(OBJDIR)/aeskey.o \
+	$(OBJDIR)/pwd2key.o \
+	$(OBJDIR)/prng.o \
+	$(OBJDIR)/hmac.o \
+	$(OBJDIR)/aestab.o \
+	$(OBJDIR)/sha1.o \
+	$(OBJDIR)/sha2.o \
+	$(OBJDIR)/fileenc.o \
+	$(OBJDIR)/aescrypt.o \
 
 RESOURCES := \
 
@@ -1506,6 +1528,51 @@ $(OBJDIR)/CWaterSurfaceSceneNode.o: ../../external/irrlicht/source/Irrlicht/CWat
 $(OBJDIR)/CSceneNodeAnimatorFollowSpline.o: ../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorFollowSpline.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/uncompr.o: ../../external/irrlicht/source/Irrlicht/zlib/uncompr.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/gzlib.o: ../../external/irrlicht/source/Irrlicht/zlib/gzlib.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/inftrees.o: ../../external/irrlicht/source/Irrlicht/zlib/inftrees.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/compress.o: ../../external/irrlicht/source/Irrlicht/zlib/compress.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/infback.o: ../../external/irrlicht/source/Irrlicht/zlib/infback.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/gzread.o: ../../external/irrlicht/source/Irrlicht/zlib/gzread.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/gzwrite.o: ../../external/irrlicht/source/Irrlicht/zlib/gzwrite.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/adler32.o: ../../external/irrlicht/source/Irrlicht/zlib/adler32.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/inflate.o: ../../external/irrlicht/source/Irrlicht/zlib/inflate.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/trees.o: ../../external/irrlicht/source/Irrlicht/zlib/trees.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/zutil.o: ../../external/irrlicht/source/Irrlicht/zlib/zutil.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/inffast.o: ../../external/irrlicht/source/Irrlicht/zlib/inffast.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/deflate.o: ../../external/irrlicht/source/Irrlicht/zlib/deflate.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/crc32.o: ../../external/irrlicht/source/Irrlicht/zlib/crc32.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/gzclose.o: ../../external/irrlicht/source/Irrlicht/zlib/gzclose.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/jdcoefct.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdcoefct.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
@@ -1641,6 +1708,9 @@ $(OBJDIR)/jmemmgr.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jmemmgr.c
 $(OBJDIR)/wrgif.o: ../../external/irrlicht/source/Irrlicht/jpeglib/wrgif.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jcsample.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jcsample.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/jmemnobs.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jmemnobs.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
@@ -1666,6 +1736,9 @@ $(OBJDIR)/jcomapi.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jcomapi.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/jcdctmgr.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jcdctmgr.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jdsample.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdsample.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/jcmainct.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jcmainct.c
@@ -1743,50 +1816,65 @@ $(OBJDIR)/pngtrans.o: ../../external/irrlicht/source/Irrlicht/libpng/pngtrans.c
 $(OBJDIR)/LzmaDec.o: ../../external/irrlicht/source/Irrlicht/lzma/LzmaDec.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/uncompr.o: ../../external/irrlicht/source/Irrlicht/zlib/uncompr.c
+$(OBJDIR)/bzlib.o: ../../external/irrlicht/source/Irrlicht/bzip2/bzlib.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/gzlib.o: ../../external/irrlicht/source/Irrlicht/zlib/gzlib.c
+$(OBJDIR)/unzcrash.o: ../../external/irrlicht/source/Irrlicht/bzip2/unzcrash.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/inftrees.o: ../../external/irrlicht/source/Irrlicht/zlib/inftrees.c
+$(OBJDIR)/mk251.o: ../../external/irrlicht/source/Irrlicht/bzip2/mk251.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/compress.o: ../../external/irrlicht/source/Irrlicht/zlib/compress.c
+$(OBJDIR)/randtable.o: ../../external/irrlicht/source/Irrlicht/bzip2/randtable.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/infback.o: ../../external/irrlicht/source/Irrlicht/zlib/infback.c
+$(OBJDIR)/blocksort.o: ../../external/irrlicht/source/Irrlicht/bzip2/blocksort.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/gzread.o: ../../external/irrlicht/source/Irrlicht/zlib/gzread.c
+$(OBJDIR)/huffman.o: ../../external/irrlicht/source/Irrlicht/bzip2/huffman.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/gzwrite.o: ../../external/irrlicht/source/Irrlicht/zlib/gzwrite.c
+$(OBJDIR)/crctable.o: ../../external/irrlicht/source/Irrlicht/bzip2/crctable.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/adler32.o: ../../external/irrlicht/source/Irrlicht/zlib/adler32.c
+$(OBJDIR)/spewG.o: ../../external/irrlicht/source/Irrlicht/bzip2/spewG.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/inflate.o: ../../external/irrlicht/source/Irrlicht/zlib/inflate.c
+$(OBJDIR)/decompress.o: ../../external/irrlicht/source/Irrlicht/bzip2/decompress.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/trees.o: ../../external/irrlicht/source/Irrlicht/zlib/trees.c
+$(OBJDIR)/bzip2recover.o: ../../external/irrlicht/source/Irrlicht/bzip2/bzip2recover.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/zutil.o: ../../external/irrlicht/source/Irrlicht/zlib/zutil.c
+$(OBJDIR)/bzcompress.o: ../../external/irrlicht/source/Irrlicht/bzip2/bzcompress.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/inffast.o: ../../external/irrlicht/source/Irrlicht/zlib/inffast.c
+$(OBJDIR)/aeskey.o: ../../external/irrlicht/source/Irrlicht/aesGladman/aeskey.cpp
 	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/deflate.o: ../../external/irrlicht/source/Irrlicht/zlib/deflate.c
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/pwd2key.o: ../../external/irrlicht/source/Irrlicht/aesGladman/pwd2key.cpp
 	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/crc32.o: ../../external/irrlicht/source/Irrlicht/zlib/crc32.c
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/prng.o: ../../external/irrlicht/source/Irrlicht/aesGladman/prng.cpp
 	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/gzclose.o: ../../external/irrlicht/source/Irrlicht/zlib/gzclose.c
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/hmac.o: ../../external/irrlicht/source/Irrlicht/aesGladman/hmac.cpp
 	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/aestab.o: ../../external/irrlicht/source/Irrlicht/aesGladman/aestab.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/sha1.o: ../../external/irrlicht/source/Irrlicht/aesGladman/sha1.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/sha2.o: ../../external/irrlicht/source/Irrlicht/aesGladman/sha2.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/fileenc.o: ../../external/irrlicht/source/Irrlicht/aesGladman/fileenc.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/aescrypt.o: ../../external/irrlicht/source/Irrlicht/aesGladman/aescrypt.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
 -include $(OBJECTS:%.o=%.d)

@@ -3,8 +3,17 @@
 
 #include <stdio.h>
 #include <string>
+#include <irrlicht.h>
 #include "Planet.hpp"
 #include "PlanetManager.hpp"
+
+using namespace std;
+using namespace irr;
+using namespace core;
+using namespace video;
+using namespace scene;
+using namespace io;
+using namespace gui;
 
 class SimApp
 {
@@ -15,9 +24,14 @@ public:
 	void start();
 
 protected:
-	bool init(const std::string wndTitle);
+	bool init(const stringw wndTitle);
 	void createScene();
 	void renderScene();
+
+	IrrlichtDevice*		m_pDevice;
+	IVideoDriver* 		m_pVideo;
+	ISceneManager* 		m_pSMgr;
+
 
 	PlanetManager*		m_pPlanetManager;
 

@@ -1641,6 +1641,99 @@
 		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIWindow.h">
 			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
 		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/uncompr.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/gzlib.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/inftrees.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/compress.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/infback.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/gzread.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/gzwrite.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/adler32.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/inflate.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/trees.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/zutil.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/inffast.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/deflate.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/crc32.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/gzclose.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/gzguts.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/inffixed.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/zutil.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/trees.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/deflate.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/crc32.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/inftrees.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/inflate.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/zconf.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/inffast.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/zlib.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		</Unit>
 		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jdcoefct.c">
 			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
 			<Option compilerVar="CC" />
@@ -1821,6 +1914,10 @@
 			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jcsample.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jmemnobs.c">
 			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
 			<Option compilerVar="CC" />
@@ -1854,6 +1951,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jcdctmgr.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jdsample.c">
 			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
 			<Option compilerVar="CC" />
 		</Unit>
@@ -2020,98 +2121,106 @@
 		<Unit filename="../../external/irrlicht/source/Irrlicht/lzma/Types.h">
 			<Option virtualFolder="external/irrlicht/source/Irrlicht/lzma" />
 		</Unit>
-		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/uncompr.c">
-			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		<Unit filename="../../external/irrlicht/source/Irrlicht/bzip2/bzlib.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/bzip2" />
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/gzlib.c">
-			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		<Unit filename="../../external/irrlicht/source/Irrlicht/bzip2/unzcrash.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/bzip2" />
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/inftrees.c">
-			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		<Unit filename="../../external/irrlicht/source/Irrlicht/bzip2/mk251.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/bzip2" />
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/compress.c">
-			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		<Unit filename="../../external/irrlicht/source/Irrlicht/bzip2/randtable.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/bzip2" />
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/infback.c">
-			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		<Unit filename="../../external/irrlicht/source/Irrlicht/bzip2/blocksort.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/bzip2" />
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/gzread.c">
-			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		<Unit filename="../../external/irrlicht/source/Irrlicht/bzip2/huffman.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/bzip2" />
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/gzwrite.c">
-			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		<Unit filename="../../external/irrlicht/source/Irrlicht/bzip2/crctable.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/bzip2" />
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/adler32.c">
-			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		<Unit filename="../../external/irrlicht/source/Irrlicht/bzip2/spewG.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/bzip2" />
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/inflate.c">
-			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		<Unit filename="../../external/irrlicht/source/Irrlicht/bzip2/decompress.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/bzip2" />
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/trees.c">
-			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		<Unit filename="../../external/irrlicht/source/Irrlicht/bzip2/bzip2recover.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/bzip2" />
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/zutil.c">
-			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		<Unit filename="../../external/irrlicht/source/Irrlicht/bzip2/bzcompress.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/bzip2" />
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/inffast.c">
-			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
-			<Option compilerVar="CC" />
+		<Unit filename="../../external/irrlicht/source/Irrlicht/bzip2/bzlib.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/bzip2" />
 		</Unit>
-		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/deflate.c">
-			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
-			<Option compilerVar="CC" />
+		<Unit filename="../../external/irrlicht/source/Irrlicht/bzip2/bzlib_private.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/bzip2" />
 		</Unit>
-		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/crc32.c">
-			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
-			<Option compilerVar="CC" />
+		<Unit filename="../../external/irrlicht/source/Irrlicht/aesGladman/aeskey.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/aesGladman" />
 		</Unit>
-		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/gzclose.c">
-			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
-			<Option compilerVar="CC" />
+		<Unit filename="../../external/irrlicht/source/Irrlicht/aesGladman/pwd2key.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/aesGladman" />
 		</Unit>
-		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/gzguts.h">
-			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		<Unit filename="../../external/irrlicht/source/Irrlicht/aesGladman/prng.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/aesGladman" />
 		</Unit>
-		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/inffixed.h">
-			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		<Unit filename="../../external/irrlicht/source/Irrlicht/aesGladman/hmac.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/aesGladman" />
 		</Unit>
-		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/zutil.h">
-			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		<Unit filename="../../external/irrlicht/source/Irrlicht/aesGladman/aestab.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/aesGladman" />
 		</Unit>
-		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/trees.h">
-			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		<Unit filename="../../external/irrlicht/source/Irrlicht/aesGladman/sha1.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/aesGladman" />
 		</Unit>
-		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/deflate.h">
-			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		<Unit filename="../../external/irrlicht/source/Irrlicht/aesGladman/sha2.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/aesGladman" />
 		</Unit>
-		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/crc32.h">
-			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		<Unit filename="../../external/irrlicht/source/Irrlicht/aesGladman/fileenc.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/aesGladman" />
 		</Unit>
-		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/inftrees.h">
-			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		<Unit filename="../../external/irrlicht/source/Irrlicht/aesGladman/aescrypt.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/aesGladman" />
 		</Unit>
-		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/inflate.h">
-			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		<Unit filename="../../external/irrlicht/source/Irrlicht/aesGladman/sha1.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/aesGladman" />
 		</Unit>
-		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/zconf.h">
-			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		<Unit filename="../../external/irrlicht/source/Irrlicht/aesGladman/pwd2key.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/aesGladman" />
 		</Unit>
-		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/inffast.h">
-			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		<Unit filename="../../external/irrlicht/source/Irrlicht/aesGladman/sha2.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/aesGladman" />
 		</Unit>
-		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/zlib.h">
-			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		<Unit filename="../../external/irrlicht/source/Irrlicht/aesGladman/hmac.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/aesGladman" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/aesGladman/prng.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/aesGladman" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/aesGladman/aes.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/aesGladman" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/aesGladman/aesopt.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/aesGladman" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/aesGladman/fileenc.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/aesGladman" />
 		</Unit>
 		<Extensions>
 		</Extensions>

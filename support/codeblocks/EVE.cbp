@@ -20,7 +20,7 @@
 					<Add directory="../../include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
-					<Add directory="../../external/glfw/include" />
+					<Add directory="../../external/irrlicht/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m64" />
@@ -29,14 +29,11 @@
 					<Add directory="../../bin" />
 					<Add library="evds" />
 					<Add library="simc" />
-					<Add library="glfw" />
+					<Add library="Irrlicht" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="Xxf86vm" />
 					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xrandr" />
-					<Add library="Xi" />
+					<Add library="Xxf86vm" />
 				</Linker>
 			</Target>
 			<Target title="Debug|x64">
@@ -52,7 +49,7 @@
 					<Add directory="../../include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
-					<Add directory="../../external/glfw/include" />
+					<Add directory="../../external/irrlicht/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m64" />
@@ -61,14 +58,11 @@
 					<Add directory="../../bin" />
 					<Add library="evds" />
 					<Add library="simc" />
-					<Add library="glfw" />
+					<Add library="Irrlicht" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="Xxf86vm" />
 					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xrandr" />
-					<Add library="Xi" />
+					<Add library="Xxf86vm" />
 				</Linker>
 			</Target>
 			<Target title="Debug|x64">
@@ -84,7 +78,7 @@
 					<Add directory="../../include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
-					<Add directory="../../external/glfw/include" />
+					<Add directory="../../external/irrlicht/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m64" />
@@ -93,14 +87,11 @@
 					<Add directory="../../bin" />
 					<Add library="evds" />
 					<Add library="simc" />
-					<Add library="glfw" />
+					<Add library="Irrlicht" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="Xxf86vm" />
 					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xrandr" />
-					<Add library="Xi" />
+					<Add library="Xxf86vm" />
 				</Linker>
 			</Target>
 			<Target title="Release|x64">
@@ -117,7 +108,7 @@
 					<Add directory="../../include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
-					<Add directory="../../external/glfw/include" />
+					<Add directory="../../external/irrlicht/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m64" />
@@ -126,14 +117,11 @@
 					<Add directory="../../bin" />
 					<Add library="evds" />
 					<Add library="simc" />
-					<Add library="glfw" />
+					<Add library="Irrlicht" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="Xxf86vm" />
 					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xrandr" />
-					<Add library="Xi" />
+					<Add library="Xxf86vm" />
 				</Linker>
 			</Target>
 			<Target title="DebugDynamic|x64">
@@ -153,7 +141,7 @@
 					<Add directory="../../include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
-					<Add directory="../../external/glfw/include" />
+					<Add directory="../../external/irrlicht/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m64" />
@@ -162,14 +150,11 @@
 					<Add directory="../../bin" />
 					<Add library="evds" />
 					<Add library="simc" />
-					<Add library="glfw" />
+					<Add library="Irrlicht" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="Xxf86vm" />
 					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xrandr" />
-					<Add library="Xi" />
+					<Add library="Xxf86vm" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseDynamic|x64">
@@ -189,7 +174,7 @@
 					<Add directory="../../include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
-					<Add directory="../../external/glfw/include" />
+					<Add directory="../../external/irrlicht/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m64" />
@@ -198,14 +183,11 @@
 					<Add directory="../../bin" />
 					<Add library="evds" />
 					<Add library="simc" />
-					<Add library="glfw" />
+					<Add library="Irrlicht" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="Xxf86vm" />
 					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xrandr" />
-					<Add library="Xi" />
+					<Add library="Xxf86vm" />
 				</Linker>
 			</Target>
 			<Target title="DebugSingleThread|x64">
@@ -225,7 +207,7 @@
 					<Add directory="../../include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
-					<Add directory="../../external/glfw/include" />
+					<Add directory="../../external/irrlicht/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m64" />
@@ -234,14 +216,11 @@
 					<Add directory="../../bin" />
 					<Add library="evds" />
 					<Add library="simc" />
-					<Add library="glfw" />
+					<Add library="Irrlicht" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="Xxf86vm" />
 					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xrandr" />
-					<Add library="Xi" />
+					<Add library="Xxf86vm" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseSingleThread|x64">
@@ -261,7 +240,7 @@
 					<Add directory="../../include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
-					<Add directory="../../external/glfw/include" />
+					<Add directory="../../external/irrlicht/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m64" />
@@ -270,14 +249,11 @@
 					<Add directory="../../bin" />
 					<Add library="evds" />
 					<Add library="simc" />
-					<Add library="glfw" />
+					<Add library="Irrlicht" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="Xxf86vm" />
 					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xrandr" />
-					<Add library="Xi" />
+					<Add library="Xxf86vm" />
 				</Linker>
 			</Target>
 			<Target title="DebugSingleThreadDynamic|x64">
@@ -301,7 +277,7 @@
 					<Add directory="../../include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
-					<Add directory="../../external/glfw/include" />
+					<Add directory="../../external/irrlicht/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m64" />
@@ -310,14 +286,11 @@
 					<Add directory="../../bin" />
 					<Add library="evds" />
 					<Add library="simc" />
-					<Add library="glfw" />
+					<Add library="Irrlicht" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="Xxf86vm" />
 					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xrandr" />
-					<Add library="Xi" />
+					<Add library="Xxf86vm" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseSingleThreadDynamic|x64">
@@ -341,7 +314,7 @@
 					<Add directory="../../include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
-					<Add directory="../../external/glfw/include" />
+					<Add directory="../../external/irrlicht/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m64" />
@@ -350,14 +323,11 @@
 					<Add directory="../../bin" />
 					<Add library="evds" />
 					<Add library="simc" />
-					<Add library="glfw" />
+					<Add library="Irrlicht" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="Xxf86vm" />
 					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xrandr" />
-					<Add library="Xi" />
+					<Add library="Xxf86vm" />
 				</Linker>
 			</Target>
 			<Target title="Release|x32">
@@ -374,7 +344,7 @@
 					<Add directory="../../include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
-					<Add directory="../../external/glfw/include" />
+					<Add directory="../../external/irrlicht/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m32" />
@@ -383,14 +353,11 @@
 					<Add directory="../../bin" />
 					<Add library="evds" />
 					<Add library="simc" />
-					<Add library="glfw" />
+					<Add library="Irrlicht" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="Xxf86vm" />
 					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xrandr" />
-					<Add library="Xi" />
+					<Add library="Xxf86vm" />
 				</Linker>
 			</Target>
 			<Target title="Debug|x32">
@@ -406,7 +373,7 @@
 					<Add directory="../../include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
-					<Add directory="../../external/glfw/include" />
+					<Add directory="../../external/irrlicht/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m32" />
@@ -415,14 +382,11 @@
 					<Add directory="../../bin" />
 					<Add library="evds" />
 					<Add library="simc" />
-					<Add library="glfw" />
+					<Add library="Irrlicht" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="Xxf86vm" />
 					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xrandr" />
-					<Add library="Xi" />
+					<Add library="Xxf86vm" />
 				</Linker>
 			</Target>
 			<Target title="Debug|x32">
@@ -438,7 +402,7 @@
 					<Add directory="../../include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
-					<Add directory="../../external/glfw/include" />
+					<Add directory="../../external/irrlicht/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m32" />
@@ -447,14 +411,11 @@
 					<Add directory="../../bin" />
 					<Add library="evds" />
 					<Add library="simc" />
-					<Add library="glfw" />
+					<Add library="Irrlicht" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="Xxf86vm" />
 					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xrandr" />
-					<Add library="Xi" />
+					<Add library="Xxf86vm" />
 				</Linker>
 			</Target>
 			<Target title="Release|x32">
@@ -471,7 +432,7 @@
 					<Add directory="../../include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
-					<Add directory="../../external/glfw/include" />
+					<Add directory="../../external/irrlicht/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m32" />
@@ -480,14 +441,11 @@
 					<Add directory="../../bin" />
 					<Add library="evds" />
 					<Add library="simc" />
-					<Add library="glfw" />
+					<Add library="Irrlicht" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="Xxf86vm" />
 					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xrandr" />
-					<Add library="Xi" />
+					<Add library="Xxf86vm" />
 				</Linker>
 			</Target>
 			<Target title="DebugDynamic|x32">
@@ -507,7 +465,7 @@
 					<Add directory="../../include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
-					<Add directory="../../external/glfw/include" />
+					<Add directory="../../external/irrlicht/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m32" />
@@ -516,14 +474,11 @@
 					<Add directory="../../bin" />
 					<Add library="evds" />
 					<Add library="simc" />
-					<Add library="glfw" />
+					<Add library="Irrlicht" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="Xxf86vm" />
 					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xrandr" />
-					<Add library="Xi" />
+					<Add library="Xxf86vm" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseDynamic|x32">
@@ -543,7 +498,7 @@
 					<Add directory="../../include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
-					<Add directory="../../external/glfw/include" />
+					<Add directory="../../external/irrlicht/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m32" />
@@ -552,14 +507,11 @@
 					<Add directory="../../bin" />
 					<Add library="evds" />
 					<Add library="simc" />
-					<Add library="glfw" />
+					<Add library="Irrlicht" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="Xxf86vm" />
 					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xrandr" />
-					<Add library="Xi" />
+					<Add library="Xxf86vm" />
 				</Linker>
 			</Target>
 			<Target title="DebugSingleThread|x32">
@@ -579,7 +531,7 @@
 					<Add directory="../../include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
-					<Add directory="../../external/glfw/include" />
+					<Add directory="../../external/irrlicht/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m32" />
@@ -588,14 +540,11 @@
 					<Add directory="../../bin" />
 					<Add library="evds" />
 					<Add library="simc" />
-					<Add library="glfw" />
+					<Add library="Irrlicht" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="Xxf86vm" />
 					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xrandr" />
-					<Add library="Xi" />
+					<Add library="Xxf86vm" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseSingleThread|x32">
@@ -615,7 +564,7 @@
 					<Add directory="../../include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
-					<Add directory="../../external/glfw/include" />
+					<Add directory="../../external/irrlicht/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m32" />
@@ -624,14 +573,11 @@
 					<Add directory="../../bin" />
 					<Add library="evds" />
 					<Add library="simc" />
-					<Add library="glfw" />
+					<Add library="Irrlicht" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="Xxf86vm" />
 					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xrandr" />
-					<Add library="Xi" />
+					<Add library="Xxf86vm" />
 				</Linker>
 			</Target>
 			<Target title="DebugSingleThreadDynamic|x32">
@@ -655,7 +601,7 @@
 					<Add directory="../../include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
-					<Add directory="../../external/glfw/include" />
+					<Add directory="../../external/irrlicht/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m32" />
@@ -664,14 +610,11 @@
 					<Add directory="../../bin" />
 					<Add library="evds" />
 					<Add library="simc" />
-					<Add library="glfw" />
+					<Add library="Irrlicht" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="Xxf86vm" />
 					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xrandr" />
-					<Add library="Xi" />
+					<Add library="Xxf86vm" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseSingleThreadDynamic|x32">
@@ -695,7 +638,7 @@
 					<Add directory="../../include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
-					<Add directory="../../external/glfw/include" />
+					<Add directory="../../external/irrlicht/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m32" />
@@ -704,17 +647,17 @@
 					<Add directory="../../bin" />
 					<Add library="evds" />
 					<Add library="simc" />
-					<Add library="glfw" />
+					<Add library="Irrlicht" />
 					<Add library="m" />
 					<Add library="pthread" />
-					<Add library="Xxf86vm" />
 					<Add library="GL" />
-					<Add library="X11" />
-					<Add library="Xrandr" />
-					<Add library="Xi" />
+					<Add library="Xxf86vm" />
 				</Linker>
 			</Target>
 		</Build>
+		<Unit filename="../../source/EventHandler.cpp">
+			<Option virtualFolder="." />
+		</Unit>
 		<Unit filename="../../source/PlanetManager.cpp">
 			<Option virtualFolder="." />
 		</Unit>
@@ -728,6 +671,9 @@
 			<Option virtualFolder="." />
 		</Unit>
 		<Unit filename="../../include/PlanetManager.hpp">
+			<Option virtualFolder="include" />
+		</Unit>
+		<Unit filename="../../include/EventHandler.hpp">
 			<Option virtualFolder="include" />
 		</Unit>
 		<Unit filename="../../include/SimApp.hpp">

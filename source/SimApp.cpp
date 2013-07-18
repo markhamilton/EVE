@@ -12,13 +12,16 @@ int main(int argc, char **argv)
 	SimApp app;
 	app.start();
 
-
 	return 0;
 }
 
 SimApp::SimApp()
 {
-	m_pPlanetManager = 0;
+	m_pDevice 			= 0;
+	m_pVideo			= 0;
+	m_pSMgr				= 0;
+
+	m_pPlanetManager 	= 0;
 }
 
 SimApp::~SimApp()
@@ -27,6 +30,18 @@ SimApp::~SimApp()
 
 void SimApp::start()
 {
+	m_pDevice = createDevice(EDT_OPENGL, core::dimension2d<u32>(640, 480));
+
+	m_pVideo = m_pDevice->getVideoDriver();
+	m_pSMgr = m_pDevice->getSceneManager();
+
+	while(m_pDevice->run())
+	{
+		m_pVideo->beginScene(true, true, video::SColor(255, 127, 0, 255));
+
+		m_pSMgr->drawAll();
+		m_pVideo->endScene();
+	}
 }
 
 void SimApp::createScene()
@@ -43,7 +58,7 @@ void SimApp::renderScene()
 
 }
 
-bool SimApp::init(const std::string wndTitle)
+bool SimApp::init(const stringw wndTitle)
 {
 	return true;
 }

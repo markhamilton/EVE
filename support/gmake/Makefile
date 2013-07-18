@@ -16,7 +16,7 @@ Irrlicht:
 	@echo "==== Building Irrlicht ($(config)) ===="
 	@${MAKE} --no-print-directory -C . -f Irrlicht.make
 
-EVE: evds simc
+EVE: evds simc Irrlicht
 	@echo "==== Building EVE ($(config)) ===="
 	@${MAKE} --no-print-directory -C . -f EVE.make
 

@@ -1,6 +1,7 @@
 --------------------------------------------------------------------------------
 -- TODO: Add console builds linked with ncurses
 -- TODO: Testing in Windows
+-- TODO: Whittle down the irrlicht build to remove unnecessary files
 --------------------------------------------------------------------------------
 
 -- if not os.isdir("../debug") then os.mkdir("../debug") end
@@ -41,18 +42,24 @@ solution "EVE"
 		files {
 			"../external/irrlicht/source/Irrlicht/*.cpp",
 			"../external/irrlicht/source/Irrlicht/*.h",
+			"../external/irrlicht/source/Irrlicht/zlib/*.c",
+			"../external/irrlicht/source/Irrlicht/zlib/*.h",
 			"../external/irrlicht/source/Irrlicht/jpeglib/*.c",
 			"../external/irrlicht/source/Irrlicht/jpeglib/*.h",
 			"../external/irrlicht/source/Irrlicht/libpng/*.c",
 			"../external/irrlicht/source/Irrlicht/libpng/*.h",
 			"../external/irrlicht/source/Irrlicht/lzma/*.c",
 			"../external/irrlicht/source/Irrlicht/lzma/*.h",
-			"../external/irrlicht/source/Irrlicht/zlib/*.c",
-			"../external/irrlicht/source/Irrlicht/zlib/*.h",
+			"../external/irrlicht/source/Irrlicht/bzip2/*.c",
+			"../external/irrlicht/source/Irrlicht/bzip2/*.h",
+			"../external/irrlicht/source/Irrlicht/aesGladman/*.cpp",
+			"../external/irrlicht/source/Irrlicht/aesGladman/*.h",
 		}
 		excludes {
-			"../external/irrlicht/source/Irrlicht/jpeglib/jcsample.c",
-			"../external/irrlicht/source/Irrlicht/jpeglib/jdsample.c",
+			-- "../external/irrlicht/source/Irrlicht/jpeglib/jcsample.c",
+			-- "../external/irrlicht/source/Irrlicht/jpeglib/jcinit.c",
+			-- "../external/irrlicht/source/Irrlicht/jpeglib/jdmaster.c",
+			-- "../external/irrlicht/source/Irrlicht/jpeglib/jdsample.c",
 			"../external/irrlicht/source/Irrlicht/jpeglib/jmemdos.c",
 			"../external/irrlicht/source/Irrlicht/jpeglib/jmemmac.c",
 			"../external/irrlicht/source/Irrlicht/jpeglib/ansi2knr.c",
@@ -62,6 +69,8 @@ solution "EVE"
 			"../external/irrlicht/source/Irrlicht/jpeglib/example.c",
 			"../external/irrlicht/source/Irrlicht/libpng/example.c",
 			"../external/irrlicht/source/Irrlicht/libpng/pngtest.c",
+			"../external/irrlicht/source/Irrlicht/bzip2/bzip2.c",
+			"../external/irrlicht/source/Irrlicht/bzip2/dlltest.c",
 		}
 
 --------------------------------------------------------------------------------
@@ -73,13 +82,13 @@ project "EVE"
 		"../include",
 		"../external/evds/include",
 		"../external/simc/include",
-		"../external/glfw/include",
+		"../external/irrlicht/include",
 	}
 	files {
 			"../source/**",
 			"../include/**",
 	}
-	links { "evds", "simc", "glfw" }
+	links { "evds", "simc", "Irrlicht" }
 	defines { "EVE_SIM" }
 	kind "WindowedApp"
 
@@ -87,7 +96,7 @@ project "EVE"
 		links { "" }
 
 	configuration { "linux" }
-		links { "m", "pthread", "Xxf86vm", "GL", "X11", "Xrandr", "Xi" }
+		links { "m", "pthread", "GL", "Xxf86vm" }
 		linkoptions { "-lstdc++" }
 
 --------------------------------------------------------------------------------

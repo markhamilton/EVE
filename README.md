@@ -25,7 +25,6 @@ The current plans with the software are to:
 
 ## Dependencies
 
-* OpenGL support
 * [Premake4](http://industriousone.com/premake/download)
 
 ## How to Build
