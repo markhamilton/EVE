@@ -18,20 +18,25 @@
 					<Add option="-DNDEBUG" />
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
-					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/glfw/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
 					<Add option="-lstdc++" />
 					<Add directory="../../bin" />
-					<Add library="glfw" />
 					<Add library="evds" />
 					<Add library="simc" />
+					<Add library="glfw" />
 					<Add library="m" />
 					<Add library="pthread" />
+					<Add library="Xxf86vm" />
+					<Add library="GL" />
+					<Add library="X11" />
+					<Add library="Xrandr" />
+					<Add library="Xi" />
 				</Linker>
 			</Target>
 			<Target title="Debug|x64">
@@ -45,20 +50,25 @@
 					<Add option="-DDEBUG" />
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
-					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/glfw/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
 					<Add option="-lstdc++" />
 					<Add directory="../../bin" />
-					<Add library="glfw" />
 					<Add library="evds" />
 					<Add library="simc" />
+					<Add library="glfw" />
 					<Add library="m" />
 					<Add library="pthread" />
+					<Add library="Xxf86vm" />
+					<Add library="GL" />
+					<Add library="X11" />
+					<Add library="Xrandr" />
+					<Add library="Xi" />
 				</Linker>
 			</Target>
 			<Target title="Debug|x64">
@@ -72,20 +82,25 @@
 					<Add option="-DDEBUG" />
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
-					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/glfw/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
 					<Add option="-lstdc++" />
 					<Add directory="../../bin" />
-					<Add library="glfw" />
 					<Add library="evds" />
 					<Add library="simc" />
+					<Add library="glfw" />
 					<Add library="m" />
 					<Add library="pthread" />
+					<Add library="Xxf86vm" />
+					<Add library="GL" />
+					<Add library="X11" />
+					<Add library="Xrandr" />
+					<Add library="Xi" />
 				</Linker>
 			</Target>
 			<Target title="Release|x64">
@@ -100,20 +115,25 @@
 					<Add option="-DNDEBUG" />
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
-					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/glfw/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
 					<Add option="-lstdc++" />
 					<Add directory="../../bin" />
-					<Add library="glfw" />
 					<Add library="evds" />
 					<Add library="simc" />
+					<Add library="glfw" />
 					<Add library="m" />
 					<Add library="pthread" />
+					<Add library="Xxf86vm" />
+					<Add library="GL" />
+					<Add library="X11" />
+					<Add library="Xrandr" />
+					<Add library="Xi" />
 				</Linker>
 			</Target>
 			<Target title="DebugDynamic|x64">
@@ -131,20 +151,25 @@
 					<Add option="-DRDRS_DYNAMIC" />
 					<Add option="-DSIMC_DYNAMIC" />
 					<Add directory="../../include" />
-					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/glfw/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
 					<Add option="-lstdc++" />
 					<Add directory="../../bin" />
-					<Add library="glfw" />
 					<Add library="evds" />
 					<Add library="simc" />
+					<Add library="glfw" />
 					<Add library="m" />
 					<Add library="pthread" />
+					<Add library="Xxf86vm" />
+					<Add library="GL" />
+					<Add library="X11" />
+					<Add library="Xrandr" />
+					<Add library="Xi" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseDynamic|x64">
@@ -162,20 +187,25 @@
 					<Add option="-DRDRS_DYNAMIC" />
 					<Add option="-DSIMC_DYNAMIC" />
 					<Add directory="../../include" />
-					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/glfw/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
 					<Add option="-lstdc++" />
 					<Add directory="../../bin" />
-					<Add library="glfw" />
 					<Add library="evds" />
 					<Add library="simc" />
+					<Add library="glfw" />
 					<Add library="m" />
 					<Add library="pthread" />
+					<Add library="Xxf86vm" />
+					<Add library="GL" />
+					<Add library="X11" />
+					<Add library="Xrandr" />
+					<Add library="Xi" />
 				</Linker>
 			</Target>
 			<Target title="DebugSingleThread|x64">
@@ -193,20 +223,25 @@
 					<Add option="-DRDRS_SINGLETHREADED" />
 					<Add option="-DSIMC_SINGLETHREADED" />
 					<Add directory="../../include" />
-					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/glfw/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
 					<Add option="-lstdc++" />
 					<Add directory="../../bin" />
-					<Add library="glfw" />
 					<Add library="evds" />
 					<Add library="simc" />
+					<Add library="glfw" />
 					<Add library="m" />
 					<Add library="pthread" />
+					<Add library="Xxf86vm" />
+					<Add library="GL" />
+					<Add library="X11" />
+					<Add library="Xrandr" />
+					<Add library="Xi" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseSingleThread|x64">
@@ -224,20 +259,25 @@
 					<Add option="-DRDRS_SINGLETHREADED" />
 					<Add option="-DSIMC_SINGLETHREADED" />
 					<Add directory="../../include" />
-					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/glfw/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
 					<Add option="-lstdc++" />
 					<Add directory="../../bin" />
-					<Add library="glfw" />
 					<Add library="evds" />
 					<Add library="simc" />
+					<Add library="glfw" />
 					<Add library="m" />
 					<Add library="pthread" />
+					<Add library="Xxf86vm" />
+					<Add library="GL" />
+					<Add library="X11" />
+					<Add library="Xrandr" />
+					<Add library="Xi" />
 				</Linker>
 			</Target>
 			<Target title="DebugSingleThreadDynamic|x64">
@@ -259,20 +299,25 @@
 					<Add option="-DRDRS_SINGLETHREADED" />
 					<Add option="-DSIMC_SINGLETHREADED" />
 					<Add directory="../../include" />
-					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/glfw/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
 					<Add option="-lstdc++" />
 					<Add directory="../../bin" />
-					<Add library="glfw" />
 					<Add library="evds" />
 					<Add library="simc" />
+					<Add library="glfw" />
 					<Add library="m" />
 					<Add library="pthread" />
+					<Add library="Xxf86vm" />
+					<Add library="GL" />
+					<Add library="X11" />
+					<Add library="Xrandr" />
+					<Add library="Xi" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseSingleThreadDynamic|x64">
@@ -294,20 +339,25 @@
 					<Add option="-DRDRS_SINGLETHREADED" />
 					<Add option="-DSIMC_SINGLETHREADED" />
 					<Add directory="../../include" />
-					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/glfw/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m64" />
 					<Add option="-L/usr/lib64" />
 					<Add option="-lstdc++" />
 					<Add directory="../../bin" />
-					<Add library="glfw" />
 					<Add library="evds" />
 					<Add library="simc" />
+					<Add library="glfw" />
 					<Add library="m" />
 					<Add library="pthread" />
+					<Add library="Xxf86vm" />
+					<Add library="GL" />
+					<Add library="X11" />
+					<Add library="Xrandr" />
+					<Add library="Xi" />
 				</Linker>
 			</Target>
 			<Target title="Release|x32">
@@ -322,20 +372,25 @@
 					<Add option="-DNDEBUG" />
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
-					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/glfw/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
 					<Add option="-lstdc++" />
 					<Add directory="../../bin" />
-					<Add library="glfw" />
 					<Add library="evds" />
 					<Add library="simc" />
+					<Add library="glfw" />
 					<Add library="m" />
 					<Add library="pthread" />
+					<Add library="Xxf86vm" />
+					<Add library="GL" />
+					<Add library="X11" />
+					<Add library="Xrandr" />
+					<Add library="Xi" />
 				</Linker>
 			</Target>
 			<Target title="Debug|x32">
@@ -349,20 +404,25 @@
 					<Add option="-DDEBUG" />
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
-					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/glfw/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
 					<Add option="-lstdc++" />
 					<Add directory="../../bin" />
-					<Add library="glfw" />
 					<Add library="evds" />
 					<Add library="simc" />
+					<Add library="glfw" />
 					<Add library="m" />
 					<Add library="pthread" />
+					<Add library="Xxf86vm" />
+					<Add library="GL" />
+					<Add library="X11" />
+					<Add library="Xrandr" />
+					<Add library="Xi" />
 				</Linker>
 			</Target>
 			<Target title="Debug|x32">
@@ -376,20 +436,25 @@
 					<Add option="-DDEBUG" />
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
-					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/glfw/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
 					<Add option="-lstdc++" />
 					<Add directory="../../bin" />
-					<Add library="glfw" />
 					<Add library="evds" />
 					<Add library="simc" />
+					<Add library="glfw" />
 					<Add library="m" />
 					<Add library="pthread" />
+					<Add library="Xxf86vm" />
+					<Add library="GL" />
+					<Add library="X11" />
+					<Add library="Xrandr" />
+					<Add library="Xi" />
 				</Linker>
 			</Target>
 			<Target title="Release|x32">
@@ -404,20 +469,25 @@
 					<Add option="-DNDEBUG" />
 					<Add option="-DEVE_SIM" />
 					<Add directory="../../include" />
-					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/glfw/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
 					<Add option="-lstdc++" />
 					<Add directory="../../bin" />
-					<Add library="glfw" />
 					<Add library="evds" />
 					<Add library="simc" />
+					<Add library="glfw" />
 					<Add library="m" />
 					<Add library="pthread" />
+					<Add library="Xxf86vm" />
+					<Add library="GL" />
+					<Add library="X11" />
+					<Add library="Xrandr" />
+					<Add library="Xi" />
 				</Linker>
 			</Target>
 			<Target title="DebugDynamic|x32">
@@ -435,20 +505,25 @@
 					<Add option="-DRDRS_DYNAMIC" />
 					<Add option="-DSIMC_DYNAMIC" />
 					<Add directory="../../include" />
-					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/glfw/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
 					<Add option="-lstdc++" />
 					<Add directory="../../bin" />
-					<Add library="glfw" />
 					<Add library="evds" />
 					<Add library="simc" />
+					<Add library="glfw" />
 					<Add library="m" />
 					<Add library="pthread" />
+					<Add library="Xxf86vm" />
+					<Add library="GL" />
+					<Add library="X11" />
+					<Add library="Xrandr" />
+					<Add library="Xi" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseDynamic|x32">
@@ -466,20 +541,25 @@
 					<Add option="-DRDRS_DYNAMIC" />
 					<Add option="-DSIMC_DYNAMIC" />
 					<Add directory="../../include" />
-					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/glfw/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
 					<Add option="-lstdc++" />
 					<Add directory="../../bin" />
-					<Add library="glfw" />
 					<Add library="evds" />
 					<Add library="simc" />
+					<Add library="glfw" />
 					<Add library="m" />
 					<Add library="pthread" />
+					<Add library="Xxf86vm" />
+					<Add library="GL" />
+					<Add library="X11" />
+					<Add library="Xrandr" />
+					<Add library="Xi" />
 				</Linker>
 			</Target>
 			<Target title="DebugSingleThread|x32">
@@ -497,20 +577,25 @@
 					<Add option="-DRDRS_SINGLETHREADED" />
 					<Add option="-DSIMC_SINGLETHREADED" />
 					<Add directory="../../include" />
-					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/glfw/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
 					<Add option="-lstdc++" />
 					<Add directory="../../bin" />
-					<Add library="glfw" />
 					<Add library="evds" />
 					<Add library="simc" />
+					<Add library="glfw" />
 					<Add library="m" />
 					<Add library="pthread" />
+					<Add library="Xxf86vm" />
+					<Add library="GL" />
+					<Add library="X11" />
+					<Add library="Xrandr" />
+					<Add library="Xi" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseSingleThread|x32">
@@ -528,20 +613,25 @@
 					<Add option="-DRDRS_SINGLETHREADED" />
 					<Add option="-DSIMC_SINGLETHREADED" />
 					<Add directory="../../include" />
-					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/glfw/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
 					<Add option="-lstdc++" />
 					<Add directory="../../bin" />
-					<Add library="glfw" />
 					<Add library="evds" />
 					<Add library="simc" />
+					<Add library="glfw" />
 					<Add library="m" />
 					<Add library="pthread" />
+					<Add library="Xxf86vm" />
+					<Add library="GL" />
+					<Add library="X11" />
+					<Add library="Xrandr" />
+					<Add library="Xi" />
 				</Linker>
 			</Target>
 			<Target title="DebugSingleThreadDynamic|x32">
@@ -563,20 +653,25 @@
 					<Add option="-DRDRS_SINGLETHREADED" />
 					<Add option="-DSIMC_SINGLETHREADED" />
 					<Add directory="../../include" />
-					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/glfw/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
 					<Add option="-lstdc++" />
 					<Add directory="../../bin" />
-					<Add library="glfw" />
 					<Add library="evds" />
 					<Add library="simc" />
+					<Add library="glfw" />
 					<Add library="m" />
 					<Add library="pthread" />
+					<Add library="Xxf86vm" />
+					<Add library="GL" />
+					<Add library="X11" />
+					<Add library="Xrandr" />
+					<Add library="Xi" />
 				</Linker>
 			</Target>
 			<Target title="ReleaseSingleThreadDynamic|x32">
@@ -598,26 +693,28 @@
 					<Add option="-DRDRS_SINGLETHREADED" />
 					<Add option="-DSIMC_SINGLETHREADED" />
 					<Add directory="../../include" />
-					<Add directory="../../external/glfw/include" />
 					<Add directory="../../external/evds/include" />
 					<Add directory="../../external/simc/include" />
+					<Add directory="../../external/glfw/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-m32" />
 					<Add option="-L/usr/lib32" />
 					<Add option="-lstdc++" />
 					<Add directory="../../bin" />
-					<Add library="glfw" />
 					<Add library="evds" />
 					<Add library="simc" />
+					<Add library="glfw" />
 					<Add library="m" />
 					<Add library="pthread" />
+					<Add library="Xxf86vm" />
+					<Add library="GL" />
+					<Add library="X11" />
+					<Add library="Xrandr" />
+					<Add library="Xi" />
 				</Linker>
 			</Target>
 		</Build>
-		<Unit filename="../../source/EventHandler.cpp">
-			<Option virtualFolder="." />
-		</Unit>
 		<Unit filename="../../source/PlanetManager.cpp">
 			<Option virtualFolder="." />
 		</Unit>
@@ -631,9 +728,6 @@
 			<Option virtualFolder="." />
 		</Unit>
 		<Unit filename="../../include/PlanetManager.hpp">
-			<Option virtualFolder="include" />
-		</Unit>
-		<Unit filename="../../include/EventHandler.hpp">
 			<Option virtualFolder="include" />
 		</Unit>
 		<Unit filename="../../include/SimApp.hpp">

@@ -28,32 +28,6 @@ solution "EVE"
 		defines { "NDEBUG" }
 		flags { "Optimize" }
 
-
---------------------------------------------------------------------------------
-
-project "EVE"
-	uuid "D20CBF50-D363-11E2-8B8B-0800200C9A66"
-	language "C++"
-	includedirs { 
-		"../include",
-		"../external/evds/include",
-		"../external/simc/include",
-	}
-	files {
-			"../source/**",
-			"../include/**",
-	}
-	links { "evds", "simc", "glfw3" }
-	defines { "EVE_SIM" }
-	kind "WindowedApp"
-
-	configuration { "windows" }
-		links { "" }
-
-	configuration { "linux" }
-		links { "m", "pthread", "Xxf86vm", "GL", "X11", "Xrandr", "Xi" }
-		linkoptions { "-lstdc++" }
-
 --------------------------------------------------------------------------------
 
 	project "glfw"
@@ -65,12 +39,13 @@ project "EVE"
 			"../external/glfw/deps"
 		}
 		files {
-			"../external/glfw/src/internal.h",
 			"../external/glfw/src/clipboard.c",
+			"../external/glfw/src/config.h",
 			"../external/glfw/src/context.c",
 			"../external/glfw/src/gamma.c",
 			"../external/glfw/src/init.c",
 			"../external/glfw/src/input.c",
+			"../external/glfw/src/internal.h",
 			"../external/glfw/src/joystick.c",
 			"../external/glfw/src/monitor.c",
 			"../external/glfw/src/time.c",
@@ -83,8 +58,37 @@ project "EVE"
 			}
 			includedirs { "../external/config/glfw_win32" }
 		configuration { "linux" }
-			files { "../external/glfw/src/x11_*.c" }
+			files {
+				"../external/glfw/src/glx_*.*",
+				"../external/glfw/src/x11_*.*"
+			}
 			includedirs { "../external/config/glfw_x11" }
+
+--------------------------------------------------------------------------------
+
+project "EVE"
+	uuid "D20CBF50-D363-11E2-8B8B-0800200C9A66"
+	language "C++"
+	includedirs { 
+		"../include",
+		"../external/evds/include",
+		"../external/simc/include",
+		"../external/glfw/include",
+	}
+	files {
+			"../source/**",
+			"../include/**",
+	}
+	links { "evds", "simc", "glfw" }
+	defines { "EVE_SIM" }
+	kind "WindowedApp"
+
+	configuration { "windows" }
+		links { "" }
+
+	configuration { "linux" }
+		links { "m", "pthread", "Xxf86vm", "GL", "X11", "Xrandr", "Xi" }
+		linkoptions { "-lstdc++" }
 
 --------------------------------------------------------------------------------
 

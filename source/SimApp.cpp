@@ -11,12 +11,16 @@ int main(int argc, char **argv)
 {
 	GLFWwindow* window;
 
-	if (!glfwInit()) return -1;
+	if (!glfwInit()) {
+		printf("glfw failed init");
+		return -1;
+	}
 
 	window = glfwCreateWindow(640, 480, "Eve Flight Simulatior", NULL, NULL);
 	if (!window)
 	{
 		glfwTerminate();
+		printf("Can't create window");
 		return -1;
 	}
 
