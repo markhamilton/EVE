@@ -1,0 +1,2120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Irrlicht" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release|x64">
+				<Option output="../../bin/libIrrlicht.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x64/Release/Irrlicht" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-m64" />
+					<Add option="-DNDEBUG" />
+					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/deps" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m64" />
+					<Add option="-L/usr/lib64" />
+				</Linker>
+			</Target>
+			<Target title="Debug|x64">
+				<Option output="../../bin/libIrrlicht.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x64/Debug/Irrlicht" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-m64" />
+					<Add option="-DDEBUG" />
+					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/deps" />
+				</Compiler>
+				<Linker>
+					<Add option="-m64" />
+					<Add option="-L/usr/lib64" />
+				</Linker>
+			</Target>
+			<Target title="Debug|x64">
+				<Option output="../../bin/libIrrlicht.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x64/Debug/Irrlicht" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-m64" />
+					<Add option="-DDEBUG" />
+					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/deps" />
+				</Compiler>
+				<Linker>
+					<Add option="-m64" />
+					<Add option="-L/usr/lib64" />
+				</Linker>
+			</Target>
+			<Target title="Release|x64">
+				<Option output="../../bin/libIrrlicht.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x64/Release/Irrlicht" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-m64" />
+					<Add option="-DNDEBUG" />
+					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/deps" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m64" />
+					<Add option="-L/usr/lib64" />
+				</Linker>
+			</Target>
+			<Target title="DebugDynamic|x64">
+				<Option output="../../bin/libIrrlicht.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x64/DebugDynamic/Irrlicht" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-m64" />
+					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/deps" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m64" />
+					<Add option="-L/usr/lib64" />
+				</Linker>
+			</Target>
+			<Target title="ReleaseDynamic|x64">
+				<Option output="../../bin/libIrrlicht.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x64/ReleaseDynamic/Irrlicht" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-m64" />
+					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/deps" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m64" />
+					<Add option="-L/usr/lib64" />
+				</Linker>
+			</Target>
+			<Target title="DebugSingleThread|x64">
+				<Option output="../../bin/libIrrlicht.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x64/DebugSingleThread/Irrlicht" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-m64" />
+					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/deps" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m64" />
+					<Add option="-L/usr/lib64" />
+				</Linker>
+			</Target>
+			<Target title="ReleaseSingleThread|x64">
+				<Option output="../../bin/libIrrlicht.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x64/ReleaseSingleThread/Irrlicht" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-m64" />
+					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/deps" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m64" />
+					<Add option="-L/usr/lib64" />
+				</Linker>
+			</Target>
+			<Target title="DebugSingleThreadDynamic|x64">
+				<Option output="../../bin/libIrrlicht.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x64/DebugSingleThreadDynamic/Irrlicht" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-m64" />
+					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/deps" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m64" />
+					<Add option="-L/usr/lib64" />
+				</Linker>
+			</Target>
+			<Target title="ReleaseSingleThreadDynamic|x64">
+				<Option output="../../bin/libIrrlicht.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x64/ReleaseSingleThreadDynamic/Irrlicht" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-m64" />
+					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/deps" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m64" />
+					<Add option="-L/usr/lib64" />
+				</Linker>
+			</Target>
+			<Target title="Release|x32">
+				<Option output="../../bin/libIrrlicht.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x32/Release/Irrlicht" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-m32" />
+					<Add option="-DNDEBUG" />
+					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/deps" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add option="-L/usr/lib32" />
+				</Linker>
+			</Target>
+			<Target title="Debug|x32">
+				<Option output="../../bin/libIrrlicht.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x32/Debug/Irrlicht" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-m32" />
+					<Add option="-DDEBUG" />
+					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/deps" />
+				</Compiler>
+				<Linker>
+					<Add option="-m32" />
+					<Add option="-L/usr/lib32" />
+				</Linker>
+			</Target>
+			<Target title="Debug|x32">
+				<Option output="../../bin/libIrrlicht.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x32/Debug/Irrlicht" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-m32" />
+					<Add option="-DDEBUG" />
+					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/deps" />
+				</Compiler>
+				<Linker>
+					<Add option="-m32" />
+					<Add option="-L/usr/lib32" />
+				</Linker>
+			</Target>
+			<Target title="Release|x32">
+				<Option output="../../bin/libIrrlicht.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x32/Release/Irrlicht" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-m32" />
+					<Add option="-DNDEBUG" />
+					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/deps" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add option="-L/usr/lib32" />
+				</Linker>
+			</Target>
+			<Target title="DebugDynamic|x32">
+				<Option output="../../bin/libIrrlicht.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x32/DebugDynamic/Irrlicht" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-m32" />
+					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/deps" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add option="-L/usr/lib32" />
+				</Linker>
+			</Target>
+			<Target title="ReleaseDynamic|x32">
+				<Option output="../../bin/libIrrlicht.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x32/ReleaseDynamic/Irrlicht" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-m32" />
+					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/deps" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add option="-L/usr/lib32" />
+				</Linker>
+			</Target>
+			<Target title="DebugSingleThread|x32">
+				<Option output="../../bin/libIrrlicht.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x32/DebugSingleThread/Irrlicht" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-m32" />
+					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/deps" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add option="-L/usr/lib32" />
+				</Linker>
+			</Target>
+			<Target title="ReleaseSingleThread|x32">
+				<Option output="../../bin/libIrrlicht.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x32/ReleaseSingleThread/Irrlicht" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-m32" />
+					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/deps" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add option="-L/usr/lib32" />
+				</Linker>
+			</Target>
+			<Target title="DebugSingleThreadDynamic|x32">
+				<Option output="../../bin/libIrrlicht.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x32/DebugSingleThreadDynamic/Irrlicht" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-m32" />
+					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/deps" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add option="-L/usr/lib32" />
+				</Linker>
+			</Target>
+			<Target title="ReleaseSingleThreadDynamic|x32">
+				<Option output="../../bin/libIrrlicht.a" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/x32/ReleaseSingleThreadDynamic/Irrlicht" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-m32" />
+					<Add directory="../../external/irrlicht/include" />
+					<Add directory="../../external/glfw/deps" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add option="-L/usr/lib32" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CIrrMeshWriter.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CParticleAnimatedMeshSceneNodeEmitter.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSTLMeshWriter.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageWriterBMP.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTRTextureGouraudAdd2.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTRTextureLightMap2_M4.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIMeshViewer.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTRNormalMap.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CNPKReader.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CB3DMeshFileLoader.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUITabControl.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CMS3DMeshFileLoader.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CMeshSceneNode.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorRotation.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CD3D9Driver.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CParticleRingEmitter.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTRGouraud.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/COpenGLSLMaterialRenderer.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTRGouraudWire.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTRTextureGouraudAddNoZ2.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/COBJMeshWriter.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CParticleRotationAffector.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CLimitReadFile.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/COpenGLDriver.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CIrrDeviceWinCE.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSkyBoxSceneNode.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSphereSceneNode.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CCgMaterialRenderer.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/COpenGLShaderMaterialRenderer.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CMD2MeshFileLoader.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CZipReader.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CD3D9HLSLMaterialRenderer.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTRTextureBlend.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CD3D9ParallaxMapRenderer.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CMeshCache.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorFlyStraight.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorTexture.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/Irrlicht.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorCameraMaya.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CFileList.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CEmptySceneNode.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIStaticText.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CDepthBuffer.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/COpenGLExtensionHandler.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CQ3LevelMesh.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CAnimatedMeshMD2.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CParticleMeshEmitter.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CIrrMeshFileLoader.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTRFlatWire.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CCubeSceneNode.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CQuake3ShaderSceneNode.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTarReader.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/COpenGLCgMaterialRenderer.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CParticleBoxEmitter.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CDMFLoader.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CD3D9CgMaterialRenderer.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CVideoModeList.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/os.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CMY3DMeshFileLoader.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIEditBox.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTRTextureGouraudNoZ.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSceneCollisionManager.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CBurningShader_Raster_Reference.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CMD3MeshFileLoader.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIContextMenu.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CAttributes.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSoftwareTexture.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CLWOMeshFileLoader.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTRStencilShadow.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CBSPMeshFileLoader.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorCollisionResponse.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTRTextureLightMap2_M1.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CXMeshFileLoader.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CD3D8ParallaxMapRenderer.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageLoaderJPG.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CWADReader.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageWriterPCX.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CBoneSceneNode.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CD3D9Texture.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIScrollBar.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CLightSceneNode.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/COgreMeshFileLoader.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/COpenGLTexture.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTRTextureFlat.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTRGouraud2.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CLMTSMeshFileLoader.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUISpinBox.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTRTextureFlatWire.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CColorConverter.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CDefaultSceneNodeFactory.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CBillboardSceneNode.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CPLYMeshWriter.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CAnimatedMeshHalfLife.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIFont.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CParticleFadeOutAffector.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageWriterJPG.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CColladaMeshWriter.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CD3D8Driver.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CXMLReader.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CParticleGravityAffector.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTerrainTriangleSelector.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CDefaultSceneNodeAnimatorFactory.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CIrrDeviceConsole.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTRTextureGouraudVertexAlpha2.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CCameraSceneNode.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSceneManager.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTriangleSelector.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUITreeView.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/IBurningShader.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CParticleSphereEmitter.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CMountPointReader.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTerrainSceneNode.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTriangleBBSelector.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/COctreeTriangleSelector.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/COpenGLNormalMapRenderer.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/irrXML.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUISpriteBank.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageLoaderPSD.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUICheckBox.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTRTextureDetailMap2.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorFlyCircle.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSTLMeshFileLoader.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CDefaultGUIElementFactory.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTRTextureGouraud2.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageWriterPSD.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CWriteFile.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTRTextureLightMapGouraud2_M4.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageLoaderBMP.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSoftwareDriver.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CD3D9ShaderMaterialRenderer.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImage.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageWriterPPM.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIMenu.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/COBJMeshFileLoader.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSkinnedMesh.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageLoaderDDS.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CColladaFileLoader.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIInOutFader.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CMetaTriangleSelector.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/COpenGLParallaxMapRenderer.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTRTextureGouraudWire.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIEnvironment.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorDelete.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CPLYMeshFileLoader.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIToolBar.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSoftwareTexture2.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/COSOperator.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIImage.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTRTextureGouraudAlphaNoZ.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CShadowVolumeSceneNode.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTRTextureGouraudAlpha.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CCSMLoader.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CAnimatedMeshSceneNode.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/COctreeSceneNode.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CPakReader.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CParticleScaleAffector.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CZBuffer.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTRGouraudAlpha2.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIComboBox.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageLoaderPCX.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CParticleAttractionAffector.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CD3D8NormalMapRenderer.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIImageList.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CVolumeLightSceneNode.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CXMLWriter.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CD3D8Texture.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CReadFile.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageWriterPNG.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CLogger.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CIrrDeviceWin32.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CIrrDeviceSDL.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIListBox.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CIrrDeviceFB.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageWriterTGA.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CIrrDeviceStub.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorCameraFPS.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUITable.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSkyDomeSceneNode.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CParticlePointEmitter.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTextSceneNode.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CMeshManipulator.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTRTextureGouraudAdd.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CNullDriver.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/C3DSMeshFileLoader.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIButton.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTRTextureLightMap2_Add.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageLoaderWAL.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUISkin.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTRFlat.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageLoaderPNG.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGeometryCreator.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIMessageBox.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CDummyTransformationSceneNode.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIColorSelectDialog.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSceneLoaderIrr.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CMemoryFile.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSMFMeshFileLoader.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageLoaderRGB.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSoftwareDriver2.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CIrrDeviceLinux.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTRTextureGouraud.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTRTextureWire2.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTRGouraudAlphaNoZ2.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CD3D9NormalMapRenderer.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageLoaderTGA.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIFileOpenDialog.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CFPSCounter.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageLoaderPPM.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTRTextureGouraudNoZ2.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CFileSystem.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/COCTLoader.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTRTextureLightMap2_M2.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CD3D8ShaderMaterialRenderer.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIModalScreen.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CParticleCylinderEmitter.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIWindow.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CParticleSystemSceneNode.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CAnimatedMeshMD3.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CWaterSurfaceSceneNode.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorFollowSpline.cpp">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTerrainSceneNode.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CMemoryFile.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CIrrMeshWriter.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/wglext.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CDefaultSceneNodeAnimatorFactory.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CParticleAnimatedMeshSceneNodeEmitter.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CParticleSystemSceneNode.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorFlyStraight.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CMD3MeshFileLoader.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CParticlePointEmitter.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTimer.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorFollowSpline.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorTexture.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageLoaderPCX.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CAnimatedMeshHalfLife.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIInOutFader.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CCameraSceneNode.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSkyDomeSceneNode.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTRTextureGouraud.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CMD2MeshFileLoader.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CMetaTriangleSelector.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUITreeView.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CParticleMeshEmitter.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CFPSCounter.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CCgMaterialRenderer.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIStaticText.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/COgreMeshFileLoader.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTarReader.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTriangleSelector.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CZBuffer.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CColorConverter.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CIrrMeshFileLoader.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIToolBar.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageWriterPSD.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/COpenGLTexture.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CCSMLoader.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CXMeshFileLoader.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CD3D9ParallaxMapRenderer.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSMFMeshFileLoader.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/S4DVertex.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CZipReader.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIColorSelectDialog.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CWaterSurfaceSceneNode.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIFileOpenDialog.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CCubeSceneNode.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIComboBox.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CMY3DMeshFileLoader.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTextSceneNode.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIMessageBox.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CNullDriver.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageLoaderTGA.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageLoaderPSD.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/COpenGLExtensionHandler.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CD3D9Driver.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTriangleBBSelector.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CIrrDeviceFB.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CD3D9HLSLMaterialRenderer.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSoftwareDriver2.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSoftwareTexture.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageLoaderRGB.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CTerrainTriangleSelector.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CIrrDeviceWin32.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIListBox.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageWriterPCX.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/COBJMeshWriter.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorCollisionResponse.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSTLMeshFileLoader.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/COCTLoader.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CDMFLoader.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/C3DSMeshFileLoader.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CLogger.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CDepthBuffer.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CLimitReadFile.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CD3D8Driver.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageWriterPPM.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/SoftwareDriver2_helper.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CColladaFileLoader.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CAnimatedMeshMD3.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CXMLReaderImpl.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CLMTSMeshFileLoader.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CVideoModeList.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/IDepthBuffer.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CBSPMeshFileLoader.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/BuiltInFont.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/S2DVertex.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CIrrDeviceStub.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CParticleFadeOutAffector.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CAnimatedMeshMD2.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/COpenGLCgMaterialRenderer.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CD3D9NormalMapRenderer.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CD3D9CgMaterialRenderer.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/COSOperator.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSceneCollisionManager.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CAttributes.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CD3D8ShaderMaterialRenderer.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CQuake3ShaderSceneNode.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSkinnedMesh.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageLoaderPNG.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/glext.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIContextMenu.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIImageList.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CPakReader.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CPLYMeshWriter.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorCameraFPS.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/COpenGLNormalMapRenderer.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CParticleScaleAffector.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIMeshViewer.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorRotation.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/ISceneNodeAnimatorFinishing.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CD3D8ParallaxMapRenderer.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSTLMeshWriter.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CAttributeImpl.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSceneLoaderIrr.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CXMLReader.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CColladaMeshWriter.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorFlyCircle.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageWriterBMP.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorCameraMaya.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CLightSceneNode.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImage.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CMeshManipulator.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CMS3DMeshFileLoader.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CDummyTransformationSceneNode.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CParticleRingEmitter.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSphereSceneNode.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUITabControl.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorDelete.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/COpenGLShaderMaterialRenderer.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CD3D8NormalMapRenderer.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/IZBuffer.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSoftwareTexture2.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CQ3LevelMesh.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageLoaderDDS.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/dmfsupport.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUITable.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CIrrDeviceLinux.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGeometryCreator.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIScrollBar.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/IAttribute.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUISpriteBank.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CVolumeLightSceneNode.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/IImagePresenter.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/COpenGLParallaxMapRenderer.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CD3D9MaterialRenderer.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CIrrDeviceConsole.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/IBurningShader.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIMenu.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CParticleSphereEmitter.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CB3DMeshFileLoader.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSceneManager.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CParticleAttractionAffector.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CNPKReader.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CIrrDeviceWinCE.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUICheckBox.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CEmptySceneNode.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/COpenGLMaterialRenderer.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageWriterTGA.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CAnimatedMeshSceneNode.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CBoneSceneNode.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageWriterJPG.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/os.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CBillboardSceneNode.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/Octree.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUISkin.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CParticleRotationAffector.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageLoaderWAL.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIFont.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CParticleCylinderEmitter.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CD3D9ShaderMaterialRenderer.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CParticleBoxEmitter.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/ITriangleRenderer.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIEnvironment.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/resource.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIModalScreen.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIButton.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CWADReader.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUISpinBox.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CD3D9Texture.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CMeshSceneNode.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CBlit.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSoftwareDriver.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIImage.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CD3D8MaterialRenderer.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CMY3DHelper.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageLoaderJPG.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CParticleGravityAffector.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CFileList.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CDefaultGUIElementFactory.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CShadowVolumeSceneNode.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CXMLWriter.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageWriterPNG.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/COctreeSceneNode.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CDefaultSceneNodeFactory.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSoftware2MaterialRenderer.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/glxext.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/COpenGLDriver.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageLoaderBMP.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CSkyBoxSceneNode.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIEditBox.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CMeshCache.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CD3D8Texture.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CIrrDeviceSDL.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CWriteFile.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CImageLoaderPPM.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CReadFile.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CFileSystem.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/COBJMeshFileLoader.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CPLYMeshFileLoader.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/COpenGLSLMaterialRenderer.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/SoftwareDriver2_compile_config.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CMountPointReader.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CLWOMeshFileLoader.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/COctreeTriangleSelector.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/CGUIWindow.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jdcoefct.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jmemname.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jctrans.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jidctflt.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/transupp.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/rdbmp.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/wrrle.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/rdswitch.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jccolor.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jcparam.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jmemansi.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jquant2.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/ckconfig.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/rdtarga.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jdatadst.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jdmerge.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/cjpeg.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jcprepct.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jdmaster.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jcmaster.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/wrtarga.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jquant1.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jaricom.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/wrbmp.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jdatasrc.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jdmarker.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/rdppm.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jddctmgr.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jccoefct.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jcmarker.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/wrppm.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jchuff.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jdinput.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/rdrle.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jcarith.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jdapimin.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jcapimin.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jdpostct.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jerror.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jdapistd.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jfdctflt.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jpegtran.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jcapistd.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jmemmgr.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/wrgif.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jmemnobs.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/rdgif.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jfdctint.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jdmainct.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jdhuff.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jfdctfst.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jidctfst.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jcomapi.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jcdctmgr.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jcmainct.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jcinit.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/djpeg.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jdcolor.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jdtrans.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jdarith.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jidctint.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/rdcolmap.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jutils.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jconfig.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jerror.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jmemsys.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jpeglib.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/cdjpeg.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/transupp.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jmorecfg.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jpegint.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jdct.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jinclude.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/jversion.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/jpeglib/cderror.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/jpeglib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/libpng/pngget.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/libpng" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/libpng/pngread.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/libpng" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/libpng/pngerror.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/libpng" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/libpng/pngrutil.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/libpng" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/libpng/pngpread.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/libpng" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/libpng/pngwutil.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/libpng" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/libpng/pngrio.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/libpng" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/libpng/pngmem.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/libpng" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/libpng/png.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/libpng" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/libpng/pngrtran.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/libpng" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/libpng/pngset.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/libpng" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/libpng/pngwrite.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/libpng" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/libpng/pngwio.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/libpng" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/libpng/pngwtran.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/libpng" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/libpng/pngtrans.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/libpng" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/libpng/pngdebug.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/libpng" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/libpng/pngstruct.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/libpng" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/libpng/png.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/libpng" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/libpng/pnginfo.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/libpng" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/libpng/pnglibconf.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/libpng" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/libpng/pngconf.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/libpng" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/libpng/pngpriv.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/libpng" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/lzma/LzmaDec.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/lzma" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/lzma/LzmaDec.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/lzma" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/lzma/Types.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/lzma" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/uncompr.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/gzlib.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/inftrees.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/compress.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/infback.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/gzread.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/gzwrite.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/adler32.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/inflate.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/trees.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/zutil.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/inffast.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/deflate.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/crc32.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/gzclose.c">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/gzguts.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/inffixed.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/zutil.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/trees.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/deflate.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/crc32.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/inftrees.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/inflate.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/zconf.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/inffast.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		</Unit>
+		<Unit filename="../../external/irrlicht/source/Irrlicht/zlib/zlib.h">
+			<Option virtualFolder="external/irrlicht/source/Irrlicht/zlib" />
+		</Unit>
+		<Extensions>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
+

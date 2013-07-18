@@ -30,43 +30,39 @@ solution "EVE"
 
 --------------------------------------------------------------------------------
 
-	project "glfw"
-		uuid "D15A53B8-EDE5-8C4E-90AF-09F47C48DA45"
+	project "Irrlicht"
+		uuid "4b501a00-efc6-11e2-b778-0800200c9a66"
 		kind "StaticLib"
-		language "C"
+		language "C++"
 		includedirs {
-			"../external/glfw/include",
+			"../external/irrlicht/include",
 			"../external/glfw/deps"
 		}
 		files {
-			"../external/glfw/src/clipboard.c",
-			"../external/glfw/src/config.h",
-			"../external/glfw/src/context.c",
-			"../external/glfw/src/gamma.c",
-			"../external/glfw/src/init.c",
-			"../external/glfw/src/input.c",
-			"../external/glfw/src/internal.h",
-			"../external/glfw/src/joystick.c",
-			"../external/glfw/src/monitor.c",
-			"../external/glfw/src/time.c",
-			"../external/glfw/src/window.c",
+			"../external/irrlicht/source/Irrlicht/*.cpp",
+			"../external/irrlicht/source/Irrlicht/*.h",
+			"../external/irrlicht/source/Irrlicht/jpeglib/*.c",
+			"../external/irrlicht/source/Irrlicht/jpeglib/*.h",
+			"../external/irrlicht/source/Irrlicht/libpng/*.c",
+			"../external/irrlicht/source/Irrlicht/libpng/*.h",
+			"../external/irrlicht/source/Irrlicht/lzma/*.c",
+			"../external/irrlicht/source/Irrlicht/lzma/*.h",
+			"../external/irrlicht/source/Irrlicht/zlib/*.c",
+			"../external/irrlicht/source/Irrlicht/zlib/*.h",
 		}
-		configuration { "windows" }
-			files {
-				"../external/glfw/src/win32_*.c",
-				"../external/glfw/src/wgl_*.c"
-			}
-			includedirs { "../external/config/glfw_win32" }
-		configuration { "linux" }
-			defines {
-				"GLFW_USE_EGL",
-				"GLFW_CLIENT_LIBRARY=opengl"
-			}
-			files {
-				"../external/glfw/src/glx_*.*",
-				"../external/glfw/src/x11_*.*"
-			}
-			includedirs { "../external/config/glfw_x11" }
+		excludes {
+			"../external/irrlicht/source/Irrlicht/jpeglib/jcsample.c",
+			"../external/irrlicht/source/Irrlicht/jpeglib/jdsample.c",
+			"../external/irrlicht/source/Irrlicht/jpeglib/jmemdos.c",
+			"../external/irrlicht/source/Irrlicht/jpeglib/jmemmac.c",
+			"../external/irrlicht/source/Irrlicht/jpeglib/ansi2knr.c",
+			"../external/irrlicht/source/Irrlicht/jpeglib/rdjpgcom.c",
+			"../external/irrlicht/source/Irrlicht/jpeglib/wrjpgcom.c",
+			"../external/irrlicht/source/Irrlicht/jpeglib/cdjpeg.c",
+			"../external/irrlicht/source/Irrlicht/jpeglib/example.c",
+			"../external/irrlicht/source/Irrlicht/libpng/example.c",
+			"../external/irrlicht/source/Irrlicht/libpng/pngtest.c",
+		}
 
 --------------------------------------------------------------------------------
 

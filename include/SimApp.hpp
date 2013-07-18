@@ -1,7 +1,6 @@
 #ifndef SIMAPP_HPP
 #define SIMAPP_HPP
 
-#include <GLFW/glfw3.h>
 #include <stdio.h>
 #include <string>
 #include "Planet.hpp"
@@ -10,17 +9,17 @@
 class SimApp
 {
 public:
-	SimApp(GLFWwindow* window);
+	SimApp();
 	~SimApp();
  
-	bool init(const std::string wndTitle);
-	void createScene();
-
-	void renderScene();
+	void start();
 
 protected:
+	bool init(const std::string wndTitle);
+	void createScene();
+	void renderScene();
+
 	PlanetManager*		m_pPlanetManager;
-	GLFWwindow*			m_pWindow;
 
 private:
 	bool		m_bSettingsMode;
