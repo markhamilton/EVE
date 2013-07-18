@@ -2,18 +2,18 @@
 
 #include "Planet.hpp"
 
-Planet::Planet()
-{
-	// m_pSceneNode 		= 0;
+// Planet::Planet()
+// {
+// 	m_pSceneNode 		= 0;
 
-	m_pShowWireframe 	= false;
-	m_pShowBoundingBox 	= false;
-	m_pShowNormal 		= false;
-	m_pShowVelocity 	= false;
-}
+// 	m_pShowWireframe 	= false;
+// 	m_pShowBoundingBox 	= false;
+// 	m_pShowNormal 		= false;
+// 	m_pShowVelocity 	= false;
+// }
 
 // Planet::Planet(ISceneNode* parent, ISceneManager* mgr, s32 id)
-// 		//: scene::ISceneNode(parent, mgr, id)
+// 		: scene::ISceneNode(parent, mgr, id)
 // {
 // 	m_pMaterial.Wireframe = false;
 // 	m_pMaterial.Lighting = false;
@@ -75,20 +75,20 @@ Planet::Planet()
 // 	// cubeSceneNode->getMaterial(1).Textures[0] = texture2
 // }
 
-// Planet::Planet(IrrlichtDevice* Device, const stringw Name, const io::path &Texture, const f32 Radius)
-// {
-// 	m_pDevice = Device;
-// 	m_pSMgr = Device->getSceneManager();
-// 	m_pDriver = Device->getVideoDriver();
+Planet::Planet(IrrlichtDevice* Device, const stringw Name, const io::path &Texture, const f32 Radius)
+{
+	m_pDevice = Device;
+	m_pSMgr = Device->getSceneManager();
+	m_pDriver = Device->getVideoDriver();
 
-// 	m_pName = Name;
+	m_pName = Name;
 
-// 	// m_pSceneNode = m_pSMgr->addSphereSceneNode(Radius, 160, 0, -1, vector3df(0, 0, 0), vector3df(0, 0, 0));
-// 	m_pSceneNode = m_pSMgr->addCubeSceneNode(Radius, 0, -1, vector3df(0, 0, 0), vector3df(0, 0, 0));
-// 	m_pSceneNode->setMaterialFlag(video::EMF_LIGHTING, false);
+	m_pSceneNode = m_pSMgr->addSphereSceneNode(Radius, 160, 0, -1, vector3df(0, 0, 0), vector3df(0, 0, 0));
+	// m_pSceneNode = m_pSMgr->addCubeSceneNode(Radius, 0, -1, vector3df(0, 0, 0), vector3df(0, 0, 0));
+	m_pSceneNode->setMaterialFlag(video::EMF_LIGHTING, false);
 
-// 	m_pSceneNode->setMaterialTexture(0, m_pDriver->getTexture("../assets/cubemap/earth/top.png"));
-// }
+	m_pSceneNode->setMaterialTexture(0, m_pDriver->getTexture(Texture));
+}
 
 Planet::~Planet()
 {
@@ -127,37 +127,37 @@ Planet::~Planet()
 // 	return Material;
 // }
 
-void Planet::setName(std::string Name)
+void Planet::setName(stringw Name)
 {
 	m_pName = Name;
 }
-std::string Planet::getName()
+stringw Planet::getName()
 {
 	return m_pName;
 }
 
-// void Planet::showWireframe(const bool State)
-// {
-// 	if(m_pSceneNode != 0)
-// 		m_pSceneNode->setMaterialFlag(video::EMF_WIREFRAME, State);
+void Planet::showWireframe(const bool State)
+{
+	if(m_pSceneNode != 0)
+		m_pSceneNode->setMaterialFlag(video::EMF_WIREFRAME, State);
 
-// 	m_pShowWireframe = State;
-// }
+	m_pShowWireframe = State;
+}
 
-// void Planet::showBoundingBox(const bool State)
-// {
-// 	// TODO: Show/hide bounding box
-// 	m_pShowBoundingBox = State;
-// }
+void Planet::showBoundingBox(const bool State)
+{
+	// TODO: Show/hide bounding box
+	m_pShowBoundingBox = State;
+}
 
-// void Planet::showNormal(const bool State)
-// {
-// 	// TODO: Show/hide normals
-// 	m_pShowNormal = State;
-// }
+void Planet::showNormal(const bool State)
+{
+	// TODO: Show/hide normals
+	m_pShowNormal = State;
+}
 
-// void Planet::showVelocity(const bool State)
-// {
-// 	// TODO: Show/hide velocity markers
-// 	m_pShowVelocity = State;
-// }
+void Planet::showVelocity(const bool State)
+{
+	// TODO: Show/hide velocity markers
+	m_pShowVelocity = State;
+}

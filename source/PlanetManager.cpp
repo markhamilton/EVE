@@ -2,61 +2,61 @@
 
 #include "PlanetManager.hpp"
 
-// PlanetManager::PlanetManager(IrrlichtDevice* Device)
-// {
-// 	m_pDevice			= Device;
-// 	m_pDriver 			= Device->getVideoDriver();
-// 	m_pSMgr 			= Device->getSceneManager();
+PlanetManager::PlanetManager(IrrlichtDevice* Device)
+{
+	m_pDevice			= Device;
+	m_pDriver 			= Device->getVideoDriver();
+	m_pSMgr 			= Device->getSceneManager();
 
-// 	m_pShowWireframe 	= false;
-// 	m_pShowBoundingBox 	= false;
-// 	m_pShowNormal 		= false;
-// 	m_pShowVelocity 	= false;
-// }
+	m_pShowWireframe 	= false;
+	m_pShowBoundingBox 	= false;
+	m_pShowNormal 		= false;
+	m_pShowVelocity 	= false;
+}
 
 PlanetManager::~PlanetManager()
 {
 
 }
-// void PlanetManager::addPlanet(const std::string Name, const double Radius, const vector3d Origin)
-// {
-// 	Planet* p = new Planet();
-// 	m_pPlanetList.push_back(p);
-// }
+void PlanetManager::addPlanet(const stringw Name, const double Radius, const vector3df Origin)
+{
+	Planet* p = new Planet(m_pDevice, Name, "../assets/earth.jpg", Radius);
+	m_pPlanetList.push_back(p);
+}
 
-// void PlanetManager::showWireframe(const bool State)
-// {
-// 	for(int ii = 0; ii < m_pPlanetList.size(); ii++)
-// 		m_pPlanetList[ii]->showWireframe(State);
+void PlanetManager::showWireframe(const bool State)
+{
+	for(int ii = 0; ii < m_pPlanetList.size(); ii++)
+		m_pPlanetList[ii]->showWireframe(State);
 
-// 	m_pShowWireframe = State;
-// }
+	m_pShowWireframe = State;
+}
 
-// void PlanetManager::showBoundingBox(const bool State)
-// {
-// 	for(int ii = 0; ii < m_pPlanetList.size(); ii++)
-// 		m_pPlanetList[ii]->showBoundingBox(State);
+void PlanetManager::showBoundingBox(const bool State)
+{
+	for(int ii = 0; ii < m_pPlanetList.size(); ii++)
+		m_pPlanetList[ii]->showBoundingBox(State);
 
-// 	m_pShowBoundingBox = State;
-// }
+	m_pShowBoundingBox = State;
+}
 
-// void PlanetManager::showNormal(const bool State)
-// {
-// 	for(int ii = 0; ii < m_pPlanetList.size(); ii++)
-// 		m_pPlanetList[ii]->showNormal(State);
+void PlanetManager::showNormal(const bool State)
+{
+	for(int ii = 0; ii < m_pPlanetList.size(); ii++)
+		m_pPlanetList[ii]->showNormal(State);
 
-// 	m_pShowNormal = State;
-// }
+	m_pShowNormal = State;
+}
 
-// void PlanetManager::showVelocity(const bool State)
-// {
-// 	for(int ii = 0; ii < m_pPlanetList.size(); ii++)
-// 		m_pPlanetList[ii]->showVelocity(State);
+void PlanetManager::showVelocity(const bool State)
+{
+	for(int ii = 0; ii < m_pPlanetList.size(); ii++)
+		m_pPlanetList[ii]->showVelocity(State);
 
-// 	m_pShowVelocity = State;
-// }
+	m_pShowVelocity = State;
+}
 
-// void PlanetManager::loadSystem(const io::path &XmlFile, const Ogre::Vector3 RelativeOrigin)
-// {
-// 	// TODO: Load a system and place all the objects
-// }
+void PlanetManager::loadSystem(const io::path &XmlFile, const vector3df RelativeOrigin)
+{
+	// TODO: Load a system and place all the objects
+}

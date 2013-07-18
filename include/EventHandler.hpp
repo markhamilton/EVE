@@ -12,7 +12,6 @@ using namespace gui;
 
 class EventHandler : public IEventReceiver
 {
-protected:
 	
 };
 

@@ -26,12 +26,13 @@ public:
 protected:
 	bool init(const stringw wndTitle);
 	void createScene();
-	void renderScene();
+	void updateScene();
 
 	IrrlichtDevice*		m_pDevice;
-	IVideoDriver* 		m_pVideo;
+	IVideoDriver* 		m_pDriver;
 	ISceneManager* 		m_pSMgr;
 
+	ICameraSceneNode* 	m_pCamera;
 
 	PlanetManager*		m_pPlanetManager;
 
