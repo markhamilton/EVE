@@ -18,7 +18,7 @@ PlanetManager::~PlanetManager()
 {
 
 }
-// void PlanetManager::addPlanet(const std::string Name, const double Radius, const vector3f Origin)
+// void PlanetManager::addPlanet(const std::string Name, const double Radius, const vector3d Origin)
 // {
 // 	Planet* p = new Planet();
 // 	m_pPlanetList.push_back(p);

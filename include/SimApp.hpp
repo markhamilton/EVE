@@ -10,17 +10,17 @@
 class SimApp
 {
 public:
-	SimApp();
+	SimApp(GLFWwindow* window);
 	~SimApp();
  
 	bool init(const std::string wndTitle);
 	void createScene();
 
-	void start();
 	void renderScene();
 
 protected:
 	PlanetManager*		m_pPlanetManager;
+	GLFWwindow*			m_pWindow;
 
 private:
 	bool		m_bSettingsMode;

@@ -12,7 +12,7 @@ public:
 	// PlanetManager(IrrlichtDevice* Device);
 	~PlanetManager();
 
-	// void addPlanet(const std::string Name, const double Radius, const Vector3f Origin);
+	// void addPlanet(const std::string Name, const double Radius, const vector3f Origin);
 
 	// void toggleWireframe() 		{ showWireframe(!m_pShowWireframe); }
 	// void toggleBoundingBox() 	{ showBoundingBox(!m_pShowBoundingBox); }
