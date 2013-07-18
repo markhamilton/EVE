@@ -468,7 +468,6 @@ ifeq ($(config),releasesinglethreaddynamic32)
 endif
 
 OBJECTS := \
-	$(OBJDIR)/EventHandler.o \
 	$(OBJDIR)/PlanetManager.o \
 	$(OBJDIR)/Planet.o \
 	$(OBJDIR)/SimApp.o \
@@ -537,9 +536,6 @@ endif
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 endif
 
-$(OBJDIR)/EventHandler.o: ../../source/EventHandler.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/PlanetManager.o: ../../source/PlanetManager.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"

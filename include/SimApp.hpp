@@ -15,13 +15,16 @@ using namespace scene;
 using namespace io;
 using namespace gui;
 
-class SimApp
+class SimApp : public IEventReceiver
 {
 public:
 	SimApp();
 	~SimApp();
  
 	void start();
+	void shutdown();
+
+	virtual bool OnEvent(const SEvent& event);
 
 protected:
 	bool init(const stringw wndTitle);
@@ -29,6 +32,7 @@ protected:
 	void updateScene();
 
 	IrrlichtDevice*		m_pDevice;
+	ILogger*			m_pLog;
 	IVideoDriver* 		m_pDriver;
 	ISceneManager* 		m_pSMgr;
 

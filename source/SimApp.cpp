@@ -6,7 +6,6 @@
 // TODO: GUI
 
 #include "SimApp.hpp"
-#include "EventHandler.hpp"
 
 int main(int argc, char **argv)
 {
@@ -19,6 +18,7 @@ int main(int argc, char **argv)
 SimApp::SimApp()
 {
 	m_pDevice 			= 0;
+	m_pLog 				= 0;
 	m_pDriver			= 0;
 	m_pSMgr				= 0;
 	m_pCamera			= 0;
@@ -36,6 +36,8 @@ void SimApp::start()
 
 	createScene();
 
+	m_pLog->log("Ready!");
+
 	// Main app loop
 	while(m_pDevice->run())
 	{
@@ -48,8 +50,8 @@ void SimApp::start()
 
 void SimApp::createScene()
 {
-	//m_pLog->logMessage("Creating scene...");
-	// TODO: Init scene, camera, gui, simulation models, lighting
+	m_pLog->log("Creating scene...");
+	// TODO: Init simulation models, physical models, lighting, shaders
 	// TODO: Load scene objects here
 
 	// Skybox is temporary, I will add something more realistic later
@@ -60,7 +62,6 @@ void SimApp::createScene()
 		m_pDriver->getTexture("../assets/skybox/starfield_right.jpg"),
 		m_pDriver->getTexture("../assets/skybox/starfield_front.jpg"),
 		m_pDriver->getTexture("../assets/skybox/starfield_back.jpg"));
-
 
 	m_pPlanetManager = new PlanetManager(m_pDevice);
 	m_pPlanetManager->addPlanet("earth", 40.0f, vector3df(0, 0, 0));
@@ -78,7 +79,7 @@ bool SimApp::init(const stringw wndTitle)
 	wndParam.DriverType 			= EDT_OPENGL;
 	wndParam.Doublebuffer 			= true;
 	wndParam.DriverMultithreaded	= true;
-	// wndParam.EventReceiver 			= EventHandler();
+	wndParam.EventReceiver 			= this;
 	wndParam.Fullscreen 			= false;
 	wndParam.HighPrecisionFPU		= true;
 	wndParam.Stencilbuffer			= true;
@@ -90,9 +91,41 @@ bool SimApp::init(const stringw wndTitle)
 	m_pDevice = createDeviceEx(wndParam);
 	m_pDevice->setWindowCaption(wndTitle.c_str());
 
-	m_pDriver = m_pDevice->getVideoDriver();
-	m_pSMgr = m_pDevice->getSceneManager();
-
+	m_pLog 		= m_pDevice->getLogger();
+	m_pDriver 	= m_pDevice->getVideoDriver();
+	m_pSMgr 	= m_pDevice->getSceneManager();
 
 	return true;
+}
+
+void SimApp::shutdown()
+{
+	m_pDevice->closeDevice();
+}
+
+bool SimApp::OnEvent(const SEvent& event)
+{
+	if (!m_pDevice)
+		return false;
+
+	if(event.EventType == EET_KEY_INPUT_EVENT && event.KeyInput.PressedDown == false)
+	{
+		if (event.KeyInput.Key == KEY_ESCAPE )
+		{
+			shutdown();
+		}
+		else if (event.KeyInput.Key == KEY_F9)
+		{
+			IImage* image = m_pDevice->getVideoDriver()->createScreenShot();
+			if (image)
+			{
+				m_pDevice->getVideoDriver()->writeImageToFile(image, "screenshot.png");
+				image->drop();
+			}
+		}
+		else if (event.KeyInput.Key == KEY_F12)
+		{
+			m_pPlanetManager->toggleWireframe();
+		}
+	}
 }
