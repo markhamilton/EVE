@@ -38,8 +38,8 @@ ifeq ($(config),release64)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libglfw.a -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
-  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libglfw.a
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lglfw3 -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
+  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -60,8 +60,8 @@ ifeq ($(config),debug64)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libglfw.a -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
-  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libglfw.a
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lglfw3 -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
+  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -82,8 +82,8 @@ ifeq ($(config),debug64)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libglfw.a -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
-  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libglfw.a
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lglfw3 -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
+  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -104,8 +104,8 @@ ifeq ($(config),release64)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libglfw.a -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
-  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libglfw.a
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lglfw3 -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
+  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -126,8 +126,8 @@ ifeq ($(config),debugdynamic64)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -levds ../../bin/libsimc.a ../../bin/libglfw.a -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
-  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a ../../bin/libglfw.a
+  LIBS      += -levds ../../bin/libsimc.a -lglfw3 -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
+  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -148,8 +148,8 @@ ifeq ($(config),releasedynamic64)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -levds ../../bin/libsimc.a ../../bin/libglfw.a -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
-  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a ../../bin/libglfw.a
+  LIBS      += -levds ../../bin/libsimc.a -lglfw3 -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
+  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -170,8 +170,8 @@ ifeq ($(config),debugsinglethread64)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libglfw.a -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
-  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libglfw.a
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lglfw3 -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
+  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -192,8 +192,8 @@ ifeq ($(config),releasesinglethread64)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libglfw.a -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
-  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libglfw.a
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lglfw3 -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
+  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -214,8 +214,8 @@ ifeq ($(config),debugsinglethreaddynamic64)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -levds ../../bin/libsimc.a ../../bin/libglfw.a -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
-  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a ../../bin/libglfw.a
+  LIBS      += -levds ../../bin/libsimc.a -lglfw3 -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
+  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -236,8 +236,8 @@ ifeq ($(config),releasesinglethreaddynamic64)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -levds ../../bin/libsimc.a ../../bin/libglfw.a -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
-  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a ../../bin/libglfw.a
+  LIBS      += -levds ../../bin/libsimc.a -lglfw3 -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
+  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -258,8 +258,8 @@ ifeq ($(config),release32)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libglfw.a -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
-  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libglfw.a
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lglfw3 -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
+  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -280,8 +280,8 @@ ifeq ($(config),debug32)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libglfw.a -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
-  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libglfw.a
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lglfw3 -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
+  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -302,8 +302,8 @@ ifeq ($(config),debug32)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libglfw.a -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
-  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libglfw.a
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lglfw3 -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
+  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -324,8 +324,8 @@ ifeq ($(config),release32)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libglfw.a -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
-  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libglfw.a
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lglfw3 -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
+  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -346,8 +346,8 @@ ifeq ($(config),debugdynamic32)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -levds ../../bin/libsimc.a ../../bin/libglfw.a -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
-  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a ../../bin/libglfw.a
+  LIBS      += -levds ../../bin/libsimc.a -lglfw3 -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
+  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -368,8 +368,8 @@ ifeq ($(config),releasedynamic32)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -levds ../../bin/libsimc.a ../../bin/libglfw.a -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
-  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a ../../bin/libglfw.a
+  LIBS      += -levds ../../bin/libsimc.a -lglfw3 -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
+  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -390,8 +390,8 @@ ifeq ($(config),debugsinglethread32)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libglfw.a -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
-  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libglfw.a
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lglfw3 -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
+  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -412,8 +412,8 @@ ifeq ($(config),releasesinglethread32)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libglfw.a -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
-  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libglfw.a
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lglfw3 -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
+  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -434,8 +434,8 @@ ifeq ($(config),debugsinglethreaddynamic32)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -levds ../../bin/libsimc.a ../../bin/libglfw.a -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
-  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a ../../bin/libglfw.a
+  LIBS      += -levds ../../bin/libsimc.a -lglfw3 -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
+  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -456,8 +456,8 @@ ifeq ($(config),releasesinglethreaddynamic32)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -levds ../../bin/libsimc.a ../../bin/libglfw.a -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
-  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a ../../bin/libglfw.a
+  LIBS      += -levds ../../bin/libsimc.a -lglfw3 -lm -lpthread -lXxf86vm -lGL -lX11 -lXrandr -lXi
+  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef

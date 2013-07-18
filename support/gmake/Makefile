@@ -6,17 +6,13 @@ ifndef config
 endif
 export config
 
-PROJECTS := glfw EVE simc evds
+PROJECTS := EVE simc evds
 
 .PHONY: all clean help $(PROJECTS)
 
 all: $(PROJECTS)
 
-glfw: 
-	@echo "==== Building glfw ($(config)) ===="
-	@${MAKE} --no-print-directory -C . -f glfw.make
-
-EVE: evds simc glfw
+EVE: evds simc
 	@echo "==== Building EVE ($(config)) ===="
 	@${MAKE} --no-print-directory -C . -f EVE.make
 
@@ -29,7 +25,6 @@ evds:
 	@${MAKE} --no-print-directory -C . -f evds.make
 
 clean:
-	@${MAKE} --no-print-directory -C . -f glfw.make clean
 	@${MAKE} --no-print-directory -C . -f EVE.make clean
 	@${MAKE} --no-print-directory -C . -f simc.make clean
 	@${MAKE} --no-print-directory -C . -f evds.make clean
@@ -62,7 +57,6 @@ help:
 	@echo "TARGETS:"
 	@echo "   all (default)"
 	@echo "   clean"
-	@echo "   glfw"
 	@echo "   EVE"
 	@echo "   simc"
 	@echo "   evds"

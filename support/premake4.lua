@@ -58,6 +58,10 @@ solution "EVE"
 			}
 			includedirs { "../external/config/glfw_win32" }
 		configuration { "linux" }
+			defines {
+				"GLFW_USE_EGL",
+				"GLFW_CLIENT_LIBRARY=opengl"
+			}
 			files {
 				"../external/glfw/src/glx_*.*",
 				"../external/glfw/src/x11_*.*"

@@ -31,7 +31,7 @@ ifeq ($(config),release64)
   OBJDIR     = obj/x64/Release/glfw
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libglfw.a
-  DEFINES   += -DNDEBUG
+  DEFINES   += -DNDEBUG -DGLFW_USE_EGL -DGLFW_CLIENT_LIBRARY=opengl
   INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m64
@@ -53,7 +53,7 @@ ifeq ($(config),debug64)
   OBJDIR     = obj/x64/Debug/glfw
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libglfw.a
-  DEFINES   += -DDEBUG
+  DEFINES   += -DDEBUG -DGLFW_USE_EGL -DGLFW_CLIENT_LIBRARY=opengl
   INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m64
@@ -75,7 +75,7 @@ ifeq ($(config),debug64)
   OBJDIR     = obj/x64/Debug/glfw
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libglfw.a
-  DEFINES   += -DDEBUG
+  DEFINES   += -DDEBUG -DGLFW_USE_EGL -DGLFW_CLIENT_LIBRARY=opengl
   INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m64
@@ -97,7 +97,7 @@ ifeq ($(config),release64)
   OBJDIR     = obj/x64/Release/glfw
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libglfw.a
-  DEFINES   += -DNDEBUG
+  DEFINES   += -DNDEBUG -DGLFW_USE_EGL -DGLFW_CLIENT_LIBRARY=opengl
   INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m64
@@ -119,7 +119,7 @@ ifeq ($(config),debugdynamic64)
   OBJDIR     = obj/x64/DebugDynamic/glfw
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libglfw.a
-  DEFINES   += 
+  DEFINES   += -DGLFW_USE_EGL -DGLFW_CLIENT_LIBRARY=opengl
   INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
@@ -141,7 +141,7 @@ ifeq ($(config),releasedynamic64)
   OBJDIR     = obj/x64/ReleaseDynamic/glfw
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libglfw.a
-  DEFINES   += 
+  DEFINES   += -DGLFW_USE_EGL -DGLFW_CLIENT_LIBRARY=opengl
   INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
@@ -163,7 +163,7 @@ ifeq ($(config),debugsinglethread64)
   OBJDIR     = obj/x64/DebugSingleThread/glfw
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libglfw.a
-  DEFINES   += 
+  DEFINES   += -DGLFW_USE_EGL -DGLFW_CLIENT_LIBRARY=opengl
   INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
@@ -185,7 +185,7 @@ ifeq ($(config),releasesinglethread64)
   OBJDIR     = obj/x64/ReleaseSingleThread/glfw
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libglfw.a
-  DEFINES   += 
+  DEFINES   += -DGLFW_USE_EGL -DGLFW_CLIENT_LIBRARY=opengl
   INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
@@ -207,7 +207,7 @@ ifeq ($(config),debugsinglethreaddynamic64)
   OBJDIR     = obj/x64/DebugSingleThreadDynamic/glfw
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libglfw.a
-  DEFINES   += 
+  DEFINES   += -DGLFW_USE_EGL -DGLFW_CLIENT_LIBRARY=opengl
   INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
@@ -229,7 +229,7 @@ ifeq ($(config),releasesinglethreaddynamic64)
   OBJDIR     = obj/x64/ReleaseSingleThreadDynamic/glfw
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libglfw.a
-  DEFINES   += 
+  DEFINES   += -DGLFW_USE_EGL -DGLFW_CLIENT_LIBRARY=opengl
   INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
@@ -251,7 +251,7 @@ ifeq ($(config),release32)
   OBJDIR     = obj/x32/Release/glfw
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libglfw.a
-  DEFINES   += -DNDEBUG
+  DEFINES   += -DNDEBUG -DGLFW_USE_EGL -DGLFW_CLIENT_LIBRARY=opengl
   INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m32
@@ -273,7 +273,7 @@ ifeq ($(config),debug32)
   OBJDIR     = obj/x32/Debug/glfw
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libglfw.a
-  DEFINES   += -DDEBUG
+  DEFINES   += -DDEBUG -DGLFW_USE_EGL -DGLFW_CLIENT_LIBRARY=opengl
   INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m32
@@ -295,7 +295,7 @@ ifeq ($(config),debug32)
   OBJDIR     = obj/x32/Debug/glfw
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libglfw.a
-  DEFINES   += -DDEBUG
+  DEFINES   += -DDEBUG -DGLFW_USE_EGL -DGLFW_CLIENT_LIBRARY=opengl
   INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m32
@@ -317,7 +317,7 @@ ifeq ($(config),release32)
   OBJDIR     = obj/x32/Release/glfw
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libglfw.a
-  DEFINES   += -DNDEBUG
+  DEFINES   += -DNDEBUG -DGLFW_USE_EGL -DGLFW_CLIENT_LIBRARY=opengl
   INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m32
@@ -339,7 +339,7 @@ ifeq ($(config),debugdynamic32)
   OBJDIR     = obj/x32/DebugDynamic/glfw
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libglfw.a
-  DEFINES   += 
+  DEFINES   += -DGLFW_USE_EGL -DGLFW_CLIENT_LIBRARY=opengl
   INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
@@ -361,7 +361,7 @@ ifeq ($(config),releasedynamic32)
   OBJDIR     = obj/x32/ReleaseDynamic/glfw
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libglfw.a
-  DEFINES   += 
+  DEFINES   += -DGLFW_USE_EGL -DGLFW_CLIENT_LIBRARY=opengl
   INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
@@ -383,7 +383,7 @@ ifeq ($(config),debugsinglethread32)
   OBJDIR     = obj/x32/DebugSingleThread/glfw
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libglfw.a
-  DEFINES   += 
+  DEFINES   += -DGLFW_USE_EGL -DGLFW_CLIENT_LIBRARY=opengl
   INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
@@ -405,7 +405,7 @@ ifeq ($(config),releasesinglethread32)
   OBJDIR     = obj/x32/ReleaseSingleThread/glfw
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libglfw.a
-  DEFINES   += 
+  DEFINES   += -DGLFW_USE_EGL -DGLFW_CLIENT_LIBRARY=opengl
   INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
@@ -427,7 +427,7 @@ ifeq ($(config),debugsinglethreaddynamic32)
   OBJDIR     = obj/x32/DebugSingleThreadDynamic/glfw
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libglfw.a
-  DEFINES   += 
+  DEFINES   += -DGLFW_USE_EGL -DGLFW_CLIENT_LIBRARY=opengl
   INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
@@ -449,7 +449,7 @@ ifeq ($(config),releasesinglethreaddynamic32)
   OBJDIR     = obj/x32/ReleaseSingleThreadDynamic/glfw
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libglfw.a
-  DEFINES   += 
+  DEFINES   += -DGLFW_USE_EGL -DGLFW_CLIENT_LIBRARY=opengl
   INCLUDES  += -I../../external/glfw/include -I../../external/glfw/deps -I../../external/config/glfw_x11
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
