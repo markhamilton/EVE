@@ -56,10 +56,6 @@ solution "EVE"
 			"../external/irrlicht/source/Irrlicht/aesGladman/*.h",
 		}
 		excludes {
-			-- "../external/irrlicht/source/Irrlicht/jpeglib/jcsample.c",
-			-- "../external/irrlicht/source/Irrlicht/jpeglib/jcinit.c",
-			-- "../external/irrlicht/source/Irrlicht/jpeglib/jdmaster.c",
-			-- "../external/irrlicht/source/Irrlicht/jpeglib/jdsample.c",
 			"../external/irrlicht/source/Irrlicht/jpeglib/jmemdos.c",
 			"../external/irrlicht/source/Irrlicht/jpeglib/jmemmac.c",
 			"../external/irrlicht/source/Irrlicht/jpeglib/ansi2knr.c",
