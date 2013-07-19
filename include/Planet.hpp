@@ -31,6 +31,7 @@ public:
 	void showVelocity(const bool State);
 
 private:
+	IMesh* createPlanetQLSCFaceMesh(const f32 radius, const vector3df normal) const;
 	// IMesh* createPlanetMesh(const s32 Radius);
 
 	IrrlichtDevice*			m_pDevice;
