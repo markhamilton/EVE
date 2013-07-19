@@ -114,18 +114,18 @@ bool SimApp::OnEvent(const SEvent& event)
 		{
 			shutdown();
 		}
+		else if (event.KeyInput.Key == KEY_F1)
+		{
+			m_pPlanetManager->toggleWireframe();
+		}
 		else if (event.KeyInput.Key == KEY_F9)
 		{
 			IImage* image = m_pDevice->getVideoDriver()->createScreenShot();
 			if (image)
 			{
-				m_pDevice->getVideoDriver()->writeImageToFile(image, "screenshot.png");
+				m_pDriver->writeImageToFile(image, "screenshot.png");
 				image->drop();
 			}
-		}
-		else if (event.KeyInput.Key == KEY_F12)
-		{
-			m_pPlanetManager->toggleWireframe();
 		}
 	}
 }
