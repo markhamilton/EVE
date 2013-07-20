@@ -12,54 +12,105 @@
 // 	m_pShowVelocity 	= false;
 // }
 
-IMesh* Planet::createPlanetQLSCFaceMesh(const f32 radius, const vector3df normal) const
+Planet::Planet(IrrlichtDevice* Device, const stringw Name, const io::path &Texture, const f32 Radius)
 {
-	const f32 circ 		= 2 * 3.141592 * radius;
+	m_pDevice		= Device;
+	m_pSMgr 		= Device->getSceneManager();
+	m_pDriver 		= Device->getVideoDriver();
+
+	m_pName 		= Name;
+
+	// m_pSceneNode 	= m_pSMgr->addSphereSceneNode(Radius, 160, 0, -1, vector3df(0, 0, 0), vector3df(0, 0, 0));
+	m_pSceneNode	= m_pSMgr->addMeshSceneNode(createPlanetMesh(Radius));
+
+	m_pSceneNode->setMaterialFlag(video::EMF_LIGHTING, false);
+
+	// m_pSceneNode->setMaterialTexture(0, m_pDriver->getTexture(Texture));
+}
+
+Planet::~Planet()
+{
+}
+
+SMeshBuffer* Planet::createPlanetQLSCFaceMeshBuffer(const f32 Radius, const vector3df Normal)
+{
+	const f32 circ 		= 2 * 3.141592 * Radius;
 	const f32 range 	= circ / 4;
 
 	const u32 polyCount = 90;
 
 
 	SMeshBuffer* buffer = new SMeshBuffer();
-
-	// buffer->setHardwareMappingHint(EHM_STATIC);
-
 	S3DVertex vtx;
 	vtx.Color.set(255, 255, 255, 255);
+	vtx.Pos.set(0, 0, Radius);
 
 	// Create the vertices
-	buffer->Vertices.reallocate(polyCount * polyCount);
-	for (u32 yy = 0; yy < polyCount - 1; ++yy)
+	for (u32 xx = 0; xx < polyCount - 1; ++xx)
 	{
-		for (u32 xx = 0; xx < polyCount - 1; ++xx)
+		for (u32 yy = 0; yy < polyCount - 1; ++yy)
 		{
-			vtx.Pos.set(xx, 0, yy);
+			// f32 vX = (xx / polyCount) * Radius;
+			// f32 vY = (yy / polyCount) * Radius;
+			vtx.Pos.X = (f32)xx / (f32)polyCount * Radius - Radius * 0.5;
+			vtx.Pos.Y = (f32)yy / (f32)polyCount * Radius - Radius * 0.5;
+			vtx.TCoords.set((f32)xx / ((f32)polyCount - 1.0), (f32)yy / ((f32)polyCount - 1.0));
 			buffer->Vertices.push_back(vtx);
 		}
 	}
 
 	// Create the indices
-	buffer->Indices.reallocate(polyCount * polyCount * 6);
+	for (u32 xx = 0; xx < polyCount - 1; ++xx)
+	{
+		for (u32 yy = 0; yy < polyCount - 1; ++yy)
+		{
+			const u32 cur = xx * polyCount + yy;
 
+			buffer->Indices.push_back(cur);
+			buffer->Indices.push_back(cur + 1);
+			buffer->Indices.push_back(cur + polyCount);
+
+			buffer->Indices.push_back(cur + 1);
+			buffer->Indices.push_back(cur + 1 + polyCount);
+			buffer->Indices.push_back(cur + polyCount);
+		}
+	}
+
+	return buffer;
 }
 
-Planet::Planet(IrrlichtDevice* Device, const stringw Name, const io::path &Texture, const f32 Radius)
+IMesh* Planet::createPlanetMesh(const f32 Radius)
 {
-	m_pDevice = Device;
-	m_pSMgr = Device->getSceneManager();
-	m_pDriver = Device->getVideoDriver();
+	SMesh* mesh 		= new SMesh;
+	SMeshBuffer* face 	= 0;
 
-	m_pName = Name;
+	face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(1, 0, 0));
+	mesh->addMeshBuffer(face);
+	face->drop();
 
-	m_pSceneNode = m_pSMgr->addSphereSceneNode(Radius, 160, 0, -1, vector3df(0, 0, 0), vector3df(0, 0, 0));
-	// m_pSceneNode = m_pSMgr->addCubeSceneNode(Radius, 0, -1, vector3df(0, 0, 0), vector3df(0, 0, 0));
-	m_pSceneNode->setMaterialFlag(video::EMF_LIGHTING, false);
+	// face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(0, 1, 0));
+	// mesh->addMeshBuffer(face);
+	// face->drop();
 
-	m_pSceneNode->setMaterialTexture(0, m_pDriver->getTexture(Texture));
-}
+	// face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(0, 0, 1));
+	// mesh->addMeshBuffer(face);
+	// face->drop();
 
-Planet::~Planet()
-{
+	// face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(-1, 0, 0));
+	// mesh->addMeshBuffer(face);
+	// face->drop();
+
+	// face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(0, -1, 0));
+	// mesh->addMeshBuffer(face);
+	// face->drop();
+
+	// face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(0, 0, -1));
+	// mesh->addMeshBuffer(face);
+	// face->drop();
+
+	mesh->recalculateBoundingBox();
+
+	return mesh;
 }
 
 // virtual void Planet::OnRegisterSceneNode()

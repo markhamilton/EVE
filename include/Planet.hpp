@@ -31,8 +31,8 @@ public:
 	void showVelocity(const bool State);
 
 private:
-	IMesh* createPlanetQLSCFaceMesh(const f32 radius, const vector3df normal) const;
-	// IMesh* createPlanetMesh(const s32 Radius);
+	static SMeshBuffer* createPlanetQLSCFaceMeshBuffer(const f32 Radius, const vector3df Normal);
+	static IMesh* createPlanetMesh(const f32 Radius);
 
 	IrrlichtDevice*			m_pDevice;
 	ISceneManager*			m_pSMgr;
