@@ -16,12 +16,14 @@ Planet::Planet(IrrlichtDevice* Device, const stringw Name, const io::path &Textu
 
 	m_pName 			= Name;
 
-	// m_pSceneNode 	= m_pSMgr->addSphereSceneNode(Radius, 160, 0, -1, vector3df(0, 0, 0), vector3df(0, 0, 0));
-	// m_pSceneNode		= m_pSMgr->addMeshSceneNode(createPlanetMesh(Radius));
-	m_pSceneNode		= m_pSMgr->addOctreeSceneNode(createPlanetMesh(Radius));
+	IMeshSceneNode* ref	= m_pSMgr->addSphereSceneNode(Radius, 160, 0, -1, vector3df(0, 0, 0), vector3df(0, 0, 0));
+	ref->setMaterialFlag(video::EMF_LIGHTING, false);
+	ref->setMaterialTexture(0, m_pDriver->getTexture("../assets/earth.jpg"));
+
+	// m_pSceneNode		= m_pSMgr->addOctreeSceneNode(createPlanetMesh(Radius));
+	m_pSceneNode		= m_pSMgr->addMeshSceneNode(createPlanetMesh(Radius));
 
 	m_pSceneNode->setMaterialFlag(video::EMF_LIGHTING, false);
-
 	m_pSceneNode->setMaterialTexture(0, m_pDriver->getTexture("../assets/cubemap/earth/left.png"));
 }
 
@@ -29,15 +31,12 @@ Planet::~Planet()
 {
 }
 
-SMeshBuffer* Planet::createPlanetQLSCFaceMeshBuffer(const f32 Radius, const vector3df Normal)
+SMeshBuffer* Planet::createPlanetQLSCFaceMeshBuffer(const f32 Radius, const vector3df Direction)
 {
 	const f32 circ 		= 2 * 3.141592 * Radius;
 	const f32 range 	= circ / 4;
 
 	const u32 polyCount = 90;
-	const f32 deltaDegPerPoly = 90 / polyCount;
-
-	vector3df rot 		= Normal.getSphericalCoordinateAngles();
 
 	SMeshBuffer* buffer = new SMeshBuffer();
 	S3DVertex vtx;
@@ -49,13 +48,9 @@ SMeshBuffer* Planet::createPlanetQLSCFaceMeshBuffer(const f32 Radius, const vect
 		for (u32 yy = 0; yy < polyCount; ++yy)
 		{
 			vector3df v = vector3df(
-				(f32)xx / (f32)polyCount * Radius - Radius * 0.5,
-				(f32)yy / (f32)polyCount * Radius - Radius * 0.5,
+				(f32)xx / (f32)polyCount * Radius * 2 - Radius,
+				(f32)yy / (f32)polyCount * Radius * 2 - Radius,
 				-Radius);
-
-			v.rotateYZBy(rot.X, vector3df(0,0,0));
-			v.rotateXZBy(rot.Y, vector3df(0,0,0));
-			v.rotateXYBy(rot.Z, vector3df(0,0,0));
 
 			vtx.Pos.set(v.X, v.Y, v.Z);
 
@@ -98,9 +93,9 @@ IMesh* Planet::createPlanetMesh(const f32 Radius)
 	mesh->addMeshBuffer(face);
 	face->drop();
 
-	// face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(0, 1, 0));
-	// mesh->addMeshBuffer(face);
-	// face->drop();
+	face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(0, 1, 0));
+	mesh->addMeshBuffer(face);
+	face->drop();
 
 	// face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(0, 0, 1));
 	// mesh->addMeshBuffer(face);
