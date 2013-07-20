@@ -16,15 +16,14 @@ Planet::Planet(IrrlichtDevice* Device, const stringw Name, const io::path &Textu
 
 	m_pName 			= Name;
 
-	IMeshSceneNode* ref	= m_pSMgr->addSphereSceneNode(Radius, 160, 0, -1, vector3df(0, 0, 0), vector3df(0, 0, 0));
-	ref->setMaterialFlag(video::EMF_LIGHTING, false);
-	ref->setMaterialTexture(0, m_pDriver->getTexture("../assets/earth.jpg"));
+	// IMeshSceneNode* ref	= m_pSMgr->addSphereSceneNode(Radius, 160, 0, -1, vector3df(0, 0, 0), vector3df(0, 0, 0));
+	// ref->setMaterialFlag(video::EMF_LIGHTING, false);
+	// ref->setMaterialTexture(0, m_pDriver->getTexture("../assets/earth.jpg"));
 
 	// m_pSceneNode		= m_pSMgr->addOctreeSceneNode(createPlanetMesh(Radius));
 	m_pSceneNode		= m_pSMgr->addMeshSceneNode(createPlanetMesh(Radius));
 
 	m_pSceneNode->setMaterialFlag(video::EMF_LIGHTING, false);
-	m_pSceneNode->setMaterialTexture(0, m_pDriver->getTexture("../assets/cubemap/earth/left.png"));
 }
 
 Planet::~Planet()
@@ -37,10 +36,12 @@ SMeshBuffer* Planet::createPlanetQLSCFaceMeshBuffer(const f32 Radius, const vect
 	const f32 range 	= circ / 4;
 
 	const u32 polyCount = 90;
+	const vector3df rot = Direction.getHorizontalAngle();
 
 	SMeshBuffer* buffer = new SMeshBuffer();
 	S3DVertex vtx;
 	vtx.Color.set(255, 255, 255, 255);
+
 
 	// Create the vertices
 	for (u32 xx = 0; xx < polyCount; ++xx)
@@ -48,13 +49,17 @@ SMeshBuffer* Planet::createPlanetQLSCFaceMeshBuffer(const f32 Radius, const vect
 		for (u32 yy = 0; yy < polyCount; ++yy)
 		{
 			vector3df v = vector3df(
-				(f32)xx / (f32)polyCount * Radius * 2 - Radius,
-				(f32)yy / (f32)polyCount * Radius * 2 - Radius,
+				(f32)xx / ((f32)polyCount - 1.0) * Radius * 2 - Radius,
+				(f32)yy / ((f32)polyCount - 1.0) * Radius * 2 - Radius,
 				-Radius);
+
+			v.rotateYZBy(rot.X);
+			v.rotateXZBy(rot.Y);
+			v.rotateXYBy(rot.Z);
 
 			vtx.Pos.set(v.X, v.Y, v.Z);
 
-			vtx.TCoords.set((f32)xx / (f32)polyCount, (f32)yy / (f32)polyCount);
+			vtx.TCoords.set((f32)xx / ((f32)polyCount - 1), (f32)yy / ((f32)polyCount - 1));
 			buffer->Vertices.push_back(vtx);
 		}
 	}
@@ -76,8 +81,6 @@ SMeshBuffer* Planet::createPlanetQLSCFaceMeshBuffer(const f32 Radius, const vect
 		}
 	}
 
-	// Recalculate Normals
-	
 	buffer->recalculateBoundingBox();
 	buffer->setHardwareMappingHint(EHM_STATIC);
 
@@ -90,28 +93,34 @@ IMesh* Planet::createPlanetMesh(const f32 Radius)
 	SMeshBuffer* face 	= 0;
 
 	face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(1, 0, 0));
+	face->Material.setTexture(0, m_pDriver->getTexture("../assets/cubemap/earth/front.png"));
 	mesh->addMeshBuffer(face);
 	face->drop();
 
 	face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(0, 1, 0));
+	face->Material.setTexture(0, m_pDriver->getTexture("../assets/cubemap/earth/top.png"));
 	mesh->addMeshBuffer(face);
 	face->drop();
 
-	// face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(0, 0, 1));
-	// mesh->addMeshBuffer(face);
-	// face->drop();
+	face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(0, 0, 1));
+	face->Material.setTexture(0, m_pDriver->getTexture("../assets/cubemap/earth/left.png"));
+	mesh->addMeshBuffer(face);
+	face->drop();
 
-	// face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(-1, 0, 0));
-	// mesh->addMeshBuffer(face);
-	// face->drop();
+	face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(-1, 0, 0));
+	face->Material.setTexture(0, m_pDriver->getTexture("../assets/cubemap/earth/back.png"));
+	mesh->addMeshBuffer(face);
+	face->drop();
 
-	// face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(0, -1, 0));
-	// mesh->addMeshBuffer(face);
-	// face->drop();
+	face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(0, -1, 0));
+	face->Material.setTexture(0, m_pDriver->getTexture("../assets/cubemap/earth/bottom.png"));
+	mesh->addMeshBuffer(face);
+	face->drop();
 
-	// face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(0, 0, -1));
-	// mesh->addMeshBuffer(face);
-	// face->drop();
+	face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(0, 0, -1));
+	face->Material.setTexture(0, m_pDriver->getTexture("../assets/cubemap/earth/right.png"));
+	mesh->addMeshBuffer(face);
+	face->drop();
 
 	mesh->recalculateBoundingBox();
 
