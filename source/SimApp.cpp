@@ -118,6 +118,10 @@ bool SimApp::OnEvent(const SEvent& event)
 		{
 			m_pPlanetManager->toggleWireframe();
 		}
+		else if (event.KeyInput.Key == KEY_F2)
+		{
+			m_pPlanetManager->togglePointCloud();
+		}
 		else if (event.KeyInput.Key == KEY_F9)
 		{
 			IImage* image = m_pDevice->getVideoDriver()->createScreenShot();

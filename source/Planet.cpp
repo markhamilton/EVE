@@ -1,31 +1,28 @@
 // TODO: Create Quadrilateralized spherical cube
 
 #include "Planet.hpp"
-
-// Planet::Planet()
-// {
-// 	m_pSceneNode 		= 0;
-
-// 	m_pShowWireframe 	= false;
-// 	m_pShowBoundingBox 	= false;
-// 	m_pShowNormal 		= false;
-// 	m_pShowVelocity 	= false;
-// }
+#include <math.h>
 
 Planet::Planet(IrrlichtDevice* Device, const stringw Name, const io::path &Texture, const f32 Radius)
 {
-	m_pDevice		= Device;
-	m_pSMgr 		= Device->getSceneManager();
-	m_pDriver 		= Device->getVideoDriver();
+	m_pDevice			= Device;
+	m_pSMgr 			= Device->getSceneManager();
+	m_pDriver 			= Device->getVideoDriver();
 
-	m_pName 		= Name;
+	m_pShowWireframe 	= false;
+	m_pShowPointCloud 	= false;
+	m_pShowBoundingBox 	= false;
+	m_pShowNormal 		= false;
+	m_pShowVelocity 	= false;
+
+	m_pName 			= Name;
 
 	// m_pSceneNode 	= m_pSMgr->addSphereSceneNode(Radius, 160, 0, -1, vector3df(0, 0, 0), vector3df(0, 0, 0));
-	m_pSceneNode	= m_pSMgr->addMeshSceneNode(createPlanetMesh(Radius));
+	m_pSceneNode		= m_pSMgr->addMeshSceneNode(createPlanetMesh(Radius));
 
 	m_pSceneNode->setMaterialFlag(video::EMF_LIGHTING, false);
 
-	// m_pSceneNode->setMaterialTexture(0, m_pDriver->getTexture(Texture));
+	m_pSceneNode->setMaterialTexture(0, m_pDriver->getTexture("../assets/cubemap/earth/top.png"));
 }
 
 Planet::~Planet()
@@ -43,18 +40,16 @@ SMeshBuffer* Planet::createPlanetQLSCFaceMeshBuffer(const f32 Radius, const vect
 	SMeshBuffer* buffer = new SMeshBuffer();
 	S3DVertex vtx;
 	vtx.Color.set(255, 255, 255, 255);
-	vtx.Pos.set(0, 0, Radius);
+	vtx.Pos.set(0, 0, -Radius);
 
 	// Create the vertices
-	for (u32 xx = 0; xx < polyCount - 1; ++xx)
+	for (u32 xx = 0; xx < polyCount; ++xx)
 	{
-		for (u32 yy = 0; yy < polyCount - 1; ++yy)
+		for (u32 yy = 0; yy < polyCount; ++yy)
 		{
-			// f32 vX = (xx / polyCount) * Radius;
-			// f32 vY = (yy / polyCount) * Radius;
 			vtx.Pos.X = (f32)xx / (f32)polyCount * Radius - Radius * 0.5;
 			vtx.Pos.Y = (f32)yy / (f32)polyCount * Radius - Radius * 0.5;
-			vtx.TCoords.set((f32)xx / ((f32)polyCount - 1.0), (f32)yy / ((f32)polyCount - 1.0));
+			vtx.TCoords.set((f32)xx / (f32)polyCount, (f32)yy / (f32)polyCount);
 			buffer->Vertices.push_back(vtx);
 		}
 	}
@@ -75,6 +70,11 @@ SMeshBuffer* Planet::createPlanetQLSCFaceMeshBuffer(const f32 Radius, const vect
 			buffer->Indices.push_back(cur + polyCount);
 		}
 	}
+
+	// Recalculate Normals
+	
+	buffer->recalculateBoundingBox();
+	buffer->setHardwareMappingHint(EHM_STATIC);
 
 	return buffer;
 }
@@ -157,10 +157,24 @@ stringw Planet::getName()
 
 void Planet::showWireframe(const bool State)
 {
-	if(m_pSceneNode != 0)
+	if (m_pSceneNode != 0)
+	{
 		m_pSceneNode->setMaterialFlag(video::EMF_WIREFRAME, State);
+		if (State) showPointCloud(false);
+	}
 
 	m_pShowWireframe = State;
+}
+
+void Planet::showPointCloud(const bool State)
+{
+	if (m_pSceneNode != 0)
+	{
+		m_pSceneNode->setMaterialFlag(video::EMF_POINTCLOUD, State);
+		if (State) showWireframe(false);
+	}
+
+	m_pShowPointCloud = State;
 }
 
 void Planet::showBoundingBox(const bool State)

@@ -9,6 +9,7 @@ PlanetManager::PlanetManager(IrrlichtDevice* Device)
 	m_pSMgr 			= Device->getSceneManager();
 
 	m_pShowWireframe 	= false;
+	m_pShowPointCloud	= false;
 	m_pShowBoundingBox 	= false;
 	m_pShowNormal 		= false;
 	m_pShowVelocity 	= false;
@@ -26,10 +27,24 @@ void PlanetManager::addPlanet(const stringw Name, const double Radius, const vec
 
 void PlanetManager::showWireframe(const bool State)
 {
-	for(int ii = 0; ii < m_pPlanetList.size(); ii++)
+	for (int ii = 0; ii < m_pPlanetList.size(); ii++)
 		m_pPlanetList[ii]->showWireframe(State);
 
+	// Disable point cloud flags
+	if (State) showPointCloud(false);
+
 	m_pShowWireframe = State;
+}
+
+void PlanetManager::showPointCloud(const bool State)
+{
+	for (int ii = 0; ii < m_pPlanetList.size(); ii++)
+		m_pPlanetList[ii]->showPointCloud(State);
+
+	// Disable wireframe flags
+	if (State) showWireframe(false);
+
+	m_pShowPointCloud = State;
 }
 
 void PlanetManager::showBoundingBox(const bool State)

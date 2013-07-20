@@ -26,13 +26,14 @@ public:
 
 	// Misc visualization parameters
 	void showWireframe(const bool State);
+	void showPointCloud(const bool State);
 	void showBoundingBox(const bool State);
 	void showNormal(const bool State);
 	void showVelocity(const bool State);
 
 private:
-	static SMeshBuffer* createPlanetQLSCFaceMeshBuffer(const f32 Radius, const vector3df Normal);
-	static IMesh* createPlanetMesh(const f32 Radius);
+	SMeshBuffer* createPlanetQLSCFaceMeshBuffer(const f32 Radius, const vector3df Normal);
+	IMesh* createPlanetMesh(const f32 Radius);
 
 	IrrlichtDevice*			m_pDevice;
 	ISceneManager*			m_pSMgr;
@@ -52,7 +53,8 @@ private:
 
 	vector3df				m_pOrigin;
 
-	bool					m_pShowWireframe;
+	int						m_pShowWireframe;
+	int						m_pShowPointCloud;
 	bool					m_pShowBoundingBox;
 	bool					m_pShowNormal;
 	bool					m_pShowVelocity;
