@@ -1,7 +1,6 @@
 // TODO: Create Quadrilateralized spherical cube
 
 #include "Planet.hpp"
-#include <math.h>
 
 Planet::Planet(IrrlichtDevice* Device, const stringw Name, const io::path &Texture, const f32 Radius)
 {
@@ -18,11 +17,13 @@ Planet::Planet(IrrlichtDevice* Device, const stringw Name, const io::path &Textu
 	m_pName 			= Name;
 
 	// m_pSceneNode 	= m_pSMgr->addSphereSceneNode(Radius, 160, 0, -1, vector3df(0, 0, 0), vector3df(0, 0, 0));
-	m_pSceneNode		= m_pSMgr->addMeshSceneNode(createPlanetMesh(Radius));
+	// m_pSceneNode		= m_pSMgr->addMeshSceneNode(createPlanetMesh(Radius));
+	m_pSceneNode		= m_pSMgr->addOctreeSceneNode(createPlanetMesh(Radius));
 
 	m_pSceneNode->setMaterialFlag(video::EMF_LIGHTING, false);
 
 	m_pSceneNode->setMaterialTexture(0, m_pDriver->getTexture("../assets/cubemap/earth/left.png"));
+}
 
 Planet::~Planet()
 {
@@ -34,7 +35,9 @@ SMeshBuffer* Planet::createPlanetQLSCFaceMeshBuffer(const f32 Radius, const vect
 	const f32 range 	= circ / 4;
 
 	const u32 polyCount = 90;
+	const f32 deltaDegPerPoly = 90 / polyCount;
 
+	vector3df rot 		= Normal.getSphericalCoordinateAngles();
 
 	SMeshBuffer* buffer = new SMeshBuffer();
 	S3DVertex vtx;
@@ -45,10 +48,16 @@ SMeshBuffer* Planet::createPlanetQLSCFaceMeshBuffer(const f32 Radius, const vect
 	{
 		for (u32 yy = 0; yy < polyCount; ++yy)
 		{
-			vtx.Pos.set(
+			vector3df v = vector3df(
 				(f32)xx / (f32)polyCount * Radius - Radius * 0.5,
 				(f32)yy / (f32)polyCount * Radius - Radius * 0.5,
 				-Radius);
+
+			v.rotateYZBy(rot.X, vector3df(0,0,0));
+			v.rotateXZBy(rot.Y, vector3df(0,0,0));
+			v.rotateXYBy(rot.Z, vector3df(0,0,0));
+
+			vtx.Pos.set(v.X, v.Y, v.Z);
 
 			vtx.TCoords.set((f32)xx / (f32)polyCount, (f32)yy / (f32)polyCount);
 			buffer->Vertices.push_back(vtx);
@@ -89,9 +98,9 @@ IMesh* Planet::createPlanetMesh(const f32 Radius)
 	mesh->addMeshBuffer(face);
 	face->drop();
 
-	face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(0, 1, 0));
-	mesh->addMeshBuffer(face);
-	face->drop();
+	// face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(0, 1, 0));
+	// mesh->addMeshBuffer(face);
+	// face->drop();
 
 	// face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(0, 0, 1));
 	// mesh->addMeshBuffer(face);
