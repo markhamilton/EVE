@@ -22,8 +22,7 @@ Planet::Planet(IrrlichtDevice* Device, const stringw Name, const io::path &Textu
 
 	m_pSceneNode->setMaterialFlag(video::EMF_LIGHTING, false);
 
-	m_pSceneNode->setMaterialTexture(0, m_pDriver->getTexture("../assets/cubemap/earth/top.png"));
-}
+	m_pSceneNode->setMaterialTexture(0, m_pDriver->getTexture("../assets/cubemap/earth/left.png"));
 
 Planet::~Planet()
 {
@@ -40,15 +39,17 @@ SMeshBuffer* Planet::createPlanetQLSCFaceMeshBuffer(const f32 Radius, const vect
 	SMeshBuffer* buffer = new SMeshBuffer();
 	S3DVertex vtx;
 	vtx.Color.set(255, 255, 255, 255);
-	vtx.Pos.set(0, 0, -Radius);
 
 	// Create the vertices
 	for (u32 xx = 0; xx < polyCount; ++xx)
 	{
 		for (u32 yy = 0; yy < polyCount; ++yy)
 		{
-			vtx.Pos.X = (f32)xx / (f32)polyCount * Radius - Radius * 0.5;
-			vtx.Pos.Y = (f32)yy / (f32)polyCount * Radius - Radius * 0.5;
+			vtx.Pos.set(
+				(f32)xx / (f32)polyCount * Radius - Radius * 0.5,
+				(f32)yy / (f32)polyCount * Radius - Radius * 0.5,
+				-Radius);
+
 			vtx.TCoords.set((f32)xx / (f32)polyCount, (f32)yy / (f32)polyCount);
 			buffer->Vertices.push_back(vtx);
 		}
@@ -88,9 +89,9 @@ IMesh* Planet::createPlanetMesh(const f32 Radius)
 	mesh->addMeshBuffer(face);
 	face->drop();
 
-	// face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(0, 1, 0));
-	// mesh->addMeshBuffer(face);
-	// face->drop();
+	face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(0, 1, 0));
+	mesh->addMeshBuffer(face);
+	face->drop();
 
 	// face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(0, 0, 1));
 	// mesh->addMeshBuffer(face);
