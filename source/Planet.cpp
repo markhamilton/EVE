@@ -35,31 +35,49 @@ SMeshBuffer* Planet::createPlanetQLSCFaceMeshBuffer(const f32 Radius, const vect
 	const f32 circ 		= 2 * 3.141592 * Radius;
 	const f32 range 	= circ / 4;
 
-	const u32 polyCount = 90;
+	const u32 polyCount = 40;
 	const vector3df rot = Direction.getHorizontalAngle();
 
 	SMeshBuffer* buffer = new SMeshBuffer();
 	S3DVertex vtx;
 	vtx.Color.set(255, 255, 255, 255);
 
-
 	// Create the vertices
 	for (u32 xx = 0; xx < polyCount; ++xx)
 	{
 		for (u32 yy = 0; yy < polyCount; ++yy)
 		{
-			vector3df v = vector3df(
-				(f32)xx / ((f32)polyCount - 1.0) * Radius * 2 - Radius,
-				(f32)yy / ((f32)polyCount - 1.0) * Radius * 2 - Radius,
-				-Radius);
+			// // Makes a cube
+			// vector3df v = vector3df(
+			// 	(f32)xx / ((f32)polyCount - 1.0) * Radius * 2 - Radius,
+			// 	(f32)yy / ((f32)polyCount - 1.0) * Radius * 2 - Radius,
+			// 	-Radius);
 
-			v.rotateYZBy(rot.X);
-			v.rotateXZBy(rot.Y);
-			v.rotateXYBy(rot.Z);
+			// v.rotateYZBy(rot.X);
+			// v.rotateXZBy(rot.Y);
+			// v.rotateXYBy(rot.Z);
+
+			vector3df vrot = vector3df(
+				((f32)xx / ((f32)polyCount - 1.0) * Radius * 2 - Radius),
+				((f32)yy / ((f32)polyCount - 1.0) * Radius * 2 - Radius),
+				Radius).getHorizontalAngle();
+
+			vector3df v = vector3df(0, 0, Radius);
+
+			if (Direction.Y == 0) {
+				v.rotateYZBy(rot.X + vrot.X);
+				v.rotateXZBy(rot.Y + vrot.Y);
+			}
+			else
+			{
+				v.rotateYZBy(vrot.X);
+				v.rotateXZBy(vrot.Y - 90 * Direction.Y);
+				v.rotateXYBy(90);
+			}
 
 			vtx.Pos.set(v.X, v.Y, v.Z);
 
-			vtx.TCoords.set((f32)xx / ((f32)polyCount - 1), (f32)yy / ((f32)polyCount - 1));
+			vtx.TCoords.set((f32)xx / ((f32)polyCount - 1), polyCount - ((f32)yy / ((f32)polyCount - 1)));
 			buffer->Vertices.push_back(vtx);
 		}
 	}
@@ -93,7 +111,7 @@ IMesh* Planet::createPlanetMesh(const f32 Radius)
 	SMeshBuffer* face 	= 0;
 
 	face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(1, 0, 0));
-	face->Material.setTexture(0, m_pDriver->getTexture("../assets/cubemap/earth/front.png"));
+	face->Material.setTexture(0, m_pDriver->getTexture("../assets/cubemap/earth/left.png"));
 	mesh->addMeshBuffer(face);
 	face->drop();
 
@@ -103,12 +121,12 @@ IMesh* Planet::createPlanetMesh(const f32 Radius)
 	face->drop();
 
 	face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(0, 0, 1));
-	face->Material.setTexture(0, m_pDriver->getTexture("../assets/cubemap/earth/left.png"));
+	face->Material.setTexture(0, m_pDriver->getTexture("../assets/cubemap/earth/back.png"));
 	mesh->addMeshBuffer(face);
 	face->drop();
 
 	face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(-1, 0, 0));
-	face->Material.setTexture(0, m_pDriver->getTexture("../assets/cubemap/earth/back.png"));
+	face->Material.setTexture(0, m_pDriver->getTexture("../assets/cubemap/earth/right.png"));
 	mesh->addMeshBuffer(face);
 	face->drop();
 
@@ -118,7 +136,7 @@ IMesh* Planet::createPlanetMesh(const f32 Radius)
 	face->drop();
 
 	face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(0, 0, -1));
-	face->Material.setTexture(0, m_pDriver->getTexture("../assets/cubemap/earth/right.png"));
+	face->Material.setTexture(0, m_pDriver->getTexture("../assets/cubemap/earth/front.png"));
 	mesh->addMeshBuffer(face);
 	face->drop();
 
