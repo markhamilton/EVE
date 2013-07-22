@@ -43,4 +43,4 @@ To generate project files for Visual Studio 2010, type:
 
 There will be a new folder called `vs2010` and the `.sln` and `.cproj` files will be in there for you. Open and hit F5 to build.
 
-I usually keep the code::blocks projects and GNU make build files all up to date; those are in their respective folders under `support`. Open the `support/codeblocks/EVE.workspace` file in order to open the project in codeblocks, or `cd` to the `gmake` folder to build from a Makefile.
+I usually keep the code::blocks projects and GNU make build files all up to date; those are in their respective folders under `support`. Open the `support/codeblocks/EVE.workspace` file in order to open the project in codeblocks, or `cd` to the `support/gmake` folder to build from a Makefile.
