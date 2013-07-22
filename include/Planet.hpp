@@ -26,6 +26,8 @@ public:
 	// Misc visualization parameters
 	void showWireframe(const bool State);
 	void showPointCloud(const bool State);
+	void showLighting(const bool State);
+	void showOutline(const bool State);
 	void showBoundingBox(const bool State);
 	void showNormal(const bool State);
 	void showVelocity(const bool State);
@@ -54,6 +56,8 @@ private:
 
 	int						m_pShowWireframe;
 	int						m_pShowPointCloud;
+	int						m_pShowLighting;
+	int						m_pShowOutline;
 	bool					m_pShowBoundingBox;
 	bool					m_pShowNormal;
 	bool					m_pShowVelocity;

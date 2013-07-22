@@ -10,6 +10,8 @@ PlanetManager::PlanetManager(IrrlichtDevice* Device)
 
 	m_pShowWireframe 	= false;
 	m_pShowPointCloud	= false;
+	m_pShowLighting 	= true;
+	m_pShowOutline 	 	= false;
 	m_pShowBoundingBox 	= false;
 	m_pShowNormal 		= false;
 	m_pShowVelocity 	= false;
@@ -45,6 +47,22 @@ void PlanetManager::showPointCloud(const bool State)
 	if (State) showWireframe(false);
 
 	m_pShowPointCloud = State;
+}
+
+void PlanetManager::showLighting(const bool State)
+{
+	for (int ii = 0; ii < m_pPlanetList.size(); ii++)
+		m_pPlanetList[ii]->showLighting(State);
+
+	m_pShowLighting = State;
+}
+
+void PlanetManager::showOutline(const bool State)
+{
+	for (int ii = 0; ii < m_pPlanetList.size(); ii++)
+		m_pPlanetList[ii]->showOutline(State);
+
+	m_pShowOutline = State;
 }
 
 void PlanetManager::showBoundingBox(const bool State)

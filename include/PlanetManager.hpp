@@ -24,12 +24,16 @@ public:
 
 	void toggleWireframe() 		{ showWireframe(!m_pShowWireframe); }
 	void togglePointCloud() 	{ showPointCloud(!m_pShowPointCloud); }
+	void toggleLighting() 		{ showLighting(!m_pShowLighting); }
+	void toggleOutline() 		{ showOutline(!m_pShowOutline); }
 	void toggleBoundingBox() 	{ showBoundingBox(!m_pShowBoundingBox); }
 	void toggleNormal() 		{ showNormal(!m_pShowNormal); }
 	void toggleVelocity() 		{ showVelocity(!m_pShowVelocity); }
 
 	void showWireframe(const bool State);
 	void showPointCloud(const bool State);
+	void showLighting(const bool State);
+	void showOutline(const bool State);
 	void showBoundingBox(const bool State);
 	void showNormal(const bool State);
 	void showVelocity(const bool State);
@@ -44,6 +48,8 @@ private:
 
 	bool					m_pShowWireframe;
 	bool					m_pShowPointCloud;
+	bool					m_pShowLighting;
+	bool					m_pShowOutline;
 	bool					m_pShowBoundingBox;
 	bool					m_pShowNormal;
 	bool					m_pShowVelocity;

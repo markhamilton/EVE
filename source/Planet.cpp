@@ -10,6 +10,8 @@ Planet::Planet(IrrlichtDevice* Device, const stringw Name, const io::path &Textu
 
 	m_pShowWireframe 	= false;
 	m_pShowPointCloud 	= false;
+	m_pShowLighting 	= true;
+	m_pShowOutline 		= false;
 	m_pShowBoundingBox 	= false;
 	m_pShowNormal 		= false;
 	m_pShowVelocity 	= false;
@@ -20,10 +22,10 @@ Planet::Planet(IrrlichtDevice* Device, const stringw Name, const io::path &Textu
 	// ref->setMaterialFlag(video::EMF_LIGHTING, false);
 	// ref->setMaterialTexture(0, m_pDriver->getTexture("../assets/earth.jpg"));
 
-	// m_pSceneNode		= m_pSMgr->addOctreeSceneNode(createPlanetMesh(Radius));
-	m_pSceneNode		= m_pSMgr->addMeshSceneNode(createPlanetMesh(Radius));
+	m_pSceneNode		= m_pSMgr->addOctreeSceneNode(createPlanetMesh(Radius));
+	// m_pSceneNode		= m_pSMgr->addMeshSceneNode(createPlanetMesh(Radius));
 
-	m_pSceneNode->setMaterialFlag(video::EMF_LIGHTING, false);
+	m_pSceneNode->setMaterialFlag(video::EMF_LIGHTING, true);
 }
 
 Planet::~Planet()
@@ -97,6 +99,19 @@ SMeshBuffer* Planet::createPlanetQLSCFaceMeshBuffer(const f32 Radius, const vect
 			buffer->Indices.push_back(cur + 1 + polyCount);
 			buffer->Indices.push_back(cur + polyCount);
 		}
+	}
+
+	// Recalculate normals
+	for (u32 i = 0; i < buffer->Indices.size(); i += 3)
+	{
+		const core::vector3df normal = core::plane3d<f32>(
+			buffer->Vertices[buffer->Indices[i+0]].Pos,
+			buffer->Vertices[buffer->Indices[i+1]].Pos,
+			buffer->Vertices[buffer->Indices[i+2]].Pos).Normal;
+
+		buffer->Vertices[buffer->Indices[i+0]].Normal = normal;
+		buffer->Vertices[buffer->Indices[i+1]].Normal = normal;
+		buffer->Vertices[buffer->Indices[i+2]].Normal = normal;
 	}
 
 	buffer->recalculateBoundingBox();
@@ -207,6 +222,20 @@ void Planet::showPointCloud(const bool State)
 	}
 
 	m_pShowPointCloud = State;
+}
+
+void Planet::showLighting(const bool State)
+{
+	if (m_pSceneNode != 0)
+		m_pSceneNode->setMaterialFlag(video::EMF_LIGHTING, State);
+
+	m_pShowLighting = State;
+}
+
+void Planet::showOutline(const bool State)
+{
+	// TODO: Show/hide mesh lighting
+	m_pShowOutline = State;
 }
 
 void Planet::showBoundingBox(const bool State)

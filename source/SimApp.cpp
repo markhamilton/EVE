@@ -54,6 +54,9 @@ void SimApp::createScene()
 	// TODO: Init simulation models, physical models, lighting, shaders
 	// TODO: Load scene objects here
 
+	// Sun 
+	ILightSceneNode *sun = m_pSMgr->addLightSceneNode(0, vector3df(0, 0, -100.0f), SColorf(1.0f, 1.0f, 1.0f), 1000.0f);
+
 	// Skybox is temporary, I will add something more realistic later
 	ISceneNode *skybox = m_pSMgr->addSkyBoxSceneNode(
 		m_pDriver->getTexture("../assets/skybox/starfield_top.jpg"),
@@ -67,14 +70,13 @@ void SimApp::createScene()
 	m_pPlanetManager->addPlanet("earth", 40.0f, vector3df(0, 0, 0));
 
 	m_pCamera = m_pSMgr->addCameraSceneNodeMaya(0, -150, 200, 1500, -1, 70, true);
-	m_pCamera->setPosition(vector3df(0, 0, 90.0f));
 	m_pCamera->setTarget(vector3df(0, 0, 0));
 }
 
 bool SimApp::init(const stringw wndTitle)
 {
 	SIrrlichtCreationParameters wndParam;
-	wndParam.AntiAlias 				= 32;
+	wndParam.AntiAlias 				= 4;
 	wndParam.Bits 					= 32;
 	wndParam.DriverType 			= EDT_OPENGL;
 	wndParam.Doublebuffer 			= true;
@@ -121,6 +123,10 @@ bool SimApp::OnEvent(const SEvent& event)
 		else if (event.KeyInput.Key == KEY_F2)
 		{
 			m_pPlanetManager->togglePointCloud();
+		}
+		else if (event.KeyInput.Key == KEY_F3)
+		{
+			m_pPlanetManager->toggleLighting();
 		}
 		else if (event.KeyInput.Key == KEY_F9)
 		{
