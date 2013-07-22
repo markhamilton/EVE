@@ -66,8 +66,8 @@ void SimApp::createScene()
 	m_pPlanetManager = new PlanetManager(m_pDevice);
 	m_pPlanetManager->addPlanet("earth", 40.0f, vector3df(0, 0, 0));
 
-	m_pCamera = m_pSMgr->addCameraSceneNodeMaya(0, -1500, 200, 1500, -1, 70, true);
-	m_pCamera->setPosition(vector3df(70, 0, 0));
+	m_pCamera = m_pSMgr->addCameraSceneNodeMaya(0, -150, 200, 1500, -1, 70, true);
+	m_pCamera->setPosition(vector3df(0, 0, 90.0f));
 	m_pCamera->setTarget(vector3df(0, 0, 0));
 }
 
@@ -114,18 +114,22 @@ bool SimApp::OnEvent(const SEvent& event)
 		{
 			shutdown();
 		}
+		else if (event.KeyInput.Key == KEY_F1)
+		{
+			m_pPlanetManager->toggleWireframe();
+		}
+		else if (event.KeyInput.Key == KEY_F2)
+		{
+			m_pPlanetManager->togglePointCloud();
+		}
 		else if (event.KeyInput.Key == KEY_F9)
 		{
 			IImage* image = m_pDevice->getVideoDriver()->createScreenShot();
 			if (image)
 			{
-				m_pDevice->getVideoDriver()->writeImageToFile(image, "screenshot.png");
+				m_pDriver->writeImageToFile(image, "screenshot.png");
 				image->drop();
 			}
-		}
-		else if (event.KeyInput.Key == KEY_F12)
-		{
-			m_pPlanetManager->toggleWireframe();
 		}
 	}
 }

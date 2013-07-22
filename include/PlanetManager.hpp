@@ -23,11 +23,13 @@ public:
 	void addPlanet(const stringw Name, const double Radius, const vector3df Origin);
 
 	void toggleWireframe() 		{ showWireframe(!m_pShowWireframe); }
+	void togglePointCloud() 	{ showPointCloud(!m_pShowPointCloud); }
 	void toggleBoundingBox() 	{ showBoundingBox(!m_pShowBoundingBox); }
 	void toggleNormal() 		{ showNormal(!m_pShowNormal); }
 	void toggleVelocity() 		{ showVelocity(!m_pShowVelocity); }
 
 	void showWireframe(const bool State);
+	void showPointCloud(const bool State);
 	void showBoundingBox(const bool State);
 	void showNormal(const bool State);
 	void showVelocity(const bool State);
@@ -41,6 +43,7 @@ private:
 	vector<Planet*>			m_pPlanetList;
 
 	bool					m_pShowWireframe;
+	bool					m_pShowPointCloud;
 	bool					m_pShowBoundingBox;
 	bool					m_pShowNormal;
 	bool					m_pShowVelocity;

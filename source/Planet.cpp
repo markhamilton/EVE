@@ -2,96 +2,147 @@
 
 #include "Planet.hpp"
 
-// Planet::Planet()
-// {
-// 	m_pSceneNode 		= 0;
-
-// 	m_pShowWireframe 	= false;
-// 	m_pShowBoundingBox 	= false;
-// 	m_pShowNormal 		= false;
-// 	m_pShowVelocity 	= false;
-// }
-
-// Planet::Planet(ISceneNode* parent, ISceneManager* mgr, s32 id)
-// 		: scene::ISceneNode(parent, mgr, id)
-// {
-// 	m_pMaterial.Wireframe = false;
-// 	m_pMaterial.Lighting = false;
-
-//     m_pVertices = vector<S3DVertex>(4);
-// 	m_pVertices[0] = video::S3DVertex(0,0,10, 1,1,0,
-// 			video::SColor(255,0,255,255), 0, 1);
-// 	m_pVertices[1] = video::S3DVertex(10,0,-10, 1,0,0,
-// 			video::SColor(255,255,0,255), 1, 1);
-// 	m_pVertices[2] = video::S3DVertex(0,20,0, 0,1,1,
-// 			video::SColor(255,255,255,0), 1, 0);
-// 	m_pVertices[3] = video::S3DVertex(-10,0,-10, 0,0,1,
-// 			video::SColor(255,0,255,0), 0, 0);
-
-// 	m_pBox.reset(m_pVertices[0].Pos);
-// 	for (s32 i=1; i<4; ++i)
-// 		m_pBox.addInternalPoint(m_pVertices[i].Pos);
-// }
-
-// SMesh* createCubeMesh(f32 cubeSize = 5.f)
-// {
-// 	video::SColor cubeColor(255,255,255,255);
-
-// 	SMeshBuffer* buffer = new SMeshBuffer();
-// 	SMeshBuffer* buffer2 = new SMeshBuffer();
-// 	u16 u[6] = { 0,2,1, 0,3,2};
-// 	u16 u2[6] = {0,11,10, 0,10,7};
-
-// 	for (s32 i=0; i<6; ++i)
-// 	{
-// 		buffer->Indices.push_back( u[i] );
-// 		buffer2->Indices.push_back( u2[i] );
-// 	}
-
-// 	buffer->Vertices.set_used(12);
-// 	buffer->Vertices[0] = video::S3DVertex(0,0,0, -1,-1,-1, cubeColor, 0, 1);
-// 	buffer->Vertices[1] = video::S3DVertex(1,0,0, 1,-1,-1, cubeColor, 1, 1);
-// 	buffer->Vertices[2] = video::S3DVertex(1,1,0, 1, 1,-1, cubeColor, 1, 0);
-// 	buffer->Vertices[3] = video::S3DVertex(0,1,0, -1, 1,-1, cubeColor, 0, 0);
-// 	buffer->Vertices[4] = video::S3DVertex(1,0,1, 1,-1, 1, cubeColor, 0, 1);
-// 	buffer->Vertices[5] = video::S3DVertex(1,1,1, 1, 1, 1, cubeColor, 0, 0);
-
-// 	buffer2->Vertices[0] = video::S3DVertex(0,1,1, -1, 1, 1, cubeColor, 1, 0);
-// 	buffer2->Vertices[1] = video::S3DVertex(0,0,1, -1,-1, 1, cubeColor, 1, 1);
-// 	buffer2->Vertices[2] = video::S3DVertex(0,1,1, -1, 1, 1, cubeColor, 0, 1);
-// 	buffer2->Vertices[3] = video::S3DVertex(0,1,0, -1, 1,-1, cubeColor, 1, 1);
-// 	buffer2->Vertices[4] = video::S3DVertex(1,0,1, 1,-1, 1, cubeColor, 1, 0);
-// 	buffer2->Vertices[5] = video::S3DVertex(1,0,0, 1,-1,-1, cubeColor, 0, 0);
-
-// 	buffer->BoundingBox.reset(0,0,0);
-
-// 	SMesh* cubeMesh = new SMesh();
-// 	cubeMesh->addMeshBuffer(buffer);
-// 	cubeMesh->addMeshBuffer(buffer2);
-
-// 	return cubeMesh;
-
-// 	// cubeSceneNode->getMaterial(0).Textures[0] = texture1
-// 	// cubeSceneNode->getMaterial(1).Textures[0] = texture2
-// }
-
 Planet::Planet(IrrlichtDevice* Device, const stringw Name, const io::path &Texture, const f32 Radius)
 {
-	m_pDevice = Device;
-	m_pSMgr = Device->getSceneManager();
-	m_pDriver = Device->getVideoDriver();
+	m_pDevice			= Device;
+	m_pSMgr 			= Device->getSceneManager();
+	m_pDriver 			= Device->getVideoDriver();
 
-	m_pName = Name;
+	m_pShowWireframe 	= false;
+	m_pShowPointCloud 	= false;
+	m_pShowBoundingBox 	= false;
+	m_pShowNormal 		= false;
+	m_pShowVelocity 	= false;
 
-	m_pSceneNode = m_pSMgr->addSphereSceneNode(Radius, 160, 0, -1, vector3df(0, 0, 0), vector3df(0, 0, 0));
-	// m_pSceneNode = m_pSMgr->addCubeSceneNode(Radius, 0, -1, vector3df(0, 0, 0), vector3df(0, 0, 0));
+	m_pName 			= Name;
+
+	// IMeshSceneNode* ref	= m_pSMgr->addSphereSceneNode(Radius, 160, 0, -1, vector3df(0, 0, 0), vector3df(0, 0, 0));
+	// ref->setMaterialFlag(video::EMF_LIGHTING, false);
+	// ref->setMaterialTexture(0, m_pDriver->getTexture("../assets/earth.jpg"));
+
+	// m_pSceneNode		= m_pSMgr->addOctreeSceneNode(createPlanetMesh(Radius));
+	m_pSceneNode		= m_pSMgr->addMeshSceneNode(createPlanetMesh(Radius));
+
 	m_pSceneNode->setMaterialFlag(video::EMF_LIGHTING, false);
-
-	m_pSceneNode->setMaterialTexture(0, m_pDriver->getTexture(Texture));
 }
 
 Planet::~Planet()
 {
+}
+
+SMeshBuffer* Planet::createPlanetQLSCFaceMeshBuffer(const f32 Radius, const vector3df Direction)
+{
+	const f32 circ 		= 2 * 3.141592 * Radius;
+	const f32 range 	= circ / 4;
+
+	const u32 polyCount = 40;
+	const vector3df rot = Direction.getHorizontalAngle();
+
+	SMeshBuffer* buffer = new SMeshBuffer();
+	S3DVertex vtx;
+	vtx.Color.set(255, 255, 255, 255);
+
+	// Create the vertices
+	for (u32 xx = 0; xx < polyCount; ++xx)
+	{
+		for (u32 yy = 0; yy < polyCount; ++yy)
+		{
+			// // Makes a cube
+			// vector3df v = vector3df(
+			// 	(f32)xx / ((f32)polyCount - 1.0) * Radius * 2 - Radius,
+			// 	(f32)yy / ((f32)polyCount - 1.0) * Radius * 2 - Radius,
+			// 	-Radius);
+
+			// v.rotateYZBy(rot.X);
+			// v.rotateXZBy(rot.Y);
+			// v.rotateXYBy(rot.Z);
+
+			vector3df vrot = vector3df(
+				((f32)xx / ((f32)polyCount - 1.0) * Radius * 2 - Radius),
+				((f32)yy / ((f32)polyCount - 1.0) * Radius * 2 - Radius),
+				Radius).getHorizontalAngle();
+
+			vector3df v = vector3df(0, 0, Radius);
+
+			if (Direction.Y == 0) {
+				v.rotateYZBy(rot.X + vrot.X);
+				v.rotateXZBy(rot.Y + vrot.Y);
+			}
+			else
+			{
+				v.rotateYZBy(vrot.X);
+				v.rotateXZBy(vrot.Y - 90 * Direction.Y);
+				v.rotateXYBy(90);
+			}
+
+			vtx.Pos.set(v.X, v.Y, v.Z);
+
+			vtx.TCoords.set((f32)xx / ((f32)polyCount - 1), polyCount - ((f32)yy / ((f32)polyCount - 1)));
+			buffer->Vertices.push_back(vtx);
+		}
+	}
+
+	// Create the indices
+	for (u32 xx = 0; xx < polyCount - 1; ++xx)
+	{
+		for (u32 yy = 0; yy < polyCount - 1; ++yy)
+		{
+			const u32 cur = xx * polyCount + yy;
+
+			buffer->Indices.push_back(cur);
+			buffer->Indices.push_back(cur + 1);
+			buffer->Indices.push_back(cur + polyCount);
+
+			buffer->Indices.push_back(cur + 1);
+			buffer->Indices.push_back(cur + 1 + polyCount);
+			buffer->Indices.push_back(cur + polyCount);
+		}
+	}
+
+	buffer->recalculateBoundingBox();
+	buffer->setHardwareMappingHint(EHM_STATIC);
+
+	return buffer;
+}
+
+IMesh* Planet::createPlanetMesh(const f32 Radius)
+{
+	SMesh* mesh 		= new SMesh;
+	SMeshBuffer* face 	= 0;
+
+	face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(1, 0, 0));
+	face->Material.setTexture(0, m_pDriver->getTexture("../assets/cubemap/earth/left.png"));
+	mesh->addMeshBuffer(face);
+	face->drop();
+
+	face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(0, 1, 0));
+	face->Material.setTexture(0, m_pDriver->getTexture("../assets/cubemap/earth/top.png"));
+	mesh->addMeshBuffer(face);
+	face->drop();
+
+	face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(0, 0, 1));
+	face->Material.setTexture(0, m_pDriver->getTexture("../assets/cubemap/earth/back.png"));
+	mesh->addMeshBuffer(face);
+	face->drop();
+
+	face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(-1, 0, 0));
+	face->Material.setTexture(0, m_pDriver->getTexture("../assets/cubemap/earth/right.png"));
+	mesh->addMeshBuffer(face);
+	face->drop();
+
+	face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(0, -1, 0));
+	face->Material.setTexture(0, m_pDriver->getTexture("../assets/cubemap/earth/bottom.png"));
+	mesh->addMeshBuffer(face);
+	face->drop();
+
+	face = createPlanetQLSCFaceMeshBuffer(Radius, vector3df(0, 0, -1));
+	face->Material.setTexture(0, m_pDriver->getTexture("../assets/cubemap/earth/front.png"));
+	mesh->addMeshBuffer(face);
+	face->drop();
+
+	mesh->recalculateBoundingBox();
+
+	return mesh;
 }
 
 // virtual void Planet::OnRegisterSceneNode()
@@ -138,10 +189,24 @@ stringw Planet::getName()
 
 void Planet::showWireframe(const bool State)
 {
-	if(m_pSceneNode != 0)
+	if (m_pSceneNode != 0)
+	{
 		m_pSceneNode->setMaterialFlag(video::EMF_WIREFRAME, State);
+		if (State) showPointCloud(false);
+	}
 
 	m_pShowWireframe = State;
+}
+
+void Planet::showPointCloud(const bool State)
+{
+	if (m_pSceneNode != 0)
+	{
+		m_pSceneNode->setMaterialFlag(video::EMF_POINTCLOUD, State);
+		if (State) showWireframe(false);
+	}
+
+	m_pShowPointCloud = State;
 }
 
 void Planet::showBoundingBox(const bool State)

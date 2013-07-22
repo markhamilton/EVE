@@ -92,7 +92,7 @@ project "EVE"
 		links { "" }
 
 	configuration { "linux" }
-		links { "m", "pthread", "GL", "Xxf86vm" }
+		links { "m", "pthread", "GL", "Xxf86vm", "X11" }
 		linkoptions { "-lstdc++" }
 
 --------------------------------------------------------------------------------

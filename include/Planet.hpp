@@ -17,7 +17,6 @@ using namespace gui;
 class Planet
 {
 public:
-	Planet();
 	Planet(IrrlichtDevice* Device, const stringw Name, const io::path &Texture, const f32 Radius);
 	~Planet();
 
@@ -26,12 +25,14 @@ public:
 
 	// Misc visualization parameters
 	void showWireframe(const bool State);
+	void showPointCloud(const bool State);
 	void showBoundingBox(const bool State);
 	void showNormal(const bool State);
 	void showVelocity(const bool State);
 
 private:
-	// IMesh* createPlanetMesh(const s32 Radius);
+	SMeshBuffer* createPlanetQLSCFaceMeshBuffer(const f32 Radius, const vector3df Direction);
+	IMesh* createPlanetMesh(const f32 Radius);
 
 	IrrlichtDevice*			m_pDevice;
 	ISceneManager*			m_pSMgr;
@@ -51,7 +52,8 @@ private:
 
 	vector3df				m_pOrigin;
 
-	bool					m_pShowWireframe;
+	int						m_pShowWireframe;
+	int						m_pShowPointCloud;
 	bool					m_pShowBoundingBox;
 	bool					m_pShowNormal;
 	bool					m_pShowVelocity;
