@@ -55,7 +55,7 @@ void SimApp::createScene()
 	// TODO: Load scene objects here
 
 	// Sun 
-	ILightSceneNode *sun = m_pSMgr->addLightSceneNode(0, vector3df(0, 0, -100.0f), SColorf(1.0f, 1.0f, 1.0f), 1000.0f);
+	ILightSceneNode *sun = m_pSMgr->addLightSceneNode(0, vector3df(0, 0, 100.0f), SColorf(1.0f, 1.0f, 1.0f), 1000.0f);
 
 	// Skybox is temporary, I will add something more realistic later
 	ISceneNode *skybox = m_pSMgr->addSkyBoxSceneNode(
