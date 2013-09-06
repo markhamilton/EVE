@@ -468,15 +468,15 @@ ifeq ($(config),releasesinglethreaddynamic32)
 endif
 
 OBJECTS := \
-	$(OBJDIR)/sim_threading.o \
 	$(OBJDIR)/sim_linkedlist.o \
-	$(OBJDIR)/sim_curtime.o \
 	$(OBJDIR)/sim_xml.o \
+	$(OBJDIR)/sim_curtime.o \
 	$(OBJDIR)/sim_queue.o \
+	$(OBJDIR)/sim_threading.o \
 	$(OBJDIR)/tinystr.o \
-	$(OBJDIR)/tinyxmlparser.o \
-	$(OBJDIR)/tinyxmlerror.o \
 	$(OBJDIR)/tinyxml.o \
+	$(OBJDIR)/tinyxmlerror.o \
+	$(OBJDIR)/tinyxmlparser.o \
 
 RESOURCES := \
 
@@ -541,31 +541,31 @@ endif
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 endif
 
-$(OBJDIR)/sim_threading.o: ../../external/simc/source/sim_threading.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/sim_linkedlist.o: ../../external/simc/source/sim_linkedlist.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/sim_curtime.o: ../../external/simc/source/sim_curtime.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/sim_xml.o: ../../external/simc/source/sim_xml.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/sim_curtime.o: ../../external/simc/source/sim_curtime.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/sim_queue.o: ../../external/simc/source/sim_queue.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/sim_threading.o: ../../external/simc/source/sim_threading.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/tinystr.o: ../../external/simc/external/tinyxml/tinystr.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/tinyxmlparser.o: ../../external/simc/external/tinyxml/tinyxmlparser.cpp
+$(OBJDIR)/tinyxml.o: ../../external/simc/external/tinyxml/tinyxml.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/tinyxmlerror.o: ../../external/simc/external/tinyxml/tinyxmlerror.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/tinyxml.o: ../../external/simc/external/tinyxml/tinyxml.cpp
+$(OBJDIR)/tinyxmlparser.o: ../../external/simc/external/tinyxml/tinyxmlparser.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
