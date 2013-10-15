@@ -36,7 +36,7 @@ ifeq ($(config),release64)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m64 -L/usr/lib64
+  LDFLAGS   += -Wl,-x -m64 -L/usr/lib64
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -102,7 +102,7 @@ ifeq ($(config),release64)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m64 -L/usr/lib64
+  LDFLAGS   += -Wl,-x -m64 -L/usr/lib64
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -118,13 +118,13 @@ endif
 ifeq ($(config),debugdynamic64)
   OBJDIR     = obj/x64/DebugDynamic/evds
   TARGETDIR  = ../../bin
-  TARGET     = $(TARGETDIR)/libevds.so
+  TARGET     = $(TARGETDIR)/libevds.dylib
   DEFINES   += -DEVDS_LIBRARY -DSIMC_LIBRARY
   INCLUDES  += -I../../external/evds/include -I../../external/evds/external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m64 -fPIC
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -shared -m64 -L/usr/lib64
+  LDFLAGS   += -Wl,-x -dynamiclib -flat_namespace -m64 -L/usr/lib64
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -140,13 +140,13 @@ endif
 ifeq ($(config),releasedynamic64)
   OBJDIR     = obj/x64/ReleaseDynamic/evds
   TARGETDIR  = ../../bin
-  TARGET     = $(TARGETDIR)/libevds.so
+  TARGET     = $(TARGETDIR)/libevds.dylib
   DEFINES   += -DEVDS_LIBRARY -DSIMC_LIBRARY
   INCLUDES  += -I../../external/evds/include -I../../external/evds/external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m64 -fPIC
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -shared -m64 -L/usr/lib64
+  LDFLAGS   += -Wl,-x -dynamiclib -flat_namespace -m64 -L/usr/lib64
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -168,7 +168,7 @@ ifeq ($(config),debugsinglethread64)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m64 -L/usr/lib64
+  LDFLAGS   += -Wl,-x -m64 -L/usr/lib64
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -190,7 +190,7 @@ ifeq ($(config),releasesinglethread64)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m64 -L/usr/lib64
+  LDFLAGS   += -Wl,-x -m64 -L/usr/lib64
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -206,13 +206,13 @@ endif
 ifeq ($(config),debugsinglethreaddynamic64)
   OBJDIR     = obj/x64/DebugSingleThreadDynamic/evds
   TARGETDIR  = ../../bin
-  TARGET     = $(TARGETDIR)/libevds.so
+  TARGET     = $(TARGETDIR)/libevds.dylib
   DEFINES   += -DEVDS_LIBRARY -DSIMC_LIBRARY
   INCLUDES  += -I../../external/evds/include -I../../external/evds/external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m64 -fPIC
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -shared -m64 -L/usr/lib64
+  LDFLAGS   += -Wl,-x -dynamiclib -flat_namespace -m64 -L/usr/lib64
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -228,13 +228,13 @@ endif
 ifeq ($(config),releasesinglethreaddynamic64)
   OBJDIR     = obj/x64/ReleaseSingleThreadDynamic/evds
   TARGETDIR  = ../../bin
-  TARGET     = $(TARGETDIR)/libevds.so
+  TARGET     = $(TARGETDIR)/libevds.dylib
   DEFINES   += -DEVDS_LIBRARY -DSIMC_LIBRARY
   INCLUDES  += -I../../external/evds/include -I../../external/evds/external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m64 -fPIC
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -shared -m64 -L/usr/lib64
+  LDFLAGS   += -Wl,-x -dynamiclib -flat_namespace -m64 -L/usr/lib64
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -256,7 +256,7 @@ ifeq ($(config),release32)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m32 -L/usr/lib32
+  LDFLAGS   += -Wl,-x -m32 -L/usr/lib32
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -322,7 +322,7 @@ ifeq ($(config),release32)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m32 -L/usr/lib32
+  LDFLAGS   += -Wl,-x -m32 -L/usr/lib32
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -338,13 +338,13 @@ endif
 ifeq ($(config),debugdynamic32)
   OBJDIR     = obj/x32/DebugDynamic/evds
   TARGETDIR  = ../../bin
-  TARGET     = $(TARGETDIR)/libevds.so
+  TARGET     = $(TARGETDIR)/libevds.dylib
   DEFINES   += -DEVDS_LIBRARY -DSIMC_LIBRARY
   INCLUDES  += -I../../external/evds/include -I../../external/evds/external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m32 -fPIC
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -shared -m32 -L/usr/lib32
+  LDFLAGS   += -Wl,-x -dynamiclib -flat_namespace -m32 -L/usr/lib32
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -360,13 +360,13 @@ endif
 ifeq ($(config),releasedynamic32)
   OBJDIR     = obj/x32/ReleaseDynamic/evds
   TARGETDIR  = ../../bin
-  TARGET     = $(TARGETDIR)/libevds.so
+  TARGET     = $(TARGETDIR)/libevds.dylib
   DEFINES   += -DEVDS_LIBRARY -DSIMC_LIBRARY
   INCLUDES  += -I../../external/evds/include -I../../external/evds/external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m32 -fPIC
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -shared -m32 -L/usr/lib32
+  LDFLAGS   += -Wl,-x -dynamiclib -flat_namespace -m32 -L/usr/lib32
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -388,7 +388,7 @@ ifeq ($(config),debugsinglethread32)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m32 -L/usr/lib32
+  LDFLAGS   += -Wl,-x -m32 -L/usr/lib32
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -410,7 +410,7 @@ ifeq ($(config),releasesinglethread32)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m32 -L/usr/lib32
+  LDFLAGS   += -Wl,-x -m32 -L/usr/lib32
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -426,13 +426,13 @@ endif
 ifeq ($(config),debugsinglethreaddynamic32)
   OBJDIR     = obj/x32/DebugSingleThreadDynamic/evds
   TARGETDIR  = ../../bin
-  TARGET     = $(TARGETDIR)/libevds.so
+  TARGET     = $(TARGETDIR)/libevds.dylib
   DEFINES   += -DEVDS_LIBRARY -DSIMC_LIBRARY
   INCLUDES  += -I../../external/evds/include -I../../external/evds/external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m32 -fPIC
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -shared -m32 -L/usr/lib32
+  LDFLAGS   += -Wl,-x -dynamiclib -flat_namespace -m32 -L/usr/lib32
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -448,13 +448,13 @@ endif
 ifeq ($(config),releasesinglethreaddynamic32)
   OBJDIR     = obj/x32/ReleaseSingleThreadDynamic/evds
   TARGETDIR  = ../../bin
-  TARGET     = $(TARGETDIR)/libevds.so
+  TARGET     = $(TARGETDIR)/libevds.dylib
   DEFINES   += -DEVDS_LIBRARY -DSIMC_LIBRARY
   INCLUDES  += -I../../external/evds/include -I../../external/evds/external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m32 -fPIC
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -shared -m32 -L/usr/lib32
+  LDFLAGS   += -Wl,-x -dynamiclib -flat_namespace -m32 -L/usr/lib32
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -469,22 +469,22 @@ endif
 
 OBJECTS := \
 	$(OBJDIR)/evds_env.o \
+	$(OBJDIR)/evds_load.o \
+	$(OBJDIR)/evds_math.o \
+	$(OBJDIR)/evds_mesh.o \
+	$(OBJDIR)/evds_modifier.o \
 	$(OBJDIR)/evds_object.o \
 	$(OBJDIR)/evds_save.o \
-	$(OBJDIR)/evds_math.o \
-	$(OBJDIR)/evds_modifier.o \
-	$(OBJDIR)/evds_variable.o \
 	$(OBJDIR)/evds_system.o \
-	$(OBJDIR)/evds_load.o \
-	$(OBJDIR)/evds_mesh.o \
-	$(OBJDIR)/evds_planet.o \
-	$(OBJDIR)/evds_prop_rk4.o \
-	$(OBJDIR)/evds_fueltank.o \
-	$(OBJDIR)/evds_engine.o \
-	$(OBJDIR)/evds_gimbal.o \
-	$(OBJDIR)/evds_database.o \
-	$(OBJDIR)/evds_prop_heun.o \
+	$(OBJDIR)/evds_variable.o \
 	$(OBJDIR)/evds_body.o \
+	$(OBJDIR)/evds_database.o \
+	$(OBJDIR)/evds_engine.o \
+	$(OBJDIR)/evds_fueltank.o \
+	$(OBJDIR)/evds_gimbal.o \
+	$(OBJDIR)/evds_planet.o \
+	$(OBJDIR)/evds_prop_heun.o \
+	$(OBJDIR)/evds_prop_rk4.o \
 
 RESOURCES := \
 
@@ -552,52 +552,52 @@ endif
 $(OBJDIR)/evds_env.o: ../../external/evds/source/evds_core/evds_env.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/evds_load.o: ../../external/evds/source/evds_core/evds_load.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/evds_math.o: ../../external/evds/source/evds_core/evds_math.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/evds_mesh.o: ../../external/evds/source/evds_core/evds_mesh.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/evds_modifier.o: ../../external/evds/source/evds_core/evds_modifier.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/evds_object.o: ../../external/evds/source/evds_core/evds_object.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/evds_save.o: ../../external/evds/source/evds_core/evds_save.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/evds_math.o: ../../external/evds/source/evds_core/evds_math.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/evds_modifier.o: ../../external/evds/source/evds_core/evds_modifier.c
+$(OBJDIR)/evds_system.o: ../../external/evds/source/evds_core/evds_system.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/evds_variable.o: ../../external/evds/source/evds_core/evds_variable.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/evds_system.o: ../../external/evds/source/evds_core/evds_system.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/evds_load.o: ../../external/evds/source/evds_core/evds_load.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/evds_mesh.o: ../../external/evds/source/evds_core/evds_mesh.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/evds_planet.o: ../../external/evds/source/evds_common/evds_planet.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/evds_prop_rk4.o: ../../external/evds/source/evds_common/evds_prop_rk4.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/evds_fueltank.o: ../../external/evds/source/evds_common/evds_fueltank.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/evds_engine.o: ../../external/evds/source/evds_common/evds_engine.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/evds_gimbal.o: ../../external/evds/source/evds_common/evds_gimbal.c
+$(OBJDIR)/evds_body.o: ../../external/evds/source/evds_common/evds_body.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/evds_database.o: ../../external/evds/source/evds_common/evds_database.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/evds_engine.o: ../../external/evds/source/evds_common/evds_engine.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/evds_fueltank.o: ../../external/evds/source/evds_common/evds_fueltank.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/evds_gimbal.o: ../../external/evds/source/evds_common/evds_gimbal.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/evds_planet.o: ../../external/evds/source/evds_common/evds_planet.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/evds_prop_heun.o: ../../external/evds/source/evds_common/evds_prop_heun.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/evds_body.o: ../../external/evds/source/evds_common/evds_body.c
+$(OBJDIR)/evds_prop_rk4.o: ../../external/evds/source/evds_common/evds_prop_rk4.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 

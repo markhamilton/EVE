@@ -32,11 +32,11 @@ ifeq ($(config),release64)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libIrrlicht.a
   DEFINES   += -DNDEBUG
-  INCLUDES  += -I../../external/irrlicht/include -I../../external/glfw/deps
+  INCLUDES  += -I../../external/irrlicht/source/Irrlicht/MacOSX -I../../external/irrlicht/source/Irrlicht -I../../external/irrlicht/include -I../../external/glfw/deps
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m64 -L/usr/lib64
+  LDFLAGS   += -Wl,-x -m64 -L/usr/lib64
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -54,7 +54,7 @@ ifeq ($(config),debug64)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libIrrlicht.a
   DEFINES   += -DDEBUG
-  INCLUDES  += -I../../external/irrlicht/include -I../../external/glfw/deps
+  INCLUDES  += -I../../external/irrlicht/source/Irrlicht/MacOSX -I../../external/irrlicht/source/Irrlicht -I../../external/irrlicht/include -I../../external/glfw/deps
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m64
   CXXFLAGS  += $(CFLAGS) 
@@ -76,7 +76,7 @@ ifeq ($(config),debug64)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libIrrlicht.a
   DEFINES   += -DDEBUG
-  INCLUDES  += -I../../external/irrlicht/include -I../../external/glfw/deps
+  INCLUDES  += -I../../external/irrlicht/source/Irrlicht/MacOSX -I../../external/irrlicht/source/Irrlicht -I../../external/irrlicht/include -I../../external/glfw/deps
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m64
   CXXFLAGS  += $(CFLAGS) 
@@ -98,11 +98,11 @@ ifeq ($(config),release64)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libIrrlicht.a
   DEFINES   += -DNDEBUG
-  INCLUDES  += -I../../external/irrlicht/include -I../../external/glfw/deps
+  INCLUDES  += -I../../external/irrlicht/source/Irrlicht/MacOSX -I../../external/irrlicht/source/Irrlicht -I../../external/irrlicht/include -I../../external/glfw/deps
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m64 -L/usr/lib64
+  LDFLAGS   += -Wl,-x -m64 -L/usr/lib64
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -120,11 +120,11 @@ ifeq ($(config),debugdynamic64)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libIrrlicht.a
   DEFINES   += 
-  INCLUDES  += -I../../external/irrlicht/include -I../../external/glfw/deps
+  INCLUDES  += -I../../external/irrlicht/source/Irrlicht/MacOSX -I../../external/irrlicht/source/Irrlicht -I../../external/irrlicht/include -I../../external/glfw/deps
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m64 -L/usr/lib64
+  LDFLAGS   += -Wl,-x -m64 -L/usr/lib64
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -142,11 +142,11 @@ ifeq ($(config),releasedynamic64)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libIrrlicht.a
   DEFINES   += 
-  INCLUDES  += -I../../external/irrlicht/include -I../../external/glfw/deps
+  INCLUDES  += -I../../external/irrlicht/source/Irrlicht/MacOSX -I../../external/irrlicht/source/Irrlicht -I../../external/irrlicht/include -I../../external/glfw/deps
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m64 -L/usr/lib64
+  LDFLAGS   += -Wl,-x -m64 -L/usr/lib64
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -164,11 +164,11 @@ ifeq ($(config),debugsinglethread64)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libIrrlicht.a
   DEFINES   += 
-  INCLUDES  += -I../../external/irrlicht/include -I../../external/glfw/deps
+  INCLUDES  += -I../../external/irrlicht/source/Irrlicht/MacOSX -I../../external/irrlicht/source/Irrlicht -I../../external/irrlicht/include -I../../external/glfw/deps
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m64 -L/usr/lib64
+  LDFLAGS   += -Wl,-x -m64 -L/usr/lib64
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -186,11 +186,11 @@ ifeq ($(config),releasesinglethread64)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libIrrlicht.a
   DEFINES   += 
-  INCLUDES  += -I../../external/irrlicht/include -I../../external/glfw/deps
+  INCLUDES  += -I../../external/irrlicht/source/Irrlicht/MacOSX -I../../external/irrlicht/source/Irrlicht -I../../external/irrlicht/include -I../../external/glfw/deps
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m64 -L/usr/lib64
+  LDFLAGS   += -Wl,-x -m64 -L/usr/lib64
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -208,11 +208,11 @@ ifeq ($(config),debugsinglethreaddynamic64)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libIrrlicht.a
   DEFINES   += 
-  INCLUDES  += -I../../external/irrlicht/include -I../../external/glfw/deps
+  INCLUDES  += -I../../external/irrlicht/source/Irrlicht/MacOSX -I../../external/irrlicht/source/Irrlicht -I../../external/irrlicht/include -I../../external/glfw/deps
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m64 -L/usr/lib64
+  LDFLAGS   += -Wl,-x -m64 -L/usr/lib64
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -230,11 +230,11 @@ ifeq ($(config),releasesinglethreaddynamic64)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libIrrlicht.a
   DEFINES   += 
-  INCLUDES  += -I../../external/irrlicht/include -I../../external/glfw/deps
+  INCLUDES  += -I../../external/irrlicht/source/Irrlicht/MacOSX -I../../external/irrlicht/source/Irrlicht -I../../external/irrlicht/include -I../../external/glfw/deps
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m64 -L/usr/lib64
+  LDFLAGS   += -Wl,-x -m64 -L/usr/lib64
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -252,11 +252,11 @@ ifeq ($(config),release32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libIrrlicht.a
   DEFINES   += -DNDEBUG
-  INCLUDES  += -I../../external/irrlicht/include -I../../external/glfw/deps
+  INCLUDES  += -I../../external/irrlicht/source/Irrlicht/MacOSX -I../../external/irrlicht/source/Irrlicht -I../../external/irrlicht/include -I../../external/glfw/deps
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m32 -L/usr/lib32
+  LDFLAGS   += -Wl,-x -m32 -L/usr/lib32
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -274,7 +274,7 @@ ifeq ($(config),debug32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libIrrlicht.a
   DEFINES   += -DDEBUG
-  INCLUDES  += -I../../external/irrlicht/include -I../../external/glfw/deps
+  INCLUDES  += -I../../external/irrlicht/source/Irrlicht/MacOSX -I../../external/irrlicht/source/Irrlicht -I../../external/irrlicht/include -I../../external/glfw/deps
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m32
   CXXFLAGS  += $(CFLAGS) 
@@ -296,7 +296,7 @@ ifeq ($(config),debug32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libIrrlicht.a
   DEFINES   += -DDEBUG
-  INCLUDES  += -I../../external/irrlicht/include -I../../external/glfw/deps
+  INCLUDES  += -I../../external/irrlicht/source/Irrlicht/MacOSX -I../../external/irrlicht/source/Irrlicht -I../../external/irrlicht/include -I../../external/glfw/deps
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m32
   CXXFLAGS  += $(CFLAGS) 
@@ -318,11 +318,11 @@ ifeq ($(config),release32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libIrrlicht.a
   DEFINES   += -DNDEBUG
-  INCLUDES  += -I../../external/irrlicht/include -I../../external/glfw/deps
+  INCLUDES  += -I../../external/irrlicht/source/Irrlicht/MacOSX -I../../external/irrlicht/source/Irrlicht -I../../external/irrlicht/include -I../../external/glfw/deps
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m32 -L/usr/lib32
+  LDFLAGS   += -Wl,-x -m32 -L/usr/lib32
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -340,11 +340,11 @@ ifeq ($(config),debugdynamic32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libIrrlicht.a
   DEFINES   += 
-  INCLUDES  += -I../../external/irrlicht/include -I../../external/glfw/deps
+  INCLUDES  += -I../../external/irrlicht/source/Irrlicht/MacOSX -I../../external/irrlicht/source/Irrlicht -I../../external/irrlicht/include -I../../external/glfw/deps
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m32 -L/usr/lib32
+  LDFLAGS   += -Wl,-x -m32 -L/usr/lib32
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -362,11 +362,11 @@ ifeq ($(config),releasedynamic32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libIrrlicht.a
   DEFINES   += 
-  INCLUDES  += -I../../external/irrlicht/include -I../../external/glfw/deps
+  INCLUDES  += -I../../external/irrlicht/source/Irrlicht/MacOSX -I../../external/irrlicht/source/Irrlicht -I../../external/irrlicht/include -I../../external/glfw/deps
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m32 -L/usr/lib32
+  LDFLAGS   += -Wl,-x -m32 -L/usr/lib32
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -384,11 +384,11 @@ ifeq ($(config),debugsinglethread32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libIrrlicht.a
   DEFINES   += 
-  INCLUDES  += -I../../external/irrlicht/include -I../../external/glfw/deps
+  INCLUDES  += -I../../external/irrlicht/source/Irrlicht/MacOSX -I../../external/irrlicht/source/Irrlicht -I../../external/irrlicht/include -I../../external/glfw/deps
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m32 -L/usr/lib32
+  LDFLAGS   += -Wl,-x -m32 -L/usr/lib32
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -406,11 +406,11 @@ ifeq ($(config),releasesinglethread32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libIrrlicht.a
   DEFINES   += 
-  INCLUDES  += -I../../external/irrlicht/include -I../../external/glfw/deps
+  INCLUDES  += -I../../external/irrlicht/source/Irrlicht/MacOSX -I../../external/irrlicht/source/Irrlicht -I../../external/irrlicht/include -I../../external/glfw/deps
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m32 -L/usr/lib32
+  LDFLAGS   += -Wl,-x -m32 -L/usr/lib32
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -428,11 +428,11 @@ ifeq ($(config),debugsinglethreaddynamic32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libIrrlicht.a
   DEFINES   += 
-  INCLUDES  += -I../../external/irrlicht/include -I../../external/glfw/deps
+  INCLUDES  += -I../../external/irrlicht/source/Irrlicht/MacOSX -I../../external/irrlicht/source/Irrlicht -I../../external/irrlicht/include -I../../external/glfw/deps
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m32 -L/usr/lib32
+  LDFLAGS   += -Wl,-x -m32 -L/usr/lib32
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -450,11 +450,11 @@ ifeq ($(config),releasesinglethreaddynamic32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libIrrlicht.a
   DEFINES   += 
-  INCLUDES  += -I../../external/irrlicht/include -I../../external/glfw/deps
+  INCLUDES  += -I../../external/irrlicht/source/Irrlicht/MacOSX -I../../external/irrlicht/source/Irrlicht -I../../external/irrlicht/include -I../../external/glfw/deps
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -s -m32 -L/usr/lib32
+  LDFLAGS   += -Wl,-x -m32 -L/usr/lib32
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -468,342 +468,342 @@ ifeq ($(config),releasesinglethreaddynamic32)
 endif
 
 OBJECTS := \
-	$(OBJDIR)/CSceneNodeAnimatorTexture.o \
-	$(OBJDIR)/CNullDriver.o \
-	$(OBJDIR)/CImageLoaderTGA.o \
-	$(OBJDIR)/CGUIListBox.o \
-	$(OBJDIR)/CGUIScrollBar.o \
-	$(OBJDIR)/CGUICheckBox.o \
-	$(OBJDIR)/CGUIModalScreen.o \
-	$(OBJDIR)/COpenGLNormalMapRenderer.o \
-	$(OBJDIR)/CImage.o \
 	$(OBJDIR)/C3DSMeshFileLoader.o \
-	$(OBJDIR)/CTRNormalMap.o \
-	$(OBJDIR)/CParticleAttractionAffector.o \
-	$(OBJDIR)/CShadowVolumeSceneNode.o \
-	$(OBJDIR)/CFileSystem.o \
-	$(OBJDIR)/CColorConverter.o \
-	$(OBJDIR)/CTRTextureGouraudAddNoZ2.o \
-	$(OBJDIR)/CTRTextureGouraudNoZ.o \
-	$(OBJDIR)/CBSPMeshFileLoader.o \
-	$(OBJDIR)/CParticleGravityAffector.o \
-	$(OBJDIR)/CGUIColorSelectDialog.o \
-	$(OBJDIR)/CWriteFile.o \
-	$(OBJDIR)/CDummyTransformationSceneNode.o \
-	$(OBJDIR)/CZBuffer.o \
-	$(OBJDIR)/CTRFlat.o \
-	$(OBJDIR)/COpenGLTexture.o \
-	$(OBJDIR)/CGUIComboBox.o \
-	$(OBJDIR)/CSMFMeshFileLoader.o \
-	$(OBJDIR)/CParticlePointEmitter.o \
-	$(OBJDIR)/CTRTextureGouraudNoZ2.o \
-	$(OBJDIR)/CSkinnedMesh.o \
-	$(OBJDIR)/CIrrDeviceLinux.o \
-	$(OBJDIR)/CImageWriterPCX.o \
-	$(OBJDIR)/CSTLMeshFileLoader.o \
-	$(OBJDIR)/CSkyDomeSceneNode.o \
-	$(OBJDIR)/CTRTextureGouraudAdd2.o \
-	$(OBJDIR)/CSoftwareTexture.o \
-	$(OBJDIR)/CTRTextureFlat.o \
-	$(OBJDIR)/CAttributes.o \
-	$(OBJDIR)/CDefaultGUIElementFactory.o \
-	$(OBJDIR)/CMountPointReader.o \
-	$(OBJDIR)/CParticleBoxEmitter.o \
-	$(OBJDIR)/CTarReader.o \
-	$(OBJDIR)/CTRTextureLightMap2_Add.o \
-	$(OBJDIR)/CSoftwareDriver.o \
-	$(OBJDIR)/CSoftwareTexture2.o \
-	$(OBJDIR)/CSceneNodeAnimatorCollisionResponse.o \
-	$(OBJDIR)/CImageLoaderPCX.o \
-	$(OBJDIR)/CDepthBuffer.o \
-	$(OBJDIR)/CSphereSceneNode.o \
-	$(OBJDIR)/CTRTextureGouraudAdd.o \
-	$(OBJDIR)/CGUISpinBox.o \
-	$(OBJDIR)/CSceneNodeAnimatorRotation.o \
-	$(OBJDIR)/CMeshManipulator.o \
-	$(OBJDIR)/CCSMLoader.o \
-	$(OBJDIR)/CLimitReadFile.o \
-	$(OBJDIR)/CImageWriterBMP.o \
-	$(OBJDIR)/CImageLoaderWAL.o \
-	$(OBJDIR)/CTriangleBBSelector.o \
-	$(OBJDIR)/CTRGouraud2.o \
-	$(OBJDIR)/CPLYMeshFileLoader.o \
-	$(OBJDIR)/CTRStencilShadow.o \
-	$(OBJDIR)/CLMTSMeshFileLoader.o \
-	$(OBJDIR)/os.o \
-	$(OBJDIR)/CNPKReader.o \
-	$(OBJDIR)/CImageWriterJPG.o \
-	$(OBJDIR)/CBurningShader_Raster_Reference.o \
-	$(OBJDIR)/CZipReader.o \
-	$(OBJDIR)/CD3D9HLSLMaterialRenderer.o \
-	$(OBJDIR)/COctreeSceneNode.o \
-	$(OBJDIR)/CGUITable.o \
-	$(OBJDIR)/CPLYMeshWriter.o \
-	$(OBJDIR)/CTriangleSelector.o \
-	$(OBJDIR)/CImageLoaderJPG.o \
-	$(OBJDIR)/CParticleScaleAffector.o \
-	$(OBJDIR)/CAnimatedMeshMD2.o \
-	$(OBJDIR)/CGeometryCreator.o \
-	$(OBJDIR)/CGUIFileOpenDialog.o \
-	$(OBJDIR)/CD3D9CgMaterialRenderer.o \
-	$(OBJDIR)/CGUIEnvironment.o \
-	$(OBJDIR)/CMemoryFile.o \
-	$(OBJDIR)/CMS3DMeshFileLoader.o \
-	$(OBJDIR)/CParticleFadeOutAffector.o \
-	$(OBJDIR)/CVideoModeList.o \
-	$(OBJDIR)/CTerrainSceneNode.o \
-	$(OBJDIR)/CQuake3ShaderSceneNode.o \
-	$(OBJDIR)/CTerrainTriangleSelector.o \
-	$(OBJDIR)/CMeshSceneNode.o \
-	$(OBJDIR)/CIrrMeshFileLoader.o \
-	$(OBJDIR)/CD3D9Driver.o \
-	$(OBJDIR)/CTRTextureLightMap2_M1.o \
-	$(OBJDIR)/CAnimatedMeshMD3.o \
-	$(OBJDIR)/COCTLoader.o \
-	$(OBJDIR)/CTRTextureFlatWire.o \
-	$(OBJDIR)/CEmptySceneNode.o \
-	$(OBJDIR)/COpenGLExtensionHandler.o \
-	$(OBJDIR)/CCubeSceneNode.o \
-	$(OBJDIR)/CGUIContextMenu.o \
-	$(OBJDIR)/COpenGLDriver.o \
-	$(OBJDIR)/CLWOMeshFileLoader.o \
-	$(OBJDIR)/CIrrDeviceConsole.o \
-	$(OBJDIR)/CD3D9ShaderMaterialRenderer.o \
-	$(OBJDIR)/CD3D8ShaderMaterialRenderer.o \
-	$(OBJDIR)/COpenGLShaderMaterialRenderer.o \
-	$(OBJDIR)/CImageLoaderDDS.o \
-	$(OBJDIR)/CD3D8Driver.o \
-	$(OBJDIR)/CParticleCylinderEmitter.o \
-	$(OBJDIR)/CLogger.o \
-	$(OBJDIR)/CSTLMeshWriter.o \
-	$(OBJDIR)/CQ3LevelMesh.o \
-	$(OBJDIR)/CGUISpriteBank.o \
 	$(OBJDIR)/CAnimatedMeshHalfLife.o \
-	$(OBJDIR)/CSoftwareDriver2.o \
-	$(OBJDIR)/CD3D9Texture.o \
-	$(OBJDIR)/CD3D9NormalMapRenderer.o \
-	$(OBJDIR)/CTRGouraudAlpha2.o \
-	$(OBJDIR)/CImageLoaderPNG.o \
+	$(OBJDIR)/CAnimatedMeshMD2.o \
+	$(OBJDIR)/CAnimatedMeshMD3.o \
 	$(OBJDIR)/CAnimatedMeshSceneNode.o \
-	$(OBJDIR)/CGUITreeView.o \
-	$(OBJDIR)/CTRTextureBlend.o \
-	$(OBJDIR)/CTRTextureGouraudWire.o \
-	$(OBJDIR)/CIrrDeviceSDL.o \
-	$(OBJDIR)/CGUIFont.o \
-	$(OBJDIR)/COpenGLCgMaterialRenderer.o \
-	$(OBJDIR)/CImageWriterPNG.o \
-	$(OBJDIR)/COBJMeshWriter.o \
-	$(OBJDIR)/CSceneCollisionManager.o \
-	$(OBJDIR)/CSceneManager.o \
-	$(OBJDIR)/CTRTextureDetailMap2.o \
-	$(OBJDIR)/CWaterSurfaceSceneNode.o \
-	$(OBJDIR)/CTRTextureGouraudAlphaNoZ.o \
-	$(OBJDIR)/CMD3MeshFileLoader.o \
-	$(OBJDIR)/CGUITabControl.o \
-	$(OBJDIR)/CGUIImage.o \
-	$(OBJDIR)/CIrrMeshWriter.o \
-	$(OBJDIR)/CTRGouraudAlphaNoZ2.o \
-	$(OBJDIR)/CWADReader.o \
-	$(OBJDIR)/CTRTextureGouraud.o \
-	$(OBJDIR)/CBoneSceneNode.o \
-	$(OBJDIR)/CTextSceneNode.o \
-	$(OBJDIR)/CSceneNodeAnimatorCameraMaya.o \
-	$(OBJDIR)/CTRGouraud.o \
-	$(OBJDIR)/CParticleSystemSceneNode.o \
-	$(OBJDIR)/CParticleSphereEmitter.o \
-	$(OBJDIR)/CImageWriterPSD.o \
-	$(OBJDIR)/CSceneLoaderIrr.o \
-	$(OBJDIR)/CTRFlatWire.o \
-	$(OBJDIR)/CFileList.o \
-	$(OBJDIR)/CTRGouraudWire.o \
-	$(OBJDIR)/CTRTextureGouraudVertexAlpha2.o \
-	$(OBJDIR)/CImageWriterPPM.o \
-	$(OBJDIR)/CIrrDeviceWin32.o \
-	$(OBJDIR)/CTRTextureLightMap2_M2.o \
-	$(OBJDIR)/CVolumeLightSceneNode.o \
-	$(OBJDIR)/CParticleAnimatedMeshSceneNodeEmitter.o \
-	$(OBJDIR)/CGUIWindow.o \
-	$(OBJDIR)/CSceneNodeAnimatorCameraFPS.o \
-	$(OBJDIR)/CMeshCache.o \
-	$(OBJDIR)/CLightSceneNode.o \
-	$(OBJDIR)/COpenGLSLMaterialRenderer.o \
-	$(OBJDIR)/COctreeTriangleSelector.o \
-	$(OBJDIR)/CGUIInOutFader.o \
-	$(OBJDIR)/CIrrDeviceFB.o \
-	$(OBJDIR)/CGUIButton.o \
-	$(OBJDIR)/CXMLReader.o \
-	$(OBJDIR)/CMD2MeshFileLoader.o \
-	$(OBJDIR)/CGUIMenu.o \
-	$(OBJDIR)/CCgMaterialRenderer.o \
-	$(OBJDIR)/CD3D8Texture.o \
-	$(OBJDIR)/CReadFile.o \
-	$(OBJDIR)/irrXML.o \
-	$(OBJDIR)/CSceneNodeAnimatorFlyStraight.o \
-	$(OBJDIR)/CGUIStaticText.o \
-	$(OBJDIR)/CSkyBoxSceneNode.o \
-	$(OBJDIR)/CImageLoaderPPM.o \
-	$(OBJDIR)/CGUIMessageBox.o \
-	$(OBJDIR)/CGUIToolBar.o \
-	$(OBJDIR)/CD3D8ParallaxMapRenderer.o \
-	$(OBJDIR)/IBurningShader.o \
-	$(OBJDIR)/CTRTextureLightMap2_M4.o \
-	$(OBJDIR)/CSceneNodeAnimatorFlyCircle.o \
-	$(OBJDIR)/CSceneNodeAnimatorFollowSpline.o \
-	$(OBJDIR)/CDefaultSceneNodeAnimatorFactory.o \
-	$(OBJDIR)/CParticleRingEmitter.o \
-	$(OBJDIR)/CMY3DMeshFileLoader.o \
-	$(OBJDIR)/CGUIImageList.o \
-	$(OBJDIR)/CD3D8NormalMapRenderer.o \
-	$(OBJDIR)/CImageWriterTGA.o \
-	$(OBJDIR)/CParticleMeshEmitter.o \
-	$(OBJDIR)/COBJMeshFileLoader.o \
-	$(OBJDIR)/CParticleRotationAffector.o \
-	$(OBJDIR)/CFPSCounter.o \
-	$(OBJDIR)/CColladaMeshWriter.o \
-	$(OBJDIR)/CTRTextureLightMapGouraud2_M4.o \
-	$(OBJDIR)/CIrrDeviceWinCE.o \
-	$(OBJDIR)/CIrrDeviceStub.o \
-	$(OBJDIR)/CMetaTriangleSelector.o \
-	$(OBJDIR)/CImageLoaderBMP.o \
-	$(OBJDIR)/CCameraSceneNode.o \
-	$(OBJDIR)/CBillboardSceneNode.o \
-	$(OBJDIR)/CDefaultSceneNodeFactory.o \
-	$(OBJDIR)/COpenGLParallaxMapRenderer.o \
-	$(OBJDIR)/CGUIEditBox.o \
-	$(OBJDIR)/CTRTextureGouraudAlpha.o \
-	$(OBJDIR)/CTRTextureWire2.o \
-	$(OBJDIR)/CImageLoaderRGB.o \
-	$(OBJDIR)/CXMLWriter.o \
-	$(OBJDIR)/COSOperator.o \
-	$(OBJDIR)/CXMeshFileLoader.o \
-	$(OBJDIR)/CD3D9ParallaxMapRenderer.o \
-	$(OBJDIR)/CTRTextureGouraud2.o \
-	$(OBJDIR)/CSceneNodeAnimatorDelete.o \
-	$(OBJDIR)/Irrlicht.o \
+	$(OBJDIR)/CAttributes.o \
 	$(OBJDIR)/CB3DMeshFileLoader.o \
-	$(OBJDIR)/CGUISkin.o \
-	$(OBJDIR)/COgreMeshFileLoader.o \
-	$(OBJDIR)/CImageLoaderPSD.o \
-	$(OBJDIR)/CGUIMeshViewer.o \
+	$(OBJDIR)/CBillboardSceneNode.o \
+	$(OBJDIR)/CBoneSceneNode.o \
+	$(OBJDIR)/CBSPMeshFileLoader.o \
+	$(OBJDIR)/CBurningShader_Raster_Reference.o \
+	$(OBJDIR)/CCameraSceneNode.o \
+	$(OBJDIR)/CCgMaterialRenderer.o \
 	$(OBJDIR)/CColladaFileLoader.o \
+	$(OBJDIR)/CColladaMeshWriter.o \
+	$(OBJDIR)/CColorConverter.o \
+	$(OBJDIR)/CCSMLoader.o \
+	$(OBJDIR)/CCubeSceneNode.o \
+	$(OBJDIR)/CD3D8Driver.o \
+	$(OBJDIR)/CD3D8NormalMapRenderer.o \
+	$(OBJDIR)/CD3D8ParallaxMapRenderer.o \
+	$(OBJDIR)/CD3D8ShaderMaterialRenderer.o \
+	$(OBJDIR)/CD3D8Texture.o \
+	$(OBJDIR)/CD3D9CgMaterialRenderer.o \
+	$(OBJDIR)/CD3D9Driver.o \
+	$(OBJDIR)/CD3D9HLSLMaterialRenderer.o \
+	$(OBJDIR)/CD3D9NormalMapRenderer.o \
+	$(OBJDIR)/CD3D9ParallaxMapRenderer.o \
+	$(OBJDIR)/CD3D9ShaderMaterialRenderer.o \
+	$(OBJDIR)/CD3D9Texture.o \
+	$(OBJDIR)/CDefaultGUIElementFactory.o \
+	$(OBJDIR)/CDefaultSceneNodeAnimatorFactory.o \
+	$(OBJDIR)/CDefaultSceneNodeFactory.o \
+	$(OBJDIR)/CDepthBuffer.o \
 	$(OBJDIR)/CDMFLoader.o \
+	$(OBJDIR)/CDummyTransformationSceneNode.o \
+	$(OBJDIR)/CEmptySceneNode.o \
+	$(OBJDIR)/CFileList.o \
+	$(OBJDIR)/CFileSystem.o \
+	$(OBJDIR)/CFPSCounter.o \
+	$(OBJDIR)/CGeometryCreator.o \
+	$(OBJDIR)/CGUIButton.o \
+	$(OBJDIR)/CGUICheckBox.o \
+	$(OBJDIR)/CGUIColorSelectDialog.o \
+	$(OBJDIR)/CGUIComboBox.o \
+	$(OBJDIR)/CGUIContextMenu.o \
+	$(OBJDIR)/CGUIEditBox.o \
+	$(OBJDIR)/CGUIEnvironment.o \
+	$(OBJDIR)/CGUIFileOpenDialog.o \
+	$(OBJDIR)/CGUIFont.o \
+	$(OBJDIR)/CGUIImage.o \
+	$(OBJDIR)/CGUIImageList.o \
+	$(OBJDIR)/CGUIInOutFader.o \
+	$(OBJDIR)/CGUIListBox.o \
+	$(OBJDIR)/CGUIMenu.o \
+	$(OBJDIR)/CGUIMeshViewer.o \
+	$(OBJDIR)/CGUIMessageBox.o \
+	$(OBJDIR)/CGUIModalScreen.o \
+	$(OBJDIR)/CGUIScrollBar.o \
+	$(OBJDIR)/CGUISkin.o \
+	$(OBJDIR)/CGUISpinBox.o \
+	$(OBJDIR)/CGUISpriteBank.o \
+	$(OBJDIR)/CGUIStaticText.o \
+	$(OBJDIR)/CGUITabControl.o \
+	$(OBJDIR)/CGUITable.o \
+	$(OBJDIR)/CGUIToolBar.o \
+	$(OBJDIR)/CGUITreeView.o \
+	$(OBJDIR)/CGUIWindow.o \
+	$(OBJDIR)/CImage.o \
+	$(OBJDIR)/CImageLoaderBMP.o \
+	$(OBJDIR)/CImageLoaderDDS.o \
+	$(OBJDIR)/CImageLoaderJPG.o \
+	$(OBJDIR)/CImageLoaderPCX.o \
+	$(OBJDIR)/CImageLoaderPNG.o \
+	$(OBJDIR)/CImageLoaderPPM.o \
+	$(OBJDIR)/CImageLoaderPSD.o \
+	$(OBJDIR)/CImageLoaderRGB.o \
+	$(OBJDIR)/CImageLoaderTGA.o \
+	$(OBJDIR)/CImageLoaderWAL.o \
+	$(OBJDIR)/CImageWriterBMP.o \
+	$(OBJDIR)/CImageWriterJPG.o \
+	$(OBJDIR)/CImageWriterPCX.o \
+	$(OBJDIR)/CImageWriterPNG.o \
+	$(OBJDIR)/CImageWriterPPM.o \
+	$(OBJDIR)/CImageWriterPSD.o \
+	$(OBJDIR)/CImageWriterTGA.o \
+	$(OBJDIR)/CIrrDeviceConsole.o \
+	$(OBJDIR)/CIrrDeviceFB.o \
+	$(OBJDIR)/CIrrDeviceLinux.o \
+	$(OBJDIR)/CIrrDeviceSDL.o \
+	$(OBJDIR)/CIrrDeviceStub.o \
+	$(OBJDIR)/CIrrDeviceWin32.o \
+	$(OBJDIR)/CIrrDeviceWinCE.o \
+	$(OBJDIR)/CIrrMeshFileLoader.o \
+	$(OBJDIR)/CIrrMeshWriter.o \
+	$(OBJDIR)/CLightSceneNode.o \
+	$(OBJDIR)/CLimitReadFile.o \
+	$(OBJDIR)/CLMTSMeshFileLoader.o \
+	$(OBJDIR)/CLogger.o \
+	$(OBJDIR)/CLWOMeshFileLoader.o \
+	$(OBJDIR)/CMD2MeshFileLoader.o \
+	$(OBJDIR)/CMD3MeshFileLoader.o \
+	$(OBJDIR)/CMemoryFile.o \
+	$(OBJDIR)/CMeshCache.o \
+	$(OBJDIR)/CMeshManipulator.o \
+	$(OBJDIR)/CMeshSceneNode.o \
+	$(OBJDIR)/CMetaTriangleSelector.o \
+	$(OBJDIR)/CMountPointReader.o \
+	$(OBJDIR)/CMS3DMeshFileLoader.o \
+	$(OBJDIR)/CMY3DMeshFileLoader.o \
+	$(OBJDIR)/CNPKReader.o \
+	$(OBJDIR)/CNullDriver.o \
+	$(OBJDIR)/COBJMeshFileLoader.o \
+	$(OBJDIR)/COBJMeshWriter.o \
+	$(OBJDIR)/COCTLoader.o \
+	$(OBJDIR)/COctreeSceneNode.o \
+	$(OBJDIR)/COctreeTriangleSelector.o \
+	$(OBJDIR)/COgreMeshFileLoader.o \
+	$(OBJDIR)/COpenGLCgMaterialRenderer.o \
+	$(OBJDIR)/COpenGLDriver.o \
+	$(OBJDIR)/COpenGLExtensionHandler.o \
+	$(OBJDIR)/COpenGLNormalMapRenderer.o \
+	$(OBJDIR)/COpenGLParallaxMapRenderer.o \
+	$(OBJDIR)/COpenGLShaderMaterialRenderer.o \
+	$(OBJDIR)/COpenGLSLMaterialRenderer.o \
+	$(OBJDIR)/COpenGLTexture.o \
+	$(OBJDIR)/COSOperator.o \
 	$(OBJDIR)/CPakReader.o \
-	$(OBJDIR)/gzclose.o \
-	$(OBJDIR)/inffast.o \
-	$(OBJDIR)/gzwrite.o \
-	$(OBJDIR)/deflate.o \
-	$(OBJDIR)/uncompr.o \
-	$(OBJDIR)/inftrees.o \
-	$(OBJDIR)/gzlib.o \
-	$(OBJDIR)/zutil.o \
-	$(OBJDIR)/compress.o \
-	$(OBJDIR)/gzread.o \
-	$(OBJDIR)/crc32.o \
+	$(OBJDIR)/CParticleAnimatedMeshSceneNodeEmitter.o \
+	$(OBJDIR)/CParticleAttractionAffector.o \
+	$(OBJDIR)/CParticleBoxEmitter.o \
+	$(OBJDIR)/CParticleCylinderEmitter.o \
+	$(OBJDIR)/CParticleFadeOutAffector.o \
+	$(OBJDIR)/CParticleGravityAffector.o \
+	$(OBJDIR)/CParticleMeshEmitter.o \
+	$(OBJDIR)/CParticlePointEmitter.o \
+	$(OBJDIR)/CParticleRingEmitter.o \
+	$(OBJDIR)/CParticleRotationAffector.o \
+	$(OBJDIR)/CParticleScaleAffector.o \
+	$(OBJDIR)/CParticleSphereEmitter.o \
+	$(OBJDIR)/CParticleSystemSceneNode.o \
+	$(OBJDIR)/CPLYMeshFileLoader.o \
+	$(OBJDIR)/CPLYMeshWriter.o \
+	$(OBJDIR)/CQ3LevelMesh.o \
+	$(OBJDIR)/CQuake3ShaderSceneNode.o \
+	$(OBJDIR)/CReadFile.o \
+	$(OBJDIR)/CSceneCollisionManager.o \
+	$(OBJDIR)/CSceneLoaderIrr.o \
+	$(OBJDIR)/CSceneManager.o \
+	$(OBJDIR)/CSceneNodeAnimatorCameraFPS.o \
+	$(OBJDIR)/CSceneNodeAnimatorCameraMaya.o \
+	$(OBJDIR)/CSceneNodeAnimatorCollisionResponse.o \
+	$(OBJDIR)/CSceneNodeAnimatorDelete.o \
+	$(OBJDIR)/CSceneNodeAnimatorFlyCircle.o \
+	$(OBJDIR)/CSceneNodeAnimatorFlyStraight.o \
+	$(OBJDIR)/CSceneNodeAnimatorFollowSpline.o \
+	$(OBJDIR)/CSceneNodeAnimatorRotation.o \
+	$(OBJDIR)/CSceneNodeAnimatorTexture.o \
+	$(OBJDIR)/CShadowVolumeSceneNode.o \
+	$(OBJDIR)/CSkinnedMesh.o \
+	$(OBJDIR)/CSkyBoxSceneNode.o \
+	$(OBJDIR)/CSkyDomeSceneNode.o \
+	$(OBJDIR)/CSMFMeshFileLoader.o \
+	$(OBJDIR)/CSoftwareDriver.o \
+	$(OBJDIR)/CSoftwareDriver2.o \
+	$(OBJDIR)/CSoftwareTexture.o \
+	$(OBJDIR)/CSoftwareTexture2.o \
+	$(OBJDIR)/CSphereSceneNode.o \
+	$(OBJDIR)/CSTLMeshFileLoader.o \
+	$(OBJDIR)/CSTLMeshWriter.o \
+	$(OBJDIR)/CTarReader.o \
+	$(OBJDIR)/CTerrainSceneNode.o \
+	$(OBJDIR)/CTerrainTriangleSelector.o \
+	$(OBJDIR)/CTextSceneNode.o \
+	$(OBJDIR)/CTRFlat.o \
+	$(OBJDIR)/CTRFlatWire.o \
+	$(OBJDIR)/CTRGouraud.o \
+	$(OBJDIR)/CTRGouraud2.o \
+	$(OBJDIR)/CTRGouraudAlpha2.o \
+	$(OBJDIR)/CTRGouraudAlphaNoZ2.o \
+	$(OBJDIR)/CTRGouraudWire.o \
+	$(OBJDIR)/CTriangleBBSelector.o \
+	$(OBJDIR)/CTriangleSelector.o \
+	$(OBJDIR)/CTRNormalMap.o \
+	$(OBJDIR)/CTRStencilShadow.o \
+	$(OBJDIR)/CTRTextureBlend.o \
+	$(OBJDIR)/CTRTextureDetailMap2.o \
+	$(OBJDIR)/CTRTextureFlat.o \
+	$(OBJDIR)/CTRTextureFlatWire.o \
+	$(OBJDIR)/CTRTextureGouraud.o \
+	$(OBJDIR)/CTRTextureGouraud2.o \
+	$(OBJDIR)/CTRTextureGouraudAdd.o \
+	$(OBJDIR)/CTRTextureGouraudAdd2.o \
+	$(OBJDIR)/CTRTextureGouraudAddNoZ2.o \
+	$(OBJDIR)/CTRTextureGouraudAlpha.o \
+	$(OBJDIR)/CTRTextureGouraudAlphaNoZ.o \
+	$(OBJDIR)/CTRTextureGouraudNoZ.o \
+	$(OBJDIR)/CTRTextureGouraudNoZ2.o \
+	$(OBJDIR)/CTRTextureGouraudVertexAlpha2.o \
+	$(OBJDIR)/CTRTextureGouraudWire.o \
+	$(OBJDIR)/CTRTextureLightMap2_Add.o \
+	$(OBJDIR)/CTRTextureLightMap2_M1.o \
+	$(OBJDIR)/CTRTextureLightMap2_M2.o \
+	$(OBJDIR)/CTRTextureLightMap2_M4.o \
+	$(OBJDIR)/CTRTextureLightMapGouraud2_M4.o \
+	$(OBJDIR)/CTRTextureWire2.o \
+	$(OBJDIR)/CVideoModeList.o \
+	$(OBJDIR)/CVolumeLightSceneNode.o \
+	$(OBJDIR)/CWADReader.o \
+	$(OBJDIR)/CWaterSurfaceSceneNode.o \
+	$(OBJDIR)/CWriteFile.o \
+	$(OBJDIR)/CXMeshFileLoader.o \
+	$(OBJDIR)/CXMLReader.o \
+	$(OBJDIR)/CXMLWriter.o \
+	$(OBJDIR)/CZBuffer.o \
+	$(OBJDIR)/CZipReader.o \
+	$(OBJDIR)/IBurningShader.o \
+	$(OBJDIR)/Irrlicht.o \
+	$(OBJDIR)/irrXML.o \
+	$(OBJDIR)/os.o \
 	$(OBJDIR)/adler32.o \
-	$(OBJDIR)/trees.o \
+	$(OBJDIR)/compress.o \
+	$(OBJDIR)/crc32.o \
+	$(OBJDIR)/deflate.o \
+	$(OBJDIR)/gzclose.o \
+	$(OBJDIR)/gzlib.o \
+	$(OBJDIR)/gzread.o \
+	$(OBJDIR)/gzwrite.o \
 	$(OBJDIR)/infback.o \
+	$(OBJDIR)/inffast.o \
 	$(OBJDIR)/inflate.o \
-	$(OBJDIR)/transupp.o \
-	$(OBJDIR)/wrtarga.o \
-	$(OBJDIR)/jmemmgr.o \
-	$(OBJDIR)/rdgif.o \
-	$(OBJDIR)/jfdctint.o \
-	$(OBJDIR)/jmemname.o \
+	$(OBJDIR)/inftrees.o \
+	$(OBJDIR)/trees.o \
+	$(OBJDIR)/uncompr.o \
+	$(OBJDIR)/zutil.o \
+	$(OBJDIR)/cjpeg.o \
+	$(OBJDIR)/ckconfig.o \
+	$(OBJDIR)/djpeg.o \
+	$(OBJDIR)/jaricom.o \
+	$(OBJDIR)/jcapimin.o \
+	$(OBJDIR)/jcapistd.o \
+	$(OBJDIR)/jcarith.o \
+	$(OBJDIR)/jccoefct.o \
 	$(OBJDIR)/jccolor.o \
 	$(OBJDIR)/jcdctmgr.o \
-	$(OBJDIR)/jdinput.o \
-	$(OBJDIR)/jcapistd.o \
-	$(OBJDIR)/jutils.o \
-	$(OBJDIR)/jdtrans.o \
-	$(OBJDIR)/jaricom.o \
-	$(OBJDIR)/jquant2.o \
-	$(OBJDIR)/rdbmp.o \
-	$(OBJDIR)/jidctflt.o \
-	$(OBJDIR)/jfdctflt.o \
-	$(OBJDIR)/djpeg.o \
-	$(OBJDIR)/jccoefct.o \
-	$(OBJDIR)/jdhuff.o \
+	$(OBJDIR)/jchuff.o \
+	$(OBJDIR)/jcinit.o \
+	$(OBJDIR)/jcmainct.o \
+	$(OBJDIR)/jcmarker.o \
+	$(OBJDIR)/jcmaster.o \
+	$(OBJDIR)/jcomapi.o \
+	$(OBJDIR)/jcparam.o \
 	$(OBJDIR)/jcprepct.o \
 	$(OBJDIR)/jcsample.o \
-	$(OBJDIR)/jdapimin.o \
-	$(OBJDIR)/jdmerge.o \
-	$(OBJDIR)/jdcolor.o \
-	$(OBJDIR)/jcarith.o \
-	$(OBJDIR)/jdmaster.o \
-	$(OBJDIR)/rdcolmap.o \
-	$(OBJDIR)/rdtarga.o \
-	$(OBJDIR)/jdmarker.o \
-	$(OBJDIR)/jdmainct.o \
-	$(OBJDIR)/jmemnobs.o \
-	$(OBJDIR)/jcmaster.o \
-	$(OBJDIR)/rdrle.o \
-	$(OBJDIR)/jdatasrc.o \
-	$(OBJDIR)/jerror.o \
-	$(OBJDIR)/jdcoefct.o \
-	$(OBJDIR)/jmemansi.o \
-	$(OBJDIR)/jcapimin.o \
-	$(OBJDIR)/jdpostct.o \
-	$(OBJDIR)/wrppm.o \
-	$(OBJDIR)/jcmainct.o \
-	$(OBJDIR)/wrgif.o \
-	$(OBJDIR)/rdswitch.o \
-	$(OBJDIR)/jquant1.o \
-	$(OBJDIR)/jidctint.o \
-	$(OBJDIR)/jcinit.o \
-	$(OBJDIR)/ckconfig.o \
-	$(OBJDIR)/jfdctfst.o \
 	$(OBJDIR)/jctrans.o \
-	$(OBJDIR)/jpegtran.o \
-	$(OBJDIR)/jdarith.o \
-	$(OBJDIR)/wrrle.o \
-	$(OBJDIR)/jdsample.o \
-	$(OBJDIR)/jddctmgr.o \
-	$(OBJDIR)/jidctfst.o \
-	$(OBJDIR)/jdatadst.o \
-	$(OBJDIR)/jchuff.o \
-	$(OBJDIR)/jcomapi.o \
-	$(OBJDIR)/cjpeg.o \
-	$(OBJDIR)/rdppm.o \
+	$(OBJDIR)/jdapimin.o \
 	$(OBJDIR)/jdapistd.o \
+	$(OBJDIR)/jdarith.o \
+	$(OBJDIR)/jdatadst.o \
+	$(OBJDIR)/jdatasrc.o \
+	$(OBJDIR)/jdcoefct.o \
+	$(OBJDIR)/jdcolor.o \
+	$(OBJDIR)/jddctmgr.o \
+	$(OBJDIR)/jdhuff.o \
+	$(OBJDIR)/jdinput.o \
+	$(OBJDIR)/jdmainct.o \
+	$(OBJDIR)/jdmarker.o \
+	$(OBJDIR)/jdmaster.o \
+	$(OBJDIR)/jdmerge.o \
+	$(OBJDIR)/jdpostct.o \
+	$(OBJDIR)/jdsample.o \
+	$(OBJDIR)/jdtrans.o \
+	$(OBJDIR)/jerror.o \
+	$(OBJDIR)/jfdctflt.o \
+	$(OBJDIR)/jfdctfst.o \
+	$(OBJDIR)/jfdctint.o \
+	$(OBJDIR)/jidctflt.o \
+	$(OBJDIR)/jidctfst.o \
+	$(OBJDIR)/jidctint.o \
+	$(OBJDIR)/jmemansi.o \
+	$(OBJDIR)/jmemmgr.o \
+	$(OBJDIR)/jmemname.o \
+	$(OBJDIR)/jmemnobs.o \
+	$(OBJDIR)/jpegtran.o \
+	$(OBJDIR)/jquant1.o \
+	$(OBJDIR)/jquant2.o \
+	$(OBJDIR)/jutils.o \
+	$(OBJDIR)/rdbmp.o \
+	$(OBJDIR)/rdcolmap.o \
+	$(OBJDIR)/rdgif.o \
+	$(OBJDIR)/rdppm.o \
+	$(OBJDIR)/rdrle.o \
+	$(OBJDIR)/rdswitch.o \
+	$(OBJDIR)/rdtarga.o \
+	$(OBJDIR)/transupp.o \
 	$(OBJDIR)/wrbmp.o \
-	$(OBJDIR)/jcmarker.o \
-	$(OBJDIR)/jcparam.o \
+	$(OBJDIR)/wrgif.o \
+	$(OBJDIR)/wrppm.o \
+	$(OBJDIR)/wrrle.o \
+	$(OBJDIR)/wrtarga.o \
+	$(OBJDIR)/png.o \
+	$(OBJDIR)/pngerror.o \
+	$(OBJDIR)/pngget.o \
+	$(OBJDIR)/pngmem.o \
+	$(OBJDIR)/pngpread.o \
+	$(OBJDIR)/pngread.o \
 	$(OBJDIR)/pngrio.o \
 	$(OBJDIR)/pngrtran.o \
-	$(OBJDIR)/pngtrans.o \
-	$(OBJDIR)/pngwrite.o \
-	$(OBJDIR)/pngset.o \
 	$(OBJDIR)/pngrutil.o \
-	$(OBJDIR)/pngget.o \
-	$(OBJDIR)/pngerror.o \
-	$(OBJDIR)/pngwtran.o \
-	$(OBJDIR)/pngread.o \
-	$(OBJDIR)/png.o \
-	$(OBJDIR)/pngpread.o \
-	$(OBJDIR)/pngmem.o \
+	$(OBJDIR)/pngset.o \
+	$(OBJDIR)/pngtrans.o \
 	$(OBJDIR)/pngwio.o \
+	$(OBJDIR)/pngwrite.o \
+	$(OBJDIR)/pngwtran.o \
 	$(OBJDIR)/pngwutil.o \
 	$(OBJDIR)/LzmaDec.o \
-	$(OBJDIR)/unzcrash.o \
-	$(OBJDIR)/huffman.o \
+	$(OBJDIR)/blocksort.o \
 	$(OBJDIR)/bzcompress.o \
-	$(OBJDIR)/decompress.o \
+	$(OBJDIR)/bzip2recover.o \
 	$(OBJDIR)/bzlib.o \
 	$(OBJDIR)/crctable.o \
-	$(OBJDIR)/randtable.o \
+	$(OBJDIR)/decompress.o \
+	$(OBJDIR)/huffman.o \
 	$(OBJDIR)/mk251.o \
+	$(OBJDIR)/randtable.o \
 	$(OBJDIR)/spewG.o \
-	$(OBJDIR)/blocksort.o \
-	$(OBJDIR)/bzip2recover.o \
+	$(OBJDIR)/unzcrash.o \
 	$(OBJDIR)/aescrypt.o \
-	$(OBJDIR)/pwd2key.o \
-	$(OBJDIR)/hmac.o \
-	$(OBJDIR)/fileenc.o \
-	$(OBJDIR)/sha2.o \
-	$(OBJDIR)/prng.o \
-	$(OBJDIR)/sha1.o \
-	$(OBJDIR)/aestab.o \
 	$(OBJDIR)/aeskey.o \
+	$(OBJDIR)/aestab.o \
+	$(OBJDIR)/fileenc.o \
+	$(OBJDIR)/hmac.o \
+	$(OBJDIR)/prng.o \
+	$(OBJDIR)/pwd2key.o \
+	$(OBJDIR)/sha1.o \
+	$(OBJDIR)/sha2.o \
 
 RESOURCES := \
 
@@ -868,727 +868,733 @@ endif
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 endif
 
-$(OBJDIR)/CSceneNodeAnimatorTexture.o: ../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorTexture.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CNullDriver.o: ../../external/irrlicht/source/Irrlicht/CNullDriver.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CImageLoaderTGA.o: ../../external/irrlicht/source/Irrlicht/CImageLoaderTGA.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CGUIListBox.o: ../../external/irrlicht/source/Irrlicht/CGUIListBox.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CGUIScrollBar.o: ../../external/irrlicht/source/Irrlicht/CGUIScrollBar.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CGUICheckBox.o: ../../external/irrlicht/source/Irrlicht/CGUICheckBox.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CGUIModalScreen.o: ../../external/irrlicht/source/Irrlicht/CGUIModalScreen.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/COpenGLNormalMapRenderer.o: ../../external/irrlicht/source/Irrlicht/COpenGLNormalMapRenderer.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CImage.o: ../../external/irrlicht/source/Irrlicht/CImage.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/C3DSMeshFileLoader.o: ../../external/irrlicht/source/Irrlicht/C3DSMeshFileLoader.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTRNormalMap.o: ../../external/irrlicht/source/Irrlicht/CTRNormalMap.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CParticleAttractionAffector.o: ../../external/irrlicht/source/Irrlicht/CParticleAttractionAffector.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CShadowVolumeSceneNode.o: ../../external/irrlicht/source/Irrlicht/CShadowVolumeSceneNode.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CFileSystem.o: ../../external/irrlicht/source/Irrlicht/CFileSystem.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CColorConverter.o: ../../external/irrlicht/source/Irrlicht/CColorConverter.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTRTextureGouraudAddNoZ2.o: ../../external/irrlicht/source/Irrlicht/CTRTextureGouraudAddNoZ2.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTRTextureGouraudNoZ.o: ../../external/irrlicht/source/Irrlicht/CTRTextureGouraudNoZ.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CBSPMeshFileLoader.o: ../../external/irrlicht/source/Irrlicht/CBSPMeshFileLoader.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CParticleGravityAffector.o: ../../external/irrlicht/source/Irrlicht/CParticleGravityAffector.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CGUIColorSelectDialog.o: ../../external/irrlicht/source/Irrlicht/CGUIColorSelectDialog.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CWriteFile.o: ../../external/irrlicht/source/Irrlicht/CWriteFile.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CDummyTransformationSceneNode.o: ../../external/irrlicht/source/Irrlicht/CDummyTransformationSceneNode.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CZBuffer.o: ../../external/irrlicht/source/Irrlicht/CZBuffer.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTRFlat.o: ../../external/irrlicht/source/Irrlicht/CTRFlat.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/COpenGLTexture.o: ../../external/irrlicht/source/Irrlicht/COpenGLTexture.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CGUIComboBox.o: ../../external/irrlicht/source/Irrlicht/CGUIComboBox.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CSMFMeshFileLoader.o: ../../external/irrlicht/source/Irrlicht/CSMFMeshFileLoader.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CParticlePointEmitter.o: ../../external/irrlicht/source/Irrlicht/CParticlePointEmitter.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTRTextureGouraudNoZ2.o: ../../external/irrlicht/source/Irrlicht/CTRTextureGouraudNoZ2.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CSkinnedMesh.o: ../../external/irrlicht/source/Irrlicht/CSkinnedMesh.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CIrrDeviceLinux.o: ../../external/irrlicht/source/Irrlicht/CIrrDeviceLinux.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CImageWriterPCX.o: ../../external/irrlicht/source/Irrlicht/CImageWriterPCX.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CSTLMeshFileLoader.o: ../../external/irrlicht/source/Irrlicht/CSTLMeshFileLoader.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CSkyDomeSceneNode.o: ../../external/irrlicht/source/Irrlicht/CSkyDomeSceneNode.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTRTextureGouraudAdd2.o: ../../external/irrlicht/source/Irrlicht/CTRTextureGouraudAdd2.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CSoftwareTexture.o: ../../external/irrlicht/source/Irrlicht/CSoftwareTexture.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTRTextureFlat.o: ../../external/irrlicht/source/Irrlicht/CTRTextureFlat.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CAttributes.o: ../../external/irrlicht/source/Irrlicht/CAttributes.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CDefaultGUIElementFactory.o: ../../external/irrlicht/source/Irrlicht/CDefaultGUIElementFactory.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CMountPointReader.o: ../../external/irrlicht/source/Irrlicht/CMountPointReader.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CParticleBoxEmitter.o: ../../external/irrlicht/source/Irrlicht/CParticleBoxEmitter.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTarReader.o: ../../external/irrlicht/source/Irrlicht/CTarReader.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTRTextureLightMap2_Add.o: ../../external/irrlicht/source/Irrlicht/CTRTextureLightMap2_Add.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CSoftwareDriver.o: ../../external/irrlicht/source/Irrlicht/CSoftwareDriver.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CSoftwareTexture2.o: ../../external/irrlicht/source/Irrlicht/CSoftwareTexture2.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CSceneNodeAnimatorCollisionResponse.o: ../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorCollisionResponse.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CImageLoaderPCX.o: ../../external/irrlicht/source/Irrlicht/CImageLoaderPCX.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CDepthBuffer.o: ../../external/irrlicht/source/Irrlicht/CDepthBuffer.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CSphereSceneNode.o: ../../external/irrlicht/source/Irrlicht/CSphereSceneNode.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTRTextureGouraudAdd.o: ../../external/irrlicht/source/Irrlicht/CTRTextureGouraudAdd.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CGUISpinBox.o: ../../external/irrlicht/source/Irrlicht/CGUISpinBox.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CSceneNodeAnimatorRotation.o: ../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorRotation.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CMeshManipulator.o: ../../external/irrlicht/source/Irrlicht/CMeshManipulator.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CCSMLoader.o: ../../external/irrlicht/source/Irrlicht/CCSMLoader.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CLimitReadFile.o: ../../external/irrlicht/source/Irrlicht/CLimitReadFile.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CImageWriterBMP.o: ../../external/irrlicht/source/Irrlicht/CImageWriterBMP.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CImageLoaderWAL.o: ../../external/irrlicht/source/Irrlicht/CImageLoaderWAL.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTriangleBBSelector.o: ../../external/irrlicht/source/Irrlicht/CTriangleBBSelector.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTRGouraud2.o: ../../external/irrlicht/source/Irrlicht/CTRGouraud2.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CPLYMeshFileLoader.o: ../../external/irrlicht/source/Irrlicht/CPLYMeshFileLoader.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTRStencilShadow.o: ../../external/irrlicht/source/Irrlicht/CTRStencilShadow.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CLMTSMeshFileLoader.o: ../../external/irrlicht/source/Irrlicht/CLMTSMeshFileLoader.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/os.o: ../../external/irrlicht/source/Irrlicht/os.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CNPKReader.o: ../../external/irrlicht/source/Irrlicht/CNPKReader.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CImageWriterJPG.o: ../../external/irrlicht/source/Irrlicht/CImageWriterJPG.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CBurningShader_Raster_Reference.o: ../../external/irrlicht/source/Irrlicht/CBurningShader_Raster_Reference.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CZipReader.o: ../../external/irrlicht/source/Irrlicht/CZipReader.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CD3D9HLSLMaterialRenderer.o: ../../external/irrlicht/source/Irrlicht/CD3D9HLSLMaterialRenderer.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/COctreeSceneNode.o: ../../external/irrlicht/source/Irrlicht/COctreeSceneNode.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CGUITable.o: ../../external/irrlicht/source/Irrlicht/CGUITable.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CPLYMeshWriter.o: ../../external/irrlicht/source/Irrlicht/CPLYMeshWriter.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTriangleSelector.o: ../../external/irrlicht/source/Irrlicht/CTriangleSelector.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CImageLoaderJPG.o: ../../external/irrlicht/source/Irrlicht/CImageLoaderJPG.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CParticleScaleAffector.o: ../../external/irrlicht/source/Irrlicht/CParticleScaleAffector.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CAnimatedMeshMD2.o: ../../external/irrlicht/source/Irrlicht/CAnimatedMeshMD2.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CGeometryCreator.o: ../../external/irrlicht/source/Irrlicht/CGeometryCreator.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CGUIFileOpenDialog.o: ../../external/irrlicht/source/Irrlicht/CGUIFileOpenDialog.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CD3D9CgMaterialRenderer.o: ../../external/irrlicht/source/Irrlicht/CD3D9CgMaterialRenderer.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CGUIEnvironment.o: ../../external/irrlicht/source/Irrlicht/CGUIEnvironment.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CMemoryFile.o: ../../external/irrlicht/source/Irrlicht/CMemoryFile.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CMS3DMeshFileLoader.o: ../../external/irrlicht/source/Irrlicht/CMS3DMeshFileLoader.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CParticleFadeOutAffector.o: ../../external/irrlicht/source/Irrlicht/CParticleFadeOutAffector.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CVideoModeList.o: ../../external/irrlicht/source/Irrlicht/CVideoModeList.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTerrainSceneNode.o: ../../external/irrlicht/source/Irrlicht/CTerrainSceneNode.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CQuake3ShaderSceneNode.o: ../../external/irrlicht/source/Irrlicht/CQuake3ShaderSceneNode.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTerrainTriangleSelector.o: ../../external/irrlicht/source/Irrlicht/CTerrainTriangleSelector.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CMeshSceneNode.o: ../../external/irrlicht/source/Irrlicht/CMeshSceneNode.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CIrrMeshFileLoader.o: ../../external/irrlicht/source/Irrlicht/CIrrMeshFileLoader.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CD3D9Driver.o: ../../external/irrlicht/source/Irrlicht/CD3D9Driver.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTRTextureLightMap2_M1.o: ../../external/irrlicht/source/Irrlicht/CTRTextureLightMap2_M1.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CAnimatedMeshMD3.o: ../../external/irrlicht/source/Irrlicht/CAnimatedMeshMD3.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/COCTLoader.o: ../../external/irrlicht/source/Irrlicht/COCTLoader.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTRTextureFlatWire.o: ../../external/irrlicht/source/Irrlicht/CTRTextureFlatWire.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CEmptySceneNode.o: ../../external/irrlicht/source/Irrlicht/CEmptySceneNode.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/COpenGLExtensionHandler.o: ../../external/irrlicht/source/Irrlicht/COpenGLExtensionHandler.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CCubeSceneNode.o: ../../external/irrlicht/source/Irrlicht/CCubeSceneNode.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CGUIContextMenu.o: ../../external/irrlicht/source/Irrlicht/CGUIContextMenu.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/COpenGLDriver.o: ../../external/irrlicht/source/Irrlicht/COpenGLDriver.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CLWOMeshFileLoader.o: ../../external/irrlicht/source/Irrlicht/CLWOMeshFileLoader.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CIrrDeviceConsole.o: ../../external/irrlicht/source/Irrlicht/CIrrDeviceConsole.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CD3D9ShaderMaterialRenderer.o: ../../external/irrlicht/source/Irrlicht/CD3D9ShaderMaterialRenderer.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CD3D8ShaderMaterialRenderer.o: ../../external/irrlicht/source/Irrlicht/CD3D8ShaderMaterialRenderer.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/COpenGLShaderMaterialRenderer.o: ../../external/irrlicht/source/Irrlicht/COpenGLShaderMaterialRenderer.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CImageLoaderDDS.o: ../../external/irrlicht/source/Irrlicht/CImageLoaderDDS.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CD3D8Driver.o: ../../external/irrlicht/source/Irrlicht/CD3D8Driver.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CParticleCylinderEmitter.o: ../../external/irrlicht/source/Irrlicht/CParticleCylinderEmitter.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CLogger.o: ../../external/irrlicht/source/Irrlicht/CLogger.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CSTLMeshWriter.o: ../../external/irrlicht/source/Irrlicht/CSTLMeshWriter.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CQ3LevelMesh.o: ../../external/irrlicht/source/Irrlicht/CQ3LevelMesh.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CGUISpriteBank.o: ../../external/irrlicht/source/Irrlicht/CGUISpriteBank.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/CAnimatedMeshHalfLife.o: ../../external/irrlicht/source/Irrlicht/CAnimatedMeshHalfLife.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CSoftwareDriver2.o: ../../external/irrlicht/source/Irrlicht/CSoftwareDriver2.cpp
+$(OBJDIR)/CAnimatedMeshMD2.o: ../../external/irrlicht/source/Irrlicht/CAnimatedMeshMD2.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CD3D9Texture.o: ../../external/irrlicht/source/Irrlicht/CD3D9Texture.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CD3D9NormalMapRenderer.o: ../../external/irrlicht/source/Irrlicht/CD3D9NormalMapRenderer.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTRGouraudAlpha2.o: ../../external/irrlicht/source/Irrlicht/CTRGouraudAlpha2.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CImageLoaderPNG.o: ../../external/irrlicht/source/Irrlicht/CImageLoaderPNG.cpp
+$(OBJDIR)/CAnimatedMeshMD3.o: ../../external/irrlicht/source/Irrlicht/CAnimatedMeshMD3.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/CAnimatedMeshSceneNode.o: ../../external/irrlicht/source/Irrlicht/CAnimatedMeshSceneNode.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CGUITreeView.o: ../../external/irrlicht/source/Irrlicht/CGUITreeView.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTRTextureBlend.o: ../../external/irrlicht/source/Irrlicht/CTRTextureBlend.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTRTextureGouraudWire.o: ../../external/irrlicht/source/Irrlicht/CTRTextureGouraudWire.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CIrrDeviceSDL.o: ../../external/irrlicht/source/Irrlicht/CIrrDeviceSDL.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CGUIFont.o: ../../external/irrlicht/source/Irrlicht/CGUIFont.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/COpenGLCgMaterialRenderer.o: ../../external/irrlicht/source/Irrlicht/COpenGLCgMaterialRenderer.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CImageWriterPNG.o: ../../external/irrlicht/source/Irrlicht/CImageWriterPNG.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/COBJMeshWriter.o: ../../external/irrlicht/source/Irrlicht/COBJMeshWriter.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CSceneCollisionManager.o: ../../external/irrlicht/source/Irrlicht/CSceneCollisionManager.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CSceneManager.o: ../../external/irrlicht/source/Irrlicht/CSceneManager.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTRTextureDetailMap2.o: ../../external/irrlicht/source/Irrlicht/CTRTextureDetailMap2.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CWaterSurfaceSceneNode.o: ../../external/irrlicht/source/Irrlicht/CWaterSurfaceSceneNode.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTRTextureGouraudAlphaNoZ.o: ../../external/irrlicht/source/Irrlicht/CTRTextureGouraudAlphaNoZ.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CMD3MeshFileLoader.o: ../../external/irrlicht/source/Irrlicht/CMD3MeshFileLoader.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CGUITabControl.o: ../../external/irrlicht/source/Irrlicht/CGUITabControl.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CGUIImage.o: ../../external/irrlicht/source/Irrlicht/CGUIImage.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CIrrMeshWriter.o: ../../external/irrlicht/source/Irrlicht/CIrrMeshWriter.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTRGouraudAlphaNoZ2.o: ../../external/irrlicht/source/Irrlicht/CTRGouraudAlphaNoZ2.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CWADReader.o: ../../external/irrlicht/source/Irrlicht/CWADReader.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTRTextureGouraud.o: ../../external/irrlicht/source/Irrlicht/CTRTextureGouraud.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CBoneSceneNode.o: ../../external/irrlicht/source/Irrlicht/CBoneSceneNode.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTextSceneNode.o: ../../external/irrlicht/source/Irrlicht/CTextSceneNode.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CSceneNodeAnimatorCameraMaya.o: ../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorCameraMaya.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTRGouraud.o: ../../external/irrlicht/source/Irrlicht/CTRGouraud.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CParticleSystemSceneNode.o: ../../external/irrlicht/source/Irrlicht/CParticleSystemSceneNode.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CParticleSphereEmitter.o: ../../external/irrlicht/source/Irrlicht/CParticleSphereEmitter.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CImageWriterPSD.o: ../../external/irrlicht/source/Irrlicht/CImageWriterPSD.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CSceneLoaderIrr.o: ../../external/irrlicht/source/Irrlicht/CSceneLoaderIrr.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTRFlatWire.o: ../../external/irrlicht/source/Irrlicht/CTRFlatWire.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CFileList.o: ../../external/irrlicht/source/Irrlicht/CFileList.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTRGouraudWire.o: ../../external/irrlicht/source/Irrlicht/CTRGouraudWire.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTRTextureGouraudVertexAlpha2.o: ../../external/irrlicht/source/Irrlicht/CTRTextureGouraudVertexAlpha2.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CImageWriterPPM.o: ../../external/irrlicht/source/Irrlicht/CImageWriterPPM.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CIrrDeviceWin32.o: ../../external/irrlicht/source/Irrlicht/CIrrDeviceWin32.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTRTextureLightMap2_M2.o: ../../external/irrlicht/source/Irrlicht/CTRTextureLightMap2_M2.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CVolumeLightSceneNode.o: ../../external/irrlicht/source/Irrlicht/CVolumeLightSceneNode.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CParticleAnimatedMeshSceneNodeEmitter.o: ../../external/irrlicht/source/Irrlicht/CParticleAnimatedMeshSceneNodeEmitter.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CGUIWindow.o: ../../external/irrlicht/source/Irrlicht/CGUIWindow.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CSceneNodeAnimatorCameraFPS.o: ../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorCameraFPS.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CMeshCache.o: ../../external/irrlicht/source/Irrlicht/CMeshCache.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CLightSceneNode.o: ../../external/irrlicht/source/Irrlicht/CLightSceneNode.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/COpenGLSLMaterialRenderer.o: ../../external/irrlicht/source/Irrlicht/COpenGLSLMaterialRenderer.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/COctreeTriangleSelector.o: ../../external/irrlicht/source/Irrlicht/COctreeTriangleSelector.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CGUIInOutFader.o: ../../external/irrlicht/source/Irrlicht/CGUIInOutFader.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CIrrDeviceFB.o: ../../external/irrlicht/source/Irrlicht/CIrrDeviceFB.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CGUIButton.o: ../../external/irrlicht/source/Irrlicht/CGUIButton.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CXMLReader.o: ../../external/irrlicht/source/Irrlicht/CXMLReader.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CMD2MeshFileLoader.o: ../../external/irrlicht/source/Irrlicht/CMD2MeshFileLoader.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CGUIMenu.o: ../../external/irrlicht/source/Irrlicht/CGUIMenu.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CCgMaterialRenderer.o: ../../external/irrlicht/source/Irrlicht/CCgMaterialRenderer.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CD3D8Texture.o: ../../external/irrlicht/source/Irrlicht/CD3D8Texture.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CReadFile.o: ../../external/irrlicht/source/Irrlicht/CReadFile.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/irrXML.o: ../../external/irrlicht/source/Irrlicht/irrXML.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CSceneNodeAnimatorFlyStraight.o: ../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorFlyStraight.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CGUIStaticText.o: ../../external/irrlicht/source/Irrlicht/CGUIStaticText.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CSkyBoxSceneNode.o: ../../external/irrlicht/source/Irrlicht/CSkyBoxSceneNode.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CImageLoaderPPM.o: ../../external/irrlicht/source/Irrlicht/CImageLoaderPPM.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CGUIMessageBox.o: ../../external/irrlicht/source/Irrlicht/CGUIMessageBox.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CGUIToolBar.o: ../../external/irrlicht/source/Irrlicht/CGUIToolBar.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CD3D8ParallaxMapRenderer.o: ../../external/irrlicht/source/Irrlicht/CD3D8ParallaxMapRenderer.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/IBurningShader.o: ../../external/irrlicht/source/Irrlicht/IBurningShader.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTRTextureLightMap2_M4.o: ../../external/irrlicht/source/Irrlicht/CTRTextureLightMap2_M4.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CSceneNodeAnimatorFlyCircle.o: ../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorFlyCircle.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CSceneNodeAnimatorFollowSpline.o: ../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorFollowSpline.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CDefaultSceneNodeAnimatorFactory.o: ../../external/irrlicht/source/Irrlicht/CDefaultSceneNodeAnimatorFactory.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CParticleRingEmitter.o: ../../external/irrlicht/source/Irrlicht/CParticleRingEmitter.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CMY3DMeshFileLoader.o: ../../external/irrlicht/source/Irrlicht/CMY3DMeshFileLoader.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CGUIImageList.o: ../../external/irrlicht/source/Irrlicht/CGUIImageList.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CD3D8NormalMapRenderer.o: ../../external/irrlicht/source/Irrlicht/CD3D8NormalMapRenderer.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CImageWriterTGA.o: ../../external/irrlicht/source/Irrlicht/CImageWriterTGA.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CParticleMeshEmitter.o: ../../external/irrlicht/source/Irrlicht/CParticleMeshEmitter.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/COBJMeshFileLoader.o: ../../external/irrlicht/source/Irrlicht/COBJMeshFileLoader.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CParticleRotationAffector.o: ../../external/irrlicht/source/Irrlicht/CParticleRotationAffector.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CFPSCounter.o: ../../external/irrlicht/source/Irrlicht/CFPSCounter.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CColladaMeshWriter.o: ../../external/irrlicht/source/Irrlicht/CColladaMeshWriter.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTRTextureLightMapGouraud2_M4.o: ../../external/irrlicht/source/Irrlicht/CTRTextureLightMapGouraud2_M4.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CIrrDeviceWinCE.o: ../../external/irrlicht/source/Irrlicht/CIrrDeviceWinCE.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CIrrDeviceStub.o: ../../external/irrlicht/source/Irrlicht/CIrrDeviceStub.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CMetaTriangleSelector.o: ../../external/irrlicht/source/Irrlicht/CMetaTriangleSelector.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CImageLoaderBMP.o: ../../external/irrlicht/source/Irrlicht/CImageLoaderBMP.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CCameraSceneNode.o: ../../external/irrlicht/source/Irrlicht/CCameraSceneNode.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CBillboardSceneNode.o: ../../external/irrlicht/source/Irrlicht/CBillboardSceneNode.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CDefaultSceneNodeFactory.o: ../../external/irrlicht/source/Irrlicht/CDefaultSceneNodeFactory.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/COpenGLParallaxMapRenderer.o: ../../external/irrlicht/source/Irrlicht/COpenGLParallaxMapRenderer.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CGUIEditBox.o: ../../external/irrlicht/source/Irrlicht/CGUIEditBox.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTRTextureGouraudAlpha.o: ../../external/irrlicht/source/Irrlicht/CTRTextureGouraudAlpha.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTRTextureWire2.o: ../../external/irrlicht/source/Irrlicht/CTRTextureWire2.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CImageLoaderRGB.o: ../../external/irrlicht/source/Irrlicht/CImageLoaderRGB.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CXMLWriter.o: ../../external/irrlicht/source/Irrlicht/CXMLWriter.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/COSOperator.o: ../../external/irrlicht/source/Irrlicht/COSOperator.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CXMeshFileLoader.o: ../../external/irrlicht/source/Irrlicht/CXMeshFileLoader.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CD3D9ParallaxMapRenderer.o: ../../external/irrlicht/source/Irrlicht/CD3D9ParallaxMapRenderer.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CTRTextureGouraud2.o: ../../external/irrlicht/source/Irrlicht/CTRTextureGouraud2.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CSceneNodeAnimatorDelete.o: ../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorDelete.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/Irrlicht.o: ../../external/irrlicht/source/Irrlicht/Irrlicht.cpp
+$(OBJDIR)/CAttributes.o: ../../external/irrlicht/source/Irrlicht/CAttributes.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/CB3DMeshFileLoader.o: ../../external/irrlicht/source/Irrlicht/CB3DMeshFileLoader.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CGUISkin.o: ../../external/irrlicht/source/Irrlicht/CGUISkin.cpp
+$(OBJDIR)/CBillboardSceneNode.o: ../../external/irrlicht/source/Irrlicht/CBillboardSceneNode.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/COgreMeshFileLoader.o: ../../external/irrlicht/source/Irrlicht/COgreMeshFileLoader.cpp
+$(OBJDIR)/CBoneSceneNode.o: ../../external/irrlicht/source/Irrlicht/CBoneSceneNode.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CImageLoaderPSD.o: ../../external/irrlicht/source/Irrlicht/CImageLoaderPSD.cpp
+$(OBJDIR)/CBSPMeshFileLoader.o: ../../external/irrlicht/source/Irrlicht/CBSPMeshFileLoader.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/CGUIMeshViewer.o: ../../external/irrlicht/source/Irrlicht/CGUIMeshViewer.cpp
+$(OBJDIR)/CBurningShader_Raster_Reference.o: ../../external/irrlicht/source/Irrlicht/CBurningShader_Raster_Reference.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CCameraSceneNode.o: ../../external/irrlicht/source/Irrlicht/CCameraSceneNode.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CCgMaterialRenderer.o: ../../external/irrlicht/source/Irrlicht/CCgMaterialRenderer.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/CColladaFileLoader.o: ../../external/irrlicht/source/Irrlicht/CColladaFileLoader.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CColladaMeshWriter.o: ../../external/irrlicht/source/Irrlicht/CColladaMeshWriter.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CColorConverter.o: ../../external/irrlicht/source/Irrlicht/CColorConverter.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CCSMLoader.o: ../../external/irrlicht/source/Irrlicht/CCSMLoader.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CCubeSceneNode.o: ../../external/irrlicht/source/Irrlicht/CCubeSceneNode.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CD3D8Driver.o: ../../external/irrlicht/source/Irrlicht/CD3D8Driver.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CD3D8NormalMapRenderer.o: ../../external/irrlicht/source/Irrlicht/CD3D8NormalMapRenderer.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CD3D8ParallaxMapRenderer.o: ../../external/irrlicht/source/Irrlicht/CD3D8ParallaxMapRenderer.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CD3D8ShaderMaterialRenderer.o: ../../external/irrlicht/source/Irrlicht/CD3D8ShaderMaterialRenderer.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CD3D8Texture.o: ../../external/irrlicht/source/Irrlicht/CD3D8Texture.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CD3D9CgMaterialRenderer.o: ../../external/irrlicht/source/Irrlicht/CD3D9CgMaterialRenderer.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CD3D9Driver.o: ../../external/irrlicht/source/Irrlicht/CD3D9Driver.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CD3D9HLSLMaterialRenderer.o: ../../external/irrlicht/source/Irrlicht/CD3D9HLSLMaterialRenderer.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CD3D9NormalMapRenderer.o: ../../external/irrlicht/source/Irrlicht/CD3D9NormalMapRenderer.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CD3D9ParallaxMapRenderer.o: ../../external/irrlicht/source/Irrlicht/CD3D9ParallaxMapRenderer.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CD3D9ShaderMaterialRenderer.o: ../../external/irrlicht/source/Irrlicht/CD3D9ShaderMaterialRenderer.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CD3D9Texture.o: ../../external/irrlicht/source/Irrlicht/CD3D9Texture.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CDefaultGUIElementFactory.o: ../../external/irrlicht/source/Irrlicht/CDefaultGUIElementFactory.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CDefaultSceneNodeAnimatorFactory.o: ../../external/irrlicht/source/Irrlicht/CDefaultSceneNodeAnimatorFactory.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CDefaultSceneNodeFactory.o: ../../external/irrlicht/source/Irrlicht/CDefaultSceneNodeFactory.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CDepthBuffer.o: ../../external/irrlicht/source/Irrlicht/CDepthBuffer.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/CDMFLoader.o: ../../external/irrlicht/source/Irrlicht/CDMFLoader.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CDummyTransformationSceneNode.o: ../../external/irrlicht/source/Irrlicht/CDummyTransformationSceneNode.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CEmptySceneNode.o: ../../external/irrlicht/source/Irrlicht/CEmptySceneNode.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CFileList.o: ../../external/irrlicht/source/Irrlicht/CFileList.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CFileSystem.o: ../../external/irrlicht/source/Irrlicht/CFileSystem.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CFPSCounter.o: ../../external/irrlicht/source/Irrlicht/CFPSCounter.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CGeometryCreator.o: ../../external/irrlicht/source/Irrlicht/CGeometryCreator.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CGUIButton.o: ../../external/irrlicht/source/Irrlicht/CGUIButton.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CGUICheckBox.o: ../../external/irrlicht/source/Irrlicht/CGUICheckBox.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CGUIColorSelectDialog.o: ../../external/irrlicht/source/Irrlicht/CGUIColorSelectDialog.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CGUIComboBox.o: ../../external/irrlicht/source/Irrlicht/CGUIComboBox.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CGUIContextMenu.o: ../../external/irrlicht/source/Irrlicht/CGUIContextMenu.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CGUIEditBox.o: ../../external/irrlicht/source/Irrlicht/CGUIEditBox.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CGUIEnvironment.o: ../../external/irrlicht/source/Irrlicht/CGUIEnvironment.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CGUIFileOpenDialog.o: ../../external/irrlicht/source/Irrlicht/CGUIFileOpenDialog.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CGUIFont.o: ../../external/irrlicht/source/Irrlicht/CGUIFont.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CGUIImage.o: ../../external/irrlicht/source/Irrlicht/CGUIImage.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CGUIImageList.o: ../../external/irrlicht/source/Irrlicht/CGUIImageList.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CGUIInOutFader.o: ../../external/irrlicht/source/Irrlicht/CGUIInOutFader.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CGUIListBox.o: ../../external/irrlicht/source/Irrlicht/CGUIListBox.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CGUIMenu.o: ../../external/irrlicht/source/Irrlicht/CGUIMenu.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CGUIMeshViewer.o: ../../external/irrlicht/source/Irrlicht/CGUIMeshViewer.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CGUIMessageBox.o: ../../external/irrlicht/source/Irrlicht/CGUIMessageBox.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CGUIModalScreen.o: ../../external/irrlicht/source/Irrlicht/CGUIModalScreen.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CGUIScrollBar.o: ../../external/irrlicht/source/Irrlicht/CGUIScrollBar.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CGUISkin.o: ../../external/irrlicht/source/Irrlicht/CGUISkin.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CGUISpinBox.o: ../../external/irrlicht/source/Irrlicht/CGUISpinBox.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CGUISpriteBank.o: ../../external/irrlicht/source/Irrlicht/CGUISpriteBank.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CGUIStaticText.o: ../../external/irrlicht/source/Irrlicht/CGUIStaticText.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CGUITabControl.o: ../../external/irrlicht/source/Irrlicht/CGUITabControl.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CGUITable.o: ../../external/irrlicht/source/Irrlicht/CGUITable.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CGUIToolBar.o: ../../external/irrlicht/source/Irrlicht/CGUIToolBar.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CGUITreeView.o: ../../external/irrlicht/source/Irrlicht/CGUITreeView.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CGUIWindow.o: ../../external/irrlicht/source/Irrlicht/CGUIWindow.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CImage.o: ../../external/irrlicht/source/Irrlicht/CImage.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CImageLoaderBMP.o: ../../external/irrlicht/source/Irrlicht/CImageLoaderBMP.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CImageLoaderDDS.o: ../../external/irrlicht/source/Irrlicht/CImageLoaderDDS.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CImageLoaderJPG.o: ../../external/irrlicht/source/Irrlicht/CImageLoaderJPG.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CImageLoaderPCX.o: ../../external/irrlicht/source/Irrlicht/CImageLoaderPCX.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CImageLoaderPNG.o: ../../external/irrlicht/source/Irrlicht/CImageLoaderPNG.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CImageLoaderPPM.o: ../../external/irrlicht/source/Irrlicht/CImageLoaderPPM.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CImageLoaderPSD.o: ../../external/irrlicht/source/Irrlicht/CImageLoaderPSD.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CImageLoaderRGB.o: ../../external/irrlicht/source/Irrlicht/CImageLoaderRGB.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CImageLoaderTGA.o: ../../external/irrlicht/source/Irrlicht/CImageLoaderTGA.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CImageLoaderWAL.o: ../../external/irrlicht/source/Irrlicht/CImageLoaderWAL.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CImageWriterBMP.o: ../../external/irrlicht/source/Irrlicht/CImageWriterBMP.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CImageWriterJPG.o: ../../external/irrlicht/source/Irrlicht/CImageWriterJPG.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CImageWriterPCX.o: ../../external/irrlicht/source/Irrlicht/CImageWriterPCX.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CImageWriterPNG.o: ../../external/irrlicht/source/Irrlicht/CImageWriterPNG.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CImageWriterPPM.o: ../../external/irrlicht/source/Irrlicht/CImageWriterPPM.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CImageWriterPSD.o: ../../external/irrlicht/source/Irrlicht/CImageWriterPSD.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CImageWriterTGA.o: ../../external/irrlicht/source/Irrlicht/CImageWriterTGA.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CIrrDeviceConsole.o: ../../external/irrlicht/source/Irrlicht/CIrrDeviceConsole.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CIrrDeviceFB.o: ../../external/irrlicht/source/Irrlicht/CIrrDeviceFB.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CIrrDeviceLinux.o: ../../external/irrlicht/source/Irrlicht/CIrrDeviceLinux.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CIrrDeviceSDL.o: ../../external/irrlicht/source/Irrlicht/CIrrDeviceSDL.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CIrrDeviceStub.o: ../../external/irrlicht/source/Irrlicht/CIrrDeviceStub.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CIrrDeviceWin32.o: ../../external/irrlicht/source/Irrlicht/CIrrDeviceWin32.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CIrrDeviceWinCE.o: ../../external/irrlicht/source/Irrlicht/CIrrDeviceWinCE.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CIrrMeshFileLoader.o: ../../external/irrlicht/source/Irrlicht/CIrrMeshFileLoader.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CIrrMeshWriter.o: ../../external/irrlicht/source/Irrlicht/CIrrMeshWriter.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CLightSceneNode.o: ../../external/irrlicht/source/Irrlicht/CLightSceneNode.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CLimitReadFile.o: ../../external/irrlicht/source/Irrlicht/CLimitReadFile.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CLMTSMeshFileLoader.o: ../../external/irrlicht/source/Irrlicht/CLMTSMeshFileLoader.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CLogger.o: ../../external/irrlicht/source/Irrlicht/CLogger.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CLWOMeshFileLoader.o: ../../external/irrlicht/source/Irrlicht/CLWOMeshFileLoader.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CMD2MeshFileLoader.o: ../../external/irrlicht/source/Irrlicht/CMD2MeshFileLoader.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CMD3MeshFileLoader.o: ../../external/irrlicht/source/Irrlicht/CMD3MeshFileLoader.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CMemoryFile.o: ../../external/irrlicht/source/Irrlicht/CMemoryFile.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CMeshCache.o: ../../external/irrlicht/source/Irrlicht/CMeshCache.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CMeshManipulator.o: ../../external/irrlicht/source/Irrlicht/CMeshManipulator.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CMeshSceneNode.o: ../../external/irrlicht/source/Irrlicht/CMeshSceneNode.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CMetaTriangleSelector.o: ../../external/irrlicht/source/Irrlicht/CMetaTriangleSelector.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CMountPointReader.o: ../../external/irrlicht/source/Irrlicht/CMountPointReader.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CMS3DMeshFileLoader.o: ../../external/irrlicht/source/Irrlicht/CMS3DMeshFileLoader.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CMY3DMeshFileLoader.o: ../../external/irrlicht/source/Irrlicht/CMY3DMeshFileLoader.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CNPKReader.o: ../../external/irrlicht/source/Irrlicht/CNPKReader.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CNullDriver.o: ../../external/irrlicht/source/Irrlicht/CNullDriver.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/COBJMeshFileLoader.o: ../../external/irrlicht/source/Irrlicht/COBJMeshFileLoader.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/COBJMeshWriter.o: ../../external/irrlicht/source/Irrlicht/COBJMeshWriter.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/COCTLoader.o: ../../external/irrlicht/source/Irrlicht/COCTLoader.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/COctreeSceneNode.o: ../../external/irrlicht/source/Irrlicht/COctreeSceneNode.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/COctreeTriangleSelector.o: ../../external/irrlicht/source/Irrlicht/COctreeTriangleSelector.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/COgreMeshFileLoader.o: ../../external/irrlicht/source/Irrlicht/COgreMeshFileLoader.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/COpenGLCgMaterialRenderer.o: ../../external/irrlicht/source/Irrlicht/COpenGLCgMaterialRenderer.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/COpenGLDriver.o: ../../external/irrlicht/source/Irrlicht/COpenGLDriver.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/COpenGLExtensionHandler.o: ../../external/irrlicht/source/Irrlicht/COpenGLExtensionHandler.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/COpenGLNormalMapRenderer.o: ../../external/irrlicht/source/Irrlicht/COpenGLNormalMapRenderer.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/COpenGLParallaxMapRenderer.o: ../../external/irrlicht/source/Irrlicht/COpenGLParallaxMapRenderer.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/COpenGLShaderMaterialRenderer.o: ../../external/irrlicht/source/Irrlicht/COpenGLShaderMaterialRenderer.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/COpenGLSLMaterialRenderer.o: ../../external/irrlicht/source/Irrlicht/COpenGLSLMaterialRenderer.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/COpenGLTexture.o: ../../external/irrlicht/source/Irrlicht/COpenGLTexture.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/COSOperator.o: ../../external/irrlicht/source/Irrlicht/COSOperator.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/CPakReader.o: ../../external/irrlicht/source/Irrlicht/CPakReader.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/gzclose.o: ../../external/irrlicht/source/Irrlicht/zlib/gzclose.c
+$(OBJDIR)/CParticleAnimatedMeshSceneNodeEmitter.o: ../../external/irrlicht/source/Irrlicht/CParticleAnimatedMeshSceneNodeEmitter.cpp
 	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/inffast.o: ../../external/irrlicht/source/Irrlicht/zlib/inffast.c
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CParticleAttractionAffector.o: ../../external/irrlicht/source/Irrlicht/CParticleAttractionAffector.cpp
 	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/gzwrite.o: ../../external/irrlicht/source/Irrlicht/zlib/gzwrite.c
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CParticleBoxEmitter.o: ../../external/irrlicht/source/Irrlicht/CParticleBoxEmitter.cpp
 	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/deflate.o: ../../external/irrlicht/source/Irrlicht/zlib/deflate.c
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CParticleCylinderEmitter.o: ../../external/irrlicht/source/Irrlicht/CParticleCylinderEmitter.cpp
 	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/uncompr.o: ../../external/irrlicht/source/Irrlicht/zlib/uncompr.c
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CParticleFadeOutAffector.o: ../../external/irrlicht/source/Irrlicht/CParticleFadeOutAffector.cpp
 	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/inftrees.o: ../../external/irrlicht/source/Irrlicht/zlib/inftrees.c
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CParticleGravityAffector.o: ../../external/irrlicht/source/Irrlicht/CParticleGravityAffector.cpp
 	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/gzlib.o: ../../external/irrlicht/source/Irrlicht/zlib/gzlib.c
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CParticleMeshEmitter.o: ../../external/irrlicht/source/Irrlicht/CParticleMeshEmitter.cpp
 	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/zutil.o: ../../external/irrlicht/source/Irrlicht/zlib/zutil.c
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CParticlePointEmitter.o: ../../external/irrlicht/source/Irrlicht/CParticlePointEmitter.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CParticleRingEmitter.o: ../../external/irrlicht/source/Irrlicht/CParticleRingEmitter.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CParticleRotationAffector.o: ../../external/irrlicht/source/Irrlicht/CParticleRotationAffector.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CParticleScaleAffector.o: ../../external/irrlicht/source/Irrlicht/CParticleScaleAffector.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CParticleSphereEmitter.o: ../../external/irrlicht/source/Irrlicht/CParticleSphereEmitter.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CParticleSystemSceneNode.o: ../../external/irrlicht/source/Irrlicht/CParticleSystemSceneNode.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CPLYMeshFileLoader.o: ../../external/irrlicht/source/Irrlicht/CPLYMeshFileLoader.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CPLYMeshWriter.o: ../../external/irrlicht/source/Irrlicht/CPLYMeshWriter.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CQ3LevelMesh.o: ../../external/irrlicht/source/Irrlicht/CQ3LevelMesh.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CQuake3ShaderSceneNode.o: ../../external/irrlicht/source/Irrlicht/CQuake3ShaderSceneNode.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CReadFile.o: ../../external/irrlicht/source/Irrlicht/CReadFile.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CSceneCollisionManager.o: ../../external/irrlicht/source/Irrlicht/CSceneCollisionManager.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CSceneLoaderIrr.o: ../../external/irrlicht/source/Irrlicht/CSceneLoaderIrr.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CSceneManager.o: ../../external/irrlicht/source/Irrlicht/CSceneManager.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CSceneNodeAnimatorCameraFPS.o: ../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorCameraFPS.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CSceneNodeAnimatorCameraMaya.o: ../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorCameraMaya.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CSceneNodeAnimatorCollisionResponse.o: ../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorCollisionResponse.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CSceneNodeAnimatorDelete.o: ../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorDelete.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CSceneNodeAnimatorFlyCircle.o: ../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorFlyCircle.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CSceneNodeAnimatorFlyStraight.o: ../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorFlyStraight.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CSceneNodeAnimatorFollowSpline.o: ../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorFollowSpline.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CSceneNodeAnimatorRotation.o: ../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorRotation.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CSceneNodeAnimatorTexture.o: ../../external/irrlicht/source/Irrlicht/CSceneNodeAnimatorTexture.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CShadowVolumeSceneNode.o: ../../external/irrlicht/source/Irrlicht/CShadowVolumeSceneNode.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CSkinnedMesh.o: ../../external/irrlicht/source/Irrlicht/CSkinnedMesh.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CSkyBoxSceneNode.o: ../../external/irrlicht/source/Irrlicht/CSkyBoxSceneNode.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CSkyDomeSceneNode.o: ../../external/irrlicht/source/Irrlicht/CSkyDomeSceneNode.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CSMFMeshFileLoader.o: ../../external/irrlicht/source/Irrlicht/CSMFMeshFileLoader.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CSoftwareDriver.o: ../../external/irrlicht/source/Irrlicht/CSoftwareDriver.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CSoftwareDriver2.o: ../../external/irrlicht/source/Irrlicht/CSoftwareDriver2.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CSoftwareTexture.o: ../../external/irrlicht/source/Irrlicht/CSoftwareTexture.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CSoftwareTexture2.o: ../../external/irrlicht/source/Irrlicht/CSoftwareTexture2.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CSphereSceneNode.o: ../../external/irrlicht/source/Irrlicht/CSphereSceneNode.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CSTLMeshFileLoader.o: ../../external/irrlicht/source/Irrlicht/CSTLMeshFileLoader.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CSTLMeshWriter.o: ../../external/irrlicht/source/Irrlicht/CSTLMeshWriter.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTarReader.o: ../../external/irrlicht/source/Irrlicht/CTarReader.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTerrainSceneNode.o: ../../external/irrlicht/source/Irrlicht/CTerrainSceneNode.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTerrainTriangleSelector.o: ../../external/irrlicht/source/Irrlicht/CTerrainTriangleSelector.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTextSceneNode.o: ../../external/irrlicht/source/Irrlicht/CTextSceneNode.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTRFlat.o: ../../external/irrlicht/source/Irrlicht/CTRFlat.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTRFlatWire.o: ../../external/irrlicht/source/Irrlicht/CTRFlatWire.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTRGouraud.o: ../../external/irrlicht/source/Irrlicht/CTRGouraud.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTRGouraud2.o: ../../external/irrlicht/source/Irrlicht/CTRGouraud2.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTRGouraudAlpha2.o: ../../external/irrlicht/source/Irrlicht/CTRGouraudAlpha2.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTRGouraudAlphaNoZ2.o: ../../external/irrlicht/source/Irrlicht/CTRGouraudAlphaNoZ2.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTRGouraudWire.o: ../../external/irrlicht/source/Irrlicht/CTRGouraudWire.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTriangleBBSelector.o: ../../external/irrlicht/source/Irrlicht/CTriangleBBSelector.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTriangleSelector.o: ../../external/irrlicht/source/Irrlicht/CTriangleSelector.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTRNormalMap.o: ../../external/irrlicht/source/Irrlicht/CTRNormalMap.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTRStencilShadow.o: ../../external/irrlicht/source/Irrlicht/CTRStencilShadow.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTRTextureBlend.o: ../../external/irrlicht/source/Irrlicht/CTRTextureBlend.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTRTextureDetailMap2.o: ../../external/irrlicht/source/Irrlicht/CTRTextureDetailMap2.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTRTextureFlat.o: ../../external/irrlicht/source/Irrlicht/CTRTextureFlat.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTRTextureFlatWire.o: ../../external/irrlicht/source/Irrlicht/CTRTextureFlatWire.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTRTextureGouraud.o: ../../external/irrlicht/source/Irrlicht/CTRTextureGouraud.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTRTextureGouraud2.o: ../../external/irrlicht/source/Irrlicht/CTRTextureGouraud2.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTRTextureGouraudAdd.o: ../../external/irrlicht/source/Irrlicht/CTRTextureGouraudAdd.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTRTextureGouraudAdd2.o: ../../external/irrlicht/source/Irrlicht/CTRTextureGouraudAdd2.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTRTextureGouraudAddNoZ2.o: ../../external/irrlicht/source/Irrlicht/CTRTextureGouraudAddNoZ2.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTRTextureGouraudAlpha.o: ../../external/irrlicht/source/Irrlicht/CTRTextureGouraudAlpha.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTRTextureGouraudAlphaNoZ.o: ../../external/irrlicht/source/Irrlicht/CTRTextureGouraudAlphaNoZ.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTRTextureGouraudNoZ.o: ../../external/irrlicht/source/Irrlicht/CTRTextureGouraudNoZ.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTRTextureGouraudNoZ2.o: ../../external/irrlicht/source/Irrlicht/CTRTextureGouraudNoZ2.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTRTextureGouraudVertexAlpha2.o: ../../external/irrlicht/source/Irrlicht/CTRTextureGouraudVertexAlpha2.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTRTextureGouraudWire.o: ../../external/irrlicht/source/Irrlicht/CTRTextureGouraudWire.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTRTextureLightMap2_Add.o: ../../external/irrlicht/source/Irrlicht/CTRTextureLightMap2_Add.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTRTextureLightMap2_M1.o: ../../external/irrlicht/source/Irrlicht/CTRTextureLightMap2_M1.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTRTextureLightMap2_M2.o: ../../external/irrlicht/source/Irrlicht/CTRTextureLightMap2_M2.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTRTextureLightMap2_M4.o: ../../external/irrlicht/source/Irrlicht/CTRTextureLightMap2_M4.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTRTextureLightMapGouraud2_M4.o: ../../external/irrlicht/source/Irrlicht/CTRTextureLightMapGouraud2_M4.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CTRTextureWire2.o: ../../external/irrlicht/source/Irrlicht/CTRTextureWire2.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CVideoModeList.o: ../../external/irrlicht/source/Irrlicht/CVideoModeList.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CVolumeLightSceneNode.o: ../../external/irrlicht/source/Irrlicht/CVolumeLightSceneNode.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CWADReader.o: ../../external/irrlicht/source/Irrlicht/CWADReader.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CWaterSurfaceSceneNode.o: ../../external/irrlicht/source/Irrlicht/CWaterSurfaceSceneNode.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CWriteFile.o: ../../external/irrlicht/source/Irrlicht/CWriteFile.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CXMeshFileLoader.o: ../../external/irrlicht/source/Irrlicht/CXMeshFileLoader.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CXMLReader.o: ../../external/irrlicht/source/Irrlicht/CXMLReader.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CXMLWriter.o: ../../external/irrlicht/source/Irrlicht/CXMLWriter.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CZBuffer.o: ../../external/irrlicht/source/Irrlicht/CZBuffer.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/CZipReader.o: ../../external/irrlicht/source/Irrlicht/CZipReader.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/IBurningShader.o: ../../external/irrlicht/source/Irrlicht/IBurningShader.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/Irrlicht.o: ../../external/irrlicht/source/Irrlicht/Irrlicht.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/irrXML.o: ../../external/irrlicht/source/Irrlicht/irrXML.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/os.o: ../../external/irrlicht/source/Irrlicht/os.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/adler32.o: ../../external/irrlicht/source/Irrlicht/zlib/adler32.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/compress.o: ../../external/irrlicht/source/Irrlicht/zlib/compress.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/gzread.o: ../../external/irrlicht/source/Irrlicht/zlib/gzread.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/crc32.o: ../../external/irrlicht/source/Irrlicht/zlib/crc32.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/adler32.o: ../../external/irrlicht/source/Irrlicht/zlib/adler32.c
+$(OBJDIR)/deflate.o: ../../external/irrlicht/source/Irrlicht/zlib/deflate.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/trees.o: ../../external/irrlicht/source/Irrlicht/zlib/trees.c
+$(OBJDIR)/gzclose.o: ../../external/irrlicht/source/Irrlicht/zlib/gzclose.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/gzlib.o: ../../external/irrlicht/source/Irrlicht/zlib/gzlib.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/gzread.o: ../../external/irrlicht/source/Irrlicht/zlib/gzread.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/gzwrite.o: ../../external/irrlicht/source/Irrlicht/zlib/gzwrite.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/infback.o: ../../external/irrlicht/source/Irrlicht/zlib/infback.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/inffast.o: ../../external/irrlicht/source/Irrlicht/zlib/inffast.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/inflate.o: ../../external/irrlicht/source/Irrlicht/zlib/inflate.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/transupp.o: ../../external/irrlicht/source/Irrlicht/jpeglib/transupp.c
+$(OBJDIR)/inftrees.o: ../../external/irrlicht/source/Irrlicht/zlib/inftrees.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/wrtarga.o: ../../external/irrlicht/source/Irrlicht/jpeglib/wrtarga.c
+$(OBJDIR)/trees.o: ../../external/irrlicht/source/Irrlicht/zlib/trees.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jmemmgr.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jmemmgr.c
+$(OBJDIR)/uncompr.o: ../../external/irrlicht/source/Irrlicht/zlib/uncompr.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/rdgif.o: ../../external/irrlicht/source/Irrlicht/jpeglib/rdgif.c
+$(OBJDIR)/zutil.o: ../../external/irrlicht/source/Irrlicht/zlib/zutil.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jfdctint.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jfdctint.c
+$(OBJDIR)/cjpeg.o: ../../external/irrlicht/source/Irrlicht/jpeglib/cjpeg.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jmemname.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jmemname.c
+$(OBJDIR)/ckconfig.o: ../../external/irrlicht/source/Irrlicht/jpeglib/ckconfig.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/djpeg.o: ../../external/irrlicht/source/Irrlicht/jpeglib/djpeg.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jaricom.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jaricom.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jcapimin.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jcapimin.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jcapistd.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jcapistd.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jcarith.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jcarith.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jccoefct.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jccoefct.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/jccolor.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jccolor.c
@@ -1597,40 +1603,25 @@ $(OBJDIR)/jccolor.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jccolor.c
 $(OBJDIR)/jcdctmgr.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jcdctmgr.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jdinput.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdinput.c
+$(OBJDIR)/jchuff.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jchuff.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jcapistd.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jcapistd.c
+$(OBJDIR)/jcinit.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jcinit.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jutils.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jutils.c
+$(OBJDIR)/jcmainct.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jcmainct.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jdtrans.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdtrans.c
+$(OBJDIR)/jcmarker.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jcmarker.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jaricom.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jaricom.c
+$(OBJDIR)/jcmaster.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jcmaster.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jquant2.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jquant2.c
+$(OBJDIR)/jcomapi.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jcomapi.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/rdbmp.o: ../../external/irrlicht/source/Irrlicht/jpeglib/rdbmp.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jidctflt.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jidctflt.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jfdctflt.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jfdctflt.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/djpeg.o: ../../external/irrlicht/source/Irrlicht/jpeglib/djpeg.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jccoefct.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jccoefct.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jdhuff.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdhuff.c
+$(OBJDIR)/jcparam.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jcparam.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/jcprepct.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jcprepct.c
@@ -1639,133 +1630,160 @@ $(OBJDIR)/jcprepct.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jcprepct.c
 $(OBJDIR)/jcsample.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jcsample.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jdapimin.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdapimin.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jdmerge.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdmerge.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jdcolor.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdcolor.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jcarith.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jcarith.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jdmaster.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdmaster.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/rdcolmap.o: ../../external/irrlicht/source/Irrlicht/jpeglib/rdcolmap.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/rdtarga.o: ../../external/irrlicht/source/Irrlicht/jpeglib/rdtarga.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jdmarker.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdmarker.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jdmainct.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdmainct.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jmemnobs.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jmemnobs.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jcmaster.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jcmaster.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/rdrle.o: ../../external/irrlicht/source/Irrlicht/jpeglib/rdrle.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jdatasrc.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdatasrc.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jerror.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jerror.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jdcoefct.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdcoefct.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jmemansi.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jmemansi.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jcapimin.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jcapimin.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jdpostct.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdpostct.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/wrppm.o: ../../external/irrlicht/source/Irrlicht/jpeglib/wrppm.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jcmainct.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jcmainct.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/wrgif.o: ../../external/irrlicht/source/Irrlicht/jpeglib/wrgif.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/rdswitch.o: ../../external/irrlicht/source/Irrlicht/jpeglib/rdswitch.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jquant1.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jquant1.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jidctint.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jidctint.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jcinit.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jcinit.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/ckconfig.o: ../../external/irrlicht/source/Irrlicht/jpeglib/ckconfig.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jfdctfst.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jfdctfst.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/jctrans.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jctrans.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jpegtran.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jpegtran.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jdarith.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdarith.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/wrrle.o: ../../external/irrlicht/source/Irrlicht/jpeglib/wrrle.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jdsample.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdsample.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jddctmgr.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jddctmgr.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jidctfst.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jidctfst.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jdatadst.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdatadst.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jchuff.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jchuff.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jcomapi.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jcomapi.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/cjpeg.o: ../../external/irrlicht/source/Irrlicht/jpeglib/cjpeg.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/rdppm.o: ../../external/irrlicht/source/Irrlicht/jpeglib/rdppm.c
+$(OBJDIR)/jdapimin.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdapimin.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/jdapistd.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdapistd.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jdarith.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdarith.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jdatadst.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdatadst.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jdatasrc.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdatasrc.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jdcoefct.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdcoefct.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jdcolor.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdcolor.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jddctmgr.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jddctmgr.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jdhuff.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdhuff.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jdinput.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdinput.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jdmainct.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdmainct.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jdmarker.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdmarker.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jdmaster.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdmaster.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jdmerge.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdmerge.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jdpostct.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdpostct.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jdsample.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdsample.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jdtrans.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jdtrans.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jerror.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jerror.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jfdctflt.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jfdctflt.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jfdctfst.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jfdctfst.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jfdctint.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jfdctint.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jidctflt.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jidctflt.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jidctfst.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jidctfst.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jidctint.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jidctint.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jmemansi.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jmemansi.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jmemmgr.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jmemmgr.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jmemname.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jmemname.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jmemnobs.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jmemnobs.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jpegtran.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jpegtran.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jquant1.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jquant1.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jquant2.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jquant2.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/jutils.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jutils.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/rdbmp.o: ../../external/irrlicht/source/Irrlicht/jpeglib/rdbmp.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/rdcolmap.o: ../../external/irrlicht/source/Irrlicht/jpeglib/rdcolmap.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/rdgif.o: ../../external/irrlicht/source/Irrlicht/jpeglib/rdgif.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/rdppm.o: ../../external/irrlicht/source/Irrlicht/jpeglib/rdppm.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/rdrle.o: ../../external/irrlicht/source/Irrlicht/jpeglib/rdrle.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/rdswitch.o: ../../external/irrlicht/source/Irrlicht/jpeglib/rdswitch.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/rdtarga.o: ../../external/irrlicht/source/Irrlicht/jpeglib/rdtarga.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/transupp.o: ../../external/irrlicht/source/Irrlicht/jpeglib/transupp.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/wrbmp.o: ../../external/irrlicht/source/Irrlicht/jpeglib/wrbmp.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jcmarker.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jcmarker.c
+$(OBJDIR)/wrgif.o: ../../external/irrlicht/source/Irrlicht/jpeglib/wrgif.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/jcparam.o: ../../external/irrlicht/source/Irrlicht/jpeglib/jcparam.c
+$(OBJDIR)/wrppm.o: ../../external/irrlicht/source/Irrlicht/jpeglib/wrppm.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/wrrle.o: ../../external/irrlicht/source/Irrlicht/jpeglib/wrrle.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/wrtarga.o: ../../external/irrlicht/source/Irrlicht/jpeglib/wrtarga.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/png.o: ../../external/irrlicht/source/Irrlicht/libpng/png.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/pngerror.o: ../../external/irrlicht/source/Irrlicht/libpng/pngerror.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/pngget.o: ../../external/irrlicht/source/Irrlicht/libpng/pngget.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/pngmem.o: ../../external/irrlicht/source/Irrlicht/libpng/pngmem.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/pngpread.o: ../../external/irrlicht/source/Irrlicht/libpng/pngpread.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/pngread.o: ../../external/irrlicht/source/Irrlicht/libpng/pngread.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/pngrio.o: ../../external/irrlicht/source/Irrlicht/libpng/pngrio.c
@@ -1774,40 +1792,22 @@ $(OBJDIR)/pngrio.o: ../../external/irrlicht/source/Irrlicht/libpng/pngrio.c
 $(OBJDIR)/pngrtran.o: ../../external/irrlicht/source/Irrlicht/libpng/pngrtran.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/pngtrans.o: ../../external/irrlicht/source/Irrlicht/libpng/pngtrans.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/pngwrite.o: ../../external/irrlicht/source/Irrlicht/libpng/pngwrite.c
+$(OBJDIR)/pngrutil.o: ../../external/irrlicht/source/Irrlicht/libpng/pngrutil.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/pngset.o: ../../external/irrlicht/source/Irrlicht/libpng/pngset.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/pngrutil.o: ../../external/irrlicht/source/Irrlicht/libpng/pngrutil.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/pngget.o: ../../external/irrlicht/source/Irrlicht/libpng/pngget.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/pngerror.o: ../../external/irrlicht/source/Irrlicht/libpng/pngerror.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/pngwtran.o: ../../external/irrlicht/source/Irrlicht/libpng/pngwtran.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/pngread.o: ../../external/irrlicht/source/Irrlicht/libpng/pngread.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/png.o: ../../external/irrlicht/source/Irrlicht/libpng/png.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/pngpread.o: ../../external/irrlicht/source/Irrlicht/libpng/pngpread.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/pngmem.o: ../../external/irrlicht/source/Irrlicht/libpng/pngmem.c
+$(OBJDIR)/pngtrans.o: ../../external/irrlicht/source/Irrlicht/libpng/pngtrans.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/pngwio.o: ../../external/irrlicht/source/Irrlicht/libpng/pngwio.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/pngwrite.o: ../../external/irrlicht/source/Irrlicht/libpng/pngwrite.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/pngwtran.o: ../../external/irrlicht/source/Irrlicht/libpng/pngwtran.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/pngwutil.o: ../../external/irrlicht/source/Irrlicht/libpng/pngwutil.c
@@ -1816,16 +1816,13 @@ $(OBJDIR)/pngwutil.o: ../../external/irrlicht/source/Irrlicht/libpng/pngwutil.c
 $(OBJDIR)/LzmaDec.o: ../../external/irrlicht/source/Irrlicht/lzma/LzmaDec.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/unzcrash.o: ../../external/irrlicht/source/Irrlicht/bzip2/unzcrash.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/huffman.o: ../../external/irrlicht/source/Irrlicht/bzip2/huffman.c
+$(OBJDIR)/blocksort.o: ../../external/irrlicht/source/Irrlicht/bzip2/blocksort.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/bzcompress.o: ../../external/irrlicht/source/Irrlicht/bzip2/bzcompress.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/decompress.o: ../../external/irrlicht/source/Irrlicht/bzip2/decompress.c
+$(OBJDIR)/bzip2recover.o: ../../external/irrlicht/source/Irrlicht/bzip2/bzip2recover.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/bzlib.o: ../../external/irrlicht/source/Irrlicht/bzip2/bzlib.c
@@ -1834,46 +1831,49 @@ $(OBJDIR)/bzlib.o: ../../external/irrlicht/source/Irrlicht/bzip2/bzlib.c
 $(OBJDIR)/crctable.o: ../../external/irrlicht/source/Irrlicht/bzip2/crctable.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/randtable.o: ../../external/irrlicht/source/Irrlicht/bzip2/randtable.c
+$(OBJDIR)/decompress.o: ../../external/irrlicht/source/Irrlicht/bzip2/decompress.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/huffman.o: ../../external/irrlicht/source/Irrlicht/bzip2/huffman.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/mk251.o: ../../external/irrlicht/source/Irrlicht/bzip2/mk251.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/randtable.o: ../../external/irrlicht/source/Irrlicht/bzip2/randtable.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/spewG.o: ../../external/irrlicht/source/Irrlicht/bzip2/spewG.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/blocksort.o: ../../external/irrlicht/source/Irrlicht/bzip2/blocksort.c
-	@echo $(notdir $<)
-	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/bzip2recover.o: ../../external/irrlicht/source/Irrlicht/bzip2/bzip2recover.c
+$(OBJDIR)/unzcrash.o: ../../external/irrlicht/source/Irrlicht/bzip2/unzcrash.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/aescrypt.o: ../../external/irrlicht/source/Irrlicht/aesGladman/aescrypt.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/pwd2key.o: ../../external/irrlicht/source/Irrlicht/aesGladman/pwd2key.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/hmac.o: ../../external/irrlicht/source/Irrlicht/aesGladman/hmac.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/fileenc.o: ../../external/irrlicht/source/Irrlicht/aesGladman/fileenc.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/sha2.o: ../../external/irrlicht/source/Irrlicht/aesGladman/sha2.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/prng.o: ../../external/irrlicht/source/Irrlicht/aesGladman/prng.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/sha1.o: ../../external/irrlicht/source/Irrlicht/aesGladman/sha1.cpp
+$(OBJDIR)/aeskey.o: ../../external/irrlicht/source/Irrlicht/aesGladman/aeskey.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/aestab.o: ../../external/irrlicht/source/Irrlicht/aesGladman/aestab.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/aeskey.o: ../../external/irrlicht/source/Irrlicht/aesGladman/aeskey.cpp
+$(OBJDIR)/fileenc.o: ../../external/irrlicht/source/Irrlicht/aesGladman/fileenc.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/hmac.o: ../../external/irrlicht/source/Irrlicht/aesGladman/hmac.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/prng.o: ../../external/irrlicht/source/Irrlicht/aesGladman/prng.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/pwd2key.o: ../../external/irrlicht/source/Irrlicht/aesGladman/pwd2key.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/sha1.o: ../../external/irrlicht/source/Irrlicht/aesGladman/sha1.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/sha2.o: ../../external/irrlicht/source/Irrlicht/aesGladman/sha2.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
