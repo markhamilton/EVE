@@ -36,7 +36,7 @@ ifeq ($(config),release64)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -Wl,-x -m64 -L/usr/lib64
+  LDFLAGS   += -s -m64 -L/usr/lib64
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -102,7 +102,7 @@ ifeq ($(config),release64)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -Wl,-x -m64 -L/usr/lib64
+  LDFLAGS   += -s -m64 -L/usr/lib64
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -124,7 +124,7 @@ ifeq ($(config),debugdynamic64)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -Wl,-x -m64 -L/usr/lib64
+  LDFLAGS   += -s -m64 -L/usr/lib64
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -146,7 +146,7 @@ ifeq ($(config),releasedynamic64)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -Wl,-x -m64 -L/usr/lib64
+  LDFLAGS   += -s -m64 -L/usr/lib64
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -168,7 +168,7 @@ ifeq ($(config),debugsinglethread64)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -Wl,-x -m64 -L/usr/lib64
+  LDFLAGS   += -s -m64 -L/usr/lib64
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -190,7 +190,7 @@ ifeq ($(config),releasesinglethread64)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -Wl,-x -m64 -L/usr/lib64
+  LDFLAGS   += -s -m64 -L/usr/lib64
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -212,7 +212,7 @@ ifeq ($(config),debugsinglethreaddynamic64)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -Wl,-x -m64 -L/usr/lib64
+  LDFLAGS   += -s -m64 -L/usr/lib64
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -234,7 +234,7 @@ ifeq ($(config),releasesinglethreaddynamic64)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m64
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -Wl,-x -m64 -L/usr/lib64
+  LDFLAGS   += -s -m64 -L/usr/lib64
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -256,7 +256,7 @@ ifeq ($(config),release32)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -Wl,-x -m32 -L/usr/lib32
+  LDFLAGS   += -s -m32 -L/usr/lib32
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -322,7 +322,7 @@ ifeq ($(config),release32)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -Wl,-x -m32 -L/usr/lib32
+  LDFLAGS   += -s -m32 -L/usr/lib32
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -344,7 +344,7 @@ ifeq ($(config),debugdynamic32)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -Wl,-x -m32 -L/usr/lib32
+  LDFLAGS   += -s -m32 -L/usr/lib32
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -366,7 +366,7 @@ ifeq ($(config),releasedynamic32)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -Wl,-x -m32 -L/usr/lib32
+  LDFLAGS   += -s -m32 -L/usr/lib32
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -388,7 +388,7 @@ ifeq ($(config),debugsinglethread32)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -Wl,-x -m32 -L/usr/lib32
+  LDFLAGS   += -s -m32 -L/usr/lib32
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -410,7 +410,7 @@ ifeq ($(config),releasesinglethread32)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -Wl,-x -m32 -L/usr/lib32
+  LDFLAGS   += -s -m32 -L/usr/lib32
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -432,7 +432,7 @@ ifeq ($(config),debugsinglethreaddynamic32)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -Wl,-x -m32 -L/usr/lib32
+  LDFLAGS   += -s -m32 -L/usr/lib32
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -454,7 +454,7 @@ ifeq ($(config),releasesinglethreaddynamic32)
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -m32
   CXXFLAGS  += $(CFLAGS) 
-  LDFLAGS   += -Wl,-x -m32 -L/usr/lib32
+  LDFLAGS   += -s -m32 -L/usr/lib32
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LIBS      += 
   LDDEPS    += 
@@ -468,11 +468,11 @@ ifeq ($(config),releasesinglethreaddynamic32)
 endif
 
 OBJECTS := \
-	$(OBJDIR)/sim_curtime.o \
 	$(OBJDIR)/sim_linkedlist.o \
+	$(OBJDIR)/sim_xml.o \
+	$(OBJDIR)/sim_curtime.o \
 	$(OBJDIR)/sim_queue.o \
 	$(OBJDIR)/sim_threading.o \
-	$(OBJDIR)/sim_xml.o \
 	$(OBJDIR)/tinystr.o \
 	$(OBJDIR)/tinyxml.o \
 	$(OBJDIR)/tinyxmlerror.o \
@@ -541,10 +541,13 @@ endif
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 endif
 
-$(OBJDIR)/sim_curtime.o: ../../external/simc/source/sim_curtime.c
+$(OBJDIR)/sim_linkedlist.o: ../../external/simc/source/sim_linkedlist.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/sim_linkedlist.o: ../../external/simc/source/sim_linkedlist.c
+$(OBJDIR)/sim_xml.o: ../../external/simc/source/sim_xml.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+$(OBJDIR)/sim_curtime.o: ../../external/simc/source/sim_curtime.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/sim_queue.o: ../../external/simc/source/sim_queue.c
@@ -553,9 +556,6 @@ $(OBJDIR)/sim_queue.o: ../../external/simc/source/sim_queue.c
 $(OBJDIR)/sim_threading.o: ../../external/simc/source/sim_threading.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(CFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
-$(OBJDIR)/sim_xml.o: ../../external/simc/source/sim_xml.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 $(OBJDIR)/tinystr.o: ../../external/simc/external/tinyxml/tinystr.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -MF $(@:%.o=%.d) -c "$<"
