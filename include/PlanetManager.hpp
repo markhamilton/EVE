@@ -20,7 +20,7 @@ public:
 	PlanetManager(IrrlichtDevice* Device);
 	~PlanetManager();
 
-	void addPlanet(const stringw Name, const double Radius, const vector3df Origin);
+	void addPlanet(const stringw Name, const f32 Radius, const vector3df Origin);
 
 	void toggleWireframe() 		{ showWireframe(!m_pShowWireframe); }
 	void togglePointCloud() 	{ showPointCloud(!m_pShowPointCloud); }

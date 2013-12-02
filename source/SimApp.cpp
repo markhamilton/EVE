@@ -138,4 +138,6 @@ bool SimApp::OnEvent(const SEvent& event)
 			}
 		}
 	}
+
+	return true;
 }

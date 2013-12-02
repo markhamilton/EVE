@@ -21,7 +21,7 @@ PlanetManager::~PlanetManager()
 {
 
 }
-void PlanetManager::addPlanet(const stringw Name, const double Radius, const vector3df Origin)
+void PlanetManager::addPlanet(const stringw Name, const f32 Radius, const vector3df Origin)
 {
 	Planet* p = new Planet(m_pDevice, Name, "../assets/earth.jpg", Radius);
 	m_pPlanetList.push_back(p);
@@ -29,7 +29,7 @@ void PlanetManager::addPlanet(const stringw Name, const double Radius, const vec
 
 void PlanetManager::showWireframe(const bool State)
 {
-	for (int ii = 0; ii < m_pPlanetList.size(); ii++)
+	for (u32 ii = 0; ii < m_pPlanetList.size(); ii++)
 		m_pPlanetList[ii]->showWireframe(State);
 
 	// Disable point cloud flags
@@ -40,7 +40,7 @@ void PlanetManager::showWireframe(const bool State)
 
 void PlanetManager::showPointCloud(const bool State)
 {
-	for (int ii = 0; ii < m_pPlanetList.size(); ii++)
+	for (u32 ii = 0; ii < m_pPlanetList.size(); ii++)
 		m_pPlanetList[ii]->showPointCloud(State);
 
 	// Disable wireframe flags
@@ -51,7 +51,7 @@ void PlanetManager::showPointCloud(const bool State)
 
 void PlanetManager::showLighting(const bool State)
 {
-	for (int ii = 0; ii < m_pPlanetList.size(); ii++)
+	for (u32 ii = 0; ii < m_pPlanetList.size(); ii++)
 		m_pPlanetList[ii]->showLighting(State);
 
 	m_pShowLighting = State;
@@ -59,7 +59,7 @@ void PlanetManager::showLighting(const bool State)
 
 void PlanetManager::showOutline(const bool State)
 {
-	for (int ii = 0; ii < m_pPlanetList.size(); ii++)
+	for (u32 ii = 0; ii < m_pPlanetList.size(); ii++)
 		m_pPlanetList[ii]->showOutline(State);
 
 	m_pShowOutline = State;
@@ -67,7 +67,7 @@ void PlanetManager::showOutline(const bool State)
 
 void PlanetManager::showBoundingBox(const bool State)
 {
-	for(int ii = 0; ii < m_pPlanetList.size(); ii++)
+	for(u32 ii = 0; ii < m_pPlanetList.size(); ii++)
 		m_pPlanetList[ii]->showBoundingBox(State);
 
 	m_pShowBoundingBox = State;
@@ -75,7 +75,7 @@ void PlanetManager::showBoundingBox(const bool State)
 
 void PlanetManager::showNormal(const bool State)
 {
-	for(int ii = 0; ii < m_pPlanetList.size(); ii++)
+	for(u32 ii = 0; ii < m_pPlanetList.size(); ii++)
 		m_pPlanetList[ii]->showNormal(State);
 
 	m_pShowNormal = State;
@@ -83,7 +83,7 @@ void PlanetManager::showNormal(const bool State)
 
 void PlanetManager::showVelocity(const bool State)
 {
-	for(int ii = 0; ii < m_pPlanetList.size(); ii++)
+	for(u32 ii = 0; ii < m_pPlanetList.size(); ii++)
 		m_pPlanetList[ii]->showVelocity(State);
 
 	m_pShowVelocity = State;
