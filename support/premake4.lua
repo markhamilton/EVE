@@ -36,12 +36,15 @@ solution "EVE"
 		kind "StaticLib"
 		language "C++"
 		includedirs {
+			"../external/irrlicht/source/Irrlicht/MacOSX",
+			"../external/irrlicht/source/Irrlicht",
 			"../external/irrlicht/include",
 			"../external/glfw/deps"
 		}
 		files {
 			"../external/irrlicht/source/Irrlicht/*.cpp",
 			"../external/irrlicht/source/Irrlicht/*.h",
+			"../external/irrlicht/source/Irrlicht/MacOSX/*.h",
 			"../external/irrlicht/source/Irrlicht/zlib/*.c",
 			"../external/irrlicht/source/Irrlicht/zlib/*.h",
 			"../external/irrlicht/source/Irrlicht/jpeglib/*.c",
