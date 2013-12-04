@@ -7,17 +7,11 @@
 #include "Planet.hpp"
 
 using namespace std;
-using namespace irr;
-using namespace core;
-using namespace video;
-using namespace scene;
-using namespace io;
-using namespace gui;
 
 class PlanetManager
 {
 public:
-	PlanetManager(IrrlichtDevice* Device);
+	PlanetManager(Root* Device);
 	~PlanetManager();
 
 	void addPlanet(const stringw Name, const double Radius, const vector3df Origin);
@@ -38,12 +32,12 @@ public:
 	void showNormal(const bool State);
 	void showVelocity(const bool State);
 
-	void loadSystem(const io::path &XmlFile, const vector3df RelativeOrigin);
+	void loadSystem(const stringw XmlFile, const Vector3 RelativeOrigin);
 
 private:
-	IrrlichtDevice*			m_pDevice;
-	IVideoDriver*			m_pDriver;
-	ISceneManager*			m_pSMgr;
+	//IrrlichtDevice*			m_pDevice;
+	//IVideoDriver*			m_pDriver;
+	//ISceneManager*			m_pSMgr;
 	vector<Planet*>			m_pPlanetList;
 
 	bool					m_pShowWireframe;

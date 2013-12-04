@@ -6,6 +6,8 @@
 #include <string>
 #include <stdio.h>
 
+using namespace std;
+
 enum ConsoleMessageType
 {
 	CMT_STANDARD = 0,
@@ -19,7 +21,7 @@ public:
 	EveConsole();
 	~EveConsole();
 
-	// void saveToFile(const io::path &Output);
+	void saveToFile(const stringw Output);
 
 private:
 };

@@ -3,25 +3,22 @@
 #ifndef PLANET_HPP
 #define PLANET_HPP
 
-#include <irrlicht.h>
+#include <stdlib>
 #include <vector>
+#include <Ogre.h>
 #include "evds.h"
 
-using namespace irr;
-using namespace core;
-using namespace video;
-using namespace scene;
-using namespace io;
-using namespace gui;
+using namespace std;
+using namespace Ogre;
 
 class Planet
 {
 public:
-	Planet(IrrlichtDevice* Device, const stringw Name, const io::path &Texture, const f32 Radius);
+	Planet(Root* root, const String Name, const String Texture, const Real Radius);
 	~Planet();
 
-	void setName(stringw Name);
-	stringw getName();
+	void setName(const String Name);
+	String getName();
 
 	// Misc visualization parameters
 	void showWireframe(const bool State);
@@ -33,26 +30,26 @@ public:
 	void showVelocity(const bool State);
 
 private:
-	SMeshBuffer* createPlanetQLSCFaceMeshBuffer(const f32 Radius, const vector3df Direction);
-	IMesh* createPlanetMesh(const f32 Radius);
+	SMeshBuffer* createPlanetQLSCFaceMeshBuffer(const Real Radius, const Vector3 Direction);
+	SMesh* createPlanetMesh(const Real Radius);
 
-	IrrlichtDevice*			m_pDevice;
-	ISceneManager*			m_pSMgr;
-	IVideoDriver*			m_pDriver;
+	//IrrlichtDevice*			m_pDevice;
+	//ISceneManager*			m_pSMgr;
+	//IVideoDriver*			m_pDriver;
 
-	IMeshSceneNode*			m_pSceneNode;
-	SMaterial				m_pMaterial;
+	//IMeshSceneNode*			m_pSceneNode;
+	//SMaterial				m_pMaterial;
 
-	aabbox3d<f32> 			m_pBox;
+	//aabbox3d<f32> 			m_pBox;
 	// vector<S3DVertex>		m_pVertices;
 
 	stringw	        		m_pName;
-	f32						m_RotateSpeed;
-	f32						m_pRadius;
-	f32						m_pFlattening;
-	f32						m_pGravity;
+	Real 					m_RotateSpeed;
+	Real					m_pRadius;
+	Real 					m_pFlattening;
+	Real					m_pGravity;
 
-	vector3df				m_pOrigin;
+	Vector3 				m_pOrigin;
 
 	int						m_pShowWireframe;
 	int						m_pShowPointCloud;

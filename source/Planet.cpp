@@ -2,11 +2,11 @@
 
 #include "Planet.hpp"
 
-Planet::Planet(IrrlichtDevice* Device, const stringw Name, const io::path &Texture, const f32 Radius)
+Planet::Planet(Root* root, const stringw Name, const stringw Texture, const double Radius)
 {
-	m_pDevice			= Device;
-	m_pSMgr 			= Device->getSceneManager();
-	m_pDriver 			= Device->getVideoDriver();
+	m_pRoot				= root;
+//	m_pSMgr 			= Device->getSceneManager();
+//	m_pDriver 			= Device->getVideoDriver();
 
 	m_pShowWireframe 	= false;
 	m_pShowPointCloud 	= false;
@@ -22,32 +22,32 @@ Planet::Planet(IrrlichtDevice* Device, const stringw Name, const io::path &Textu
 	// ref->setMaterialFlag(video::EMF_LIGHTING, false);
 	// ref->setMaterialTexture(0, m_pDriver->getTexture("../assets/earth.jpg"));
 
-	m_pSceneNode		= m_pSMgr->addOctreeSceneNode(createPlanetMesh(Radius));
+//	m_pSceneNode		= m_pSMgr->addOctreeSceneNode(createPlanetMesh(Radius));
 	// m_pSceneNode		= m_pSMgr->addMeshSceneNode(createPlanetMesh(Radius));
 
-	m_pSceneNode->setMaterialFlag(video::EMF_LIGHTING, true);
+//	m_pSceneNode->setMaterialFlag(video::EMF_LIGHTING, true);
 }
 
 Planet::~Planet()
 {
 }
 
-SMeshBuffer* Planet::createPlanetQLSCFaceMeshBuffer(const f32 Radius, const vector3df Direction)
+SMeshBuffer* Planet::createPlanetQLSCFaceMeshBuffer(const Real Radius, const Vector3 Direction)
 {
-	const f32 circ 		= 2 * 3.141592 * Radius;
-	const f32 range 	= circ / 4;
+	const Real circ 		= 2 * 3.141592 * Radius;
+	const Real range 		= circ / 4;
 
-	const u32 polyCount = 40;
-	const vector3df rot = Direction.getHorizontalAngle();
+	const int polyCount = 40;
+	//const Vector3 rot = Direction.getHorizontalAngle();
 
-	SMeshBuffer* buffer = new SMeshBuffer();
-	S3DVertex vtx;
-	vtx.Color.set(255, 255, 255, 255);
+	//SMeshBuffer* buffer = new SMeshBuffer();
+	//S3DVertex vtx;
+	//vtx.Color.set(255, 255, 255, 255);
 
 	// Create the vertices
-	for (u32 xx = 0; xx < polyCount; ++xx)
+	for (int xx = 0; xx < polyCount; ++xx)
 	{
-		for (u32 yy = 0; yy < polyCount; ++yy)
+		for (int yy = 0; yy < polyCount; ++yy)
 		{
 			// // Makes a cube
 			// vector3df v = vector3df(
@@ -59,16 +59,16 @@ SMeshBuffer* Planet::createPlanetQLSCFaceMeshBuffer(const f32 Radius, const vect
 			// v.rotateXZBy(rot.Y);
 			// v.rotateXYBy(rot.Z);
 
-			vector3df vrot = vector3df(
-				((f32)xx / ((f32)polyCount - 1.0) * Radius * 2 - Radius),
-				((f32)yy / ((f32)polyCount - 1.0) * Radius * 2 - Radius),
+			Vector3 vrot = Vector3(
+				((Real)xx / ((Real)polyCount - 1.0) * Radius * 2 - Radius),
+				((Real)yy / ((Real)polyCount - 1.0) * Radius * 2 - Radius),
 				Radius).getHorizontalAngle();
 
-			vector3df v = vector3df(0, 0, Radius);
+			Vector3 = Vector3(0, 0, Radius);
 
 			if (Direction.Y == 0) {
-				v.rotateYZBy(rot.X + vrot.X);
-				v.rotateXZBy(rot.Y + vrot.Y);
+				//v.rotateYZBy(rot.X + vrot.X);
+				//v.rotateXZBy(rot.Y + vrot.Y);
 			}
 			else
 			{
