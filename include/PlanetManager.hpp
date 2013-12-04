@@ -4,9 +4,10 @@
 #include <vector>
 #include <string>
 #include <stdio.h>
+#include <OGRE/Ogre.h>
 #include "Planet.hpp"
 
-using namespace std;
+using namespace Ogre;
 
 class PlanetManager
 {
@@ -14,7 +15,7 @@ public:
 	PlanetManager(Root* Device);
 	~PlanetManager();
 
-	void addPlanet(const stringw Name, const double Radius, const vector3df Origin);
+	void addPlanet(const String Name, const Real Radius, const Vector3 Origin);
 
 	void toggleWireframe() 		{ showWireframe(!m_pShowWireframe); }
 	void togglePointCloud() 	{ showPointCloud(!m_pShowPointCloud); }
@@ -32,13 +33,13 @@ public:
 	void showNormal(const bool State);
 	void showVelocity(const bool State);
 
-	void loadSystem(const stringw XmlFile, const Vector3 RelativeOrigin);
+	void loadSystem(const String XmlFile, const Vector3 RelativeOrigin);
 
 private:
-	//IrrlichtDevice*			m_pDevice;
+	Root*			m_pRoot;
 	//IVideoDriver*			m_pDriver;
 	//ISceneManager*			m_pSMgr;
-	vector<Planet*>			m_pPlanetList;
+	std::vector<Planet*>	m_pPlanetList;
 
 	bool					m_pShowWireframe;
 	bool					m_pShowPointCloud;

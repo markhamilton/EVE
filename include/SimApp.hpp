@@ -3,10 +3,11 @@
 
 #include <stdio.h>
 #include <string>
-#include <Ogre.h>
+#include <OGRE/Ogre.h>
 #include "Planet.hpp"
 #include "PlanetManager.hpp"
 
+using namespace Ogre;
 using namespace std;
 
 class SimApp //: public IEventReceiver
@@ -21,11 +22,11 @@ public:
 	//virtual bool OnEvent(const SEvent& event);
 
 protected:
-	bool init(const stringw wndTitle);
+	bool init(const String wndTitle);
 	void createScene();
 	void updateScene();
 
-	//IrrlichtDevice*		m_pDevice;
+	Root*		m_pRoot;
 	//ILogger*			m_pLog;
 	//IVideoDriver* 		m_pDriver;
 	//ISceneManager* 		m_pSMgr;

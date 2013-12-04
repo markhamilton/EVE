@@ -3,9 +3,8 @@
 #ifndef PLANET_HPP
 #define PLANET_HPP
 
-#include <stdlib>
 #include <vector>
-#include <Ogre.h>
+#include <OGRE/Ogre.h>
 #include "evds.h"
 
 using namespace std;
@@ -30,20 +29,20 @@ public:
 	void showVelocity(const bool State);
 
 private:
-	SMeshBuffer* createPlanetQLSCFaceMeshBuffer(const Real Radius, const Vector3 Direction);
-	SMesh* createPlanetMesh(const Real Radius);
+	// SMeshBuffer* createPlanetQLSCFaceMeshBuffer(const Real Radius, const Vector3 Direction);
+	// SMesh* createPlanetMesh(const Real Radius);
 
-	//IrrlichtDevice*			m_pDevice;
+	Root*					m_pRoot;
 	//ISceneManager*			m_pSMgr;
-	//IVideoDriver*			m_pDriver;
+	//IVideoDriver*				m_pDriver;
 
 	//IMeshSceneNode*			m_pSceneNode;
-	//SMaterial				m_pMaterial;
+	//SMaterial					m_pMaterial;
 
 	//aabbox3d<f32> 			m_pBox;
 	// vector<S3DVertex>		m_pVertices;
 
-	stringw	        		m_pName;
+	String	        		m_pName;
 	Real 					m_RotateSpeed;
 	Real					m_pRadius;
 	Real 					m_pFlattening;

@@ -32,14 +32,14 @@ ifeq ($(config),release64)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE
   DEFINES   += -DNDEBUG -DEVE_SIM
-  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -g -m64
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libIrrlicht.a -lm -lpthread -lGL -lXxf86vm -lX11
-  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libIrrlicht.a
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -logre3d
+  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -54,14 +54,14 @@ ifeq ($(config),debug64)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVEd
   DEFINES   += -DDEBUG -DEVE_SIM
-  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m64
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libIrrlicht.a -lm -lpthread -lGL -lXxf86vm -lX11
-  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libIrrlicht.a
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -logre3d
+  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -76,14 +76,14 @@ ifeq ($(config),debug64)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVEd
   DEFINES   += -DDEBUG -DEVE_SIM
-  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m64
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libIrrlicht.a -lm -lpthread -lGL -lXxf86vm -lX11
-  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libIrrlicht.a
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -logre3d
+  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -98,14 +98,14 @@ ifeq ($(config),release64)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE
   DEFINES   += -DNDEBUG -DEVE_SIM
-  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -g -m64
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libIrrlicht.a -lm -lpthread -lGL -lXxf86vm -lX11
-  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libIrrlicht.a
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -logre3d
+  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -120,14 +120,14 @@ ifeq ($(config),debugdynamic64)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVEd
   DEFINES   += -DEVE_SIM -DDEBUG -DEVDS_DYNAMIC -DIVSS_DYNAMIC -DRDRS_DYNAMIC -DSIMC_DYNAMIC
-  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m64
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -levds ../../bin/libsimc.a ../../bin/libIrrlicht.a -lm -lpthread -lGL -lXxf86vm -lX11
-  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a ../../bin/libIrrlicht.a
+  LIBS      += -levds ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -logre3d
+  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -142,14 +142,14 @@ ifeq ($(config),releasedynamic64)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE
   DEFINES   += -DEVE_SIM -DEVDS_DYNAMIC -DIVSS_DYNAMIC -DRDRS_DYNAMIC -DSIMC_DYNAMIC
-  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -g -m64
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -levds ../../bin/libsimc.a ../../bin/libIrrlicht.a -lm -lpthread -lGL -lXxf86vm -lX11
-  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a ../../bin/libIrrlicht.a
+  LIBS      += -levds ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -logre3d
+  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -164,14 +164,14 @@ ifeq ($(config),debugsinglethread64)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE_std
   DEFINES   += -DEVE_SIM -DDEBUG -DEVDS_SINGLETHREADED -DIVSS_SINGLETHREADED -DRDRS_SINGLETHREADED -DSIMC_SINGLETHREADED
-  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m64
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libIrrlicht.a -lm -lpthread -lGL -lXxf86vm -lX11
-  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libIrrlicht.a
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -logre3d
+  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -186,14 +186,14 @@ ifeq ($(config),releasesinglethread64)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE_st
   DEFINES   += -DEVE_SIM -DEVDS_SINGLETHREADED -DIVSS_SINGLETHREADED -DRDRS_SINGLETHREADED -DSIMC_SINGLETHREADED
-  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -g -m64
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libIrrlicht.a -lm -lpthread -lGL -lXxf86vm -lX11
-  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libIrrlicht.a
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -logre3d
+  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -208,14 +208,14 @@ ifeq ($(config),debugsinglethreaddynamic64)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE_std
   DEFINES   += -DEVE_SIM -DDEBUG -DEVDS_DYNAMIC -DIVSS_DYNAMIC -DRDRS_DYNAMIC -DSIMC_DYNAMIC -DEVDS_SINGLETHREADED -DIVSS_SINGLETHREADED -DRDRS_SINGLETHREADED -DSIMC_SINGLETHREADED
-  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m64
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -levds ../../bin/libsimc.a ../../bin/libIrrlicht.a -lm -lpthread -lGL -lXxf86vm -lX11
-  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a ../../bin/libIrrlicht.a
+  LIBS      += -levds ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -logre3d
+  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -230,14 +230,14 @@ ifeq ($(config),releasesinglethreaddynamic64)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE_st
   DEFINES   += -DEVE_SIM -DEVDS_DYNAMIC -DIVSS_DYNAMIC -DRDRS_DYNAMIC -DSIMC_DYNAMIC -DEVDS_SINGLETHREADED -DIVSS_SINGLETHREADED -DRDRS_SINGLETHREADED -DSIMC_SINGLETHREADED
-  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -g -m64
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -levds ../../bin/libsimc.a ../../bin/libIrrlicht.a -lm -lpthread -lGL -lXxf86vm -lX11
-  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a ../../bin/libIrrlicht.a
+  LIBS      += -levds ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -logre3d
+  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -252,14 +252,14 @@ ifeq ($(config),release32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE32
   DEFINES   += -DNDEBUG -DEVE_SIM
-  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -g -m32
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libIrrlicht.a -lm -lpthread -lGL -lXxf86vm -lX11
-  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libIrrlicht.a
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -logre3d
+  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -274,14 +274,14 @@ ifeq ($(config),debug32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVEd32
   DEFINES   += -DDEBUG -DEVE_SIM
-  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m32
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libIrrlicht.a -lm -lpthread -lGL -lXxf86vm -lX11
-  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libIrrlicht.a
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -logre3d
+  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -296,14 +296,14 @@ ifeq ($(config),debug32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVEd32
   DEFINES   += -DDEBUG -DEVE_SIM
-  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m32
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libIrrlicht.a -lm -lpthread -lGL -lXxf86vm -lX11
-  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libIrrlicht.a
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -logre3d
+  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -318,14 +318,14 @@ ifeq ($(config),release32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE32
   DEFINES   += -DNDEBUG -DEVE_SIM
-  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -g -m32
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libIrrlicht.a -lm -lpthread -lGL -lXxf86vm -lX11
-  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libIrrlicht.a
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -logre3d
+  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -340,14 +340,14 @@ ifeq ($(config),debugdynamic32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVEd32
   DEFINES   += -DEVE_SIM -DDEBUG -DEVDS_DYNAMIC -DIVSS_DYNAMIC -DRDRS_DYNAMIC -DSIMC_DYNAMIC
-  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m32
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -levds ../../bin/libsimc.a ../../bin/libIrrlicht.a -lm -lpthread -lGL -lXxf86vm -lX11
-  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a ../../bin/libIrrlicht.a
+  LIBS      += -levds ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -logre3d
+  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -362,14 +362,14 @@ ifeq ($(config),releasedynamic32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE32
   DEFINES   += -DEVE_SIM -DEVDS_DYNAMIC -DIVSS_DYNAMIC -DRDRS_DYNAMIC -DSIMC_DYNAMIC
-  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -g -m32
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -levds ../../bin/libsimc.a ../../bin/libIrrlicht.a -lm -lpthread -lGL -lXxf86vm -lX11
-  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a ../../bin/libIrrlicht.a
+  LIBS      += -levds ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -logre3d
+  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -384,14 +384,14 @@ ifeq ($(config),debugsinglethread32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE_std32
   DEFINES   += -DEVE_SIM -DDEBUG -DEVDS_SINGLETHREADED -DIVSS_SINGLETHREADED -DRDRS_SINGLETHREADED -DSIMC_SINGLETHREADED
-  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m32
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libIrrlicht.a -lm -lpthread -lGL -lXxf86vm -lX11
-  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libIrrlicht.a
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -logre3d
+  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -406,14 +406,14 @@ ifeq ($(config),releasesinglethread32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE_st32
   DEFINES   += -DEVE_SIM -DEVDS_SINGLETHREADED -DIVSS_SINGLETHREADED -DRDRS_SINGLETHREADED -DSIMC_SINGLETHREADED
-  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -g -m32
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libIrrlicht.a -lm -lpthread -lGL -lXxf86vm -lX11
-  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a ../../bin/libIrrlicht.a
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -logre3d
+  LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -428,14 +428,14 @@ ifeq ($(config),debugsinglethreaddynamic32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE_std32
   DEFINES   += -DEVE_SIM -DDEBUG -DEVDS_DYNAMIC -DIVSS_DYNAMIC -DRDRS_DYNAMIC -DSIMC_DYNAMIC -DEVDS_SINGLETHREADED -DIVSS_SINGLETHREADED -DRDRS_SINGLETHREADED -DSIMC_SINGLETHREADED
-  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -m32
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -levds ../../bin/libsimc.a ../../bin/libIrrlicht.a -lm -lpthread -lGL -lXxf86vm -lX11
-  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a ../../bin/libIrrlicht.a
+  LIBS      += -levds ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -logre3d
+  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef
@@ -450,14 +450,14 @@ ifeq ($(config),releasesinglethreaddynamic32)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/EVE_st32
   DEFINES   += -DEVE_SIM -DEVDS_DYNAMIC -DIVSS_DYNAMIC -DRDRS_DYNAMIC -DSIMC_DYNAMIC -DEVDS_SINGLETHREADED -DIVSS_SINGLETHREADED -DRDRS_SINGLETHREADED -DSIMC_SINGLETHREADED
-  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include -I../../external/irrlicht/include
+  INCLUDES  += -I../../include -I../../external/evds/include -I../../external/simc/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2 -g -m32
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -levds ../../bin/libsimc.a ../../bin/libIrrlicht.a -lm -lpthread -lGL -lXxf86vm -lX11
-  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a ../../bin/libIrrlicht.a
+  LIBS      += -levds ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -logre3d
+  LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
   endef

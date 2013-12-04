@@ -2,11 +2,11 @@
 
 #include "PlanetManager.hpp"
 
-PlanetManager::PlanetManager(IrrlichtDevice* Device)
+PlanetManager::PlanetManager(Root* root)
 {
-	m_pDevice			= Device;
-	m_pDriver 			= Device->getVideoDriver();
-	m_pSMgr 			= Device->getSceneManager();
+	m_pRoot				= root;
+	//m_pDriver 			= Device->getVideoDriver();
+	//m_pSMgr 			= Device->getSceneManager();
 
 	m_pShowWireframe 	= false;
 	m_pShowPointCloud	= false;
@@ -21,9 +21,9 @@ PlanetManager::~PlanetManager()
 {
 
 }
-void PlanetManager::addPlanet(const stringw Name, const double Radius, const vector3df Origin)
+void PlanetManager::addPlanet(const String Name, const Real Radius, const Vector3 Origin)
 {
-	Planet* p = new Planet(m_pDevice, Name, "../assets/earth.jpg", Radius);
+	Planet* p = new Planet(m_pRoot, Name, "../assets/earth.jpg", Radius);
 	m_pPlanetList.push_back(p);
 }
 
@@ -89,7 +89,7 @@ void PlanetManager::showVelocity(const bool State)
 	m_pShowVelocity = State;
 }
 
-void PlanetManager::loadSystem(const io::path &XmlFile, const vector3df RelativeOrigin)
+void PlanetManager::loadSystem(const String XmlFile, const Vector3 RelativeOrigin)
 {
 	// TODO: Load a system and place all the objects
 }

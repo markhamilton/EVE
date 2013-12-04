@@ -17,11 +17,11 @@ int main(int argc, char **argv)
 
 SimApp::SimApp()
 {
-	m_pDevice 			= 0;
-	m_pLog 				= 0;
-	m_pDriver			= 0;
-	m_pSMgr				= 0;
-	m_pCamera			= 0;
+	m_pRoot 			= 0;
+	// m_pLog 				= 0;
+	// m_pDriver			= 0;
+	// m_pSMgr				= 0;
+	// m_pCamera			= 0;
 
 	m_pPlanetManager 	= 0;
 }
@@ -32,32 +32,34 @@ SimApp::~SimApp()
 
 void SimApp::start()
 {
-	init(L"Eve Flight Simulator");
+	init("Eve Flight Simulator");
 
 	createScene();
 
-	m_pLog->log("Ready!");
+	// m_pLog->log("Ready!");
 
 	// Main app loop
-	while(m_pDevice->run())
-	{
-		m_pDriver->beginScene(true, true, video::SColor(255, 127, 0, 255));
+	// while(m_pDevice->run())
+	// {
+	// 	m_pDriver->beginScene(true, true, video::SColor(255, 127, 0, 255));
 
-		m_pSMgr->drawAll();
-		m_pDriver->endScene();
-	}
+	// 	m_pSMgr->drawAll();
+	// 	m_pDriver->endScene();
+	// }
 }
 
 void SimApp::createScene()
 {
-	m_pLog->log("Creating scene...");
+	// m_pLog->log("Creating scene...");
 	// TODO: Init simulation models, physical models, lighting, shaders
 	// TODO: Load scene objects here
 
 	// Sun 
-	ILightSceneNode *sun = m_pSMgr->addLightSceneNode(0, vector3df(0, 0, 100.0f), SColorf(1.0f, 1.0f, 1.0f), 1000.0f);
+	//ILightSceneNode *sun = m_pSMgr->addLightSceneNode(0, vector3df(0, 0, 100.0f), SColorf(1.0f, 1.0f, 1.0f), 1000.0f);
 
 	// Skybox is temporary, I will add something more realistic later
+	
+	/*
 	ISceneNode *skybox = m_pSMgr->addSkyBoxSceneNode(
 		m_pDriver->getTexture("../assets/skybox/starfield_top.jpg"),
 		m_pDriver->getTexture("../assets/skybox/starfield_top.jpg"),
@@ -65,46 +67,48 @@ void SimApp::createScene()
 		m_pDriver->getTexture("../assets/skybox/starfield_right.jpg"),
 		m_pDriver->getTexture("../assets/skybox/starfield_front.jpg"),
 		m_pDriver->getTexture("../assets/skybox/starfield_back.jpg"));
+	*/
 
-	m_pPlanetManager = new PlanetManager(m_pDevice);
-	m_pPlanetManager->addPlanet("earth", 40.0f, vector3df(0, 0, 0));
+	// m_pPlanetManager = new PlanetManager(m_pRoot);
+	// m_pPlanetManager->addPlanet("earth", 40.0f, Vector3(0, 0, 0));
 
-	m_pCamera = m_pSMgr->addCameraSceneNodeMaya(0, -150, 200, 1500, -1, 70, true);
-	m_pCamera->setTarget(vector3df(0, 0, 0));
+	// m_pCamera = m_pSMgr->addCameraSceneNodeMaya(0, -150, 200, 1500, -1, 70, true);
+	// m_pCamera->setTarget(vector3df(0, 0, 0));
 }
 
-bool SimApp::init(const stringw wndTitle)
+bool SimApp::init(const String wndTitle)
 {
-	SIrrlichtCreationParameters wndParam;
-	wndParam.AntiAlias 				= 4;
-	wndParam.Bits 					= 32;
-	wndParam.DriverType 			= EDT_OPENGL;
-	wndParam.Doublebuffer 			= true;
-	wndParam.DriverMultithreaded	= true;
-	wndParam.EventReceiver 			= this;
-	wndParam.Fullscreen 			= false;
-	wndParam.HighPrecisionFPU		= true;
-	wndParam.Stencilbuffer			= true;
-	wndParam.Vsync					= false;
-	wndParam.WindowSize				= dimension2d<u32>(640, 480);
-	wndParam.WithAlphaChannel		= false;
-	wndParam.ZBufferBits			= 16;
+	//SIrrlichtCreationParameters wndParam;
+	//wndParam.AntiAlias 				= 4;
+	//wndParam.Bits 					= 32;
+	//wndParam.DriverType 			= EDT_OPENGL;
+	//wndParam.Doublebuffer 			= true;
+	//wndParam.DriverMultithreaded	= true;
+	//wndParam.EventReceiver 			= this;
+	//wndParam.Fullscreen 			= false;
+	//wndParam.HighPrecisionFPU		= true;
+	//wndParam.Stencilbuffer			= true;
+	//wndParam.Vsync					= false;
+	//wndParam.WindowSize				= dimension2d<u32>(640, 480);
+	//wndParam.WithAlphaChannel		= false;
+	//wndParam.ZBufferBits			= 16;
 
-	m_pDevice = createDeviceEx(wndParam);
-	m_pDevice->setWindowCaption(wndTitle.c_str());
+	//m_pDevice = createDeviceEx(wndParam);
+	//m_pDevice->setWindowCaption(wndTitle.c_str());
 
-	m_pLog 		= m_pDevice->getLogger();
-	m_pDriver 	= m_pDevice->getVideoDriver();
-	m_pSMgr 	= m_pDevice->getSceneManager();
+	//m_pLog 		= m_pDevice->getLogger();
+	//m_pDriver 	= m_pDevice->getVideoDriver();
+	//m_pSMgr 	= m_pDevice->getSceneManager();
 
 	return true;
 }
 
 void SimApp::shutdown()
 {
-	m_pDevice->closeDevice();
+	//m_pDevice->closeDevice();
 }
 
+/*
 bool SimApp::OnEvent(const SEvent& event)
 {
 	if (!m_pDevice)
@@ -139,3 +143,4 @@ bool SimApp::OnEvent(const SEvent& event)
 		}
 	}
 }
+*/

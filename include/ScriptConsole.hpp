@@ -5,8 +5,9 @@
 
 #include <string>
 #include <stdio.h>
+#include <OGRE/Ogre.h>
 
-using namespace std;
+using namespace Ogre;
 
 enum ConsoleMessageType
 {
@@ -21,7 +22,7 @@ public:
 	EveConsole();
 	~EveConsole();
 
-	void saveToFile(const stringw Output);
+	void saveToFile(const String Output);
 
 private:
 };
