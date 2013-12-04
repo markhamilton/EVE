@@ -51,7 +51,7 @@ project "EVE"
 		links { "" }
 
 	configuration { "linux" }
-		links { "m", "pthread", "GL", "Xxf86vm", "X11", "ogre3d" }
+		links { "m", "pthread", "GL", "Xxf86vm", "X11", "OgreMain", "OIS", "boost_thread", "boost_system" }
 		linkoptions { "-lstdc++" }
 
 --------------------------------------------------------------------------------
