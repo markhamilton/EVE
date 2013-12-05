@@ -1,5 +1,3 @@
-// TODO: Potentially turn this into a scene manager
-
 #include "PlanetManager.hpp"
 
 PlanetManager::PlanetManager(Root* root)

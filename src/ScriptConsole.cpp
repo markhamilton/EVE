@@ -1,5 +1,4 @@
-// TODO: Trap logging events from Irrlicht and bring them into here
-// TODO: Load default console font from assets folder
+// TODO: Trap logging events from Ogre and bring them into here
 
 #include "ScriptConsole.hpp"
 

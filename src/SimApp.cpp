@@ -7,7 +7,13 @@
 
 #include "SimApp.hpp"
 
+#if OGRE_PLATFORM == OGRE_PLATFORM_WIN32
+#define WIN32_LEAN_AND_MEAN
+#include "windows.h"
+INT WINAPI WinMain(HINSTANCE hInst, HINSTANCE, LPSTR strCmdLine, INT)
+#else
 int main(int argc, char **argv)
+#endif
 {
 	SimApp app;
 	app.start();
@@ -18,10 +24,12 @@ int main(int argc, char **argv)
 SimApp::SimApp()
 {
 	m_pRoot 			= 0;
+	m_pWindow			= 0;
+	m_pSMgr				= 0;
+	m_pCamera			= 0;
+	m_pView				= 0;
+	
 	// m_pLog 				= 0;
-	// m_pDriver			= 0;
-	// m_pSMgr				= 0;
-	// m_pCamera			= 0;
 
 	m_pPlanetManager 	= 0;
 }
@@ -39,13 +47,7 @@ void SimApp::start()
 	// m_pLog->log("Ready!");
 
 	// Main app loop
-	// while(m_pDevice->run())
-	// {
-	// 	m_pDriver->beginScene(true, true, video::SColor(255, 127, 0, 255));
-
-	// 	m_pSMgr->drawAll();
-	// 	m_pDriver->endScene();
-	// }
+	m_pRoot->startRendering();
 }
 
 void SimApp::createScene()
@@ -78,6 +80,18 @@ void SimApp::createScene()
 
 bool SimApp::init(const String wndTitle)
 {
+	m_pRoot = new Root();
+	if(!m_pRoot->showConfigDialog())
+	{
+		return false;
+	}
+	m_pRoot->initialise(false);
+	
+	m_pWindow = m_pRoot->createRenderWindow(wndTitle, 640, 480, false);
+	m_pSMgr = m_pRoot->createSceneManager(Ogre::ST_GENERIC);
+	m_pCamera = m_pSMgr->createCamera("MainCam");
+	m_pView = m_pWindow->addViewport(m_pCamera);
+
 	//SIrrlichtCreationParameters wndParam;
 	//wndParam.AntiAlias 				= 4;
 	//wndParam.Bits 					= 32;

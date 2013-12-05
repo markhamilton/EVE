@@ -1,5 +1,3 @@
-// TODO: Make this a custom Scene Node?
-
 #ifndef PLANET_HPP
 #define PLANET_HPP
 

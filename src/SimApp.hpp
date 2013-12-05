@@ -26,12 +26,14 @@ protected:
 	void createScene();
 	void updateScene();
 
-	Root*		m_pRoot;
-	//ILogger*			m_pLog;
-	//IVideoDriver* 		m_pDriver;
-	//ISceneManager* 		m_pSMgr;
+	Root*				m_pRoot;
+	RenderWindow*		m_pWindow;
+	SceneManager*		m_pSMgr;
+	Camera*				m_pCamera;
+	Viewport*			m_pView;
 
-	//ICameraSceneNode* 	m_pCamera;
+	//ILogger*			m_pLog;
+
 
 	PlanetManager*		m_pPlanetManager;
 

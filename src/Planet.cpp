@@ -1,5 +1,3 @@
-// TODO: Create Quadrilateralized spherical cube
-
 #include "Planet.hpp"
 
 Planet::Planet(Root* root, const String Name, const String Texture, const Real Radius)
