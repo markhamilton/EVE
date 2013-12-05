@@ -44,7 +44,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="3"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 				PreprocessorDefinitions="WINDOWS;WIN64;NDEBUG;EVE_SIM;_CRT_SECURE_NO_WARNINGS;WIN32"
 				StringPooling="true"
 				RuntimeLibrary="2"
@@ -60,7 +60,7 @@
 			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="WINDOWS;WIN64;NDEBUG;EVE_SIM;_CRT_SECURE_NO_WARNINGS;WIN32"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -129,7 +129,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="3"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 				PreprocessorDefinitions="WINDOWS;NDEBUG;EVE_SIM;_CRT_SECURE_NO_WARNINGS;WIN32"
 				StringPooling="true"
 				RuntimeLibrary="2"
@@ -145,7 +145,7 @@
 			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="WINDOWS;NDEBUG;EVE_SIM;_CRT_SECURE_NO_WARNINGS;WIN32"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -215,7 +215,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 				PreprocessorDefinitions="WINDOWS;WIN64;DEBUG;EVE_SIM;_CRT_SECURE_NO_WARNINGS;WIN32"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -232,7 +232,7 @@
 			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="WINDOWS;WIN64;DEBUG;EVE_SIM;_CRT_SECURE_NO_WARNINGS;WIN32"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -299,7 +299,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 				PreprocessorDefinitions="WINDOWS;DEBUG;EVE_SIM;_CRT_SECURE_NO_WARNINGS;WIN32"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -316,7 +316,7 @@
 			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="WINDOWS;DEBUG;EVE_SIM;_CRT_SECURE_NO_WARNINGS;WIN32"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -384,7 +384,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 				PreprocessorDefinitions="WINDOWS;WIN64;DEBUG;EVE_SIM;_CRT_SECURE_NO_WARNINGS;WIN32"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -401,7 +401,7 @@
 			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="WINDOWS;WIN64;DEBUG;EVE_SIM;_CRT_SECURE_NO_WARNINGS;WIN32"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -468,7 +468,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 				PreprocessorDefinitions="WINDOWS;DEBUG;EVE_SIM;_CRT_SECURE_NO_WARNINGS;WIN32"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -485,7 +485,7 @@
 			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="WINDOWS;DEBUG;EVE_SIM;_CRT_SECURE_NO_WARNINGS;WIN32"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -553,7 +553,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="3"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 				PreprocessorDefinitions="WINDOWS;WIN64;NDEBUG;EVE_SIM;_CRT_SECURE_NO_WARNINGS;WIN32"
 				StringPooling="true"
 				RuntimeLibrary="2"
@@ -569,7 +569,7 @@
 			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="WINDOWS;WIN64;NDEBUG;EVE_SIM;_CRT_SECURE_NO_WARNINGS;WIN32"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -638,7 +638,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="3"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 				PreprocessorDefinitions="WINDOWS;NDEBUG;EVE_SIM;_CRT_SECURE_NO_WARNINGS;WIN32"
 				StringPooling="true"
 				RuntimeLibrary="2"
@@ -654,7 +654,7 @@
 			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="WINDOWS;NDEBUG;EVE_SIM;_CRT_SECURE_NO_WARNINGS;WIN32"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -724,7 +724,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 				PreprocessorDefinitions="WINDOWS;WIN64;EVE_SIM;DEBUG;EVDS_DYNAMIC;IVSS_DYNAMIC;RDRS_DYNAMIC;SIMC_DYNAMIC;_CRT_SECURE_NO_WARNINGS;WIN32"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -741,7 +741,7 @@
 			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="WINDOWS;WIN64;EVE_SIM;DEBUG;EVDS_DYNAMIC;IVSS_DYNAMIC;RDRS_DYNAMIC;SIMC_DYNAMIC;_CRT_SECURE_NO_WARNINGS;WIN32"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -808,7 +808,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 				PreprocessorDefinitions="WINDOWS;EVE_SIM;DEBUG;EVDS_DYNAMIC;IVSS_DYNAMIC;RDRS_DYNAMIC;SIMC_DYNAMIC;_CRT_SECURE_NO_WARNINGS;WIN32"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -825,7 +825,7 @@
 			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="WINDOWS;EVE_SIM;DEBUG;EVDS_DYNAMIC;IVSS_DYNAMIC;RDRS_DYNAMIC;SIMC_DYNAMIC;_CRT_SECURE_NO_WARNINGS;WIN32"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -893,7 +893,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="3"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 				PreprocessorDefinitions="WINDOWS;WIN64;EVE_SIM;EVDS_DYNAMIC;IVSS_DYNAMIC;RDRS_DYNAMIC;SIMC_DYNAMIC;_CRT_SECURE_NO_WARNINGS;WIN32"
 				StringPooling="true"
 				RuntimeLibrary="2"
@@ -909,7 +909,7 @@
 			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="WINDOWS;WIN64;EVE_SIM;EVDS_DYNAMIC;IVSS_DYNAMIC;RDRS_DYNAMIC;SIMC_DYNAMIC;_CRT_SECURE_NO_WARNINGS;WIN32"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -978,7 +978,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="3"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 				PreprocessorDefinitions="WINDOWS;EVE_SIM;EVDS_DYNAMIC;IVSS_DYNAMIC;RDRS_DYNAMIC;SIMC_DYNAMIC;_CRT_SECURE_NO_WARNINGS;WIN32"
 				StringPooling="true"
 				RuntimeLibrary="2"
@@ -994,7 +994,7 @@
 			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="WINDOWS;EVE_SIM;EVDS_DYNAMIC;IVSS_DYNAMIC;RDRS_DYNAMIC;SIMC_DYNAMIC;_CRT_SECURE_NO_WARNINGS;WIN32"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -1064,7 +1064,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 				PreprocessorDefinitions="WINDOWS;WIN64;EVE_SIM;DEBUG;EVDS_SINGLETHREADED;IVSS_SINGLETHREADED;RDRS_SINGLETHREADED;SIMC_SINGLETHREADED;_CRT_SECURE_NO_WARNINGS;WIN32"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -1081,7 +1081,7 @@
 			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="WINDOWS;WIN64;EVE_SIM;DEBUG;EVDS_SINGLETHREADED;IVSS_SINGLETHREADED;RDRS_SINGLETHREADED;SIMC_SINGLETHREADED;_CRT_SECURE_NO_WARNINGS;WIN32"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -1148,7 +1148,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 				PreprocessorDefinitions="WINDOWS;EVE_SIM;DEBUG;EVDS_SINGLETHREADED;IVSS_SINGLETHREADED;RDRS_SINGLETHREADED;SIMC_SINGLETHREADED;_CRT_SECURE_NO_WARNINGS;WIN32"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -1165,7 +1165,7 @@
 			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="WINDOWS;EVE_SIM;DEBUG;EVDS_SINGLETHREADED;IVSS_SINGLETHREADED;RDRS_SINGLETHREADED;SIMC_SINGLETHREADED;_CRT_SECURE_NO_WARNINGS;WIN32"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -1233,7 +1233,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="3"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 				PreprocessorDefinitions="WINDOWS;WIN64;EVE_SIM;EVDS_SINGLETHREADED;IVSS_SINGLETHREADED;RDRS_SINGLETHREADED;SIMC_SINGLETHREADED;_CRT_SECURE_NO_WARNINGS;WIN32"
 				StringPooling="true"
 				RuntimeLibrary="2"
@@ -1249,7 +1249,7 @@
 			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="WINDOWS;WIN64;EVE_SIM;EVDS_SINGLETHREADED;IVSS_SINGLETHREADED;RDRS_SINGLETHREADED;SIMC_SINGLETHREADED;_CRT_SECURE_NO_WARNINGS;WIN32"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -1318,7 +1318,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="3"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 				PreprocessorDefinitions="WINDOWS;EVE_SIM;EVDS_SINGLETHREADED;IVSS_SINGLETHREADED;RDRS_SINGLETHREADED;SIMC_SINGLETHREADED;_CRT_SECURE_NO_WARNINGS;WIN32"
 				StringPooling="true"
 				RuntimeLibrary="2"
@@ -1334,7 +1334,7 @@
 			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="WINDOWS;EVE_SIM;EVDS_SINGLETHREADED;IVSS_SINGLETHREADED;RDRS_SINGLETHREADED;SIMC_SINGLETHREADED;_CRT_SECURE_NO_WARNINGS;WIN32"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -1404,7 +1404,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 				PreprocessorDefinitions="WINDOWS;WIN64;EVE_SIM;DEBUG;EVDS_DYNAMIC;IVSS_DYNAMIC;RDRS_DYNAMIC;SIMC_DYNAMIC;EVDS_SINGLETHREADED;IVSS_SINGLETHREADED;RDRS_SINGLETHREADED;SIMC_SINGLETHREADED;_CRT_SECURE_NO_WARNINGS;WIN32"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -1421,7 +1421,7 @@
 			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="WINDOWS;WIN64;EVE_SIM;DEBUG;EVDS_DYNAMIC;IVSS_DYNAMIC;RDRS_DYNAMIC;SIMC_DYNAMIC;EVDS_SINGLETHREADED;IVSS_SINGLETHREADED;RDRS_SINGLETHREADED;SIMC_SINGLETHREADED;_CRT_SECURE_NO_WARNINGS;WIN32"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -1488,7 +1488,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 				PreprocessorDefinitions="WINDOWS;EVE_SIM;DEBUG;EVDS_DYNAMIC;IVSS_DYNAMIC;RDRS_DYNAMIC;SIMC_DYNAMIC;EVDS_SINGLETHREADED;IVSS_SINGLETHREADED;RDRS_SINGLETHREADED;SIMC_SINGLETHREADED;_CRT_SECURE_NO_WARNINGS;WIN32"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -1505,7 +1505,7 @@
 			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="WINDOWS;EVE_SIM;DEBUG;EVDS_DYNAMIC;IVSS_DYNAMIC;RDRS_DYNAMIC;SIMC_DYNAMIC;EVDS_SINGLETHREADED;IVSS_SINGLETHREADED;RDRS_SINGLETHREADED;SIMC_SINGLETHREADED;_CRT_SECURE_NO_WARNINGS;WIN32"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -1573,7 +1573,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="3"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 				PreprocessorDefinitions="WINDOWS;WIN64;EVE_SIM;EVDS_DYNAMIC;IVSS_DYNAMIC;RDRS_DYNAMIC;SIMC_DYNAMIC;EVDS_SINGLETHREADED;IVSS_SINGLETHREADED;RDRS_SINGLETHREADED;SIMC_SINGLETHREADED;_CRT_SECURE_NO_WARNINGS;WIN32"
 				StringPooling="true"
 				RuntimeLibrary="2"
@@ -1589,7 +1589,7 @@
 			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="WINDOWS;WIN64;EVE_SIM;EVDS_DYNAMIC;IVSS_DYNAMIC;RDRS_DYNAMIC;SIMC_DYNAMIC;EVDS_SINGLETHREADED;IVSS_SINGLETHREADED;RDRS_SINGLETHREADED;SIMC_SINGLETHREADED;_CRT_SECURE_NO_WARNINGS;WIN32"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -1658,7 +1658,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="3"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 				PreprocessorDefinitions="WINDOWS;EVE_SIM;EVDS_DYNAMIC;IVSS_DYNAMIC;RDRS_DYNAMIC;SIMC_DYNAMIC;EVDS_SINGLETHREADED;IVSS_SINGLETHREADED;RDRS_SINGLETHREADED;SIMC_SINGLETHREADED;_CRT_SECURE_NO_WARNINGS;WIN32"
 				StringPooling="true"
 				RuntimeLibrary="2"
@@ -1674,7 +1674,7 @@
 			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="WINDOWS;EVE_SIM;EVDS_DYNAMIC;IVSS_DYNAMIC;RDRS_DYNAMIC;SIMC_DYNAMIC;EVDS_SINGLETHREADED;IVSS_SINGLETHREADED;RDRS_SINGLETHREADED;SIMC_SINGLETHREADED;_CRT_SECURE_NO_WARNINGS;WIN32"
-				AdditionalIncludeDirectories="..\..\include;..\..\external\evds\include;..\..\external\simc\include"
+				AdditionalIncludeDirectories="..\..\src;..\..\external\evds\include;..\..\external\simc\include"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -1722,40 +1722,40 @@
 	<References>
 	</References>
 	<Files>
-		<File
-			RelativePath="..\..\source\Planet.cpp"
-			>
-		</File>
-		<File
-			RelativePath="..\..\source\PlanetManager.cpp"
-			>
-		</File>
-		<File
-			RelativePath="..\..\source\ScriptConsole.cpp"
-			>
-		</File>
-		<File
-			RelativePath="..\..\source\SimApp.cpp"
-			>
-		</File>
 		<Filter
-			Name="include"
+			Name="src"
 			Filter=""
 			>
 			<File
-				RelativePath="..\..\include\Planet.hpp"
+				RelativePath="..\..\src\Planet.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\include\PlanetManager.hpp"
+				RelativePath="..\..\src\Planet.hpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\include\ScriptConsole.hpp"
+				RelativePath="..\..\src\PlanetManager.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\include\SimApp.hpp"
+				RelativePath="..\..\src\PlanetManager.hpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\src\ScriptConsole.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\src\ScriptConsole.hpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\src\SimApp.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\src\SimApp.hpp"
 				>
 			</File>
 		</Filter>

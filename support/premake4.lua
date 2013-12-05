@@ -1,7 +1,6 @@
 --------------------------------------------------------------------------------
 -- TODO: Add console builds linked with ncurses
 -- TODO: Testing in Windows
--- TODO: Whittle down the irrlicht build to remove unnecessary files
 --------------------------------------------------------------------------------
 
 -- if not os.isdir("../debug") then os.mkdir("../debug") end
@@ -35,13 +34,12 @@ project "EVE"
 	uuid "D20CBF50-D363-11E2-8B8B-0800200C9A66"
 	language "C++"
 	includedirs { 
-		"../include",
+		"../src",
 		"../external/evds/include",
 		"../external/simc/include",
 	}
 	files {
-			"../source/**",
-			"../include/**",
+			"../src/**",
 	}
 	links { "evds", "simc", "Irrlicht" }
 	defines { "EVE_SIM" }
