@@ -28,8 +28,8 @@ void PlanetManager::addPlanet(const String Name, const Real Radius, const Vector
 
 void PlanetManager::showWireframe(const bool State)
 {
-	for (u32 ii = 0; ii < m_pPlanetList.size(); ii++)
-		m_pPlanetList[ii]->showWireframe(State);
+	for(std::vector<Planet *>::iterator it = m_pPlanetList.begin(); it != m_pPlanetList.end(); ++it)
+		(*it)->showWireframe(State);
 
 	// Disable point cloud flags
 	if (State) showPointCloud(false);
@@ -39,8 +39,8 @@ void PlanetManager::showWireframe(const bool State)
 
 void PlanetManager::showPointCloud(const bool State)
 {
-	for (u32 ii = 0; ii < m_pPlanetList.size(); ii++)
-		m_pPlanetList[ii]->showPointCloud(State);
+	for(std::vector<Planet *>::iterator it = m_pPlanetList.begin(); it != m_pPlanetList.end(); ++it)
+		(*it)->showPointCloud(State);
 
 	// Disable wireframe flags
 	if (State) showWireframe(false);
@@ -50,40 +50,40 @@ void PlanetManager::showPointCloud(const bool State)
 
 void PlanetManager::showLighting(const bool State)
 {
-	for (u32 ii = 0; ii < m_pPlanetList.size(); ii++)
-		m_pPlanetList[ii]->showLighting(State);
+	for(std::vector<Planet *>::iterator it = m_pPlanetList.begin(); it != m_pPlanetList.end(); ++it)
+		(*it)->showLighting(State);
 
 	m_pShowLighting = State;
 }
 
 void PlanetManager::showOutline(const bool State)
 {
-	for (u32 ii = 0; ii < m_pPlanetList.size(); ii++)
-		m_pPlanetList[ii]->showOutline(State);
+	for(std::vector<Planet *>::iterator it = m_pPlanetList.begin(); it != m_pPlanetList.end(); ++it)
+		(*it)->showOutline(State);
 
 	m_pShowOutline = State;
 }
 
 void PlanetManager::showBoundingBox(const bool State)
 {
-	for(u32 ii = 0; ii < m_pPlanetList.size(); ii++)
-		m_pPlanetList[ii]->showBoundingBox(State);
+	for(std::vector<Planet *>::iterator it = m_pPlanetList.begin(); it != m_pPlanetList.end(); ++it)
+		(*it)->showBoundingBox(State);
 
 	m_pShowBoundingBox = State;
 }
 
 void PlanetManager::showNormal(const bool State)
 {
-	for(u32 ii = 0; ii < m_pPlanetList.size(); ii++)
-		m_pPlanetList[ii]->showNormal(State);
+	for(std::vector<Planet *>::iterator it = m_pPlanetList.begin(); it != m_pPlanetList.end(); ++it)
+		(*it)->showNormal(State);
 
 	m_pShowNormal = State;
 }
 
 void PlanetManager::showVelocity(const bool State)
 {
-	for(u32 ii = 0; ii < m_pPlanetList.size(); ii++)
-		m_pPlanetList[ii]->showVelocity(State);
+	for(std::vector<Planet *>::iterator it = m_pPlanetList.begin(); it != m_pPlanetList.end(); ++it)
+		(*it)->showVelocity(State);
 
 	m_pShowVelocity = State;
 }
