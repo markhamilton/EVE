@@ -1,7 +1,8 @@
+// This is not intended to replace the Ogre/system logging
+// But augment it with a scripting interface and scrollback in-game
+
 #ifndef CONSOLE_HPP
 #define CONSOLE_HPP
-
-#define MAX_CONSOLE_MESSAGES 5000
 
 #include <string>
 #include <stdio.h>
@@ -22,7 +23,7 @@ public:
 	EveConsole();
 	~EveConsole();
 
-	void saveToFile(const String Output);
+	void saveToFile(const String outputFile);
 
 private:
 };

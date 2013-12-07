@@ -3,8 +3,7 @@
 Planet::Planet(Root* root, const String Name, const String Texture, const Real Radius)
 {
 	m_pRoot				= root;
-//	m_pSMgr 			= Device->getSceneManager();
-//	m_pDriver 			= Device->getVideoDriver();
+	// TODO: Grab a copy of the scene manager
 
 	m_pShowWireframe 	= false;
 	m_pShowPointCloud 	= false;
@@ -15,6 +14,8 @@ Planet::Planet(Root* root, const String Name, const String Texture, const Real R
 	m_pShowVelocity 	= false;
 
 	m_pName 			= Name;
+
+	// TODO: Load textures, set lighting parameters, load shaders, create the planet mesh
 
 	// IMeshSceneNode* ref	= m_pSMgr->addSphereSceneNode(Radius, 160, 0, -1, vector3df(0, 0, 0), vector3df(0, 0, 0));
 	// ref->setMaterialFlag(video::EMF_LIGHTING, false);
@@ -30,6 +31,7 @@ Planet::~Planet()
 {
 }
 
+// TODO: Port the planet face mesh creation code to Ogre
 // SMeshBuffer* Planet::createPlanetQLSCFaceMeshBuffer(const Real Radius, const Vector3 Direction)
 // {
 // 	const Real circ 		= 2 * 3.141592 * Radius;
@@ -166,6 +168,7 @@ Planet::~Planet()
 // 	ISceneNode::OnRegisterSceneNode();
 // }
 
+// TODO: Port the planet rendering code to Ogre
 // virtual void Planet::render()
 // {
 // 	u16 indices[] = {   0,2,3, 2,1,3, 1,0,3, 2,0,1  };

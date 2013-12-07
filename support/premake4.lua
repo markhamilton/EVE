@@ -17,9 +17,6 @@ solution "EVE"
 	configuration { "windows" }
 		defines { "WINDOWS" }
 
-	configuration { "windows", "x64" }
-		defines { "WIN64" }
-
 	configuration "Debug"
 		defines { "DEBUG" }
 		flags { "Symbols" }
@@ -32,6 +29,7 @@ solution "EVE"
 
 project "EVE"
 	uuid "D20CBF50-D363-11E2-8B8B-0800200C9A66"
+	kind "WindowedApp"
 	language "C++"
 	includedirs { 
 		"../src",
@@ -41,12 +39,11 @@ project "EVE"
 	files {
 			"../src/**",
 	}
-	links { "evds", "simc", "Irrlicht" }
+	links { "evds", "simc" }
 	defines { "EVE_SIM" }
-	kind "WindowedApp"
 
 	configuration { "windows" }
-		links { "" }
+		links { "OgreMain", "OIS" }
 
 	configuration { "linux" }
 		links { "m", "pthread", "GL", "Xxf86vm", "X11", "OgreMain", "OIS", "boost_thread", "boost_system" }

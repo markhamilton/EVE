@@ -11,9 +11,8 @@ EveConsole::~EveConsole()
 
 }
 
-// void EveConsole::saveToFile(const io::path &Output)
-// {
-// 	// TODO: Open file
-
-// 	// TODO: close file
-// }
+void EveConsole::saveToFile(const String outputFile)
+{
+	// TODO: Open file
+	// TODO: close file
+}
