@@ -38,7 +38,7 @@ ifeq ($(config),release64)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
   LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -60,7 +60,7 @@ ifeq ($(config),debug64)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
   LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -82,7 +82,7 @@ ifeq ($(config),debug64)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
   LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -104,7 +104,7 @@ ifeq ($(config),release64)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
   LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -126,7 +126,7 @@ ifeq ($(config),debugdynamic64)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -levds ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
+  LIBS      += -levds ../../bin/libsimc.a -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
   LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -148,7 +148,7 @@ ifeq ($(config),releasedynamic64)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -levds ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
+  LIBS      += -levds ../../bin/libsimc.a -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
   LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -170,7 +170,7 @@ ifeq ($(config),debugsinglethread64)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
   LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -192,7 +192,7 @@ ifeq ($(config),releasesinglethread64)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
   LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -214,7 +214,7 @@ ifeq ($(config),debugsinglethreaddynamic64)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -levds ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
+  LIBS      += -levds ../../bin/libsimc.a -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
   LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -236,7 +236,7 @@ ifeq ($(config),releasesinglethreaddynamic64)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m64 -L/usr/lib64 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -levds ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
+  LIBS      += -levds ../../bin/libsimc.a -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
   LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -258,7 +258,7 @@ ifeq ($(config),release32)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
   LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -280,7 +280,7 @@ ifeq ($(config),debug32)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
   LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -302,7 +302,7 @@ ifeq ($(config),debug32)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
   LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -324,7 +324,7 @@ ifeq ($(config),release32)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
   LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -346,7 +346,7 @@ ifeq ($(config),debugdynamic32)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -levds ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
+  LIBS      += -levds ../../bin/libsimc.a -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
   LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -368,7 +368,7 @@ ifeq ($(config),releasedynamic32)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -levds ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
+  LIBS      += -levds ../../bin/libsimc.a -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
   LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -390,7 +390,7 @@ ifeq ($(config),debugsinglethread32)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
   LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -412,7 +412,7 @@ ifeq ($(config),releasesinglethread32)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
+  LIBS      += ../../bin/libevds.a ../../bin/libsimc.a -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
   LDDEPS    += ../../bin/libevds.a ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -434,7 +434,7 @@ ifeq ($(config),debugsinglethreaddynamic32)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -levds ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
+  LIBS      += -levds ../../bin/libsimc.a -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
   LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS
@@ -456,7 +456,7 @@ ifeq ($(config),releasesinglethreaddynamic32)
   CXXFLAGS  += $(CFLAGS) 
   LDFLAGS   += -L../../bin -m32 -L/usr/lib32 -lstdc++
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
-  LIBS      += -levds ../../bin/libsimc.a -lIrrlicht -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
+  LIBS      += -levds ../../bin/libsimc.a -lm -lpthread -lGL -lXxf86vm -lX11 -lOgreMain -lOIS -lboost_thread -lboost_system
   LDDEPS    += ../../bin/libevds.so ../../bin/libsimc.a
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(LIBS) $(LDFLAGS)
   define PREBUILDCMDS

@@ -11,7 +11,8 @@
 #define WIN32_LEAN_AND_MEAN
 #include "windows.h"
 //int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
-//#else
+int main(int argc, char **argv)
+#else
 int main(int argc, char **argv)
 #endif
 {
