@@ -46,9 +46,11 @@ void SimApp::start()
 	createScene();
 
 	// m_pLog->log("Ready!");
-
-	// Main app loop
-	// m_pRoot->startRendering();
+	if(m_pRoot)
+	{
+		// Main app loop
+		m_pRoot->startRendering();
+	}
 
 	shutdown();
 }
