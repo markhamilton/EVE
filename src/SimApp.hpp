@@ -10,7 +10,7 @@
 using namespace Ogre;
 using namespace std;
 
-class SimApp : public FrameListeners
+class SimApp : public FrameListener
 {
 public:
 	SimApp();

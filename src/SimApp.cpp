@@ -48,7 +48,7 @@ void SimApp::start()
 	// m_pLog->log("Ready!");
 
 	// Main app loop
-	m_pRoot->startRendering();
+	// m_pRoot->startRendering();
 
 	shutdown();
 }
