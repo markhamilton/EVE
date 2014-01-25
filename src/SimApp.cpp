@@ -75,7 +75,11 @@ void SimApp::createScene()
 
 bool SimApp::init(const String wndTitle)
 {
-	m_pRoot = new Root("../assets/plugins.cfg", "../assets/config.cfg", "../assets/ogre.log");
+#if OGRE_PLATFORM == OGRE_PLATFORM_WIN32
+	m_pRoot = new Root("../assets/winplugins.cfg", "../assets/winconfig.cfg", "../assets/eve.log");
+#elif OGRE_PLATFORM == OGRE_PLATFORM_LINUX
+	m_pRoot = new Root("../assets/linplugins.cfg", "../assets/linconfig.cfg", "../assets/eve.log");
+#endif
 	if(!m_pRoot->showConfigDialog())
 	{
 		return false;
