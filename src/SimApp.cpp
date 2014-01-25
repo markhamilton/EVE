@@ -41,7 +41,7 @@ SimApp::~SimApp()
 
 void SimApp::start()
 {
-	init("Eve Flight Simulator");
+	if(!init("Eve Flight Simulator")) return;
 
 	createScene();
 
