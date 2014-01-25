@@ -10,7 +10,7 @@
 using namespace Ogre;
 using namespace std;
 
-class SimApp : public FrameListener
+class SimApp : public FrameListener, WindowEventListener
 {
 public:
 	SimApp();
@@ -25,6 +25,7 @@ protected:
 	bool init(const String wndTitle);
 	void createScene();
 	void updateScene();
+	void windowClosed(Ogre::RenderWindow *rw);
 
 	Root*				m_pRoot;
 	RenderWindow*		m_pWindow;

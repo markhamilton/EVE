@@ -41,7 +41,10 @@ SimApp::~SimApp()
 
 void SimApp::start()
 {
-	if(!init("Eve Flight Simulator")) return;
+	if(!init("Eve Flight Simulator")) {
+		shutdown();
+		return;
+	}
 
 	createScene();
 
@@ -72,17 +75,20 @@ void SimApp::createScene()
 
 bool SimApp::init(const String wndTitle)
 {
-	m_pRoot = new Root();
+	m_pRoot = new Root("../assets/plugins.cfg", "../assets/config.cfg", "../assets/ogre.log");
 	if(!m_pRoot->showConfigDialog())
 	{
 		return false;
 	}
 	m_pRoot->initialise(false);
+	m_pRoot->addFrameListener(this);
 	
 	m_pWindow = m_pRoot->createRenderWindow(wndTitle, 640, 480, false);
 	m_pSMgr = m_pRoot->createSceneManager(Ogre::ST_GENERIC);
 	m_pCamera = m_pSMgr->createCamera("MainCam");
 	m_pView = m_pWindow->addViewport(m_pCamera);
+
+	Ogre::WindowEventUtilities::addWindowEventListener(m_pWindow, this);
 
 	// TODO: Enable AA
 	// TODO: Init logger
@@ -93,7 +99,6 @@ bool SimApp::init(const String wndTitle)
 void SimApp::shutdown()
 {
 	m_pRoot->shutdown();
-	delete m_pRoot;
 	m_pRoot = 0;
 }
 
@@ -134,3 +139,9 @@ bool SimApp::OnEvent(const SEvent& event)
 	}
 }
 */
+
+
+void SimApp::windowClosed(Ogre::RenderWindow *rw)
+{
+	shutdown();
+}
